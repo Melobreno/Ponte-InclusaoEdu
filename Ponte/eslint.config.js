@@ -1,13 +1,35 @@
-import globals from "globals";
-import pluginJs from "@eslint/js";
-import pluginReactConfig from "eslint-plugin-react/configs/recommended.js";
-import { fixupConfigRules } from "@eslint/compat";
+import styled from 'eslint-plugin-styled-components-a11y';
 
-
-export default [
-  {files: ["**/*.{js,mjs,cjs,jsx}"]},
-  { languageOptions: { parserOptions: { ecmaFeatures: { jsx: true } } } },
-  {languageOptions: { globals: globals.browser }},
-  pluginJs.configs.recommended,
-  ...fixupConfigRules(pluginReactConfig),
+module.exports = [
+  {
+    env: {
+      browser: true,
+      es2021: true,
+    },
+    extends: [
+      'eslint:recommended',
+      'plugin:react/recommended',
+      'airbnb',
+      'plugin:prettier/recommended',
+    ],
+    plugins: ['react', 'prettier', { 'styled-components': styled }],
+    rules: {
+      'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+      'react/react-in-jsx-scope': 'off',
+      'no-console': 'warn',
+      'no-unused-vars': 'warn',
+      'prettier/prettier': [
+        'error',
+        {
+          semi: true,
+          tabWidth: 2,
+          siglequote: false,
+        },
+      ],
+      'styled-components/rule-name': 2,
+    },
+    settings: {
+      react: { version: 'detect' },
+    },
+  },
 ];
