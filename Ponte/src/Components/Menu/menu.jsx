@@ -1,7 +1,8 @@
-import * as S from './menuStyles';
-import Btn from '../Button/button';
+import * as S from "./menuStyles";
+import Btn from "../Button/button";
 
 function menu() {
+  const value = "Login";
   return (
     <S.Container>
       <ul>
@@ -14,10 +15,10 @@ function menu() {
         <li>
           <a href="">Contatos</a>
         </li>
-        <Btn />
-        <a href="" className="testeA">
-          Cadastro
-        </a>
+        <Btn txt={value} />
+        <li>
+          <a href="">Cadastro</a>
+        </li>
       </ul>
     </S.Container>
   );

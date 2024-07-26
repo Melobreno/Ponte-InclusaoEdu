@@ -1,8 +1,8 @@
-import * as S from './buttonStyle';
-function btn() {
+import * as S from "./buttonStyle";
+function btn({ txt }) {
   return (
     <>
-      <S.Container>Login</S.Container>
+      <S.Container>{txt}</S.Container>
     </>
   );
 }

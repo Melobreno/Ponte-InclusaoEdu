@@ -23,6 +23,7 @@ module.exports = [
         {
           semi: true,
           tabWidth: 2,
+          siglequote: false,
         },
       ],
       'styled-components/rule-name': 2,
