@@ -6,4 +6,8 @@ export const Container = styled.div`
   margin: 0 auto;
   padding: 1.3rem 20%;
   justify-content: space-between;
+
+  img {
+    width: 12rem;
+  }
 `;

@@ -17,7 +17,9 @@ function menu() {
         </li>
         <Btn txt={value} />
         <li>
-          <a href="">Cadastro</a>
+          <a className="cad" href="">
+            Cadastro
+          </a>
         </li>
       </ul>
     </S.Container>
