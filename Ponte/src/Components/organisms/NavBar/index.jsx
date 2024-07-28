@@ -1,6 +1,6 @@
-import imgLogo from '../../assets/logoPonte.svg';
-import * as S from './NavBarStyle.jsx';
-import Menu from '../Menu/menu.jsx';
+import imgLogo from "../../../assets/logoPonte.svg";
+import * as S from "./NavBarStyle.jsx";
+import Menu from "../../molecules/Menu";
 
 function NavBar() {
   return (

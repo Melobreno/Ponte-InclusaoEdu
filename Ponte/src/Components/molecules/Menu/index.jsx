@@ -1,5 +1,5 @@
 import * as S from "./menuStyles";
-import Btn from "../Button/button";
+import Btn from "../../atoms/Button";
 
 function menu() {
   const value = "Login";
@@ -17,7 +17,9 @@ function menu() {
         </li>
         <Btn txt={value} />
         <li>
-          <a href="">Cadastro</a>
+          <a className="cadastro" href="">
+            Cadastro
+          </a>
         </li>
       </ul>
     </S.Container>

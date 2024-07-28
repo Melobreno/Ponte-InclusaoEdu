@@ -1,11 +1,13 @@
-import NavBar from "./Components/NavBar/NavBar";
-import SobreNos from "./Pages/LP-index/Sobre Nos/sobre";
+import NavBar from "./Components/organisms/NavBar";
+import SessaoInicial from "./Pages/LP-index/Sessão inicial";
+import { StyleGlobal } from "./styleGlobal";
 
 function App() {
   return (
     <>
+      <StyleGlobal />
       <NavBar />
-      <SobreNos />
+      <SessaoInicial />
     </>
   );
 }
