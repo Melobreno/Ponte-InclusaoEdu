@@ -1,23 +1,28 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Titulo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 3rem;
+  padding-top: 1rem;
   flex-direction: column;
 
+  h1 {
+    margin-top: 0;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+  }
+
   p {
-    width: 80%;
+    width: 70%;
     border-top: solid 0.06rem white;
-    margin-top: 4rem;
+    margin-top: 3rem;
   }
 `;
 
 export const Section = styled.section`
-background-color: #F6CF00;
-
-`
+  background-color: #f6cf00;
+`;
 export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -30,6 +35,10 @@ export const Container = styled.div`
   align-items: center;
   gap: 10px;
 
+  section {
+    margin-right: 5rem;
+  }
+
   img {
     width: 43.25rem;
     max-width: 100%;
@@ -40,8 +49,7 @@ export const Container = styled.div`
   p {
     width: 30rem;
     max-width: 20rem;
-    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans ,Unicode',
-      Verdana, sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 1.2rem;
     display: block;
     padding: 10px;

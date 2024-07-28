@@ -12,6 +12,7 @@ export const Section = styled.section`
   align-content: center;
   align-items: center;
   gap: 0.8rem;
+  height: 700px;
 
   .button {
     display: flex;
