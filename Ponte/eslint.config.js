@@ -1,3 +1,4 @@
+
 import styled from 'eslint-plugin-styled-components-a11y';
 
 module.exports = [
@@ -33,3 +34,4 @@ module.exports = [
     },
   },
 ];
+
