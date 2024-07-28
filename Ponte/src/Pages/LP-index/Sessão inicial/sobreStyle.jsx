@@ -5,12 +5,13 @@ export const Section = styled.section`
   font-weight: 700;
   font-size: 2.5rem;
   display: flex;
+  flex-wrap: wrap;
   margin: 0 auto;
   justify-content: space-between;
   padding: 1.3rem 20%;
   align-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 0.8rem;
 
   .button {
     display: flex;
@@ -22,6 +23,7 @@ export const Section = styled.section`
 
 export const ContainerEsq = styled.div`
   width: 55rem;
+  max-width: 31.25rem;
 `;
 
 export const ContainerDir = styled.div`
