@@ -1,9 +1,10 @@
+import Funcionalidades from './Pages/Funcionalidades/Funcionalidades'
 function App() {
   return (
     <>
-      <h1>Teste</h1>
+      <Funcionalidades/>
     </>
-  );
-}
+  )
+};
 
 export default App;
