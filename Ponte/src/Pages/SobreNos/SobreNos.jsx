@@ -1,8 +1,11 @@
+
 import * as S from "./sobreNosStyled";
 import maosImg from "../../assets/maosMenino.svg";
+
 function SobreNos() {
   return (
     <>
+    <S.Section>
       <S.Titulo>
         <p></p>
         <h1>Sobre nós</h1>
@@ -33,6 +36,7 @@ function SobreNos() {
           <img src={maosImg} alt="Crinça com as mãos levantadas" />
         </div>
       </S.Container>
+    </S.Section>
     </>
   );
 }
