@@ -1,9 +1,10 @@
-function App() {
+ import SobreNos from "./Pages/SobreNos/SobreNos";
+
+
+ 
+ function App() {
   return (
-    <>
-      <h1>Teste</h1>
-    </>
+      <SobreNos />
   );
 }
-
 export default App;
