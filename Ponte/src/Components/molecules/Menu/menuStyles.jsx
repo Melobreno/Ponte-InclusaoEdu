@@ -16,16 +16,16 @@ export const Container = styled.div`
   ul {
     list-style-type: none;
     display: flex;
-    gap: 20px;
+    gap: 1.25rem;
     align-items: center;
   }
   a::after {
     content: "";
     position: absolute;
     width: 0;
-    height: 2px;
+    height: 0.3rem;
     display: block;
-    margin-top: 5px;
+    margin-top: 0.4rem;
     right: 0;
     background: #25a6ce;
     transition: width 0.3s ease, right 0.3s ease;

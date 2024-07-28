@@ -1,5 +1,7 @@
-import * as S from './sobreNosStyled';
-import img from '../../assets/maocrianca.svg';
+
+import * as S from "./sobreNosStyled";
+import maosImg from "../../assets/maosMenino.svg";
+
 function SobreNos() {
   return (
     <>
@@ -31,7 +33,7 @@ function SobreNos() {
           </div>
         </div>
         <div>
-          <img src={img} alt="Crinça com as mãos levantadas" />
+          <img src={maosImg} alt="Crinça com as mãos levantadas" />
         </div>
       </S.Container>
     </S.Section>
