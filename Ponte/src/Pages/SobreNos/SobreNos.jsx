@@ -1,5 +1,5 @@
-import * as S from './sobreNosStyled';
-import img from '../img/freepik-export-20240707214031vcp1 2.png';
+import * as S from "./sobreNosStyled";
+import img from "../../assets/freepik-export-20240707214031vcp1 2.png";
 function SobreNos() {
   return (
     <>
