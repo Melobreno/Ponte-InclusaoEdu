@@ -36,7 +36,7 @@ export const Container = styled.div`
     right: 0;
   }
 
-  .cad {
+  .cadastro {
     font-weight: 700;
     color: #25a6ce;
   }

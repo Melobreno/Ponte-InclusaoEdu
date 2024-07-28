@@ -17,7 +17,7 @@ function menu() {
         </li>
         <Btn txt={value} />
         <li>
-          <a className="cad" href="">
+          <a className="cadastro" href="">
             Cadastro
           </a>
         </li>
