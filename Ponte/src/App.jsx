@@ -1,10 +1,15 @@
- import SobreNos from "./Pages/SobreNos/SobreNos";
 
+import NavBar from "./Components/organisms/NavBar";
+import SessaoInicial from "./Pages/LP-index/Sessão inicial";
+import { StyleGlobal } from "./styleGlobal";
 
- 
- function App() {
+function App() {
   return (
-      <SobreNos />
+    <>
+      <StyleGlobal />
+      <NavBar />
+      <SessaoInicial />
+    </>
   );
 }
 export default App;
