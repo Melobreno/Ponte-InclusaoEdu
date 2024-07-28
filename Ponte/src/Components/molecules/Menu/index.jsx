@@ -1,5 +1,5 @@
 import * as S from "./menuStyles";
-import Btn from "../Button/button";
+import Btn from "../../atoms/Button";
 
 function menu() {
   const value = "Login";
