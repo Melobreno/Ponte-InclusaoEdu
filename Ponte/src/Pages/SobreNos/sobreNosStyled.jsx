@@ -4,15 +4,20 @@ export const Titulo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 45px;
+  margin-top: 3rem;
   flex-direction: column;
 
   p {
     width: 80%;
     border-top: solid 0.06rem white;
-    padding: 20px;
+    margin-top: 4rem;
   }
 `;
+
+export const Section = styled.section`
+background-color: #F6CF00;
+
+`
 export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -40,6 +45,7 @@ export const Container = styled.div`
     font-size: 1.2rem;
     display: block;
     padding: 10px;
+    margin-bottom: 0;
   }
 `;
 export const Text = styled.div`

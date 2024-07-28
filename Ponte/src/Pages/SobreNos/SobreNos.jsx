@@ -1,8 +1,9 @@
 import * as S from './sobreNosStyled';
-import img from '../img/freepik-export-20240707214031vcp1 2.png';
+import img from '../../assets/maocrianca.svg';
 function SobreNos() {
   return (
     <>
+    <S.Section>
       <S.Titulo>
         <p></p>
         <h1>Sobre nós</h1>
@@ -33,6 +34,7 @@ function SobreNos() {
           <img src={img} alt="Crinça com as mãos levantadas" />
         </div>
       </S.Container>
+    </S.Section>
     </>
   );
 }
