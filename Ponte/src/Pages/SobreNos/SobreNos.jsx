@@ -34,7 +34,7 @@ function SobreNos() {
               </div>
             </div>
           </section>
-          <div>
+          <div className="imagemMaos">
             <img src={maosImg} alt="Crinça com as mãos levantadas" />
           </div>
         </S.Container>

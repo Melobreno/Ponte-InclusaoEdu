@@ -26,10 +26,9 @@ export const Section = styled.section`
 export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-  padding: 1rem;
+  padding: 0 1rem;
   font-size: 1.18rem;
   align-items: center;
-  margin-bottom: 0;
   justify-content: center;
   align-content: center;
   align-items: center;
@@ -54,6 +53,10 @@ export const Container = styled.div`
     display: block;
     padding: 10px;
     margin-bottom: 0;
+  }
+
+  .imagemMaos {
+    margin: -5px;
   }
 `;
 export const Text = styled.div`

@@ -1,6 +1,8 @@
-
 import * as S from "./footerStyle";
-import img from "../../../assets/logoPonte.svg"
+import img from "../../../assets/logoPonte.svg";
+import fb from "../../../assets/social/fb.svg";
+import x from "../../../assets/social/x.svg";
+import insta from "../../../assets/social/instagram.svg";
 
 function Footer() {
   return (
@@ -23,11 +25,20 @@ function Footer() {
           <li>Contato</li>
         </ul>
 
-        <ul>
+        <ul className="social">
           <h2>Siga a Ponte</h2>
-          <li>@ponteintegraedu</li>
-          <li>@ponteintegraedu</li>
-          <li>@ponteintegraedu</li>
+          <li>
+            <img src={insta} alt="" />
+            <p>@ponteintegraedu</p>
+          </li>
+          <li>
+            <img src={x} alt="" />
+            @ponteintegraedu
+          </li>
+          <li>
+            <img src={fb} alt="" />
+            @ponteintegraedu
+          </li>
         </ul>
       </S.Container>
       <S.TextComple>
@@ -36,4 +47,4 @@ function Footer() {
     </>
   );
 }
-export default Footer
+export default Footer;
