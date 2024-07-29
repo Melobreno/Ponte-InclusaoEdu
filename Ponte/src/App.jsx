@@ -1,10 +1,9 @@
-import Funcionalidades from './Pages/Funcionalidades/Funcionalidades'
+import AppRoutes from "./AppRoutes.jsx";
 function App() {
   return (
     <>
-      <Funcionalidades/>
+      <AppRoutes />
     </>
-  )
-};
-
+  );
+}
 export default App;
