@@ -8,7 +8,7 @@ export const Section = styled.section`
   flex-wrap: wrap;
   margin: 0 auto;
   justify-content: space-between;
-  padding: 1.3rem 20%;
+  padding: 1.3rem 10%;
   align-content: center;
   align-items: center;
   gap: 0.8rem;
