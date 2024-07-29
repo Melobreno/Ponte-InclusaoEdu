@@ -1,7 +1,6 @@
 import * as S from "./sobreStyle";
-import imgTyping from "../../../assets/Typing-cuate.svg";
+import imgTyping from "../../../Assets/Typing-cuate.svg";
 import Btn from "../../../Components/atoms/Button";
-// import seta from "../../../assets/triangle.svg";
 
 function SessaoInit() {
   const value = "Saiba Mais";

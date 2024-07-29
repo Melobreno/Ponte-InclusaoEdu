@@ -1,4 +1,4 @@
-import QuestImg from "../../../assets/dudeQuest.svg";
+import QuestImg from "../../../Assets/dudeQuest.svg";
 import DivDireita from "../../molecules/FAQ/divDireita";
 import * as S from "./faqStyle";
 
