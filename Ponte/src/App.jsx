@@ -1,3 +1,4 @@
+
 import SobreNos from "../src/Pages/SobreNos/SobreNos";
 import NavBar from "../src/Components/organisms/NavBar";
 import MainSec from "./Pages/LP-index/Sessão inicial";
@@ -11,6 +12,7 @@ function App() {
       <MainSec />
       <SobreNos />
       {/* <FAQ /> */}
+
     </>
   );
 }
