@@ -1,9 +1,9 @@
+import AppRoutes from "./AppRoutes.jsx";
 function App() {
   return (
     <>
-      <h1>Teste</h1>
+      <AppRoutes />
     </>
   );
 }
-
 export default App;
