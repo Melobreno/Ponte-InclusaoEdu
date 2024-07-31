@@ -1,5 +1,5 @@
 import { FaqSection } from "./faqStyle";
-import imgQuestion from "../../../assets/VectorQuest.svg";
+import imgQuestion from "../../../Assets/VectorQuest.svg";
 
 function divDireita() {
   return (

@@ -1,4 +1,4 @@
-import imgLogo from "../../../assets/logoPonte.svg";
+import imgLogo from "../../../Assets/logoPonte.svg";
 import * as S from "./NavBarStyle.jsx";
 import Menu from "../../molecules/Menu";
 

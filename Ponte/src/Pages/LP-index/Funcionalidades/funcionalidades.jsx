@@ -1,6 +1,6 @@
-import { Titulo, Opcoes, Fundo } from "./FuncionalidadesStyle";
-import imgFun from "../../../assets/img/Funcionalidades.svg";
-import imgMais from "../../../assets/icons/+.svg";
+import { Titulo, Opcoes, Fundo } from "./funcionalidadesStyle";
+import imgFun from "../../../Assets/Funcionalidades.png";
+import imgMais from "../../../Assets/+.svg";
 // import imgFundo from '../../Assets/img/EfeitosFuncion.png';
 
 function Funcionalidades() {

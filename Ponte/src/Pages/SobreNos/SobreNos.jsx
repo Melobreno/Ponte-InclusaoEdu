@@ -1,5 +1,5 @@
 import * as S from "./sobreNosStyled";
-import maosImg from "../../assets/maosMenino.svg";
+import maosImg from "../../Assets/maosMenino.svg";
 
 function SobreNos() {
   return (
