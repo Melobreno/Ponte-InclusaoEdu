@@ -60,3 +60,11 @@ export const TextComple = styled.div`
     font-family: "Montserrat", sans-serif;
   }
 `;
+
+export const Section = styled.section`
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  position: fixed;
+  bottom: 0;
+`;
