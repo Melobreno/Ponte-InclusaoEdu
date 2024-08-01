@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import Btn from "../../atoms/Button";
 import * as S from "./style";
 function Form() {
   const { register, handleSubmit } = useForm();
@@ -72,7 +73,9 @@ function Form() {
             />
           </label>
         </div>
-        <button type="submit">Cadastrar-se</button>
+        <div className="containerBtn">
+          <Btn txt={"Cadastrar-se"} />
+        </div>
       </form>
     </S.FormSection>
   );

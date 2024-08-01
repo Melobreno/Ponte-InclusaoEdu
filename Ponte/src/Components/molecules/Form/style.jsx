@@ -38,12 +38,28 @@ export const FormSection = styled.section`
 
   input {
     margin-top: 7px;
-    height: 30px;
+    height: 1.87rem;
+    width: 20rem;
+    border-radius: 10px;
+    border: 1px solid #25a6ce;
+    padding: 0.2rem;
   }
 
   select {
-    margin-top: 13px;
+    margin-top: 15px;
     height: 30px;
     align-self: center;
+    height: 1.87rem;
+    width: 20rem;
+    border-radius: 10px;
+    border: 1px solid #25a6ce;
+    padding: 0.2rem;
+    outline: none;
+  }
+
+  .containerBtn {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 20%;
   }
 `;
