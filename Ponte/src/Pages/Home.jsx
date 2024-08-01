@@ -5,6 +5,8 @@ import MainSec from "./LP-index/Sessão inicial";
 import Footer from "../Components/molecules/Footer/Footer";
 import Funcionalidades from "../Pages/LP-index/Funcionalidades/funcionalidades";
 import Faq from "../Components/organisms/FAQ";
+import RedifiniSenha from "../Pages/RedefinirSenha/RedefinirSenha";
+import CodigoAtivacao from "./RedefinirSenha/CodigoAtivacao/CodigoAtivacao";
 function Home() {
   return (
     <>
@@ -15,6 +17,8 @@ function Home() {
       <Funcionalidades />
       <Faq />
       <Footer />
+      {/* <RedifiniSenha /> */}
+      {/* <CodigoAtivacao /> */}
     </>
   );
 }
