@@ -5,8 +5,6 @@ export const Container = styled.div`
   justify-content: space-around;
   align-items: center;
   font-family: "Montserrat", sans-serif;
-  /* width: 90rem; */
-  /* height: 10rem; */
   padding: 1rem 20%;
 
   ul {
@@ -59,4 +57,11 @@ export const TextComple = styled.div`
     margin-bottom: 0.2rem;
     font-family: "Montserrat", sans-serif;
   }
+`;
+
+export const Section = styled.section`
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  bottom: 0;
 `;

@@ -6,7 +6,7 @@ import insta from "../../../Assets/instagram.svg";
 
 function Footer() {
   return (
-    <>
+    <S.Section>
       <S.Container>
         <div>
           <img src={img} alt="" />
@@ -44,7 +44,7 @@ function Footer() {
       <S.TextComple>
         <p>Copyright ©️ 2024 Ponte. All Rights Reserved</p>
       </S.TextComple>
-    </>
+    </S.Section>
   );
 }
 export default Footer;

@@ -3,7 +3,7 @@ import { GlobalStyles } from "../src/MainStyles.jsx";
 function App() {
   return (
     <>
-    <GlobalStyles/>
+      <GlobalStyles/>
       <AppRoutes />
     </>
   );
