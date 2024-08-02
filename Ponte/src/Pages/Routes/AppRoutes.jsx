@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "../Pages/Home";
-import CadastroR from "../Components/organisms/CadastroResp";
-import CadastroP from "../Components/organisms/CadastroProf";
+import Home from "../Home";
+import CadastroR from "../../Components/organisms/CadastroResp";
+import CadastroP from "../../Components/organisms/CadastroProf";
 
 function AppRoutes() {
   return (
