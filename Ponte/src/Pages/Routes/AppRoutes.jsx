@@ -4,7 +4,7 @@ import Captacao from "../Captacao";
 import CadastroR from "../../Components/organisms/CadastroResp";
 import CadastroP from "../../Components/organisms/CadastroProf";
 import RedefinirSenha from "../Senhas/RedefinirSenha/RedefenirSenha";
-import CodigoAtivacao from '../../Pages/Senhas/RedefinirSenha/RedefenirSenha'
+import CodigoAtivacao from '../Senhas/CodigoAtivacao/CodigoAtivacao'
 import NovaSenha from "../Senhas/NovaSenha/NovaSenha";
 import Login from "../Login/Login";
 
@@ -12,6 +12,7 @@ function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
+    
         <Route path="/" exat element={<Home />}></Route>
         <Route path="/cadastroResp" element={<CadastroR />}></Route>
         <Route path="/cadastroProf" element={<CadastroP />}></Route>
