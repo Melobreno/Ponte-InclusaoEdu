@@ -4,21 +4,35 @@ export const SobreNos = styled.div`
   display: flex;
   font-family: "Montserrat-Bold", Helvetica;
   padding: 1.3rem 20%;
-  justify-content: space-between;
+  justify-content: start;
+  text-align: start;
   height: 400px;
+  gap: 20px;
 
   .textos {
+    padding-top: 1rem;
+  }
+
+  .textos p {
+    width: 500px;
+    margin: 0;
+    padding: 1rem 0;
+    font-weight: 500;
+    font-size: 1.1rem;
   }
 
   .textos h1 {
-    font-size: 1rem;
-    white-space: nowrap;
+    font-size: 1.4rem;
   }
   .inputs {
-    gap: 10px;
-    padding: 10px;
-    margin-left: 15rem;
+    width: 16rem;
   }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
   .inputs input {
     width: 28rem;
     height: 3rem;
@@ -30,19 +44,17 @@ export const SobreNos = styled.div`
   .bigInput textarea {
     min-height: 0.3rem;
     text-align: start;
-    width: 29rem;
+    width: 28rem;
     border-radius: 0.63rem;
     margin-top: 1.25rem;
     border: 1px solid #000;
   }
 
   .checkbox {
-    margin-top: 1.25rem;
-    max-width: max-content;
+    width: 29rem;
     display: flex;
     flex-direction: column;
-    margin-left: 15.5rem;
-    white-space: nowrap;
+    font-size: 0.8rem;
     gap: 0.5rem;
   }
 

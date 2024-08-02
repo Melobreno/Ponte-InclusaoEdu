@@ -22,7 +22,7 @@ function Captacao() {
           </p>
         </div>
 
-        <div>
+        <div className="container">
           <div class="inputs">
             <input type="text" placeholder="Nome Completo" />
             <input type="email" placeholder="E-mail" />
