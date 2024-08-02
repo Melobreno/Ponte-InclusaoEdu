@@ -1,13 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../Pages/Home";
-import Formu from "../Components/organisms/Form";
+import CadastroR from "../Components/organisms/CadastroResp";
+import CadastroP from "../Components/organisms/CadastroProf";
 
 function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" exat element={<Home />}></Route>
-        <Route path="/Form" element={<Formu />}></Route>
+        <Route path="/CadastroResp" element={<CadastroR />}></Route>
+        <Route path="/CadastroProf" element={<CadastroP />}></Route>
       </Routes>
     </BrowserRouter>
   );

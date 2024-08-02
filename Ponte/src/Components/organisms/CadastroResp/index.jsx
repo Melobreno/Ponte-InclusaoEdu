@@ -3,7 +3,7 @@ import Form from "../../molecules/Form";
 import Footer from "../../molecules/Footer/Footer";
 import { GlobalStyles } from "../../../MainStyles";
 
-function PageForm() {
+function cadastroR() {
   return (
     <>
       <GlobalStyles />
@@ -14,4 +14,4 @@ function PageForm() {
   );
 }
 
-export default PageForm;
+export default cadastroR;
