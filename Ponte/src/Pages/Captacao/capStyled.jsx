@@ -7,23 +7,20 @@ export const SobreNos = styled.div`
   justify-content: space-between;
   height: 400px;
 
-  /* /* .Textos {
+  .textos {
   }
-  .inputs {
-    display: flex;
-    flex-direction: column;
 
-    border-radius: 40px 0px 0px 0px;
-    position: absolute;
-    right: 0;
-    gap: 10px;
-  } */
+  .textos h1 {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
   .inputs {
     gap: 10px;
     padding: 10px;
+    margin-left: 15rem;
   }
   .inputs input {
-    width: 29rem;
+    width: 28rem;
     height: 3rem;
     border-radius: 0.5rem;
     margin-top: 1.25rem;
@@ -44,7 +41,9 @@ export const SobreNos = styled.div`
     max-width: max-content;
     display: flex;
     flex-direction: column;
-    text-align: left;
+    margin-left: 15.5rem;
+    white-space: nowrap;
+    gap: 0.5rem;
   }
 
   .button {
