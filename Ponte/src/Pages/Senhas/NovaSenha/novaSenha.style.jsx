@@ -10,27 +10,27 @@ export const Body = styled.div`
   justify-content: center;
 `;
 export const Circulo = styled.span`
-  border-radius: 800px 0px 0px 800px;
+ border-radius: 50rem 0 0 50rem;
   position: absolute;
   background-color: #fff;
   display: inline-block;
   height: 45rem;
   width: 53rem;
-  top: 20px;
+  top: 1.25rem;
   right: 0;
 `;
 export const Container = styled.div`
   background-color: #25a6ce;
   display: flex;
   justify-content: space-around;
-  gap: 50px;
+  gap: 3.12rem;
   width: 50rem;
   height: 30rem;
-  border-radius: 19px;
+  border-radius: 1.18rem;
   z-index: 0;
-  margin: 0 0 0 40px;
+  margin: 0 0 0 2.5rem;
   img {
-    margin: 0 0 15px 20px;
+    margin: 0 0 1rem 1.25rem;
   }
 `;
 
@@ -38,7 +38,7 @@ export const text = styled.div`
   display: flex;
   text-align: flex-start;
   flex-direction: column;
-  margin-right: 30px;
+  margin-right: 1.8rem;
 
   h1 {
     color: #fff;
@@ -49,8 +49,8 @@ export const text = styled.div`
   }
   input {
     border: none;
-    padding: 10px;
-    border-radius: 6px;
+    padding: 0.62rem;
+    border-radius: 0.37rem;
     outline: none;
   
 
@@ -58,11 +58,11 @@ export const text = styled.div`
   }
 
   button {
-    padding: 10px 30px 12px;
+    padding: 0.62rem 1.8rem 0.75rem;
     border: none;
     width: 40%;
-    margin: 20px;
-    border-radius: 6px;
+    margin: 1.25rem;
+    border-radius:  0.37rem;
     cursor: pointer;
   }
 `;

@@ -1,7 +1,6 @@
 import * as S from "./novaSenha.style";
 import img from "../../../Assets/Vetor.svg";
 import imgEsq from "../../../Assets/padrão 3.svg";
-
 function NovaSenha() {
   return (
     <>

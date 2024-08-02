@@ -1,6 +1,7 @@
 import * as S from "./redefinirSenha.Style";
 import img from "../../../Assets/Vetor.svg";
 import imgEsq from '../../../Assets/padrão 3.svg'
+
 function RedefinirSenha() {
   return (
     <>

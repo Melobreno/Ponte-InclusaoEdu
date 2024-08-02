@@ -10,7 +10,7 @@ export const Body = styled.div`
   justify-content: center;
 `;
 export const Circulo = styled.span`
-  border-radius: 800px 0px 0px 800px;
+ border-radius: 50rem 0 0 50rem;
   position: absolute;
   background-color: #fff;
   display: inline-block;
@@ -26,11 +26,11 @@ export const Container = styled.div`
   gap: 50px;
   width: 50rem;
   height: 30rem;
-  border-radius: 19px;
+  border-radius: 1.18rem;
   z-index: 0;
-  margin: 0 0 0 40px;
+  margin: 0 0 0 2.5rem;
   img {
-    margin: 0 0 15px 20px;
+    margin: 0 0 1rem 1.25rem;
   }
 `;
 
@@ -39,7 +39,7 @@ export const text = styled.div`
   justify-content: space-around;
   text-align: start;
   flex-direction: column;
-  margin-right: 25px;
+  margin-right: 1.5rem;
 
   h1 {
     color: #fff;
@@ -57,10 +57,10 @@ export const text = styled.div`
   }
 
   button {
-    padding: 10px 30px 12px;
+    padding: 0.62rem 1.8rem 0.75rem;
     border: none;
-    margin: 20px;
-    border-radius: 6px;
+    margin: 1.25rem;
+    border-radius: 0.37rem;
     cursor: pointer;
   }
 `;

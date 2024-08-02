@@ -11,7 +11,7 @@ export const Body = styled.div`
   justify-content: center;
 `;
 export const Circulo = styled.span`
-  border-radius: 800px 0px 0px 800px;
+  border-radius: 50rem 0 0 50rem;
   position: absolute;
   background-color: #fff;
   display: inline-block;
@@ -24,14 +24,14 @@ export const Container = styled.div`
   background-color: #25a6ce;
   display: flex;
   justify-content: space-around;
-  gap: 50px;
+  gap: 3.12rem;
   width: 50rem;
   height: 30rem;
-  border-radius: 19px;
+  border-radius: 1.18rem;
   z-index: 0;
-  margin: 0 0 0 40px;
+  margin: 0 0 0 2.5rem;
   img {
-    margin: 0 0 15px 20px;
+    margin: 0 0 1rem 1.25rem;
   }
 `;
 
@@ -51,17 +51,17 @@ export const text = styled.div`
   input {
     border: none;
     width: 90%;
-    padding: 10px;
-    border-radius: 6px;
+    padding: 0.62rem;
+    border-radius: 0.37rem;
     outline: none;
 
   }
 
   button {
-    padding: 10px 30px 12px;
+    padding: 0.62rem 1.8rem 0.75rem;
     border: none;
-    margin: 20px;
-    border-radius: 6px;
+    margin: 1.25rem;
+    border-radius: 0.37rem;
     cursor: pointer;
   }
 `;
@@ -77,7 +77,7 @@ export const ImgElemento = styled.div`
 export const labelInput =styled.div`
 label {
     color: #ffff;
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 `
