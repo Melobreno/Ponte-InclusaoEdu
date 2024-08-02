@@ -2,11 +2,13 @@ import Footer from "../../Components/molecules/Footer/Footer";
 import NavBar from "../../Components/organisms/NavBar/index";
 import Btn from "../../Components/atoms/Button/index";
 import { SobreNos } from "./capStyled";
+import { GlobalStyles } from "../../MainStyles";
 
 function Captacao() {
   const value = "Confirmar";
   return (
     <>
+      <GlobalStyles />
       <NavBar />
 
       <SobreNos>
