@@ -61,5 +61,20 @@ export const FormSection = styled.section`
     display: flex;
     justify-content: center;
     padding: 1rem 20%;
+    padding-bottom: 0;
+  }
+
+  .cadastroResp {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .cadastroResp p {
+    text-decoration: none;
+  }
+  .cadastroResp span {
+    color: #25a6ce;
+    text-decoration: underline;
   }
 `;

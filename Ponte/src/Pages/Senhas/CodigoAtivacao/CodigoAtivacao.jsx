@@ -1,6 +1,6 @@
 import * as S from "./codigoAtivacao.style";
-import img from "../../Assets/Vetor.svg";
-import imgEsq from "../../Assets/padrão 3.svg";
+import img from "../../../Assets/Vetor.svg";
+import imgEsq from "../../../Assets/padrão 3.svg";
 
 function CodigoAtivacao() {
   return (

@@ -4,7 +4,7 @@ import Captacao from "../Pages/Captacao";
 import CadastroR from "../Pages/Cadastro/CadastroResp";
 import CadastroP from "../Pages/Cadastro/CadastroProf";
 import RedefinirSenha from "../Pages/Senhas/RedefinirSenha/RedefenirSenha";
-import CodigoAtivacao from "../Pages/Senhas/CodigoAtivacao";
+import CodigoAtivacao from "../Pages/Senhas/CodigoAtivacao/CodigoAtivacao";
 import NovaSenha from "../Pages/Senhas/NovaSenha/NovaSenha";
 import Login from "../Pages/Login/Login";
 

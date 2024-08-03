@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import Btn from "../../atoms/Button";
 import * as S from "./style";
+import { Link } from "react-router-dom";
 
 function FormP() {
   const { register, handleSubmit } = useForm();
@@ -86,6 +87,12 @@ function FormP() {
         <div className="containerBtn">
           <Btn txt={"Cadastrar-se"} />
         </div>
+        <p className="cadastroResp">
+          Precisa criar um cadastro para Responsável ?{" "}
+          <Link to={"/cadastroResp"}>
+            <span>Clique aqui</span>
+          </Link>
+        </p>
       </form>
     </S.FormSection>
   );
