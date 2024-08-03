@@ -51,8 +51,8 @@ function Captacao() {
             <div>
               <input type="checkbox" name="" id="" />
               <span>
-                Ao selecionar, você está concordando com as políticas de
-                privacidade
+                Ao selecionar, você está concordando com as
+                <span className="politicSpan"> políticas de privacidade</span>
               </span>
             </div>
             <div class="button">

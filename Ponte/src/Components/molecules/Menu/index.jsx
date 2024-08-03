@@ -1,5 +1,6 @@
 import * as S from "./menuStyles";
 import Btn from "../../atoms/Button";
+import { Link } from "react-router-dom";
 
 function menu() {
   const value = "Login";
@@ -15,11 +16,15 @@ function menu() {
         <li>
           <a href="">Contatos</a>
         </li>
-        <Btn txt={value} />
+        <Link to={"/login"}>
+          <Btn txt={value} />
+        </Link>
         <li>
-          <a className="cadastro" href="">
-            Cadastro
-          </a>
+          <Link to={"/cadastroResp"}>
+            <a className="cadastro" href="">
+              Cadastro
+            </a>
+          </Link>
         </li>
       </ul>
     </S.Container>

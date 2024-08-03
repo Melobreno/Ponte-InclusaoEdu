@@ -1,7 +1,8 @@
 import { useForm } from "react-hook-form";
 import Btn from "../../atoms/Button";
 import * as S from "./style";
-function Form() {
+
+function FormP() {
   const { register, handleSubmit } = useForm();
   function onSubmit(userData) {
     console.log(userData);
@@ -90,4 +91,4 @@ function Form() {
   );
 }
 
-export default Form;
+export default FormP;

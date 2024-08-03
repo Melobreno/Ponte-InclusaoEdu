@@ -3,10 +3,10 @@ import styled from "styled-components";
 export const SobreNos = styled.div`
   display: flex;
   font-family: "Montserrat-Bold", Helvetica;
-  padding: 1.3rem 20%;
-  justify-content: start;
+  padding: 1.5rem 20%;
+  justify-content: center;
   text-align: start;
-  height: 400px;
+  height: 36rem;
   gap: 20px;
 
   .textos {
@@ -25,6 +25,7 @@ export const SobreNos = styled.div`
     font-size: 1.4rem;
   }
   .inputs {
+    padding-top: 1rem;
     width: 16rem;
   }
 
@@ -56,6 +57,11 @@ export const SobreNos = styled.div`
     flex-direction: column;
     font-size: 0.8rem;
     gap: 0.5rem;
+  }
+
+  div .politicSpan {
+    color: #25a6ce;
+    text-decoration: underline;
   }
 
   .button {

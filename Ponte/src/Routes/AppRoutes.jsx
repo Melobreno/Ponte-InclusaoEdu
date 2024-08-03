@@ -1,18 +1,18 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "../Home";
-import Captacao from "../Captacao";
-import CadastroR from "../../Components/organisms/CadastroResp";
-import CadastroP from "../../Components/organisms/CadastroProf";
-import RedefinirSenha from "../Senhas/RedefinirSenha/RedefenirSenha";
-import CodigoAtivacao from '../../Pages/Senhas/RedefinirSenha/RedefenirSenha'
-import NovaSenha from "../Senhas/NovaSenha/NovaSenha";
-import Login from "../Login/Login";
+import Home from "../Pages/Home";
+import Captacao from "../Pages/Captacao";
+import CadastroR from "../Pages/Cadastro/CadastroResp";
+import CadastroP from "../Pages/Cadastro/CadastroProf";
+import RedefinirSenha from "../Pages/Senhas/RedefinirSenha/RedefenirSenha";
+import CodigoAtivacao from "../Pages/Senhas/CodigoAtivacao";
+import NovaSenha from "../Pages/Senhas/NovaSenha/NovaSenha";
+import Login from "../Pages/Login/Login";
 
 function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" exat element={<Home />}></Route>
+        <Route path="/" element={<Home />}></Route>
         <Route path="/cadastroResp" element={<CadastroR />}></Route>
         <Route path="/cadastroProf" element={<CadastroP />}></Route>
         <Route path="/captacao" element={<Captacao />}></Route>
@@ -22,7 +22,6 @@ function AppRoutes() {
         <Route path="/login" element={<Login />}></Route>
       </Routes>
     </BrowserRouter>
-
   );
 }
 
