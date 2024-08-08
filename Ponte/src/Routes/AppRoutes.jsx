@@ -7,6 +7,7 @@ import RedefinirSenha from "../Pages/Senhas/RedefinirSenha/RedefenirSenha";
 import CodigoAtivacao from "../Pages/Senhas/CodigoAtivacao/CodigoAtivacao";
 import NovaSenha from "../Pages/Senhas/NovaSenha/NovaSenha";
 import Login from "../Pages/Login/Login";
+import Feed from "../Pages/Feed/index";
 
 function AppRoutes() {
   return (
@@ -20,6 +21,7 @@ function AppRoutes() {
         <Route path="/codigoAtivacao" element={<CodigoAtivacao />}></Route>
         <Route path="/novaSenha" element={<NovaSenha />}></Route>
         <Route path="/login" element={<Login />}></Route>
+        <Route path="/feed" element={<Feed />}></Route>
       </Routes>
     </BrowserRouter>
   );
