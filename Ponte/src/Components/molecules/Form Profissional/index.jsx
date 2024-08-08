@@ -11,7 +11,7 @@ function FormP() {
   return (
     <S.FormSection>
       <form onSubmit={handleSubmit(onSubmit)} className="formContainer">
-        <h1>Cadastro</h1>
+        <h1>Cadastro Para Profissionais</h1>
         <div className="formDiv">
           <label>
             Nome Completo:
