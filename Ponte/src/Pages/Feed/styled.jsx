@@ -1,13 +1,32 @@
 import styled from "styled-components";
+import background from "../../Assets/vetorPreto.png";
 
+export const Imagem = styled.div`
+  background-image: url(${background});
+  background-size: 28rem 13rem;
+  background-position: right;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 120vh;
+`;
 export const Section = styled.div`
-  margin: 7rem 29rem 2rem 10rem;
+  width: 99vw;
+  height: 100vh;
+
+  margin: 7rem 29rem 2rem 20rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: a row;
 
   width: 56.375rem;
   height: 59.875rem;
+  .linhaL {
+    margin: 0 2.25rem 0 2.9rem;
+    width: 0rem;
+    height: 48rem;
+  }
 `;
+
+export const Texto = styled.div``;
 
 export const Escreva = styled.div`
   width: 50rem;
@@ -52,12 +71,13 @@ export const Escreva = styled.div`
   .botao {
     display: flex;
     justify-content: right;
-    margin: 0.63rem 1rem;
+    margin: 0.63rem 1.5rem;
   }
 `;
 
 export const Mensagem = styled.div`
   display: flex;
+
   width: 50rem;
   height: 13.5rem;
   margin-top: 2.18rem;
@@ -85,12 +105,24 @@ export const Mensagem = styled.div`
     font-weight: 400;
   }
   .enviado {
+    display: flex;
     justify-content: space-between;
     padding: 0.88rem;
   }
   .img {
     width: 2.70213rem;
     height: 2.62469rem;
+  }
+  .comentario {
+    display: flex;
+  }
+  .data {
+    font-size: 0.75rem;
+  }
+  .balao {
+    padding-left: 0.5rem;
+    width: 1.8125rem;
+    height: 2.1875rem;
   }
 `;
 
@@ -122,12 +154,71 @@ export const Mensagem2 = styled.div`
   }
   .enviado {
     display: flex;
-    flex-direction: column;
+
     justify-content: space-between;
     padding: 0.88rem;
   }
   .img {
     width: 2.70213rem;
     height: 2.62469rem;
+  }
+  .comentario {
+    display: flex;
+  }
+  .data {
+    font-size: 0.75rem;
+  }
+  .balao {
+    padding-left: 0.5rem;
+    width: 1.8125rem;
+    height: 2.1875rem;
+  }
+`;
+
+export const Atores = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  height: 46rem;
+  img {
+    padding: 0.68rem;
+    display: flex;
+    width: 2.625rem;
+    height: 2.62469rem;
+  }
+
+  .atores {
+    display: flex;
+  }
+
+  .texto {
+    padding: 0.68rem;
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+  }
+  h2 {
+    margin: 0;
+    font-family: "Montserrat", sans-serif, Helvetica;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+  }
+  p {
+    margin: 0;
+    font-family: "Montserrat", sans-serif, Helvetica;
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .vetor {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-top: 20rem;
+  }
+  .vetorPreto {
+    width: 28.25rem;
+    height: 12.375rem;
   }
 `;
