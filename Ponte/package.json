@@ -13,11 +13,7 @@
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-<<<<<<< HEAD
     "react-hook-form": "^7.52.2",
-=======
-    "react-hook-form": "^7.52.1",
->>>>>>> d9089579b86e512a5e34236b6147f24216c3aad9
     "react-router-dom": "^6.25.1",
     "styled-components": "^6.1.12"
   },
@@ -27,11 +23,7 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
-<<<<<<< HEAD
     "eslint": "^8.0.0",
-=======
-    "eslint": "^8.57.0",
->>>>>>> d9089579b86e512a5e34236b6147f24216c3aad9
     "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
