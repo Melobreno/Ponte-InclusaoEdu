@@ -17,9 +17,9 @@ function AppRoutes() {
         <Route path="/cadastroResp" element={<CadastroR />}></Route>
         <Route path="/cadastroProf" element={<CadastroP />}></Route>
         <Route path="/captacao" element={<Captacao />}></Route>
-        <Route path="/redefinirSenha" element={<RedefinirSenha />}></Route>
-        <Route path="/codigoAtivacao" element={<CodigoAtivacao />}></Route>
-        <Route path="/novaSenha" element={<NovaSenha />}></Route>
+        <Route path="/CodigoAtivacao" element={<CodigoAtivacao />}></Route>
+        <Route path="/NovaSenha" element={<NovaSenha />}></Route>
+        <Route path="/RedefinirSenha" element={<RedefinirSenha />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/feed" element={<Feed />}></Route>
       </Routes>

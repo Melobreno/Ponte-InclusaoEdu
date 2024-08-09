@@ -28,7 +28,6 @@ export const Container = styled.div`
     width: 27.8125rem;
     height: 2.9375rem;
     color: #000;
-
     text-align: center;
     font-family: "Montserrat-Bold", Helvetica;
     font-size: 2.5rem;
