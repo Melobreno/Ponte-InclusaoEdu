@@ -3,9 +3,9 @@ import Home from "../Home";
 import Captacao from "../Captacao";
 import CadastroR from "../../Components/organisms/CadastroResp";
 import CadastroP from "../../Components/organisms/CadastroProf";
-import NovaSenha from "../Senhas/NovaSenha/NovaSenha"
-import CodigoAtivacao from "../Senhas/CodigoAtivacao/CodigoAtivacao"
-import RedefinirSenha from "../Senhas/RedefinirSenha/RedefinirSenha"
+import NovaSenha from "../Senhas/NovaSenha/NovaSenha";
+import CodigoAtivacao from "../Senhas/CodigoAtivacao/CodigoAtivacao";
+import RedefinirSenha from "../Senhas/RedefinirSenha/RedefinirSenha";
 import Login from "../Login/Login";
 
 function AppRoutes() {
