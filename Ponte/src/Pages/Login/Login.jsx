@@ -9,7 +9,7 @@ import insta from "../../Assets/instagram.svg";
 import { Link } from "react-router-dom";
 
 function Login() {
-  const value = "Entrar";
+  const value = "Enviar";
   return (
     <>
       <GlobalStyles />
