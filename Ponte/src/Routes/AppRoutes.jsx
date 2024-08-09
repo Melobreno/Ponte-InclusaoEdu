@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "../Home";
-import Captacao from "../Captacao";
-import CadastroR from "../../Components/organisms/CadastroResp";
-import CadastroP from "../../Components/organisms/CadastroProf";
-import NovaSenha from "../Senhas/NovaSenha/NovaSenha";
-import CodigoAtivacao from "../Senhas/CodigoAtivacao/CodigoAtivacao";
-import RedefinirSenha from "../Senhas/RedefinirSenha/RedefinirSenha";
-import Login from "../Login/Login";
+import Home from "../Pages/Home";
+import Captacao from "../Pages/Captacao";
+import CadastroR from "../Components/organisms/CadastroResp";
+import CadastroP from "../Components/organisms/CadastroProf";
+import NovaSenha from "../Pages/Senhas/NovaSenha/NovaSenha";
+import CodigoAtivacao from "../Pages/Senhas/CodigoAtivacao/CodigoAtivacao";
+import RedefinirSenha from "../Pages/Senhas/RedefinirSenha/RedefinirSenha";
+import Login from "../Pages/Login/Login";
 
 function AppRoutes() {
   return (
