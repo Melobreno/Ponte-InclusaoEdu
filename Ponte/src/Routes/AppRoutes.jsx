@@ -3,10 +3,12 @@ import Home from "../Pages/Home";
 import Captacao from "../Pages/Captacao";
 import CadastroR from "../Pages/Cadastro/CadastroResp";
 import CadastroP from "../Pages/Cadastro/CadastroProf";
-import RedefinirSenha from "../Pages/Senhas/RedefinirSenha/RedefenirSenha";
+import RedefinirSenha from "../Pages/Senhas/RedefinirSenha/RedefinirSenha";
 import CodigoAtivacao from "../Pages/Senhas/CodigoAtivacao/CodigoAtivacao";
 import NovaSenha from "../Pages/Senhas/NovaSenha/NovaSenha";
 import Login from "../Pages/Login/Login";
+import Assinatura from "../Pages/Assinatura";
+import ConfirmarCompra from "../Pages/ConfirmarCompra/";
 import Feed from "../Pages/Feed/index";
 import Mapeamento from "../Pages/Mapeamento/index";
 
@@ -18,10 +20,12 @@ function AppRoutes() {
         <Route path="/cadastroResp" element={<CadastroR />}></Route>
         <Route path="/cadastroProf" element={<CadastroP />}></Route>
         <Route path="/captacao" element={<Captacao />}></Route>
-        <Route path="/redefinirSenha" element={<RedefinirSenha />}></Route>
-        <Route path="/codigoAtivacao" element={<CodigoAtivacao />}></Route>
-        <Route path="/novaSenha" element={<NovaSenha />}></Route>
+        <Route path="/CodigoAtivacao" element={<CodigoAtivacao />}></Route>
+        <Route path="/NovaSenha" element={<NovaSenha />}></Route>
+        <Route path="/RedefinirSenha" element={<RedefinirSenha />}></Route>
         <Route path="/login" element={<Login />}></Route>
+        <Route path="/Assinaturas" element={<Assinatura />}></Route>
+        <Route path="/Pagamento" element={<ConfirmarCompra />}></Route>
         <Route path="/feed" element={<Feed />}></Route>
         <Route path="/mapeamento" element={<Mapeamento />}></Route>
       </Routes>
