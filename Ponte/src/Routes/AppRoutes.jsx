@@ -7,6 +7,8 @@ import RedefinirSenha from "../Pages/Senhas/RedefinirSenha/RedefenirSenha";
 import CodigoAtivacao from "../Pages/Senhas/CodigoAtivacao/CodigoAtivacao";
 import NovaSenha from "../Pages/Senhas/NovaSenha/NovaSenha";
 import Login from "../Pages/Login/Login";
+import Assinatura from "../Pages/Assinatura";
+import ConfirmarCompra from "../Pages/ConfirmarCompra/";
 
 function AppRoutes() {
   return (
@@ -20,6 +22,8 @@ function AppRoutes() {
         <Route path="/codigoAtivacao" element={<CodigoAtivacao />}></Route>
         <Route path="/novaSenha" element={<NovaSenha />}></Route>
         <Route path="/login" element={<Login />}></Route>
+        <Route path="/Assinaturas" element={<Assinatura />}></Route>
+        <Route path="/Pagamento" element={<ConfirmarCompra />}></Route>
       </Routes>
     </BrowserRouter>
   );

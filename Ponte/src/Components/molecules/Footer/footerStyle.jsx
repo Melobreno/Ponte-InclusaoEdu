@@ -5,7 +5,7 @@ export const Container = styled.div`
   justify-content: space-around;
   align-items: center;
   font-family: "Montserrat", sans-serif;
-  padding: 1rem 20%;
+  padding: 1rem 20% 0;
 
   ul {
     list-style-type: none;
@@ -54,12 +54,12 @@ export const TextComple = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 0.2rem;
     font-family: "Montserrat", sans-serif;
+    padding: 0;
   }
 `;
 
-export const Section = styled.section`
+export const Section = styled.footer`
   position: relative;
   width: 100%;
   margin: 0 auto;

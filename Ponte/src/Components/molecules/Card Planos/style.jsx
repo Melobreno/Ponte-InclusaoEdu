@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const cardSection = styled.section`
+export const cardSection = styled.div`
   font-family: "Montserrat", sans-serif;
   position: relative;
   border-radius: 10px;

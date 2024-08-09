@@ -1,14 +1,14 @@
-import X from "../../../Assets/X vetor.svg";
 import Btn from "../../atoms/Button";
 import InfoPremium from "../InfoProdutos/infoPremium";
 import InfoBasic from "../InfoProdutos/infoBasic";
 import * as S from "./style";
+import { Link } from "react-router-dom";
 
 function Card({ nomeProp }) {
   const valorAssinatura = nomeProp === "Premium" ? "49,90" : "00,00";
   const titleCard = nomeProp === "Premium" ? "Premium" : "Basic";
   const infoCard = nomeProp === "Premium" ? <InfoPremium /> : <InfoBasic />;
-
+  const toPayment = nomeProp === "Premium" ? "/Pagamento" : "/Pagamento";
   return (
     <>
       <S.cardSection nomeProp={nomeProp}>
@@ -23,7 +23,9 @@ function Card({ nomeProp }) {
 
           <div className="productInfo">{infoCard}</div>
           <div>
-            <Btn txt={"assinar plano"} />
+            <Link to={toPayment}>
+              <Btn txt={"assinar plano"} />
+            </Link>
           </div>
         </div>
       </S.cardSection>
