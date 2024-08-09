@@ -8,6 +8,7 @@ import CodigoAtivacao from "../Pages/Senhas/CodigoAtivacao/CodigoAtivacao";
 import NovaSenha from "../Pages/Senhas/NovaSenha/NovaSenha";
 import Login from "../Pages/Login/Login";
 import Feed from "../Pages/Feed/index";
+import Mapeamento from "../Pages/Mapeamento/index";
 
 function AppRoutes() {
   return (
@@ -22,6 +23,7 @@ function AppRoutes() {
         <Route path="/novaSenha" element={<NovaSenha />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/feed" element={<Feed />}></Route>
+        <Route path="/mapeamento" element={<Mapeamento />}></Route>
       </Routes>
     </BrowserRouter>
   );
