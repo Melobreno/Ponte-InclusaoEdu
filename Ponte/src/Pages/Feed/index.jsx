@@ -7,18 +7,20 @@ import {
   Mensagem,
   Mensagem2,
   Atores,
-} from "./styled";
+} from "./styles";
 import img from "../../Assets/Avatar 1.svg";
 import img2 from "../../Assets/avatar2.svg";
 import img3 from "../../Assets/avatar3.svg";
 // import vetor from "../../Assets/vetorPreto.png";
 import balao from "../../Assets/comentario.svg";
 import Btn from "../../Components/atoms/Button/index";
+import Pesquisa from "../../Components/molecules/BarraPesquisa";
 function Feed() {
   const value = "Enviar";
   return (
     <>
       <GlobalStyles />
+      <Pesquisa />
       <Imagem>
         <Section>
           <Texto>

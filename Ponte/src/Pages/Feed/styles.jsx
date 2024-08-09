@@ -10,15 +10,12 @@ export const Imagem = styled.div`
   height: 120vh;
 `;
 export const Section = styled.div`
-  width: 99vw;
-  height: 100vh;
+  padding: 1.3rem 20%;
 
-  margin: 7rem 29rem 2rem 20rem;
+  /* margin: 7rem 29rem 2rem 20rem; */
   display: flex;
-  flex-direction: a row;
+  flex-direction: row;
 
-  width: 56.375rem;
-  height: 59.875rem;
   .linhaL {
     margin: 0 2.25rem 0 2.9rem;
     width: 0rem;
