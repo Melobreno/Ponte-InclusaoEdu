@@ -1,5 +1,5 @@
-import * as S from "./docuemntacao.style";
-import SaidDocumentacao from "../../Components/organisms/SaidBarDocument/SaidDocumentacao";
+import * as S from "./documentacao.style";
+import SaidDocumentacao from "../../Components/organisms/SideBarDocument/SideDocumentacao";
 import Pesquisa from "../../Components/molecules/BarraPesquisa/index";
 function Documentacao() {
   return (
