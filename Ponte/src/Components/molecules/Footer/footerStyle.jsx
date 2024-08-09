@@ -60,8 +60,8 @@ export const TextComple = styled.div`
 `;
 
 export const Section = styled.section`
+  position: relative;
   width: 100%;
-  justify-content: center;
   margin: 0 auto;
   bottom: 0;
 `;

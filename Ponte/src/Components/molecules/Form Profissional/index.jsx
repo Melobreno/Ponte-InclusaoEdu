@@ -1,7 +1,9 @@
 import { useForm } from "react-hook-form";
 import Btn from "../../atoms/Button";
 import * as S from "./style";
-function Form() {
+import { Link } from "react-router-dom";
+
+function FormP() {
   const { register, handleSubmit } = useForm();
   function onSubmit(userData) {
     console.log(userData);
@@ -61,6 +63,15 @@ function Form() {
             <option value="Outro">Outro</option>
           </select>
           <label>
+            Nº de cadastro do Profissional:
+            <input
+              type="text"
+              id="inputCadastro"
+              {...register("Cadastro Prof")}
+            />
+          </label>
+
+          <label>
             Crie uma Senha:
             <input type="text" id="inputSenha" {...register("CrieSenha")} />
           </label>
@@ -76,9 +87,15 @@ function Form() {
         <div className="containerBtn">
           <Btn txt={"Cadastrar-se"} />
         </div>
+        <p className="cadastroResp">
+          Precisa criar um cadastro para Responsável ?{" "}
+          <Link to={"/cadastroResp"}>
+            <span>Clique aqui</span>
+          </Link>
+        </p>
       </form>
     </S.FormSection>
   );
 }
 
-export default Form;
+export default FormP;
