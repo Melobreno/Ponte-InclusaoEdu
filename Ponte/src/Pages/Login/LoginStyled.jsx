@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
 export const Section = styled.div`
+  font-family: "Montserrat", Helvetica;
   display: flex;
+  max-height: 100vh;
+  justify-content: center;
+  gap: 200px;
 `;
 
 export const Fundo = styled.div`
@@ -21,15 +25,13 @@ export const Container = styled.div`
   display: inline-block;
   width: 27.8125rem;
   height: 44.4375rem;
-  margin: 5rem 12rem 12rem 9rem;
-  /* margin: auto; */
+  margin: 5rem 21rem 12rem 4rem;
 
   h1 {
     width: 27.8125rem;
     height: 2.9375rem;
     color: #000;
     text-align: center;
-    font-family: "Montserrat-Bold", Helvetica;
     font-size: 2.5rem;
     font-style: normal;
     font-weight: 600;
@@ -54,9 +56,7 @@ export const Container = styled.div`
     color: #000;
     text-align: left;
     margin: 0.94rem 0 0.3rem 3.31rem;
-    font-family: "Montserrat-Bold", Helvetica;
     font-size: 0.8125rem;
-
     font-weight: 500;
   }
 
@@ -70,7 +70,6 @@ export const Container = styled.div`
     text-decoration: none;
     justify-content: right;
     margin: 0.3rem 3.31rem 0 0;
-    font-family: "Montserrat-Bold", Helvetica;
     font-size: 0.8125rem;
     transition: transform 0.2s ease-in-out;
   }
@@ -79,13 +78,11 @@ export const Container = styled.div`
     transform: scale(1.02);
   }
   .cadastre {
-    font-family: "Montserrat-Bold", Helvetica;
     font-size: 0.8125rem;
     font-weight: 500;
   }
 
   .cadastre a {
-    font-family: "Montserrat-Bold", Helvetica;
     font-size: 0.8125rem;
     font-weight: 500;
     transition: transform 0.2s ease-in-out;
@@ -100,30 +97,6 @@ export const Container = styled.div`
     height: 2.4rem;
     border-radius: 0.625rem;
     border: 0.125rem solid #25a6ce;
-
     background: #fff;
   }
-  ul {
-    margin: 3rem 9rem;
-    justify-content: space-between;
-    display: flex;
-
-    list-style-type: none;
-    width: 9.8125rem;
-    height: 2.3125rem;
-    padding: 0;
-  }
-
-  .social li img {
-    width: 2.3125rem;
-    height: 2.3125rem;
-    padding: 0;
-    margin: 0;
-  }
 `;
-
-// export const Btn = styled.div`
-//   background-color: #000000;
-//   width: 14.26094rem;
-//   height: 2.87819rem;
-// `;

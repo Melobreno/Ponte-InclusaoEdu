@@ -23,8 +23,6 @@ export const Section = styled.div`
   }
 `;
 
-export const Texto = styled.div``;
-
 export const Escreva = styled.div`
   width: 50rem;
   height: 13.5rem;

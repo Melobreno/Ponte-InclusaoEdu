@@ -1,18 +1,13 @@
-import { GlobalStyles } from "../../MainStyles";
 import { Imagem, Container, Section, Fundo } from "./LoginStyled";
 import imgLogin from "../../Assets/tabletLogin.svg";
 import logo from "../../Assets/logoPonte.svg";
 import Btn from "../../Components/atoms/Button/index";
-import fb from "../../Assets/fb.svg";
-import x from "../../Assets/x.svg";
-import insta from "../../Assets/instagram.svg";
 import { Link } from "react-router-dom";
 
 function Login() {
   const value = "Entrar";
   return (
     <>
-      <GlobalStyles />
       <Section>
         <Fundo>
           <Imagem>
@@ -47,17 +42,6 @@ function Login() {
                 <a href="">Cadasatre-se</a>
               </Link>
             </div>
-            <ul className="social">
-              <li>
-                <img src={insta} alt="" />
-              </li>
-              <li>
-                <img src={fb} alt="" />
-              </li>
-              <li>
-                <img src={x} alt="" />
-              </li>
-            </ul>
           </div>
         </Container>
       </Section>

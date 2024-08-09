@@ -20,13 +20,13 @@ export const Section = styled.section`
   .button {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     padding-bottom: 1.4rem;
   }
 
   .button button {
-    width: 190px;
-    height: 45px;
+    width: 180px;
+    height: 40px;
     font-size: 1.4rem;
     font-weight: 700;
   }
