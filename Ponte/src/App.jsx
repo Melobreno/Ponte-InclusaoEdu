@@ -5,9 +5,14 @@ import SaidDocumentacao from "../src/Components/molecules/SaidBarDocument/SaidDo
 function App() {
   return (
     <>
+<<<<<<< HEAD
       <GlobalStyles />
       {/* <AppRoutes /> */}
       <SaidDocumentacao />
+=======
+      <GlobalStyles/>
+      <AppRoutes />
+>>>>>>> d9089579b86e512a5e34236b6147f24216c3aad9
     </>
   );
 }
