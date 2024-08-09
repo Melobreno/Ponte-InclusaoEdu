@@ -1,16 +1,14 @@
 import Footer from "../../Components/molecules/Footer/Footer";
 import NavBar from "../../Components/organisms/NavBar/index";
 import Btn from "../../Components/atoms/Button/index";
+import { Link } from "react-router-dom";
 import { SobreNos } from "./capStyled";
-import { GlobalStyles } from "../../MainStyles";
 
 function Captacao() {
   const value = "Confirmar";
   return (
     <>
-      <GlobalStyles />
       <NavBar />
-
       <SobreNos>
         <div class="textos">
           <h1>COMO POSSO COMEÇAR USAR A PONTE ?</h1>
@@ -56,7 +54,9 @@ function Captacao() {
               </span>
             </div>
             <div class="button">
-              <Btn txt={value} />
+              <Link to={"/Assinaturas"}>
+                <Btn txt={value} />
+              </Link>
             </div>
           </div>
         </div>
