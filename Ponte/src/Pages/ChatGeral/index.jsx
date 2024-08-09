@@ -24,41 +24,36 @@ function Chat() {
           </div>
 
           <div className="conversa">
-            <div className="priscila">
+            <div className="bot">
               <img src={img2} alt="" className="avatar" />
 
               <div className="texto">
-                <h1>Priscila Silva</h1>
+                <h1 className="titleCv">
+                  Priscila Silva
+                  <span>15:05</span>
+                </h1>
                 <p>Sim, será ótimo</p>
               </div>
-              <div className="hora">
-                <p>15:05</p>
+            </div>
+
+            <div className="bot">
+              <img src={img} alt="" className="avatar" />
+              <div className="texto">
+                <h1 className="titleCv">
+                  Lucas Melo <span>17:36</span>
+                </h1>
+                <p>Tudo bem!</p>
               </div>
             </div>
 
-            <div className="conversa">
-              <div className="lucas">
-                <img src={img} alt="" className="avatar" />
-                <div className="texto">
-                  <h1>Lucas Melo</h1>
-                  <p>Tudo bem!</p>
-                </div>
-                <div className="hora">
-                  <p>17:36</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="conversa">
-              <div className="erick">
-                <img src={img3} alt="" className="avatar" />
-                <div className="texto">
-                  <h1>Erick Oliveira</h1>
-                  <p>Certo, aguardo resposta.</p>
-                </div>
-                <div className="hora">
-                  <p>17:36</p>
-                </div>
+            <div className="bot">
+              <img src={img3} alt="" className="avatar" />
+              <div className="texto">
+                <h1 className="titleCv">
+                  Erick Oliveira
+                  <span>17:36</span>
+                </h1>
+                <p>Certo, aguardo resposta.</p>
               </div>
             </div>
           </div>

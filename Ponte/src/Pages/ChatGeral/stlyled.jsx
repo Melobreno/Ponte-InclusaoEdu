@@ -4,12 +4,16 @@ export const Section = styled.div`
   display: flex;
   padding: 1.5rem 20%;
   .menuLateral {
-    background-color: aqua;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1.5rem;
-    padding: 2rem;
+    padding: 0 2.5rem 0 0;
+  }
+  .menuLateral img {
+    background-color: #25a6ce;
+    padding: 10px;
+    border-radius: 10px;
   }
   img {
     width: 1.5rem;
@@ -31,7 +35,7 @@ export const Section = styled.div`
     background-color: #a1c35e;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     padding: 0.95rem;
   }
 
@@ -54,29 +58,22 @@ export const Section = styled.div`
     height: 3.875rem;
   }
 
-  .priscila {
+  .titleCv {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .bot {
     display: flex;
     width: 18.6875rem;
     height: 6.0625rem;
     padding: 10px;
     /* justify-content: space-between; */
   }
-  .lucas {
-    display: flex;
-    width: 18.6875rem;
-    height: 6.0625rem;
-    /* justify-content: space-between; */
-  }
-  .erick {
-    display: flex;
-    width: 18.6875rem;
-    height: 6.0625rem;
-    /* justify-content: space-between; */
-  }
   .texto {
     display: flex;
     flex-direction: column;
-
+    width: 21rem;
     padding-left: 1rem;
   }
 `;
