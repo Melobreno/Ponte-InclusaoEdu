@@ -1,36 +1,17 @@
 import * as S from "./novaSenha.style";
-import img from "../../../Assets/Vetor.svg";
-import imgEsq from "../../../Assets/padrão 3.svg";
+import CirculoImg from "../../../Components/molecules/imgCir/imgCir";
+import ElementoSenha from "../../../Components/molecules/ElementoSenha/ElementoSenha";
+import { useState } from "react";
+
 function NovaSenha() {
+  const [mostraDoisInputs] = useState(true);
+  const value = "Digite sua senha";
   return (
     <>
-      <S.Body>
-        <S.ImgElemento>
-          {" "}
-          <img src={imgEsq} alt="" />
-        </S.ImgElemento>
-
-        <S.Circulo />
-        <S.Container>
-          <div>
-            <img src={img} alt="" />
-          </div>
-          <S.text>
-            <div>
-              <h1>Redefinir senha</h1>
-              <p>
-                Digite o seu e-mail no campo abaixo e lhe enviaremos um código
-                de ativação para redefinição de senha.
-              </p>
-            </div>
-            <S.Inputs>
-              <input type="text" placeholder="Nova senha" />
-              <input type="text" placeholder="Repita a nova senha" />
-              <button>Enviar</button>
-            </S.Inputs>
-          </S.text>
-        </S.Container>
-      </S.Body>
+      <S.Container>
+        <CirculoImg />
+        <ElementoSenha exibirInput={mostraDoisInputs} placeholder={value} />
+      </S.Container>
     </>
   );
 }

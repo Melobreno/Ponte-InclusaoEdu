@@ -36,7 +36,9 @@ function Login() {
               </a>
             </Link>
             <div className="botao">
-              <Btn txt={value} />
+              <Link to={"/feed"}>
+                <Btn txt={value} />
+              </Link>
             </div>
 
             <div className="cadastre">
