@@ -1,45 +1,66 @@
 import styled from "styled-components";
 
 export const Bloco = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  width: 65vw;
   font-family: "Montserrat", sans-serif;
+
+  .tituloh2 {
+    text-align: start;
+    margin-left: 50px;
+  }
 `;
 export const Arquivos = styled.div`
   display: flex;
-  gap: 20px;
-  margin-left: 50px;
+  flex-direction: row;
+  max-width: 100%;
+  gap: 30px;
+  justify-content: space-evenly;
+
   div {
-    width: 350px;
-    height: 80px;
+    width: 250px;
+    height: 220px;
     border-radius: 10px;
-    border: solid 2px #848484;
+    border: solid 2px #000000;
+  }
+
+  .containerFunc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .containerFunc img {
+    width: 30px;
+    background-color: #f4c500;
+    padding: 5px;
+    border-radius: 10px;
   }
 `;
 
 export const Arquivos1 = styled.div`
+  max-width: fit-content;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   margin-left: 50px;
-  div {
-    width: 100%;
+  .containerArquivos {
+    width: 54vw;
     height: 80px;
+    margin-left: 50px;
     border-radius: 10px;
-    border: solid 2px #848484;
-    p {
-    }
+    border: solid 2px #000000;
+    display: flex;
+    align-items: center;
+  }
+  .containerArquivos p {
+    padding: 0 10px;
+    width: 100%;
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
   }
 `;
 export const Container = styled.div`
   display: flex;
   text-align: center;
-`;
-export const Text = styled.div`
-  h3 {
-    display: flex;
-    align-items: flex-start;
-    margin-left: 50px;
-  }
 `;

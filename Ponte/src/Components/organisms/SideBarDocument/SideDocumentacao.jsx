@@ -4,6 +4,8 @@ import iconDoc from "../../../Assets/iconDoc.svg";
 import iconFolder from "../../../Assets/iconFolder.svg";
 import iconStar from "../../../Assets/iconStar.svg";
 import iconArrrow from "../../../Assets/arrow.svg";
+import iconConfig from "../../../Assets/iconConfig.svg";
+import iconSair from "../../../Assets/iconSair.svg";
 
 function SideDocumentacao() {
   return (
@@ -15,7 +17,7 @@ function SideDocumentacao() {
         </S.TextAvata>
         <hr />
         <S.Texto>
-          <ul className="listOpt">
+          <ul>
             <li>
               <span>
                 <img src={iconStar} alt="" />
@@ -81,6 +83,21 @@ function SideDocumentacao() {
                 teste 4
               </li>
             </ul>
+          </ul>
+
+          <ul className="listOpt">
+            <li>
+              <span>
+                <img src={iconConfig} alt="" />
+              </span>
+              Configurações
+            </li>
+            <li>
+              <span>
+                <img src={iconSair} alt="" />
+              </span>
+              Sair
+            </li>
           </ul>
         </S.Texto>
       </S.Container>

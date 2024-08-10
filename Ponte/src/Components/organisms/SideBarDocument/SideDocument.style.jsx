@@ -42,4 +42,8 @@ export const Texto = styled.div`
   .arquivos img {
     width: 15px;
   }
+
+  .listOpt {
+    margin-top: 130px;
+  }
 `;
