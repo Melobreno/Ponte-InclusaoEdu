@@ -19,9 +19,16 @@ export const Section = styled.section`
 
   .button {
     display: flex;
-    padding: 0.1rem 40%;
     align-items: center;
     justify-content: center;
+    padding-bottom: 1.4rem;
+  }
+
+  .button button {
+    width: 190px;
+    height: 45px;
+    font-size: 1.4rem;
+    font-weight: 700;
   }
 `;
 
