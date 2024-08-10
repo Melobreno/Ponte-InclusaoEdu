@@ -9,6 +9,8 @@ import NovaSenha from "../Pages/Senhas/NovaSenha/NovaSenha";
 import Login from "../Pages/Login/Login";
 import Feed from "../Pages/Feed/index";
 import Documentacao from "../Pages/Documentacao/Documentacao";
+import AtividadeProf from "../Pages/Atividade/AtividadeProf";
+import AtividadeResp from "../Pages/Atividade/AtividadeResp";
 
 function AppRoutes() {
   return (
@@ -24,6 +26,8 @@ function AppRoutes() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/feed" element={<Feed />}></Route>
         <Route path="/Doc" element={<Documentacao />}></Route>
+        <Route path="/Atividades" element={<AtividadeProf />}></Route>
+        <Route path="/AtividadeResp" element={<AtividadeResp />}></Route>
       </Routes>
     </BrowserRouter>
   );

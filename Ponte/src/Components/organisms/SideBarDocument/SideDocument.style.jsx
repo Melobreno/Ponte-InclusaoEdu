@@ -26,6 +26,10 @@ export const Texto = styled.div`
     font-size: 16px;
   }
 
+  .lapis img {
+    width: 25px;
+  }
+
   li img {
     width: 20px;
   }

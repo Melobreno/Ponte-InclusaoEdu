@@ -2,6 +2,7 @@ import img from "../../../Assets/Group.svg";
 import * as S from "./SideDocument.style";
 import iconDoc from "../../../Assets/iconDoc.svg";
 import iconFolder from "../../../Assets/iconFolder.svg";
+import lapis from "../../../Assets/lapis.svg";
 import iconStar from "../../../Assets/iconStar.svg";
 import iconArrrow from "../../../Assets/arrow.svg";
 import iconConfig from "../../../Assets/iconConfig.svg";
@@ -25,17 +26,18 @@ function SideDocumentacao() {
               Favoritos
             </li>
             <li>
+              <span className="lapis">
+                <img src={lapis} alt="" />
+              </span>
+              Atividades
+            </li>
+            <li>
               <span>
                 <img src={iconDoc} alt="" />
               </span>
               Documentos
             </li>
-            <li>
-              <span>
-                <img src={iconFolder} alt="" />
-              </span>
-              Pasta de documentos
-            </li>
+
             <ul>
               <li>
                 <span className="iconArrowOpen">
@@ -68,19 +70,19 @@ function SideDocumentacao() {
                 <span className="iconArrowClosed">
                   <img src={iconArrrow} alt="" />
                 </span>
-                teste 2
+                Nutricionista
               </li>
               <li>
                 <span className="iconArrowClosed">
                   <img src={iconArrrow} alt="" />
                 </span>
-                teste 3
+                Psicomotricista
               </li>
               <li>
                 <span className="iconArrowClosed">
                   <img src={iconArrrow} alt="" />
                 </span>
-                teste 4
+                Terapeuta Ocupacional
               </li>
             </ul>
           </ul>
