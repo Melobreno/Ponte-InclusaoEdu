@@ -1,8 +1,7 @@
 import img from "../../../Assets/logoPonte.svg";
-import Entrada from "../../atoms/Input/index";
 import Btn from "../../atoms/Button/index/";
 import * as S from "./elementoSenha.style";
-function ElementoSenha() {
+function ElementoSenha({ exibirInput, placeholderNova, placeholderRep }) {
   const value = "Entrar";
   return (
     <>
@@ -15,7 +14,10 @@ function ElementoSenha() {
             ativação para redefinição de senha.
           </p>
         </S.texto>
-        <Entrada />
+        <S.inputs>
+          {exibirInput && <input type="text" placeholder={placeholderNova} />}
+          <input type="text" placeholder={placeholderRep} />
+        </S.inputs>
         <Btn txt={value} />
       </S.Container>
     </>
