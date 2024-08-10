@@ -10,11 +10,11 @@ import Login from "../Pages/Login/Login";
 import Assinatura from "../Pages/Assinatura";
 import ConfirmarCompra from "../Pages/ConfirmarCompra/";
 import Feed from "../Pages/Feed/index";
+import Chat from "../Pages/ChatGeral";
 import Documentacao from "../Pages/Documentacao/Documentacao";
 import AtividadeProf from "../Pages/Atividade/AtividadeProf";
 import AtividadeResp from "../Pages/Atividade/AtividadeResp";
 import Mapeamento from "../Pages/Mapeamento/index";
-
 
 function AppRoutes() {
   return (
@@ -31,6 +31,7 @@ function AppRoutes() {
         <Route path="/Assinaturas" element={<Assinatura />}></Route>
         <Route path="/Pagamento" element={<ConfirmarCompra />}></Route>
         <Route path="/feed" element={<Feed />}></Route>
+        <Route path="/chat" element={<Chat />}></Route>
         <Route path="/Doc" element={<Documentacao />}></Route>
         <Route path="/Atividades" element={<AtividadeProf />}></Route>
         <Route path="/AtividadeResp" element={<AtividadeResp />}></Route>
