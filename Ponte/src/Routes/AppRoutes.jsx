@@ -3,14 +3,13 @@ import Home from "../Pages/Home";
 import Captacao from "../Pages/Captacao";
 import CadastroR from "../Pages/Cadastro/CadastroResp";
 import CadastroP from "../Pages/Cadastro/CadastroProf";
-import RedefinirSenha from "../Pages/Senhas/RedefinirSenha/RedefenirSenha";
+import RedefinirSenha from "../Pages/Senhas/RedefinirSenha/RedefinirSenha";
 import CodigoAtivacao from "../Pages/Senhas/CodigoAtivacao/CodigoAtivacao";
 import NovaSenha from "../Pages/Senhas/NovaSenha/NovaSenha";
 import Login from "../Pages/Login/Login";
 import Assinatura from "../Pages/Assinatura";
 import ConfirmarCompra from "../Pages/ConfirmarCompra/";
 import Feed from "../Pages/Feed/index";
-
 
 function AppRoutes() {
   return (
