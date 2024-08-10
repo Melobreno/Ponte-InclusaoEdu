@@ -10,6 +10,7 @@ import Login from "../Pages/Login/Login";
 import Assinatura from "../Pages/Assinatura";
 import ConfirmarCompra from "../Pages/ConfirmarCompra/";
 import Feed from "../Pages/Feed/index";
+import Mapeamento from "../Pages/Mapeamento/index";
 
 function AppRoutes() {
   return (
@@ -26,6 +27,7 @@ function AppRoutes() {
         <Route path="/Assinaturas" element={<Assinatura />}></Route>
         <Route path="/Pagamento" element={<ConfirmarCompra />}></Route>
         <Route path="/feed" element={<Feed />}></Route>
+        <Route path="/mapeamento" element={<Mapeamento />}></Route>
       </Routes>
     </BrowserRouter>
   );
