@@ -5,7 +5,7 @@ import Btn from "../../Components/atoms/Button/index";
 import { Link } from "react-router-dom";
 
 function Login() {
-  const value = "Entrar";
+  const value = "Enviar";
   return (
     <>
       <Section>

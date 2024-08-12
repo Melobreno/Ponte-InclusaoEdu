@@ -44,7 +44,7 @@ export const Map = styled.div`
     width: 40rem;
     border: 1px solid gray;
     border-radius: 20px;
-    margin-top: 1rem;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
 
@@ -55,7 +55,7 @@ export const Map = styled.div`
     width: 40rem;
     border: 1px solid gray;
     border-radius: 20px;
-    margin-top: 1rem;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
 
@@ -64,24 +64,28 @@ export const Map = styled.div`
 
   .container1 {
     display: flex;
-    width: 14rem;
-    height: 24rem;
+    width: 12rem;
+    height: 28rem;
     border: 1.5px solid gray;
     flex-direction: column;
     border-radius: 20px;
-    margin: 3rem;
+    margin-top: 4rem;
+    margin-left: 1rem;
     font-family: "montserrat";
+    padding: 0.4rem;
+    margin-left: 1rem;
   }
 
   .input {
     display: flex;
     padding: 0.5rem;
     margin: 0.3rem;
+    margin-left: 1rem;
   }
 
   .texto {
     display: flex;
-    margin-left: 1rem;
+    margin-left: 1.5rem;
   }
 
   .info1 .dados {
@@ -90,6 +94,20 @@ export const Map = styled.div`
     margin-top: 2rem;
     margin-left: 3rem;
   }
+
+  .card {
+    justify-content: center;
+    align-items: center;
+    height: 42rem;
+    width: 40rem;
+  }
+
+  .container1 .button {
+    padding: 0.8rem;
+    text-align: center;
+  }
 `;
 export const Foto1 = styled.div``;
 export const Foto2 = styled.div``;
+export const Barra = styled.div``;
+export const Button = styled.div``;

@@ -9,8 +9,18 @@ export const Container = styled.div`
 `;
 
 export const texto = styled.div`
-  margin-bottom: 20px;
   text-align: start;
-  width: 100%;
-  height: 100%;
+  width: 65%;
+`;
+export const inputs = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  input {
+    width: 20rem;
+    height: 2rem;
+    border-radius: 0.6rem;
+    border: 0.125rem solid #25a6ce;
+    outline: none;
+  }
 `;
