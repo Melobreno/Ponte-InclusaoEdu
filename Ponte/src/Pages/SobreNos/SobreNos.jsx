@@ -4,7 +4,7 @@ import maosImg from "../../Assets/maosMenino.svg";
 function SobreNos() {
   return (
     <>
-      <S.Section>
+      <S.Section id="sobre">
         <S.Titulo>
           <p></p>
           <h1>Sobre nós</h1>

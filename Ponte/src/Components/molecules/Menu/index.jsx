@@ -8,13 +8,13 @@ function menu() {
     <S.Container>
       <ul>
         <li>
-          <a href="">Sobre nós</a>
+          <a href="#sobre">Sobre nós</a>
         </li>
         <li>
-          <a href="">Funcionalidades</a>
+          <a href="#funcionalidade">Funcionalidades</a>
         </li>
         <li>
-          <a href="">Contatos</a>
+          <a href="#contato">Contatos</a>
         </li>
         <Link to={"/login"}>
           <Btn txt={value} />

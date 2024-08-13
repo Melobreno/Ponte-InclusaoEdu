@@ -1,11 +1,10 @@
 import { Titulo, Opcoes, Fundo } from "./funcionalidadesStyle";
 import imgFun from "../../../Assets/Funcionalidades.png";
 import imgMais from "../../../Assets/+.svg";
-// import imgFundo from '../../Assets/img/EfeitosFuncion.png';
 
 function Funcionalidades() {
   return (
-    <section>
+    <section id="funcionalidade">
       <Fundo>
         <Titulo>
           <h1>FUNCIONALIDADES</h1>
@@ -22,7 +21,7 @@ function Funcionalidades() {
                   </summary>
 
                   <p>
-                    A nossa ferramenta vai permitir que a comunicação entre os
+                    A nossa ferramenta permite que a comunicação entre os
                     profissionais e os responsáveis aconteça de forma organizada
                     e simplicifada.
                   </p>
