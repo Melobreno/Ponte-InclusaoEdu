@@ -15,6 +15,7 @@ import Documentacao from "../Pages/Documentacao/Documentacao";
 import AtividadeProf from "../Pages/Atividade/AtividadeProf";
 import AtividadeResp from "../Pages/Atividade/AtividadeResp";
 import Mapeamento from "../Pages/Mapeamento/index";
+import CadastroRes from "../Pages/Cadastro/CadastroResumido";
 
 function AppRoutes() {
   return (
@@ -36,6 +37,8 @@ function AppRoutes() {
         <Route path="/Atividades" element={<AtividadeProf />}></Route>
         <Route path="/AtividadeResp" element={<AtividadeResp />}></Route>
         <Route path="/mapeamento" element={<Mapeamento />}></Route>
+        <Route path="/cadas" element={<CadastroRes />}></Route>{" "}
+        {/* Chamando o Formulário resumido *APAGAR* */}
       </Routes>
     </BrowserRouter>
   );

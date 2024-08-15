@@ -2,10 +2,12 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   font-family: "Montserrat", sans-serif;
-  padding: 1rem 20% 0;
+  margin: 0 auto;
+  gap: 40px;
+  width: 100vw;
 
   ul {
     list-style-type: none;

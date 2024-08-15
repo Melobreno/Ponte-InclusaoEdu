@@ -20,7 +20,7 @@ function Login() {
             <img src={logo} alt="Imagem Logo" />
           </Link>
           <h1>Bem-vindo!</h1>
-          <div className="loginContainer">
+          <form className="loginContainer">
             <p>Digite seu e-mail:</p>
             <input type="email" name="" id="" />
             <p>Digite sua senha:</p>
@@ -42,7 +42,7 @@ function Login() {
                 <a href="">Cadasatre-se</a>
               </Link>
             </div>
-          </div>
+          </form>
         </Container>
       </Section>
     </>
