@@ -16,6 +16,8 @@ import AtividadeProf from "../Pages/Atividade/AtividadeProf";
 import AtividadeResp from "../Pages/Atividade/AtividadeResp";
 import Mapeamento from "../Pages/Mapeamento/index";
 
+import Posts from "../Pages/Feed/posts";
+
 function AppRoutes() {
   return (
     <BrowserRouter>
@@ -36,6 +38,8 @@ function AppRoutes() {
         <Route path="/Atividades" element={<AtividadeProf />}></Route>
         <Route path="/AtividadeResp" element={<AtividadeResp />}></Route>
         <Route path="/mapeamento" element={<Mapeamento />}></Route>
+
+        <Route path="/posts" element={<Posts />}></Route>
       </Routes>
     </BrowserRouter>
   );
