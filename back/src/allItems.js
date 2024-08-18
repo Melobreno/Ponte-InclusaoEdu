@@ -1,4 +1,3 @@
-allItems;
 const connection = require("./connection");
 
 const getItems = async () => {

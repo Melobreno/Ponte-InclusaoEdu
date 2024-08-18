@@ -90,15 +90,21 @@ export const Mensagem = styled.div`
     height: 7rem;
     margin-top: 0.4rem;
     margin-left: 0.71rem;
+    justify-content: space-around;
+  }
+  .conteudo p {
+    width: 45.0625rem;
+    height: 6.5rem;
+    margin: 0;
   }
 
   h1 {
     font-size: 1rem;
     font-weight: 700;
   }
-  p {
+  .comentario p {
     text-align: left;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 400;
   }
   .enviado {
@@ -112,6 +118,7 @@ export const Mensagem = styled.div`
   }
   .comentario {
     display: flex;
+    align-items: center;
   }
   .data {
     font-size: 0.75rem;
