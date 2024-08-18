@@ -10,8 +10,7 @@ export const Section = styled.section`
 
   justify-content: center;
   gap: 10%;
-
-  padding: 1.3rem 10%;
+  width: 100vw;
   align-content: center;
   align-items: center;
   gap: 0.8rem;

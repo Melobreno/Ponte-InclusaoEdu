@@ -14,13 +14,17 @@ function FormResumido() {
 
   async function handleSubmit(event) {
     event.preventDefault();
+    if (senha.length < 1 && nome.length < 1 && email.length < 1) {
+      alert("Não foi possivel efetuar o cadastro");
+    }
     if (ehIgual(senha, confirmSenha)) {
       try {
         await api.post("/adicionar", {
-          nome,
-          email,
-          senha,
+          name_user: nome,
+          email_user: email,
+          password_user: senha,
         });
+
         alert("Cadastro efetuado com sucesso!!");
         setNome("");
         setEmail("");

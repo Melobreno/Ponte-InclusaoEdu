@@ -20,7 +20,7 @@ function menu() {
           <Btn txt={value} />
         </Link>
         <li>
-          <Link to={"/cadas"}>
+          <Link to={"/cadastro"}>
             <a className="cadastro" href="">
               Cadastro
             </a>

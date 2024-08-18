@@ -16,6 +16,7 @@ import AtividadeProf from "../Pages/Atividade/AtividadeProf";
 import AtividadeResp from "../Pages/Atividade/AtividadeResp";
 import Mapeamento from "../Pages/Mapeamento/index";
 import CadastroRes from "../Pages/Cadastro/CadastroResumido";
+import PrivateRoute from "./privateRoutes";
 
 function AppRoutes() {
   return (
@@ -29,16 +30,72 @@ function AppRoutes() {
         <Route path="/NovaSenha" element={<NovaSenha />}></Route>
         <Route path="/RedefinirSenha" element={<RedefinirSenha />}></Route>
         <Route path="/login" element={<Login />}></Route>
-        <Route path="/Assinaturas" element={<Assinatura />}></Route>
-        <Route path="/Pagamento" element={<ConfirmarCompra />}></Route>
-        <Route path="/feed" element={<Feed />}></Route>
-        <Route path="/chat" element={<Chat />}></Route>
-        <Route path="/Doc" element={<Documentacao />}></Route>
-        <Route path="/Atividades" element={<AtividadeProf />}></Route>
-        <Route path="/AtividadeResp" element={<AtividadeResp />}></Route>
-        <Route path="/mapeamento" element={<Mapeamento />}></Route>
-        <Route path="/cadas" element={<CadastroRes />}></Route>{" "}
-        {/* Chamando o Formulário resumido *APAGAR* */}
+        <Route path="/cadastro" element={<CadastroRes />}></Route>
+
+        <Route
+          path="/Assinaturas"
+          element={
+            <PrivateRoute>
+              <Assinatura />
+            </PrivateRoute>
+          }
+        ></Route>
+        <Route
+          path="/Pagamento"
+          element={
+            <PrivateRoute>
+              <ConfirmarCompra />
+            </PrivateRoute>
+          }
+        ></Route>
+        <Route
+          path="/feed"
+          element={
+            <PrivateRoute>
+              <Feed />
+            </PrivateRoute>
+          }
+        ></Route>
+        <Route
+          path="/chat"
+          element={
+            <PrivateRoute>
+              <Chat />
+            </PrivateRoute>
+          }
+        ></Route>
+        <Route
+          path="/Doc"
+          element={
+            <PrivateRoute>
+              <Documentacao />
+            </PrivateRoute>
+          }
+        ></Route>
+        <Route
+          path="/Atividades"
+          element={
+            <PrivateRoute>
+              <AtividadeProf />
+            </PrivateRoute>
+          }
+        ></Route>
+        <Route
+          path="/AtividadeResp"
+          element={
+            <PrivateRoute>
+              <AtividadeResp />
+            </PrivateRoute>
+          }
+        ></Route>
+        <Route
+          path="/mapeamento"
+          element={
+            <PrivateRoute>
+              <Mapeamento />
+            </PrivateRoute>
+          }
+        ></Route>
       </Routes>
     </BrowserRouter>
   );
