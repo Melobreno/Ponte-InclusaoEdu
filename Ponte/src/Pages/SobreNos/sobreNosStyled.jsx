@@ -21,6 +21,7 @@ export const Titulo = styled.div`
 `;
 
 export const Section = styled.section`
+  width: 100vw;
   background-color: #f6cf00;
 `;
 export const Container = styled.div`

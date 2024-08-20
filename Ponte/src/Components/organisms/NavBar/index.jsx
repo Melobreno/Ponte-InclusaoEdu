@@ -5,14 +5,12 @@ import Menu from "../../molecules/Menu";
 
 function NavBar() {
   return (
-    <>
-      <S.Container>
-        <Link to={"/"}>
-          <img src={imgLogo} alt="" />
-        </Link>
-        <Menu />
-      </S.Container>
-    </>
+    <S.Container>
+      <Link to={"/"}>
+        <img src={imgLogo} alt="" />
+      </Link>
+      <Menu />
+    </S.Container>
   );
 }
 
