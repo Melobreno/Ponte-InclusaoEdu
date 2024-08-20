@@ -25,7 +25,8 @@ function Login() {
         email_user: email,
         password_user: senha,
       });
-      localStorage.setItem("token", res.data.token);
+      let token = res.data.token;
+      localStorage.setItem("token", token);
       navegate("/feed");
       alert(`Logado com sucesso, seu token: ${token}`);
     } catch (error) {
