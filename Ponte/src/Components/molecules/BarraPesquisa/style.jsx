@@ -1,12 +1,17 @@
 import styled from "styled-components";
-
+import breakpoint from "../../../breakpoints";
 export const Section = styled.div`
   display: flex;
   height: 5.1875rem;
-  justify-content: space-between;
-
+  justify-content: space-around;
   align-items: center;
-  padding: 1.3rem 20%;
+  margin: auto;
+  padding-bottom: 2.6rem;
+  padding-top: 0.7rem;
+
+  @media (${breakpoint.sm}) {
+    margin: auto;
+  }
 
   .esquerdaNav {
     display: flex;
@@ -14,6 +19,11 @@ export const Section = styled.div`
     justify-content: space-between;
     align-items: center;
     gap: 4.5rem;
+    @media (${breakpoint.sm}) {
+      width: auto;
+      justify-content: space-around;
+      gap: 1.25rem;
+    }
   }
 
   .inputNav {
@@ -21,6 +31,10 @@ export const Section = styled.div`
     width: 50rem;
     justify-content: space-between;
     align-items: center;
+    @media (${breakpoint.sm}) {
+      margin: auto;
+      width: auto;
+    }
   }
 
   .direitaNav {

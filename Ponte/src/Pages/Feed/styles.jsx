@@ -1,25 +1,37 @@
 import styled from "styled-components";
 import background from "../../Assets/vetorPreto.png";
+import breakpoint from "../../breakpoints.js";
 
-export const Imagem = styled.div`
-  background-image: url(${background});
-  background-size: 28rem 13rem;
-  background-position: right;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 120vh;
+export const Pagina = styled.div`
+  @media (${breakpoint.md}) {
+  }
 `;
-export const Section = styled.div`
-  padding: 1.3rem 20%;
 
-  /* margin: 7rem 29rem 2rem 20rem; */
+export const Section = styled.div`
   display: flex;
-  flex-direction: row;
+
+  justify-content: space-around;
+  justify-content: center;
+  /* @media (${breakpoint.md}) {
+    display: flex;
+    margin: auto;
+  } */
 
   .linhaL {
-    margin: 0 2.25rem 0 2.9rem;
+    margin: 0 6rem;
     width: 0rem;
     height: 48rem;
+    @media (${breakpoint.bg}) {
+      margin: 0 2.5rem;
+    }
+  }
+
+  .pesquisa {
+    @media (${breakpoint.md}) {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+    }
   }
 `;
 
@@ -128,6 +140,25 @@ export const Mensagem = styled.div`
     width: 1.8125rem;
     height: 2.1875rem;
   }
+  button.lixeira {
+    padding: 0;
+  }
+  .lixeira {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 1.1rem;
+    height: 1.2rem;
+    margin-left: 1.2rem;
+    border: none;
+    resize: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .lixeira:hover {
+    box-shadow: 0 0.33rem 0.7rem rgba(0, 0, 0, 0.37);
+    transform: translateY(-1px);
+  }
 `;
 
 export const Mensagem2 = styled.div`
@@ -168,22 +199,48 @@ export const Mensagem2 = styled.div`
   }
   .comentario {
     display: flex;
+    align-items: center;
   }
   .data {
     font-size: 0.75rem;
   }
   .balao {
-    padding-left: 0.5rem;
+    padding-left: 1rem;
     width: 1.8125rem;
     height: 2.1875rem;
+  }
+  button.lixeira {
+    padding: 0;
+  }
+  .lixeira {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 1.1rem;
+    height: 1.2rem;
+    margin-left: 1.2rem;
+    border: none;
+    resize: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .lixeira:hover {
+    box-shadow: 0 0.33rem 0.7rem rgba(0, 0, 0, 0.37);
+    transform: translateY(-1px);
   }
 `;
 
 export const Atores = styled.div`
   display: flex;
   flex-direction: column;
-
+  padding: 0;
+  margin: 0;
   height: 46rem;
+  width: 450px;
+
+  @media (${breakpoint.md}) {
+    width: 250px;
+  }
   img {
     padding: 0.68rem;
     display: flex;
@@ -193,6 +250,8 @@ export const Atores = styled.div`
 
   .atores {
     display: flex;
+    margin: 0;
+    padding: 0;
   }
 
   .texto {
@@ -224,5 +283,23 @@ export const Atores = styled.div`
   .vetorPreto {
     width: 28.25rem;
     height: 12.375rem;
+  }
+`;
+export const Imagem = styled.div`
+  background-image: url(${background});
+  background-size: 28rem 13rem;
+  position: relative;
+  background-repeat: no-repeat;
+  bottom: "0";
+  right: "0";
+  width: 40rem;
+  height: 13rem;
+  margin: 20rem 0 1rem 0;
+
+  @media (${breakpoint.sm}) {
+    background-image: none;
+  }
+  @media (${breakpoint.bg}) {
+    background-image: none;
   }
 `;

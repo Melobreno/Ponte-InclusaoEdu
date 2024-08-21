@@ -1,7 +1,7 @@
 import { Escreva, Mensagem, Mensagem2 } from "./styles";
 import img from "../../Assets/Avatar 1.svg";
-import img2 from "../../Assets/avatar2.svg";
-
+// import img2 from "../../Assets/avatar2.svg";
+import lixeira from "../../Assets/lixeira.svg";
 // import vetor from "../../Assets/vetorPreto.png";
 import balao from "../../Assets/comentario.svg";
 import Btn from "../../Components/atoms/Button/index";
@@ -36,9 +36,19 @@ function Posts() {
       fetchMensagens();
       setTexto("");
     } catch (error) {
-      console.error(`Error ao inserir dados: ${error}`);
+      console.error(`Erro ao inserir dados: ${error}`);
     }
   };
+
+  const handleDelete = async (id) => {
+    try {
+      await api.delete(`/deleteItem/${id}`);
+      fetchMensagens();
+    } catch (error) {
+      console.error(`Erro ao deletar a mensagem: `, error);
+    }
+  };
+
   const enviar = "Enviar";
   return (
     <>
@@ -64,11 +74,11 @@ function Posts() {
         </Escreva>
         <div>
           {mensagens.map((mensagem) => (
-            <Mensagem>
+            <Mensagem key={mensagem.id}>
               <div className="enviado">
                 <img className="img" src={img} alt="" />
 
-                <div className="texto" key={mensagem.id}>
+                <div className="texto">
                   <h1>Lucas Melo</h1>
                   <div className="conteudo">
                     <p>{mensagem.texto}</p>
@@ -79,6 +89,12 @@ function Posts() {
                       {new Date(mensagem.data).toLocaleDateString()}
                     </p>
                     <img className="balao" src={balao} alt="" />
+                    <button
+                      className="lixeira"
+                      onClick={() => handleDelete(mensagem.id)}
+                    >
+                      <img src={lixeira} />
+                    </button>
                   </div>
                 </div>
               </div>
@@ -86,7 +102,7 @@ function Posts() {
           ))}
         </div>
 
-        <Mensagem2>
+        {/* <Mensagem2>
           <div className="enviado">
             <img className="img" src={img2} alt="" />
             <div className="texto">
@@ -99,10 +115,13 @@ function Posts() {
               <div className="comentario">
                 <p className="data">07 - Agosto - 2024</p>
                 <img className="balao" src={balao} alt="" />
+                <button className="lixeira">
+                  <img src={lixeira} alt="" />
+                </button>
               </div>
             </div>
           </div>
-        </Mensagem2>
+        </Mensagem2> */}
       </div>
     </>
   );

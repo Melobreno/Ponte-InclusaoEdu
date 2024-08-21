@@ -21,4 +21,15 @@ const insertItem = async (texto) => {
   }
 };
 
-module.exports = { getItems, insertItem };
+const deleteItem = async (id) => {
+  try {
+    const deleteQuery = "DELETE FROM messages WHERE id = ?";
+    const values = [id];
+    const [result] = await connection.execute(deleteQuery, values);
+    return result;
+  } catch (error) {
+    throw new Error(`Erro ao excluir item: ${error.message}`);
+  }
+};
+
+module.exports = { getItems, insertItem, deleteItem };

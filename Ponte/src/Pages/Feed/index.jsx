@@ -1,29 +1,22 @@
 import { GlobalStyles } from "../../MainStyles";
-import {
-  Imagem,
-  Section,
-  Texto,
-  Escreva,
-  Mensagem,
-  Mensagem2,
-  Atores,
-} from "./styles";
+import { Pagina, Imagem, Section, Texto, Atores } from "./styles";
 import img from "../../Assets/Avatar 1.svg";
 import img2 from "../../Assets/avatar2.svg";
 import img3 from "../../Assets/avatar3.svg";
 // import vetor from "../../Assets/vetorPreto.png";
-import balao from "../../Assets/comentario.svg";
-import Btn from "../../Components/atoms/Button/index";
+
 import Pesquisa from "../../Components/molecules/BarraPesquisa";
 import Posts from "./posts";
 function Feed() {
   const value = "Enviar";
   return (
     <>
-      <GlobalStyles />
-      <Pesquisa />
-      <Imagem>
+      <Pagina>
+        <GlobalStyles />
+        <Pesquisa />
+
         <Section>
+          <div className="pesquisa"></div>
           <Texto>
             <div>
               <Posts />
@@ -57,13 +50,12 @@ function Feed() {
                 <p>Terapeuta</p>
               </div>
             </div>
-
-            {/* <div className="vetor">
-            <img className="vetorPreto" src={vetor} alt="" />
-          </div> */}
+            <Imagem>
+              <div className="imagemFundo"></div>
+            </Imagem>
           </Atores>
         </Section>
-      </Imagem>
+      </Pagina>
     </>
   );
 }

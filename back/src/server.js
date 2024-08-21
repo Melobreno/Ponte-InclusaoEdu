@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 
-const { getItems, insertItem } = require("./allItems");
+const { getItems, insertItem, deleteItem } = require("./allItems");
 
 const app = express();
 app.use(express.json());
@@ -26,6 +26,16 @@ app.post("/insertItem", async (req, res) => {
   try {
     const result = await insertItem(texto);
     res.status(201).json(result);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+app.delete("/deleteItem/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    const result = await deleteItem(id);
+    res.status(200).json(result);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
