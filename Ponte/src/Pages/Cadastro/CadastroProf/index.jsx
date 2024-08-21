@@ -1,12 +1,12 @@
 import Footer from "../../../Components/molecules/Footer/Footer";
 import NavBar from "../../../Components/organisms/NavBar";
-import FormProf from "../../../Components/molecules/Form Profissional";
+import FormP from "../../../Components/molecules/Form Profissional/index";
 
 function CadastroP() {
   return (
     <>
       <NavBar />
-      <FormProf />
+      <FormP />
       <Footer />
     </>
   );

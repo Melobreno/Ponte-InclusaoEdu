@@ -4,10 +4,22 @@ import * as S from "./style";
 import { Link } from "react-router-dom";
 
 function FormP() {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, setValue } = useForm();
   function onSubmit(userData) {
     console.log(userData);
   }
+  const checkCep = (e) => {
+    const cep = e.target.value.replace(/\D/g, "");
+    console.log(cep);
+    fetch(`https://viacep.com.br/ws/${cep}/json/`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setValue("cidade", data.localidade);
+        setValue("bairro", data.bairro);
+      });
+  };
+
   return (
     <S.FormSection>
       <form onSubmit={handleSubmit(onSubmit)} className="formContainer">
@@ -41,23 +53,29 @@ function FormP() {
           </label>
 
           <label>
+            Cep:
+            <input
+              type="text"
+              id="cep"
+              placeholder="Apenas números"
+              {...register("cep")}
+              onBlur={checkCep}
+            />
+          </label>
+          <label>
             Cidade:
-            <input type="text" id="" {...register("cidade")} />
+            <input type="text" id="cidade" {...register("cidade")} />
           </label>
           <label>
-            UF:
-            <input type="text" id="inputUf" {...register("UF")} />
-          </label>
-          <label>
-            Naturalidade:
-            <input type="text" id="inputNat" {...register("UF")} />
+            Bairro:
+            <input type="text" id="bairro" {...register("bairro")} />
           </label>
           <select
             name="selectSex"
             id="selectSex"
             {...register("sexo", { required: true })}
           >
-            <option value="0">Select...</option>
+            <option value="0">Sexo...</option>
             <option value="Masc">Masculino</option>
             <option value="Fem">Feminino</option>
             <option value="Outro">Outro</option>

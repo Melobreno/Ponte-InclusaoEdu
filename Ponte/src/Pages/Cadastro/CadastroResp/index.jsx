@@ -1,17 +1,17 @@
 import NavBar from "../../../Components/organisms/NavBar";
-import FormRes from "../../../Components/molecules/Form Responsavel/index";
+import FormR from "../../../Components/molecules/Form Responsavel/index";
 import Footer from "../../../Components/molecules/Footer/Footer";
 import { GlobalStyles } from "../../../MainStyles";
 
-function cadastroR() {
+function CadastroR() {
   return (
     <>
       <GlobalStyles />
       <NavBar />
-      <FormRes />
+      <FormR />
       <Footer />
     </>
   );
 }
 
-export default cadastroR;
+export default CadastroR;
