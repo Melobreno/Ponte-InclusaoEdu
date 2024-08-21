@@ -8,9 +8,7 @@ import img from "../../Assets/Avatar 1.svg";
 import img2 from "../../Assets/avatar2.svg";
 import img3 from "../../Assets/avatar3.svg";
 import lupa from "../../Assets/lupa.svg";
-import Btn from "../../Components/atoms/Button/index";
 function Chat() {
-  const value = "Enviar";
   return (
     <>
       <Pesquisa />
@@ -65,61 +63,10 @@ function Chat() {
         </div>
 
         <Direita>
-          <div className="perfil">
-            <img src={img2} alt="" className="avatar" />
-            <div className="online">
-              <h1>Priscila Silva</h1>
-              <span>Online</span>
-            </div>
-            <img src={tresPontos} alt="" className="tresPontos" />
-          </div>
-          <div className="mensagem">
-            <div className="enviada">
-              <p>
-                Bom dia, doutora. Você tem um momento para falar sobre meu
-                filho?
-              </p>
-            </div>
-            <div className="recebida">
-              <p>Bom dia! Claro, estou à disposição. O que está acontecendo?</p>
-            </div>
-            <div className="enviada">
-              <p>
-                Ele tem estado muito quieto e isolado ultimamente. Estou
-                começando a ficar preocupada.
-              </p>
-            </div>
-            <div className="recebida">
-              <p>
-                Você gostaria de marcar uma sessão para discutirmos isso com
-                mais detalhes?
-              </p>
-            </div>
-            <div className="enviada">
-              <p>Sim, acho que seria ótimo. Quando podemos marcar?</p>
-            </div>
-            <div className="recebida">
-              <p>
-                Tenho um horário disponível amanhã às 15h. Isso funciona para
-                você?
-              </p>
-            </div>
-            <div className="enviada">
-              <p>Sim, será ótimo.</p>
-            </div>
-            <hr />
-            <div className="enviar">
-              <input
-                className="novaMsg"
-                type="text"
-                placeholder="Escreva uma nova mensagem"
-              />
-
-              <div className="botao">
-                <Btn txt={value} />
-              </div>
-            </div>
-          </div>
+          <iframe
+            src="https://chat-frontend-rjpu.onrender.com"
+            frameborder="0"
+          ></iframe>
         </Direita>
       </Section>
     </>

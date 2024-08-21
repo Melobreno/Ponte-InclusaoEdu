@@ -3,25 +3,26 @@ import background from "../../../Assets/EfeitosFuncion.png";
 
 export const Fundo = styled.div`
   background-image: url(${background});
-  background-size: auto;
   background-position: center;
   background-repeat: no-repeat;
-  width: 99vw;
-  height: 100vh;
+  width: 100vw;
+  height: 95vh;
 `;
 
 export const Titulo = styled.div`
   display: flex;
   justify-content: center;
+  height: 8rem;
+  width: 100vw;
 
   h1 {
     font-size: 2.25rem;
     font-family: "Montserrat-Bold", Helvetica;
-
     background-color: #f6cf00;
-    border-radius: 3.125rem;
-    padding: 0.563rem 1.88rem;
-    margin: 6rem 31.44rem 0rem 31.44rem;
+    border-radius: 3.12rem;
+    padding: 0.5rem 1.8rem;
+    margin: 0;
+    margin-top: 4rem;
   }
 `;
 
@@ -29,9 +30,6 @@ export const Opcoes = styled.div`
   display: flex;
   justify-content: center;
 
-  section {
-    height: 14.3rem;
-  }
   ul {
     display: flex;
     flex-direction: column;
@@ -53,8 +51,8 @@ export const Opcoes = styled.div`
     background-color: #f6cf00;
     cursor: pointer;
     border-radius: 1.88rem;
-    width: 31.8rem;
-    height: 3.75rem;
+    width: 30vw;
+    height: 6vh;
     padding: 0 1.5rem;
     font-size: 1.25rem;
     display: flex;

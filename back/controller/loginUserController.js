@@ -25,7 +25,7 @@ module.exports = class loginUserController {
       const token = jwt.sign(
         { id_user: users.id_user, name_user: users.name_user },
         chaveSec,
-        { expiresIn: "5d" }
+        { expiresIn: "20s" }
       );
       console.log(`Aqui esta o seu token: ${token}`);
       return res.status(200).json({ token });

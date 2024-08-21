@@ -7,10 +7,14 @@ function Funcionalidades() {
     <section id="funcionalidade">
       <Fundo>
         <Titulo>
-          <h1>FUNCIONALIDADES</h1>
+          <div>
+            <h1>FUNCIONALIDADES</h1>
+          </div>
         </Titulo>
         <Opcoes>
-          <img src={imgFun} alt="Img Funcionalidades" />
+          <div>
+            <img src={imgFun} alt="Img Funcionalidades" />
+          </div>
           <div>
             <ul>
               <li>

@@ -4,7 +4,6 @@ export const Titulo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 1rem;
   flex-direction: column;
 
   h1 {
@@ -27,7 +26,6 @@ export const Section = styled.section`
 export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-  padding: 0 1rem;
   font-size: 1.18rem;
   align-items: center;
   justify-content: center;

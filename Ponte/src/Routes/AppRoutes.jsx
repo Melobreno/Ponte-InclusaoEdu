@@ -31,23 +31,9 @@ function AppRoutes() {
         <Route path="/RedefinirSenha" element={<RedefinirSenha />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/cadastro" element={<CadastroRes />}></Route>
+        <Route path="/Assinaturas" element={<Assinatura />}></Route>
+        <Route path="/Pagamento" element={<ConfirmarCompra />}></Route>
 
-        <Route
-          path="/Assinaturas"
-          element={
-            <PrivateRoute>
-              <Assinatura />
-            </PrivateRoute>
-          }
-        ></Route>
-        <Route
-          path="/Pagamento"
-          element={
-            <PrivateRoute>
-              <ConfirmarCompra />
-            </PrivateRoute>
-          }
-        ></Route>
         <Route
           path="/feed"
           element={

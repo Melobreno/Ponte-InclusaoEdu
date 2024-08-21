@@ -26,6 +26,7 @@ function Login() {
         password_user: senha,
       });
       localStorage.setItem("token", res.data.token);
+      console.log(token);
       navegate("/feed");
       alert(`Logado com sucesso, seu token: ${token}`);
     } catch (error) {
@@ -72,7 +73,7 @@ function Login() {
             </Link>
             <div className="botao">
               <Btn txt={value} />
-              {error && <p>{error}</p>}
+              {error && <span>{error}</span>}
             </div>
 
             <div className="cadastre">

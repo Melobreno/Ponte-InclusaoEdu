@@ -61,9 +61,25 @@ export const Container = styled.div`
   }
 
   .botao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 50px;
     margin-top: 3px;
   }
+
+  .botao button {
+    width: 123px;
+    height: 30px;
+    margin-bottom: 15px;
+  }
+
+  .botao span {
+    font-size: 14px;
+    color: #ff0000;
+    font-weight: 500;
+  }
+
   .esqueceuSenha {
     display: flex;
     color: #000;
