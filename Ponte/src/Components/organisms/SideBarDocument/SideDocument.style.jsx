@@ -4,7 +4,7 @@ export const Container = styled.div`
   background-color: #25a6ce;
   font-family: "Montserrat", sans-serif;
   width: 20vw;
-  height: 86.8vh;
+  height: 115vh;
   border-radius: 0 10px 0 0;
 `;
 
