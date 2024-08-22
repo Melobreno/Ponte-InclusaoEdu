@@ -3,10 +3,10 @@ import styled from "styled-components";
 export const Section = styled.div`
   display: flex;
   height: 5.1875rem;
-  justify-content: space-between;
-
+  justify-content: center;
+  padding: 1.3rem 0;
+  margin: 0 auto;
   align-items: center;
-  padding: 1.3rem 20%;
 
   .esquerdaNav {
     display: flex;

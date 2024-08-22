@@ -2,7 +2,7 @@ import { Section } from "./style";
 import logo from "../../../Assets/logoPonte.svg";
 import menu from "../../../Assets/botaoSideBar.svg";
 import avatar from "../../../Assets/Avatar 1.svg";
-import lupa from "../../../Assets/lupa.svg";
+import InputNav from "../../atoms/inputNav";
 function Pesquisa() {
   return (
     <>
@@ -20,16 +20,7 @@ function Pesquisa() {
         </div>
 
         <div className="direitaNav">
-          <div className="pesquisa">
-            <input
-              type="text"
-              placeholder="O que  você está procurando?"
-              className="lupa"
-            />
-            <button className="">
-              <img src={lupa} alt="" />
-            </button>
-          </div>
+          <InputNav />
           <p>Lucas Melo</p>
           <img src={avatar} alt="" className="avatar" />
         </div>

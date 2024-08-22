@@ -2,8 +2,15 @@ import styled from "styled-components";
 
 export const Section = styled.div`
   display: flex;
-  padding: 1.5rem 20%;
-  gap: 20px;
+  margin: 0 auto;
+  margin-top: 20px;
+  justify-content: center;
+  gap: 50px;
+
+  .secEsquerda {
+    display: flex;
+  }
+
   .menuLateral {
     display: flex;
     flex-direction: column;
@@ -34,8 +41,8 @@ export const Section = styled.div`
     align-items: center;
     width: 19rem;
     height: 2.4rem;
-    border-radius: 0.625rem;
-    border: 0.13rem solid #a6a6a6;
+    border-radius: 18px;
+    border: 2px solid #25a6ce;
   }
   .lupa {
     width: 2rem;
@@ -109,5 +116,6 @@ export const Direita = styled.div`
   iframe {
     width: 37.5rem;
     height: 40rem;
+    border: 1px solid black;
   }
 `;
