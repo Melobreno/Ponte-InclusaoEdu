@@ -19,3 +19,9 @@ model Users {
   email_user    String @unique
   password_user String
 }
+
+model Documents {
+  id_doc   Int    @id @default(autoincrement())
+  name_doc String
+  url_doc  String @unique
+}
