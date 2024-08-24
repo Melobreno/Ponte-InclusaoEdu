@@ -9,9 +9,16 @@ export const Section = styled.div`
   padding-bottom: 2.6rem;
   padding-top: 0.7rem;
 
-  @media (${breakpoint.sm}) {
-    margin: auto;
+  @media (${breakpoint.mobile}) {
+    transform: scale(0.37);
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    gap: 18rem;
   }
+  /* @media (${breakpoint.sm}) {
+    margin: auto;
+  } */
 
   .esquerdaNav {
     display: flex;
@@ -19,11 +26,6 @@ export const Section = styled.div`
     justify-content: space-between;
     align-items: center;
     gap: 4.5rem;
-    @media (${breakpoint.sm}) {
-      width: auto;
-      justify-content: space-around;
-      gap: 1.25rem;
-    }
   }
 
   .inputNav {
@@ -50,6 +52,10 @@ export const Section = styled.div`
     height: 2rem;
     border-radius: 1.25rem;
     border: 0.13rem solid #25a6ce;
+
+    @media (${breakpoint.sm}) {
+      display: none;
+    }
   }
 
   .lupa {

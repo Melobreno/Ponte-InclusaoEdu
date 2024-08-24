@@ -1,5 +1,5 @@
 import { GlobalStyles } from "../../MainStyles";
-import { Pagina, Imagem, Section, Texto, Atores } from "./styles";
+import { Pagina, Section, Texto, Atores } from "./styles";
 import img from "../../Assets/Avatar 1.svg";
 import img2 from "../../Assets/avatar2.svg";
 import img3 from "../../Assets/avatar3.svg";
@@ -48,9 +48,6 @@ function Feed() {
                 <p>Terapeuta</p>
               </div>
             </div>
-            <Imagem>
-              <div className="imagemFundo"></div>
-            </Imagem>
           </Atores>
         </Section>
       </Pagina>

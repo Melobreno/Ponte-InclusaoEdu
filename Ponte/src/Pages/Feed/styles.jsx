@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import background from "../../Assets/vetorPreto.png";
+
 import breakpoint from "../../breakpoints.js";
 
 export const Pagina = styled.div`
-  @media (${breakpoint.md}) {
+  @media (${breakpoint.mobile}) {
   }
 `;
 
@@ -12,10 +12,6 @@ export const Section = styled.div`
 
   justify-content: space-around;
   justify-content: center;
-  /* @media (${breakpoint.md}) {
-    display: flex;
-    margin: auto;
-  } */
 
   .linhaL {
     margin: 0 6rem;
@@ -38,7 +34,11 @@ export const Section = styled.div`
   }
 `;
 
-export const Texto = styled.div``;
+export const Texto = styled.div`
+  background-color: lightblue;
+  display: flex;
+  height: 0;
+`;
 
 export const Escreva = styled.div`
   width: 50rem;
@@ -47,8 +47,12 @@ export const Escreva = styled.div`
   border-radius: 0.375rem;
   box-shadow: 6px 6px 15px -6px rgba(0, 0, 0, 0.25);
 
-  @media (${breakpoint.sm}) {
-    width: 30rem;
+  @media (${breakpoint.mobile}) {
+    margin-top: -70px;
+    display: flex;
+    justify-content: center;
+    height: 13rem;
+    transform: scale(0.37);
   }
 
   .novaMsg {
@@ -82,10 +86,6 @@ export const Escreva = styled.div`
     width: 48rem;
     height: 1px;
     padding: 0;
-
-    @media (${breakpoint.sm}) {
-      width: 27rem;
-    }
   }
 
   .botao {
@@ -105,6 +105,15 @@ export const Mensagem = styled.div`
   border-radius: 0.375rem;
   box-shadow: 6px 6px 15px -6px rgba(0, 0, 0, 0.25);
 
+  @media (${breakpoint.mobile}) {
+    margin-top: -100px;
+    display: flex;
+
+    justify-content: center;
+    height: 13rem;
+    transform: scale(0.37);
+  }
+
   .texto {
     display: flex;
     flex-direction: column;
@@ -114,6 +123,9 @@ export const Mensagem = styled.div`
     margin-top: 0.4rem;
     margin-left: 0.71rem;
     justify-content: space-around;
+    @media (${breakpoint.mobile}) {
+      display: flex;
+    }
   }
   .conteudo p {
     width: 45.0625rem;
@@ -180,6 +192,10 @@ export const Atores = styled.div`
   height: 46rem;
   width: 450px;
 
+  @media (${breakpoint.mobile}) {
+    display: none;
+  }
+
   @media (${breakpoint.md}) {
     width: 250px;
   }
@@ -221,22 +237,5 @@ export const Atores = styled.div`
     flex-direction: column;
     justify-content: end;
     margin-top: 20rem;
-  }
-`;
-export const Imagem = styled.div`
-  background-size: 28rem 13rem;
-  position: relative;
-  background-repeat: no-repeat;
-  bottom: "0";
-  right: "0";
-  width: 40rem;
-  height: 13rem;
-  margin: 20rem 0 1rem 0;
-
-  @media (${breakpoint.sm}) {
-    background-image: none;
-  }
-  @media (${breakpoint.bg}) {
-    background-image: none;
   }
 `;

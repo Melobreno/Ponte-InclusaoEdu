@@ -26,7 +26,7 @@ function Pesquisa() {
               placeholder="O que  você está procurando?"
               className="lupa"
             />
-            <button className="">
+            <button>
               <img src={lupa} alt="" />
             </button>
           </div>
