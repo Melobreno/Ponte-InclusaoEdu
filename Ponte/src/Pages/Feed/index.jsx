@@ -1,3 +1,4 @@
+
 import { GlobalStyles } from "../../MainStyles";
 import { Pagina, Section, Texto, Atores } from "./styles";
 import img from "../../Assets/Avatar 1.svg";
@@ -20,9 +21,7 @@ function Feed() {
               <Posts />
             </div>
           </Texto>
-
           <hr className="linhaL" />
-
           <Atores>
             <div className="atores">
               <img className="img" src={img} alt="" />

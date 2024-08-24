@@ -5,7 +5,7 @@ import * as S from "./faqStyle";
 function Faq() {
   return (
     <>
-      <S.Sect>
+      <S.Sect id="contato">
         <div className="ContainerContent">{/* Vetores */}</div>
 
         <div className="divEsq">

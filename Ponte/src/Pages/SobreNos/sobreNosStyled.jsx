@@ -1,46 +1,19 @@
 import styled from "styled-components";
 import background from "../../Assets/bg.png";
 
-// export const Titulo = styled.div`
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   padding-top: 1rem;
-//   flex-direction: column;
-
-//   h1 {
-//     margin-top: 0;
-//     font-family: "Montserrat", sans-serif;
-//     text-transform: uppercase;
-//   }
-
-//   p {
-//     width: 70%;
-//     border-top: solid 0.06rem white;
-//     margin-top: 3rem;
-//   }
-// `;
-
 export const Section = styled.section`
   background-image: url(${background});
   background-color: #f6cf00;
   height: 775.61px;
-
   display: flex;
   justify-content: center;
 `;
 export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-  padding: 0 1rem;
   font-size: 1.18rem;
-  /* align-items: end; */
-
   justify-content: center;
-  /* align-content: center; */
-
   gap: 20px;
-
   section {
     margin: 0 5rem;
     display: flex;
@@ -50,9 +23,7 @@ export const Container = styled.div`
   }
   .texto {
     width: 32rem;
-
     font-family: "Montserrat", sans-serif;
-
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;
@@ -60,8 +31,6 @@ export const Container = styled.div`
   }
 
   img {
-    /* align-items: baseline;
-    width: 43.25rem; */
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
@@ -70,11 +39,8 @@ export const Container = styled.div`
     width: 30rem;
     max-width: 20rem;
     font-family: "Montserrat", sans-serif;
-
     display: block;
-
     margin-bottom: 0;
-
     font-size: 2.25rem;
     font-style: normal;
     font-weight: 700;

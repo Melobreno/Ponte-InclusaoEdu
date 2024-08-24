@@ -1,3 +1,4 @@
+
 import { GlobalStyles } from "../../../MainStyles";
 import { Section, Container } from "./funcionalidadesStyle";
 import conexao from "../../../Assets/conexao 1.svg";
@@ -20,6 +21,7 @@ function Funcionalidades() {
               <div className="imagem">
                 <img src={conexao} />
               </div>
+
 
               <h2>Mapeamento de profissionais</h2>
               <p>

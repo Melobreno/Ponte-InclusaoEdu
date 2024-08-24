@@ -4,12 +4,7 @@ import maosImg from "../../Assets/maosMenino.svg";
 function SobreNos() {
   return (
     <>
-      <S.Section>
-        {/* <S.Titulo>
-          <p></p>
-          <h1>Sobre nós</h1>
-        </S.Titulo> */}
-
+      <S.Section>    
         <S.Container>
           <section>
             <h1>Sobre nós</h1>

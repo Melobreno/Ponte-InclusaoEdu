@@ -2,13 +2,21 @@ import styled from "styled-components";
 
 export const Section = styled.div`
   display: flex;
-  padding: 1.5rem 20%;
+  margin: 0 auto;
+  margin-top: 20px;
+  justify-content: center;
+  gap: 50px;
+
+  .secEsquerda {
+    display: flex;
+  }
+
   .menuLateral {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1.5rem;
-    width: 6.375rem;
+    width: 6.37rem;
     height: 30rem;
   }
   .menuLateral img {
@@ -26,7 +34,6 @@ export const Section = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 1rem;
   }
   .search {
     display: flex;
@@ -34,8 +41,8 @@ export const Section = styled.div`
     align-items: center;
     width: 19rem;
     height: 2.4rem;
-    border-radius: 0.625rem;
-    border: 0.13rem solid #a6a6a6;
+    border-radius: 18px;
+    border: 2px solid #25a6ce;
   }
   .lupa {
     width: 2rem;
@@ -89,7 +96,6 @@ export const Section = styled.div`
     width: 18.6875rem;
     height: 6.0625rem;
     padding: 10px 0.95rem;
-    /* justify-content: space-between; */
     background-color: #ececec;
     border-left: 0.3rem solid #25a6ce;
   }
@@ -98,7 +104,6 @@ export const Section = styled.div`
     width: 18.6875rem;
     height: 6.0625rem;
     padding: 10px;
-    /* justify-content: space-between; */
   }
   .texto {
     display: flex;
@@ -108,87 +113,9 @@ export const Section = styled.div`
   }
 `;
 export const Direita = styled.div`
-  width: 37.5rem;
-  height: 40rem;
-
-  .perfil {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 0.9rem;
-    border: 0.13rem solid #938e8e;
-    border-bottom: none;
-  }
-  .online {
-    display: flex;
-    flex-direction: column;
-    font-family: "Montserrat", sans-serif, Helvetica;
-    font-weight: 600;
-  }
-  h1 {
-    font-size: 1.25rem;
-    font-style: normal;
-    font-weight: 600;
-    margin: 0;
-  }
-
-  span {
-    color: #1ed40e;
-  }
-
-  .tresPontos {
-    padding-left: 17rem;
-  }
-
-  .mensagem {
-    border: 0.13rem solid #938e8e;
-    padding: 1rem;
+  iframe {
+    width: 37.5rem;
     height: 40rem;
-  }
-
-  .enviada {
-    display: flex;
-    justify-content: end;
-    padding: 1rem;
-    padding: 1.3rem 1rem 0 10rem;
-  }
-  .recebida {
-    display: flex;
-    justify-content: start;
-    padding: 1.3rem 10rem 0 1rem;
-  }
-
-  .enviada p {
-    background-color: #f6cf00;
-    border-radius: 0.625rem;
-    padding: 0.6rem;
-  }
-
-  .recebida p {
-    background-color: #25a6ce;
-    border-radius: 0.625rem;
-    padding: 0.6rem;
-  }
-
-  .enviar {
-    display: flex;
-    align-items: center;
-  }
-
-  hr {
-    margin-top: 1rem;
-  }
-  .novaMsg {
-    width: 25.625rem;
-    height: 2.875rem;
-  }
-
-  input::placeholder {
-    font-family: "Montserrat", sans-serif, Helvetica;
-  }
-
-  .botao {
-    display: flex;
-    justify-content: center;
+    border: 1px solid black;
   }
 `;
