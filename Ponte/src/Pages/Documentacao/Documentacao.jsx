@@ -4,7 +4,7 @@ import Pesquisa from "../../Components/molecules/BarraPesquisa/index";
 import pDF from "../../Assets/PicPDF.svg";
 import lixeira from "../../Assets/lixeira.svg";
 import nDoc from "../../Assets/newDoc.svg";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useDeferredValue } from "react";
 import api from "../../api/api";
 function Documentacao() {
   const [documents, setDocuments] = useState([]);
@@ -89,12 +89,15 @@ function Documentacao() {
   const deleteDoc = async (name_doc) => {
     try {
       await api.delete(`/deletedoc/${encodeURIComponent(name_doc)}`);
-      // Após deletar, recarregar a lista de documentos
-      loadDocuments();
+      handleShowAllDocuments();
     } catch (error) {
       console.error("Erro ao deletar documento:", error);
     }
   };
+
+  useEffect(() => {
+    handleShowAllDocuments();
+  }, []);
 
   return (
     <>
