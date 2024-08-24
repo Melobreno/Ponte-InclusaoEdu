@@ -21,7 +21,6 @@ export const Section = styled.div`
     width: 39rem;
     justify-content: space-between;
     align-items: center;
-    gap: 4.5rem;
   }
 
   .inputNav {
@@ -77,5 +76,8 @@ export const Section = styled.div`
   .avatar {
     width: 2.625rem;
     height: 2.62469rem;
+  }
+  .logo {
+    width: 150px;
   }
 `;
