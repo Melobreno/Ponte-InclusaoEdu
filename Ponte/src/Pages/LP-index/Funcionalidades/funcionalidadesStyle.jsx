@@ -1,92 +1,64 @@
 import styled from "styled-components";
-import background from "../../../Assets/EfeitosFuncion.png";
 
-export const Fundo = styled.div`
-  background-image: url(${background});
-  background-size: auto;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 99vw;
-  height: 100vh;
-`;
-
-export const Titulo = styled.div`
+export const Section = styled.div`
+  height: 775.61px;
   display: flex;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 3.4rem;
 
-  h1 {
-    font-size: 2.25rem;
-    font-family: "Montserrat-Bold", Helvetica;
+  .titulo {
+    font-family: "Montserrat", sans-serif;
 
-    background-color: #f6cf00;
-    border-radius: 3.125rem;
-    padding: 0.563rem 1.88rem;
-    margin: 6rem 31.44rem 0rem 31.44rem;
+    font-size: 1.18rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
   }
 `;
 
-export const Opcoes = styled.div`
+export const Container = styled.div`
   display: flex;
-  justify-content: center;
-
-  section {
-    height: 14.3rem;
-  }
-  ul {
+  gap: 2.75rem;
+  margin-bottom: 3rem;
+  .bloco {
+    width: 20.5rem;
+    height: 30.625rem;
+    border-radius: 1.1875rem;
+    background: #f6cf00;
     display: flex;
-    flex-direction: column;
-    margin-top: 10rem;
-    list-style: none;
-    gap: 1.65rem;
+    justify-content: center;
   }
 
-  li {
+  .texto {
+    padding: 1rem;
+    width: 17rem;
+    margin-top: 0;
+    h2 {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 700;
+      width: 15.375rem;
+      margin: 0;
+    }
+    p {
+      width: 16.8125rem;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 0 auto;
+    }
+  }
+  .imagem {
     display: flex;
-    flex-direction: row;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    justify-content: space-between;
-  }
+    justify-content: center;
 
-  summary {
-    background-color: #f6cf00;
-    cursor: pointer;
-    border-radius: 1.88rem;
-    width: 31.8rem;
-    height: 3.75rem;
-    padding: 0 1.5rem;
-    font-size: 1.25rem;
-    display: flex;
-    flex-direction: row;
-
-    margin: 0 6.88rem 0rem 0.36rem;
-
-    align-items: center;
-    justify-content: space-between;
-
-    font-family: "Montserrat", Helvetica;
-    font-weight: 600;
-    text-decoration: none;
-    color: black;
-  }
-
-  p {
-    color: #000;
-    font-family: "Montserrat", Helvetica;
-    font-size: 1.25rem;
-    font-weight: 500;
-    max-width: 34rem;
-    padding: 0 1rem;
-    margin: 0.5rem 0;
-  }
-
-  .imgMais {
-    max-width: fit-content;
-    margin: 0px;
-  }
-
-  img {
-    margin: 10rem 2.69rem 9.88rem 4rem;
+    img {
+      width: 11.125rem;
+      height: 10.875rem;
+    }
   }
 `;

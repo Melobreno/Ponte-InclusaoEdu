@@ -3,7 +3,6 @@ import { Pagina, Imagem, Section, Texto, Atores } from "./styles";
 import img from "../../Assets/Avatar 1.svg";
 import img2 from "../../Assets/avatar2.svg";
 import img3 from "../../Assets/avatar3.svg";
-// import vetor from "../../Assets/vetorPreto.png";
 
 import Pesquisa from "../../Components/molecules/BarraPesquisa";
 import Posts from "./posts";
@@ -16,9 +15,8 @@ function Feed() {
         <Pesquisa />
 
         <Section>
-          <div className="pesquisa"></div>
           <Texto>
-            <div>
+            <div className="posts">
               <Posts />
             </div>
           </Texto>

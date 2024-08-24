@@ -5,14 +5,15 @@ function SobreNos() {
   return (
     <>
       <S.Section>
-        <S.Titulo>
+        {/* <S.Titulo>
           <p></p>
           <h1>Sobre nós</h1>
-        </S.Titulo>
+        </S.Titulo> */}
 
         <S.Container>
           <section>
-            <div>
+            <h1>Sobre nós</h1>
+            <div className="texto">
               <div>
                 <p>
                   Nós da Ponte, somos uma plataforma que transforma o

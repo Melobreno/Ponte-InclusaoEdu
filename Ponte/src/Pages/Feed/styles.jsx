@@ -24,6 +24,9 @@ export const Section = styled.div`
     @media (${breakpoint.bg}) {
       margin: 0 2.5rem;
     }
+    @media (${breakpoint.sm}) {
+      display: none;
+    }
   }
 
   .pesquisa {
@@ -41,9 +44,13 @@ export const Escreva = styled.div`
   width: 50rem;
   height: 13.5rem;
   background-color: #ecf4f6;
-
   border-radius: 0.375rem;
   box-shadow: 6px 6px 15px -6px rgba(0, 0, 0, 0.25);
+
+  @media (${breakpoint.sm}) {
+    width: 30rem;
+  }
+
   .novaMsg {
     display: flex;
     padding: 0.88rem;
@@ -75,6 +82,10 @@ export const Escreva = styled.div`
     width: 48rem;
     height: 1px;
     padding: 0;
+
+    @media (${breakpoint.sm}) {
+      width: 27rem;
+    }
   }
 
   .botao {
@@ -161,75 +172,6 @@ export const Mensagem = styled.div`
   }
 `;
 
-export const Mensagem2 = styled.div`
-  display: flex;
-  width: 50rem;
-  height: 13.5rem;
-  margin-top: 2.18rem;
-  background-color: #ecf4f6;
-  border-radius: 0.375rem;
-  box-shadow: 6px 6px 15px -6px rgba(0, 0, 0, 0.25);
-
-  .texto {
-    font-family: "Montserrat", sans-serif, Helvetica;
-    width: 44rem;
-    height: 7rem;
-    margin-top: 0.4rem;
-    margin-left: 0.71rem;
-  }
-
-  h1 {
-    font-size: 1rem;
-    font-weight: 700;
-  }
-  p {
-    text-align: left;
-    font-size: 1.25rem;
-    font-weight: 400;
-  }
-  .enviado {
-    display: flex;
-
-    justify-content: space-between;
-    padding: 0.88rem;
-  }
-  .img {
-    width: 2.70213rem;
-    height: 2.62469rem;
-  }
-  .comentario {
-    display: flex;
-    align-items: center;
-  }
-  .data {
-    font-size: 0.75rem;
-  }
-  .balao {
-    padding-left: 1rem;
-    width: 1.8125rem;
-    height: 2.1875rem;
-  }
-  button.lixeira {
-    padding: 0;
-  }
-  .lixeira {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    width: 1.1rem;
-    height: 1.2rem;
-    margin-left: 1.2rem;
-    border: none;
-    resize: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  .lixeira:hover {
-    box-shadow: 0 0.33rem 0.7rem rgba(0, 0, 0, 0.37);
-    transform: translateY(-1px);
-  }
-`;
-
 export const Atores = styled.div`
   display: flex;
   flex-direction: column;
@@ -280,13 +222,8 @@ export const Atores = styled.div`
     justify-content: end;
     margin-top: 20rem;
   }
-  .vetorPreto {
-    width: 28.25rem;
-    height: 12.375rem;
-  }
 `;
 export const Imagem = styled.div`
-  background-image: url(${background});
   background-size: 28rem 13rem;
   position: relative;
   background-repeat: no-repeat;

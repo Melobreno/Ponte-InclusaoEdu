@@ -1,8 +1,8 @@
-import { Escreva, Mensagem, Mensagem2 } from "./styles";
+import { Escreva, Mensagem } from "./styles";
 import img from "../../Assets/Avatar 1.svg";
 // import img2 from "../../Assets/avatar2.svg";
 import lixeira from "../../Assets/lixeira.svg";
-// import vetor from "../../Assets/vetorPreto.png";
+
 import balao from "../../Assets/comentario.svg";
 import Btn from "../../Components/atoms/Button/index";
 import { useState, useEffect } from "react";
