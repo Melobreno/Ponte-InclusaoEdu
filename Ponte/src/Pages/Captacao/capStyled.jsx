@@ -6,8 +6,13 @@ export const SobreNos = styled.div`
   padding: 1.5rem 20%;
   justify-content: center;
   text-align: start;
-  height: 36rem;
+  height: 35.5rem;
   gap: 20px;
+
+  textarea::placeholder {
+    padding: 5px 0;
+    font-family: "Montserrat-Bold", Helvetica;
+  }
 
   .textos {
     padding-top: 1rem;
