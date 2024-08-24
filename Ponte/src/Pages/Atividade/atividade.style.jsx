@@ -2,13 +2,15 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
+  max-width: 62%;
   font-family: "Montserrat", sans-serif;
 `;
 export const Bloco = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0;
-  margin-left: 50px;
+  margin-left: 180px;
+  margin-top: 30px;
+  margin-right: 0;
 
   .digite {
     padding: 1rem;
@@ -21,9 +23,7 @@ export const Bloco = styled.div`
     font-size: 1rem;
     font-family: "Montserrat", sans-serif, Helvetica;
     font-weight: 500;
-  }
-  h3 {
-    margin: 0;
+    display: flex;
   }
   .quadro {
     display: flex;
@@ -44,27 +44,9 @@ export const Bloco = styled.div`
     background-color: aliceblue;
     border-bottom: solid 2px #25a6ce;
   }
-
-  .icons {
-    display: flex;
-    margin-left: 18rem;
-    gap: 2rem;
-  }
   .avatar {
     width: 2.6rem;
     height: 2.6rem;
-  }
-  .atividade {
-  }
-  h4 {
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 600;
-  }
-  p {
-    font-size: 1.25rem;
-    font-style: normal;
-    font-weight: 400;
   }
   .bnt {
     margin: 20px;
@@ -103,6 +85,7 @@ export const menssagem = styled.div`
     border: none;
     background-color: aliceblue;
     border-radius: 3px;
+    width: 59rem;
   }
   li {
     padding: 30px;

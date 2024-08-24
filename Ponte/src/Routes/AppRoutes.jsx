@@ -11,6 +11,7 @@ import Feed from "../Pages/Feed/index";
 import Documentacao from "../Pages/Documentacao/Documentacao";
 import AtividadeProf from "../Pages/Atividade/AtividadeProf";
 import AtividadeResp from "../Pages/Atividade/AtividadeResp";
+import TelaCarregamento from "../Components/atoms/telaCarregamento/TelaCarregamneto";
 
 function AppRoutes() {
   return (
@@ -28,6 +29,7 @@ function AppRoutes() {
         <Route path="/Doc" element={<Documentacao />}></Route>
         <Route path="/Atividades" element={<AtividadeProf />}></Route>
         <Route path="/AtividadeResp" element={<AtividadeResp />}></Route>
+        <Route path="/Carregamento" element={<TelaCarregamento />}></Route>
       </Routes>
     </BrowserRouter>
   );

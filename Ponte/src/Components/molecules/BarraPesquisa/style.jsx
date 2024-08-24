@@ -2,18 +2,16 @@ import styled from "styled-components";
 
 export const Section = styled.div`
   display: flex;
-  height: 5.1875rem;
-  justify-content: space-between;
-
+  height: 4.5rem;
+  justify-content: space-around;
   align-items: center;
-  padding: 1.3rem 20%;
-
+  /* padding: 1.3rem 20%; */
+  border-bottom: solid 1px black;
   .esquerdaNav {
     display: flex;
     width: 39rem;
     justify-content: space-between;
     align-items: center;
-    gap: 4.5rem;
   }
 
   .inputNav {
@@ -61,5 +59,8 @@ export const Section = styled.div`
   .avatar {
     width: 2.625rem;
     height: 2.62469rem;
+  }
+  .logo {
+    width: 150px;
   }
 `;

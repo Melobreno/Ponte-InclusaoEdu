@@ -1,27 +1,19 @@
 import SideDocumentacao from "../../Components/organisms/SideBarDocument/SideDocumentacao";
 import Pesquisa from "../../Components/molecules/BarraPesquisa/index";
 import * as S from "./atividade.style";
-// import avatar1 from "../../Assets/Avatar 1.svg";
-import lapis from "../../Assets/lapis.svg";
-// import lixeira from "../../Assets/lixeira.svg";
-import QuadroAtvTxt from "../../Components/atoms/QuadroaAtvTxt";
-import AtividadeInput from "../../Components/atoms/AtiavidadeInput";
-import check from "../../Assets/check.svg";
 import Btn from "../../Components/atoms/Button";
 import { useState, useEffect } from "react";
 import api from "../../api";
 
-function AtividadeProf({ inputAparece }) {
-  const aparece =
-    inputAparece === "quadroSemanal" ? <QuadroAtvTxt /> : <AtividadeInput />;
-  const imgIcon = inputAparece === "quadroSemanal" ? check : lapis;
+function AtividadeProf() {
   const textoButao = "Postar";
-
   const [texto, setTexto] = useState("");
   const [messagem, setMessagem] = useState([]);
-  const [data, setData] = useState("");
   const [isFocused, setIsFocused] = useState(false);
+  const [openSidebar, setOpenSidebar] = useState(false);
+  const [editando, setEditando] = useState(null);
 
+  // get, pega a informação que tem no banco de dados e exibe na tela
   const mostrarAtividades = async () => {
     try {
       const response = await api.get("/");
@@ -34,11 +26,30 @@ function AtividadeProf({ inputAparece }) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
     try {
-      await api.post("/insertItem", {
-        texto,
-      });
+      if (texto === "") {
+        alert("texto ivalido");
+        handleEdit();
+        return;
+      }
+
+      const dataCriacao = new Date().toLocaleDateString();
+
+      if (editando) {
+        await api.put(`/updateItem/${editando}`, {
+          texto,
+        });
+        setEditando(null);
+      } else if (texto != "") {
+        await api.post("/insertItem", {
+          texto,
+        });
+      }
+
+      // quando a pagina é renderizada ele limpa o input
       setTexto("");
+      //mostra na tela depois que envia
       mostrarAtividades();
       setIsFocused(false);
     } catch (error) {
@@ -55,9 +66,6 @@ function AtividadeProf({ inputAparece }) {
   };
   useEffect(() => {
     mostrarAtividades();
-    handleSubmit();
-    const mostrarData = new Date().toLocaleDateString();
-    setData(mostrarData);
   }, []);
 
   const handleDelete = async (id) => {
@@ -70,11 +78,16 @@ function AtividadeProf({ inputAparece }) {
     }
   };
 
+  const handleEdit = (useTexto) => {
+    setTexto(useTexto.texto);
+    setEditando(useTexto.id);
+    setIsFocused(true);
+  };
   return (
     <>
-      <Pesquisa />
+      <Pesquisa setOpenSidebar={setOpenSidebar} />
       <S.Container>
-        <SideDocumentacao />
+        {openSidebar && <SideDocumentacao />}
         <S.Bloco>
           <section>
             <form onSubmit={handleSubmit}>
@@ -89,7 +102,10 @@ function AtividadeProf({ inputAparece }) {
                 />
                 {isFocused && (
                   <div className="botoes">
-                    <Btn type="submit" txt={textoButao} />
+                    <Btn
+                      type="submit"
+                      txt={editando ? "Atualizar" : textoButao}
+                    />
                     <button
                       type="button"
                       onClick={handleCancela}
@@ -111,9 +127,10 @@ function AtividadeProf({ inputAparece }) {
                       <button onClick={() => handleDelete(useTexto.id)}>
                         Deletar
                       </button>
-                      <button>Editar</button>
+                      <button onClick={() => handleEdit(useTexto)}>
+                        Editar
+                      </button>
                     </div>
-                    <p>{data}</p>
                   </li>
                 </ul>
               ))}

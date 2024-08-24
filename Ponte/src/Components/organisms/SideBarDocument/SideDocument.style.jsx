@@ -1,53 +1,77 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  background-color: #25a6ce;
-  font-family: "Montserrat", sans-serif;
-  width: 20vw;
-  height: 115vh;
-  border-radius: 0 10px 0 0;
-`;
-
-export const TextAvata = styled.div`
+export const nav = styled.nav`
   display: flex;
-  padding: 30px;
-  gap: 13px;
-  font-weight: 500;
-  justify-content: flex-start;
-`;
-export const Texto = styled.div`
-  background-color: transparent;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: aliceblue;
+  height: 89vh;
+  max-width: 250px;
+  border-radius: 0 5px 5px 0;
+  font-family: "Montserrat", sans-serif;
 
-  li {
+  #sidebar-container {
+    margin: 10px;
+  }
+  #infor-usuario {
     display: flex;
-    list-style-type: none;
+    flex-direction: column;
+  }
+  #usuario {
+    display: flex;
     gap: 20px;
-    margin-bottom: 30px;
-    font-size: 16px;
+    border-bottom: solid 1px #25a6ce;
+    width: 100%;
+  }
+  #infor-usuario span:last-child {
+    font-size: 12px;
+  }
+  #saide_items {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    list-style: none;
+    padding: 0px;
+  }
+  .saide-item {
+    border-radius: 10px;
+    padding: 14px;
+    cursor: pointer;
+  }
+  .saide-item a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    gap: 20px;
   }
 
-  .lapis img {
-    width: 25px;
+  .saide-item.active {
+    background-color: #25a6ce;
   }
 
-  li img {
-    width: 20px;
+  #sair {
+    margin: 10px;
   }
-
-  .iconArrowOpen img {
-    width: 15px;
+  .sair-btn {
+    display: flex;
+    align-items: center;
+    border: none;
+    gap: 20px;
+    cursor: pointer;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 10px;
   }
-
-  .iconArrowClosed img {
-    width: 15px;
-    rotate: -90deg;
+  .item-descricao {
+    /* width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px; */
   }
-
-  .arquivos img {
-    width: 15px;
-  }
-
-  .listOpt {
-    margin-top: 130px;
+  #sideBar.open-sidebar {
+    min-width: 15%;
   }
 `;
