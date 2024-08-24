@@ -4,15 +4,11 @@ import maosImg from "../../Assets/maosMenino.svg";
 function SobreNos() {
   return (
     <>
-      <S.Section id="sobre">
-        <S.Titulo>
-          <p></p>
-          <h1>Sobre nós</h1>
-        </S.Titulo>
-
+      <S.Section>    
         <S.Container>
           <section>
-            <div>
+            <h1>Sobre nós</h1>
+            <div className="texto">
               <div>
                 <p>
                   Nós da Ponte, somos uma plataforma que transforma o

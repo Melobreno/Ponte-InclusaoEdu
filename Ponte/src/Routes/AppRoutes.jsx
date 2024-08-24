@@ -18,6 +18,8 @@ import Mapeamento from "../Pages/Mapeamento/index";
 import CadastroRes from "../Pages/Cadastro/CadastroResumido";
 import PrivateRoute from "./privateRoutes";
 
+import Posts from "../Pages/Feed/posts";
+
 function AppRoutes() {
   return (
     <BrowserRouter>

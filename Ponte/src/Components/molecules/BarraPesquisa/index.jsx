@@ -11,16 +11,23 @@ function Pesquisa() {
           <a href="">
             <img src={menu} alt="" />
           </a>
-
           <div className="inputNav">
             <a href="">
               <img src={logo} alt="" />
             </a>
           </div>
         </div>
-
         <div className="direitaNav">
-          <InputNav />
+          <div className="pesquisa">
+            <input
+              type="text"
+              placeholder="O que  você está procurando?"
+              className="lupa"
+            />
+            <button>
+              <img src={lupa} alt="" />
+            </button>
+          </div>
           <p>Lucas Melo</p>
           <img src={avatar} alt="" className="avatar" />
         </div>

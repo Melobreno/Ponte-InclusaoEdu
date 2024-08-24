@@ -1,80 +1,77 @@
-import { Titulo, Opcoes, Fundo } from "./funcionalidadesStyle";
-import imgFun from "../../../Assets/Funcionalidades.png";
-import imgMais from "../../../Assets/+.svg";
+
+import { GlobalStyles } from "../../../MainStyles";
+import { Section, Container } from "./funcionalidadesStyle";
+import conexao from "../../../Assets/conexao 1.svg";
+import doc from "../../../Assets/doc.svg";
+import pessoas from "../../../Assets/pessoas.svg";
+import acompanamento from "../../../Assets/acompanhamento.svg";
 
 function Funcionalidades() {
   return (
-    <section id="funcionalidade">
-      <Fundo>
-        <Titulo>
-          <div>
-            <h1>FUNCIONALIDADES</h1>
+    <>
+      <GlobalStyles />
+      <Section>
+        <div className="titulo">
+          <h1>Funcionalidades</h1>
+        </div>
+
+        <Container>
+          <div className="bloco">
+            <div className="texto">
+              <div className="imagem">
+                <img src={conexao} />
+              </div>
+
+
+              <h2>Mapeamento de profissionais</h2>
+              <p>
+                Forneceremos um mapeamento de todos os profissionais e
+                instituições de ensino que utilizam nossa ferramenta.
+              </p>
+            </div>
           </div>
-        </Titulo>
-        <Opcoes>
-          <div>
-            <img src={imgFun} alt="Img Funcionalidades" />
+          <div className="bloco">
+            <div className="texto">
+              <div className="imagem">
+                <img src={pessoas} />
+              </div>
+
+              <h2>Conexão entre pais e profissionais</h2>
+              <p>
+                A nossa ferramenta vai permitir que a comunicação entre os
+                profissionais e os responsáveis aconteça de forma organizada e
+                simplificada.
+              </p>
+            </div>
           </div>
-          <div>
-            <ul>
-              <li>
-                <details>
-                  <summary>
-                    Conexão entre pais e professores{" "}
-                    <img className="imgMais" src={imgMais} alt="" />
-                  </summary>
-
-                  <p>
-                    A nossa ferramenta permite que a comunicação entre os
-                    profissionais e os responsáveis aconteça de forma organizada
-                    e simplicifada.
-                  </p>
-                </details>
-              </li>
-
-              <li>
-                <details>
-                  <summary>
-                    Mapeamento de profissionais
-                    <img className="imgMais" src={imgMais} alt="" />
-                  </summary>
-                  <p>
-                    Forneceremos um mapeamento de todos os profissionais e
-                    instituições de ensino que utilizam nossa ferramenta.
-                  </p>
-                </details>
-              </li>
-
-              <li>
-                <details>
-                  <summary>
-                    Acompanhamento contínuo{" "}
-                    <img className="imgMais" src={imgMais} alt="" />
-                  </summary>
-                  <p>
-                    A ponte vai fazer com que a sua criança receba um
-                    acompanhamento continuado e personalizado
-                  </p>
-                </details>
-              </li>
-
-              <li>
-                <details>
-                  <summary>
-                    Documentação do aluno{" "}
-                    <img className="imgMais" src={imgMais} alt="" />
-                  </summary>
-                  <p>
-                    Todo o desenvolvimento e progresso realizado da sua criança
-                    ficará salvo e disponível como arquivo PDF.
-                  </p>
-                </details>
-              </li>
-            </ul>
+          <div className="bloco">
+            <div className="texto">
+              <div className="imagem">
+                <img src={acompanamento} />
+              </div>
+              <h2>Acompanhamento contínuo</h2>
+              <p>
+                A ponte vai fazer com que a sua criança receba um acompanhamento
+                continuado e personalizado
+              </p>
+            </div>
           </div>
-        </Opcoes>
-      </Fundo>
-    </section>
+          <div className="bloco">
+            <div className="texto">
+              <div className="imagem">
+                <img src={doc} />
+              </div>
+
+              <h2>Documentação do aluno</h2>
+              <p>
+                Todo o desenvolvimento e progresso realizado da sua criança
+                ficará salvo e disponível como arquivo PDF.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </Section>
+    </>
   );
 }
 export default Funcionalidades;
