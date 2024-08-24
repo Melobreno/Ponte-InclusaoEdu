@@ -3,10 +3,12 @@ import SideDocumentacao from "../../Components/organisms/SideBarDocument/SideDoc
 import Pesquisa from "../../Components/molecules/BarraPesquisa/index";
 import fav from "../../Assets/PicFav.svg";
 import pDF from "../../Assets/PicPDF.svg";
+import lixeira from "../../Assets/lixeira.svg";
 import nDoc from "../../Assets/newDoc.svg";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import api from "../../api/api";
 function Documentacao() {
+  const [documents, setDocuments] = useState([]);
   const [uploadedFiles, setUploadedFiles] = useState([]);
   const [showAllDocuments, setShowAllDocuments] = useState(false);
   const [recentDocuments, setRecentDocuments] = useState([]);
@@ -41,7 +43,6 @@ function Documentacao() {
               { name: file.name, link },
             ]);
 
-            // Envie o link e o nome para o backend
             await fetchUploadedFiles(file.name, link);
           }
         } catch (error) {
@@ -77,10 +78,22 @@ function Documentacao() {
   const handleShowAllDocuments = async () => {
     setShowAllDocuments(true);
     try {
-      const response = await api.get("/showdoc"); // Ajuste o endpoint conforme necessário
-      setRecentDocuments(response.data); // Atualize o estado com os documentos recebidos
+      const response = await api.get("/showdoc");
+      setRecentDocuments(response.data);
     } catch (error) {
       console.error("Erro ao buscar documentos:", error);
+    }
+  };
+  //encodeURIComponent -> Garante que o valor passado continue com espaços e/ou caracteres especiais
+
+  // Função para deletar um documento
+  const deleteDoc = async (name_doc) => {
+    try {
+      await api.delete(`/deletedoc/${encodeURIComponent(name_doc)}`);
+      // Após deletar, recarregar a lista de documentos
+      loadDocuments();
+    } catch (error) {
+      console.error("Erro ao deletar documento:", error);
     }
   };
 
@@ -128,7 +141,11 @@ function Documentacao() {
           </S.Arquivos>
           <div>
             <div className="tituloh2">
-              <h2>Documentos recentes</h2>
+              {showAllDocuments ? (
+                <h2>Todos os Documentos</h2>
+              ) : (
+                <h2>Documentos recentes</h2>
+              )}
             </div>
             <S.Arquivos1>
               {recentDocuments.length > 0 ? (
@@ -142,7 +159,16 @@ function Documentacao() {
                       >
                         {file.name_doc}
                       </a>
-                      <span>{new Date().toLocaleTimeString()}</span>
+                      <span>
+                        {`${new Date().toDateString("pt-br")}`}{" "}
+                        <span>
+                          <img
+                            src={lixeira}
+                            alt=""
+                            onClick={() => deleteDoc(file.name_doc)}
+                          />
+                        </span>
+                      </span>
                     </p>
                   </div>
                 ))
