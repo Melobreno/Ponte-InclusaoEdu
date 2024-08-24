@@ -4,8 +4,8 @@ export const FormSection = styled.section`
   font-family: "Montserrat", sans-serif;
   margin-left: 10px;
   display: flex;
-  padding: 1.3rem 20%;
   justify-content: center;
+  margin: 0 auto;
 
   .formContainer {
     display: flex;

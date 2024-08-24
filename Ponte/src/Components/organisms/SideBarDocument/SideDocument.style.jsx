@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const nav = styled.nav`
   display: flex;
   flex-direction: column;
@@ -51,6 +52,7 @@ export const nav = styled.nav`
     background-color: #25a6ce;
   }
 
+
   #sair {
     margin: 10px;
   }
@@ -64,14 +66,8 @@ export const nav = styled.nav`
     border-radius: 10px;
     padding: 10px;
   }
-  .item-descricao {
-    /* width: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    font-size: 14px; */
-  }
   #sideBar.open-sidebar {
     min-width: 15%;
+
   }
 `;

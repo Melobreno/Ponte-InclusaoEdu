@@ -1,37 +1,60 @@
 import styled from "styled-components";
-import background from "../../Assets/vetorPreto.png";
 
-export const Imagem = styled.div`
-  background-image: url(${background});
-  background-size: 28rem 13rem;
-  background-position: right;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 120vh;
-`;
-export const Section = styled.div`
-  padding: 1.3rem 20%;
+import breakpoint from "../../breakpoints.js";
 
-  /* margin: 7rem 29rem 2rem 20rem; */
-  display: flex;
-  flex-direction: row;
-
-  .linhaL {
-    margin: 0 2.25rem 0 2.9rem;
-    width: 0rem;
-    height: 48rem;
+export const Pagina = styled.div`
+  @media (${breakpoint.mobile}) {
   }
 `;
 
-export const Texto = styled.div``;
+export const Section = styled.div`
+  display: flex;
 
+  justify-content: space-around;
+  justify-content: center;
+
+  .linhaL {
+    margin: 0 6rem;
+    width: 0rem;
+    height: 48rem;
+    @media (${breakpoint.bg}) {
+      margin: 0 2.5rem;
+    }
+    @media (${breakpoint.sm}) {
+      display: none;
+    }
+  }
+
+  .pesquisa {
+    @media (${breakpoint.md}) {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+    }
+  }
+`;
+
+
+export const Texto = styled.div`
+  background-color: lightblue;
+  display: flex;
+  height: 0;
+`;
 export const Escreva = styled.div`
   width: 50rem;
   height: 13.5rem;
   background-color: #ecf4f6;
-
   border-radius: 0.375rem;
   box-shadow: 6px 6px 15px -6px rgba(0, 0, 0, 0.25);
+
+  @media (${breakpoint.mobile}) {
+    margin-top: -70px;
+    display: flex;
+    justify-content: center;
+    height: 13rem;
+    transform: scale(0.37);
+  }
+
   .novaMsg {
     display: flex;
     padding: 0.88rem;
@@ -82,6 +105,15 @@ export const Mensagem = styled.div`
   border-radius: 0.375rem;
   box-shadow: 6px 6px 15px -6px rgba(0, 0, 0, 0.25);
 
+  @media (${breakpoint.mobile}) {
+    margin-top: -100px;
+    display: flex;
+
+    justify-content: center;
+    height: 13rem;
+    transform: scale(0.37);
+  }
+
   .texto {
     display: flex;
     flex-direction: column;
@@ -90,15 +122,24 @@ export const Mensagem = styled.div`
     height: 7rem;
     margin-top: 0.4rem;
     margin-left: 0.71rem;
+    justify-content: space-around;
+    @media (${breakpoint.mobile}) {
+      display: flex;
+    }
+  }
+  .conteudo p {
+    width: 45.0625rem;
+    height: 6.5rem;
+    margin: 0;
   }
 
   h1 {
     font-size: 1rem;
     font-weight: 700;
   }
-  p {
+  .comentario p {
     text-align: left;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 400;
   }
   .enviado {
@@ -112,6 +153,7 @@ export const Mensagem = styled.div`
   }
   .comentario {
     display: flex;
+    align-items: center;
   }
   .data {
     font-size: 0.75rem;
@@ -121,62 +163,42 @@ export const Mensagem = styled.div`
     width: 1.8125rem;
     height: 2.1875rem;
   }
-`;
-
-export const Mensagem2 = styled.div`
-  display: flex;
-  width: 50rem;
-  height: 13.5rem;
-  margin-top: 2.18rem;
-  background-color: #ecf4f6;
-  border-radius: 0.375rem;
-  box-shadow: 6px 6px 15px -6px rgba(0, 0, 0, 0.25);
-
-  .texto {
-    font-family: "Montserrat", sans-serif, Helvetica;
-    width: 44rem;
-    height: 7rem;
-    margin-top: 0.4rem;
-    margin-left: 0.71rem;
+  button.lixeira {
+    padding: 0;
   }
-
-  h1 {
-    font-size: 1rem;
-    font-weight: 700;
-  }
-  p {
-    text-align: left;
-    font-size: 1.25rem;
-    font-weight: 400;
-  }
-  .enviado {
+  .lixeira {
     display: flex;
-
-    justify-content: space-between;
-    padding: 0.88rem;
+    align-items: center;
+    justify-content: end;
+    width: 1.1rem;
+    height: 1.2rem;
+    margin-left: 1.2rem;
+    border: none;
+    resize: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
   }
-  .img {
-    width: 2.70213rem;
-    height: 2.62469rem;
-  }
-  .comentario {
-    display: flex;
-  }
-  .data {
-    font-size: 0.75rem;
-  }
-  .balao {
-    padding-left: 0.5rem;
-    width: 1.8125rem;
-    height: 2.1875rem;
+  .lixeira:hover {
+    box-shadow: 0 0.33rem 0.7rem rgba(0, 0, 0, 0.37);
+    transform: translateY(-1px);
   }
 `;
 
 export const Atores = styled.div`
   display: flex;
   flex-direction: column;
-
+  padding: 0;
+  margin: 0;
   height: 46rem;
+  width: 450px;
+
+  @media (${breakpoint.mobile}) {
+    display: none;
+  }
+
+  @media (${breakpoint.md}) {
+    width: 250px;
+  }
   img {
     padding: 0.68rem;
     display: flex;
@@ -186,6 +208,8 @@ export const Atores = styled.div`
 
   .atores {
     display: flex;
+    margin: 0;
+    padding: 0;
   }
 
   .texto {
@@ -213,9 +237,5 @@ export const Atores = styled.div`
     flex-direction: column;
     justify-content: end;
     margin-top: 20rem;
-  }
-  .vetorPreto {
-    width: 28.25rem;
-    height: 12.375rem;
   }
 `;

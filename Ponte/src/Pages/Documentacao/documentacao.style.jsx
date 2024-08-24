@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Bloco = styled.div`
-  width: 65vw;
+  width: 100vw;
   font-family: "Montserrat", sans-serif;
 
   .tituloh2 {
@@ -12,7 +12,7 @@ export const Bloco = styled.div`
 export const Arquivos = styled.div`
   display: flex;
   flex-direction: row;
-  max-width: 100%;
+  max-width: 70vw;
   gap: 30px;
   justify-content: space-evenly;
 
@@ -43,6 +43,17 @@ export const Arquivos1 = styled.div`
   flex-direction: column;
   gap: 20px;
   margin-left: 50px;
+
+  .timeDelete {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .msgSemArquivo {
+    width: 70vw;
+  }
+
   .containerArquivos {
     width: 54vw;
     height: 80px;
