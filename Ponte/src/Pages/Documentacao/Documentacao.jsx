@@ -1,7 +1,6 @@
 import * as S from "./documentacao.style";
 import SideDocumentacao from "../../Components/organisms/SideBarDocument/SideDocumentacao";
 import Pesquisa from "../../Components/molecules/BarraPesquisa/index";
-import fav from "../../Assets/PicFav.svg";
 import pDF from "../../Assets/PicPDF.svg";
 import lixeira from "../../Assets/lixeira.svg";
 import nDoc from "../../Assets/newDoc.svg";
@@ -132,12 +131,6 @@ function Documentacao() {
                 Visualizar Todos os Documentos
               </p>
             </div>
-            <div className="containerFunc">
-              <span>
-                <img src={fav} alt="" />
-              </span>
-              <p>Visualizar Documentos Favoritos</p>
-            </div>
           </S.Arquivos>
           <div>
             <div className="tituloh2">
@@ -155,12 +148,12 @@ function Documentacao() {
                       <a
                         href={file.url_doc}
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel="noopener noreferrer" // Essa linha garante a segurança ao abrir o link externo
                       >
                         {file.name_doc}
                       </a>
-                      <span>
-                        {`${new Date().toDateString("pt-br")}`}{" "}
+                      <span className="timeDelete">
+                        {`${new Date().toLocaleDateString()}`}{" "}
                         <span>
                           <img
                             src={lixeira}

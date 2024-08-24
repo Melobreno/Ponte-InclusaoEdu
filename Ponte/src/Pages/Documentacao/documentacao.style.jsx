@@ -16,11 +16,6 @@ export const Arquivos = styled.div`
   gap: 30px;
   justify-content: space-evenly;
 
-  .inputFile {
-    /* display: none; */
-    cursor: pointer;
-  }
-
   div {
     width: 250px;
     height: 220px;
@@ -48,6 +43,12 @@ export const Arquivos1 = styled.div`
   flex-direction: column;
   gap: 20px;
   margin-left: 50px;
+
+  .timeDelete {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
 
   .msgSemArquivo {
     width: 70vw;
