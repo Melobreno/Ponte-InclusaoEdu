@@ -1,4 +1,3 @@
-
 import { GlobalStyles } from "../../MainStyles";
 import { Pagina, Section, Texto, Atores } from "./styles";
 import img from "../../Assets/Avatar 1.svg";
@@ -8,7 +7,6 @@ import img3 from "../../Assets/avatar3.svg";
 import Pesquisa from "../../Components/molecules/BarraPesquisa";
 import Posts from "./posts";
 function Feed() {
-  const value = "Enviar";
   return (
     <>
       <Pagina>

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Sect = styled.section`
+  font-family: "Monserrat", sans-serif;
   background-color: #f6cf00;
   display: flex;
   justify-content: center;

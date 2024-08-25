@@ -2,7 +2,6 @@ import { Section } from "./style";
 import logo from "../../../Assets/logoPonte.svg";
 import menu from "../../../Assets/botaoSideBar.svg";
 import avatar from "../../../Assets/Avatar 1.svg";
-import InputNav from "../../atoms/inputNav";
 function Pesquisa() {
   return (
     <>

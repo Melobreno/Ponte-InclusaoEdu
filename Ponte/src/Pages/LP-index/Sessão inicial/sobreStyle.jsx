@@ -40,4 +40,10 @@ export const ContainerDir = styled.div`
   img {
     width: 30rem;
   }
+
+  @media (max-width: 1024px) {
+    img {
+      display: none;
+    }
+  }
 `;

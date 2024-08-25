@@ -6,7 +6,7 @@ import lixeira from "../../Assets/lixeira.svg";
 import balao from "../../Assets/comentario.svg";
 import Btn from "../../Components/atoms/Button/index";
 import { useState, useEffect } from "react";
-import api from "../../api";
+import api from "../../api/api";
 
 function Posts() {
   const [texto, setTexto] = useState("");
