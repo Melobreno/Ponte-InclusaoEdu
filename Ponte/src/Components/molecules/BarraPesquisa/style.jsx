@@ -1,24 +1,17 @@
 import styled from "styled-components";
 import breakpoint from "../../../breakpoints";
+
 export const Section = styled.div`
   display: flex;
-  height: 5.1875rem;
+  height: 5.18rem;
   justify-content: space-around;
   align-items: center;
   margin: auto;
   padding-bottom: 2.6rem;
   padding-top: 0.7rem;
-  @media (${breakpoint.mobile}) {
-    transform: scale(0.37);
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    gap: 18rem;
-  }
 
   .esquerdaNav {
     display: flex;
-    width: 39rem;
     justify-content: space-between;
     align-items: center;
   }
@@ -28,9 +21,9 @@ export const Section = styled.div`
     width: 50rem;
     justify-content: space-between;
     align-items: center;
-    @media (${breakpoint.sm}) {
+    @media (max-width: 1024px) {
       margin: auto;
-      width: auto;
+      width: 700px;
     }
   }
 
@@ -79,5 +72,22 @@ export const Section = styled.div`
   }
   .logo {
     width: 150px;
+  }
+  @media (max-width: 425px) {
+    transform: scale(1);
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    .inputNav {
+      width: fit-content;
+    }
+
+    .inputNav img {
+      width: 130px;
+    }
+    .userName {
+      display: none;
+    }
   }
 `;

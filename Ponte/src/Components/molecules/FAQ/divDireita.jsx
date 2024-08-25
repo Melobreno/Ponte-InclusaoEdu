@@ -30,7 +30,7 @@ function divDireita() {
         </li>
       </ul>
 
-      <Link to={"/captacao"}>
+      <Link to={"/captacao"} className="btnSaibaMais">
         <Btn txt={"Saiba Mais"} />
       </Link>
     </FaqSection>

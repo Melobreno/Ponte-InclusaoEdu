@@ -51,7 +51,7 @@ function Pesquisa({ setOpenSidebar }) {
               <img src={lupa} alt="lupa" />
             </button>
           </div>
-          <p>Lucas Melo</p>
+          <p className="userName">Lucas Melo</p>
           <img src={avatar} alt="avata" className="avatar" />
         </div>
       </Section>

@@ -45,6 +45,9 @@ export const FaqSection = styled.section`
     ul {
       transform: scale(1.1);
     }
+    .btnSaibaMais {
+      margin-top: 10px;
+    }
   }
 
   @media (max-width: 425px) {
