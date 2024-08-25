@@ -111,11 +111,21 @@ export const Section = styled.div`
     width: 21rem;
     padding-left: 1rem;
   }
+
+  @media (max-width: 425px) {
+    flex-wrap: wrap-reverse;
+  }
 `;
 export const Direita = styled.div`
   iframe {
     width: 37.5rem;
     height: 40rem;
     border: 1px solid black;
+  }
+
+  @media (max-width: 425px) {
+    iframe {
+      width: 423px;
+    }
   }
 `;
