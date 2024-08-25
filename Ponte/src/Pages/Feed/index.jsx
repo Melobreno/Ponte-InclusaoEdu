@@ -3,10 +3,11 @@ import { Pagina, Section, Texto, Atores } from "./styles";
 import img from "../../Assets/Avatar 1.svg";
 import img2 from "../../Assets/avatar2.svg";
 import img3 from "../../Assets/avatar3.svg";
-
 import Pesquisa from "../../Components/molecules/BarraPesquisa";
 import Posts from "./posts";
+import { useState } from "react";
 function Feed() {
+  const [openSideBar, setOpenSideBar] = useState(false);
   return (
     <>
       <Pagina>

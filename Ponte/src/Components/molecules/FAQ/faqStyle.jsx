@@ -14,7 +14,8 @@ export const FaqSection = styled.section`
   h1 {
     font-size: 2rem;
     margin: 0 0 43px;
-    font-weight: 900;
+    font-weight: 700;
+    text-transform: uppercase;
   }
 
   li {
@@ -38,5 +39,21 @@ export const FaqSection = styled.section`
     align-items: center;
     border: 0;
     margin-right: -1.2rem;
+  }
+
+  @media (max-width: 1024px) {
+    ul {
+      transform: scale(1.1);
+    }
+  }
+
+  @media (max-width: 425px) {
+    ul {
+      transform: scale(0.9);
+    }
+
+    li {
+      font-size: 1rem;
+    }
   }
 `;

@@ -4,7 +4,7 @@ import background from "../../Assets/bg.png";
 export const Section = styled.section`
   background-image: url(${background});
   background-color: #f6cf00;
-  height: 775.61px;
+  height: 80vh;
   display: flex;
   justify-content: center;
 

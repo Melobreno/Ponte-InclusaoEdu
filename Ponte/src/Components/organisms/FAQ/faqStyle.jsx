@@ -9,9 +9,14 @@ export const Sect = styled.section`
   align-content: center;
   flex-wrap: wrap;
   height: 80vh;
-  width: 100vw;
 
   .divEsq img {
     width: 500px;
+  }
+
+  @media (max-width: 1170px) {
+    .divEsq img {
+      display: none;
+    }
   }
 `;

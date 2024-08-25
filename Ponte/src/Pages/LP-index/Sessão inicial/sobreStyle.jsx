@@ -7,10 +7,8 @@ export const Section = styled.section`
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-
   justify-content: center;
   gap: 10%;
-  width: 100vw;
   align-content: center;
   align-items: center;
   gap: 0.8rem;
@@ -28,6 +26,10 @@ export const Section = styled.section`
     height: 40px;
     font-size: 1.4rem;
     font-weight: 700;
+  }
+
+  @media (max-width: 425px) {
+    padding: 10px;
   }
 `;
 

@@ -1,18 +1,42 @@
 import { Section } from "./style";
+import { FiAlignJustify } from "react-icons/fi";
+import { RiCloseFill } from "react-icons/ri";
 import logo from "../../../Assets/logoPonte.svg";
-import menu from "../../../Assets/botaoSideBar.svg";
 import avatar from "../../../Assets/Avatar 1.svg";
-function Pesquisa() {
+import lupa from "../../../Assets/lupa.svg";
+import { useState } from "react";
+
+function Pesquisa({ setOpenSidebar }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const abrirSidebar = () => {
+    const newIsOpen = !isOpen;
+    setIsOpen(newIsOpen);
+    setOpenSidebar(newIsOpen);
+  };
+
   return (
     <>
       <Section>
+        <div>
+          {isOpen ? (
+            <RiCloseFill
+              onClick={abrirSidebar}
+              className="menu"
+              fontSize={25}
+            />
+          ) : (
+            <FiAlignJustify
+              onClick={abrirSidebar}
+              fontSize={25}
+              className="menu"
+            />
+          )}
+        </div>
         <div className="esquerdaNav">
-          <a href="">
-            <img src={menu} alt="" />
-          </a>
           <div className="inputNav">
             <a href="">
-              <img src={logo} alt="" />
+              <img src={logo} alt="logo" className="logo" />
             </a>
           </div>
         </div>
@@ -23,12 +47,12 @@ function Pesquisa() {
               placeholder="O que  você está procurando?"
               className="lupa"
             />
-            <button>
-              <img src={lupa} alt="" />
+            <button className="">
+              <img src={lupa} alt="lupa" />
             </button>
           </div>
           <p>Lucas Melo</p>
-          <img src={avatar} alt="" className="avatar" />
+          <img src={avatar} alt="avata" className="avatar" />
         </div>
       </Section>
     </>

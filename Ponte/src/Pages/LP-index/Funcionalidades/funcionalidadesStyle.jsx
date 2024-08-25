@@ -91,12 +91,20 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     max-width: 425px;
+
+    h1 {
+      margin: 0;
+    }
     .container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      transform: scale(0.5);
+      transform: scale(0.6);
       height: 55vh;
       gap: 2rem;
+
+      p {
+        font-size: 1.4rem;
+      }
     }
   }
 `;

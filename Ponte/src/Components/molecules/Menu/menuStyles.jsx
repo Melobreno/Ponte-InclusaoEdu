@@ -51,7 +51,7 @@ export const Container = styled.div`
   .menu-toggle {
     display: none;
     position: relative;
-    top: 100%; /* Move abaixo do botão */
+    top: 100%;
     left: 0;
     background-color: white;
     width: 100%;
@@ -116,11 +116,11 @@ export const Container = styled.div`
 
   @media (max-width: 768px) {
     .menu-toggle {
-      display: block; /* Mostra o botão de menu */
+      display: block;
     }
 
     .menu-resp {
-      display: none; /* Esconde o menu inicialmente */
+      display: none;
       flex-direction: column;
       position: absolute;
       top: 60px;
@@ -131,9 +131,10 @@ export const Container = styled.div`
     }
 
     .menu-resp.show {
-      display: flex;
+      display: block;
       padding: 0;
       margin-right: 20px;
+      border-radius: 15px;
 
       .imgTog {
         display: none;
@@ -185,8 +186,25 @@ export const Container = styled.div`
       right: 0;
     }
 
+    .menu-resp.show {
+      width: 300px;
+    }
+
     .menu-resp li {
       margin: 8px 0;
+    }
+
+    .drop-menu a {
+      display: flex;
+      padding: 5px 10px;
+      text-align: left;
+    }
+
+    .menu-resp li:hover ul,
+    .menu li.over ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
 `;

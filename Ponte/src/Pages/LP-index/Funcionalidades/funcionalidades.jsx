@@ -1,4 +1,3 @@
-import { GlobalStyles } from "../../../MainStyles";
 import { Section, Container } from "./funcionalidadesStyle";
 import conexao from "../../../Assets/conexao 1.svg";
 import doc from "../../../Assets/doc.svg";
@@ -8,10 +7,9 @@ import acompanamento from "../../../Assets/acompanhamento.svg";
 function Funcionalidades() {
   return (
     <>
-      <GlobalStyles />
       <Section>
         <Container>
-          <div className="titulo">
+          <div className="titulo" id="funcionalidade">
             <h1>Funcionalidades</h1>
           </div>
           <div className="container">
