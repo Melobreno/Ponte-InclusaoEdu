@@ -16,25 +16,30 @@ export const cardSection = styled.div`
         return "rgba(94, 94, 94, 1)";
     }
   }};
-  width: 280px;
-  height: 400px;
+  width: 300px;
+  height: 430px;
 
+  .containerValue {
+    height: 3rem;
+  }
   .cardHeader h2 {
     color: #fff;
     text-align: center;
+    height: 1.7rem;
+    display: flex;
+    justify-content: center;
   }
 
   .containerInform {
-    padding: 10px 0 0 0;
     display: flex;
     flex-direction: column;
     margin-bottom: 5px;
-    gap: 10px;
+    gap: 5px;
     background-color: #fff;
     margin: 0 auto;
     width: 100%;
     text-align: center;
-    height: 270px;
+    height: 285px;
   }
 
   .productInfo {
@@ -45,11 +50,15 @@ export const cardSection = styled.div`
   }
 
   .contentInfo {
+    display: flex;
+    text-align: left;
     max-width: fit-content;
+    width: 16rem;
   }
 
   .contentInfo span {
     margin-left: 15px;
+    padding: 4px;
   }
 
   .contentInfo img {
@@ -57,7 +66,7 @@ export const cardSection = styled.div`
   }
 
   button {
-    margin-top: 50px;
+    margin-top: 30px;
     background-color: ${(props) => {
       switch (props.nomeProp) {
         case "Basic":

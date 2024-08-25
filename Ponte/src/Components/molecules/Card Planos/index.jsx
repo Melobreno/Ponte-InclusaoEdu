@@ -24,7 +24,7 @@ function Card({ nomeProp }) {
           <div className="productInfo">{infoCard}</div>
           <div>
             <Link to={toPayment}>
-              <Btn txt={"assinar plano"} />
+              <Btn txt={"Assinar plano"} />
             </Link>
           </div>
         </div>
