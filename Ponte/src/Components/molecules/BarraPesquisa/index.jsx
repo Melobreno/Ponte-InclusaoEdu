@@ -2,7 +2,7 @@ import { Section } from "./style";
 import logo from "../../../Assets/logoPonte.svg";
 import menu from "../../../Assets/botaoSideBar.svg";
 import avatar from "../../../Assets/Avatar 1.svg";
-import lupa from "../../../Assets/lupa.svg";
+import InputNav from "../../atoms/inputNav";
 function Pesquisa() {
   return (
     <>
@@ -11,14 +11,12 @@ function Pesquisa() {
           <a href="">
             <img src={menu} alt="" />
           </a>
-
           <div className="inputNav">
             <a href="">
               <img src={logo} alt="" />
             </a>
           </div>
         </div>
-
         <div className="direitaNav">
           <div className="pesquisa">
             <input

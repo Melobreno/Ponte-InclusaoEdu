@@ -8,7 +8,6 @@ export const Section = styled.div`
   margin: auto;
   padding-bottom: 2.6rem;
   padding-top: 0.7rem;
-
   @media (${breakpoint.mobile}) {
     transform: scale(0.37);
     justify-content: center;
@@ -16,9 +15,6 @@ export const Section = styled.div`
     padding: 0;
     gap: 18rem;
   }
-  /* @media (${breakpoint.sm}) {
-    margin: auto;
-  } */
 
   .esquerdaNav {
     display: flex;

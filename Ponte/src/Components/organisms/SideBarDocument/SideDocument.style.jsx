@@ -5,7 +5,7 @@ export const Container = styled.div`
   font-family: "Montserrat", sans-serif;
   width: 20vw;
   height: 86.8vh;
-  border-radius: 0 10px 0 0;
+  border-radius: 0 10px 10px 0;
 `;
 
 export const TextAvata = styled.div`
@@ -48,6 +48,6 @@ export const Texto = styled.div`
   }
 
   .listOpt {
-    margin-top: 130px;
+    margin-top: 120px;
   }
 `;

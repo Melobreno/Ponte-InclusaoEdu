@@ -2,7 +2,7 @@ import * as S from "./buttonStyle";
 function btn({ txt }) {
   return (
     <>
-      <S.Container>{txt}</S.Container>
+      <S.Container type="submit">{txt}</S.Container>
     </>
   );
 }

@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
+
 export const Section = styled.div`
   height: 775.61px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   flex-direction: column;
   gap: 3.4rem;
 
@@ -16,11 +19,13 @@ export const Section = styled.div`
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
+
   }
 `;
 
 export const Container = styled.div`
   display: flex;
+
   gap: 2.75rem;
   margin-bottom: 3rem;
   .bloco {
@@ -55,7 +60,6 @@ export const Container = styled.div`
   .imagem {
     display: flex;
     justify-content: center;
-
     img {
       width: 11.125rem;
       height: 10.875rem;

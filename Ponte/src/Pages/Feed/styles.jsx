@@ -34,12 +34,12 @@ export const Section = styled.div`
   }
 `;
 
+
 export const Texto = styled.div`
   background-color: lightblue;
   display: flex;
   height: 0;
 `;
-
 export const Escreva = styled.div`
   width: 50rem;
   height: 13.5rem;
