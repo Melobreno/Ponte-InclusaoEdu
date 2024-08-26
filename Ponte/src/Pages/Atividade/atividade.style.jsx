@@ -71,7 +71,6 @@ export const Bloco = styled.div`
     background-color: aliceblue;
     border-bottom: solid 2px #25a6ce;
     @media (max-width: 425px) {
-      display: none;
     }
     @media (max-width: 1024px) {
       width: 83%;
@@ -193,9 +192,9 @@ export const menssagem = styled.div`
       width: 50px;
       font-size: 8px;
     }
-    /* @media (max-width: 1024px) {
+    @media (max-width: 1024px) {
       width: 70px;
-    } */
+    }
   }
   .avatar {
     display: flex;

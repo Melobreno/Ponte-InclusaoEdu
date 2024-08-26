@@ -25,6 +25,15 @@ function AtividadeProf() {
     }
   };
 
+  const [dataCriacao, setDataCriacao] = useState("");
+
+  useEffect(() => {
+    if (!dataCriacao) {
+      const data = new Date().toLocaleDateString();
+      setDataCriacao(data);
+    }
+  }, [dataCriacao]);
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -126,7 +135,7 @@ function AtividadeProf() {
                     <h4>Lucas Melo</h4>
                   </p>
                   <li className="caixasTexto">
-                    {useTexto.texto}{" "}
+                    {useTexto.texto} <p>{dataCriacao}</p>
                     <div className="butoesCaixas">
                       <button onClick={() => handleDelete(useTexto.id_ativi)}>
                         Deletar

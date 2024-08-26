@@ -14,7 +14,7 @@ module.exports = class putController {
         .json({ message: "atividade atualizada com sucesso", atualizarAtivi });
     } catch (error) {
       return res
-        .status(200)
+        .status(500)
         .json({ message: "atividade atualizada com sucesso", error });
     }
   }
