@@ -1,8 +1,10 @@
+import { useState } from "react";
 import img from "../../../Assets/logoPonte.svg";
 import Btn from "../../atoms/Button/index/";
 import * as S from "./elementoSenha.style";
 function ElementoSenha({ exibirInput, placeholderNova, placeholderRep }) {
-  const value = "Entrar";
+  const texto = "Entrar";
+  const [valor, setValor] = useState("");
   return (
     <>
       <S.Container>
@@ -15,11 +17,19 @@ function ElementoSenha({ exibirInput, placeholderNova, placeholderRep }) {
           </p>
         </S.texto>
         <S.inputs>
-          {exibirInput && <input type="text" placeholder={placeholderNova} />}
+          {exibirInput && (
+            <input
+              type="text"
+              placeholder={placeholderNova}
+              value={valor}
+              onChange={(e) => setValor(e.target.value)}
+            />
+          )}
           <input type="text" placeholder={placeholderRep} />
         </S.inputs>
-        <Btn txt={value} />
+        <Btn txt={texto} />
       </S.Container>
+      <p>{setValor}</p>
     </>
   );
 }

@@ -7,10 +7,8 @@ export const Section = styled.section`
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-
   justify-content: center;
   gap: 10%;
-  width: 100vw;
   align-content: center;
   align-items: center;
   gap: 0.8rem;
@@ -29,6 +27,10 @@ export const Section = styled.section`
     font-size: 1.4rem;
     font-weight: 700;
   }
+
+  @media (max-width: 425px) {
+    padding: 10px;
+  }
 `;
 
 export const ContainerEsq = styled.div`
@@ -39,5 +41,11 @@ export const ContainerEsq = styled.div`
 export const ContainerDir = styled.div`
   img {
     width: 30rem;
+  }
+
+  @media (max-width: 1024px) {
+    img {
+      display: none;
+    }
   }
 `;

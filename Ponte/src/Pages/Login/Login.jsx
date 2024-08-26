@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import api from "../../api/api";
 
 function Login() {
-  const navegate = useNavigate();
+  const navigate = useNavigate();
   const value = "Enviar";
 
   const [email, setEmail] = useState("");
@@ -18,6 +18,7 @@ function Login() {
     event.preventDefault();
     if (email.length < 1 || senha.length < 1) {
       alert("Por favor insira os seus dados");
+      return;
     }
 
     try {
@@ -25,9 +26,10 @@ function Login() {
         email_user: email,
         password_user: senha,
       });
+      const token = res.data.token;
       localStorage.setItem("token", res.data.token);
       console.log(token);
-      navegate("/feed");
+      navigate("/feed");
       alert(`Logado com sucesso, seu token: ${token}`);
     } catch (error) {
       setError("Login falhou. Verifique suas credenciais.");

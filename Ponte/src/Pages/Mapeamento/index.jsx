@@ -1,14 +1,18 @@
 import { Map, Foto1, Foto2 } from "./mapStyled";
 import foto1 from "../../Assets/Usermulher.svg";
 import foto2 from "../../Assets/Userhomem.svg";
-import Barra from "../../Components/molecules/BarraPesquisa/index";
 import Button from "../../Components/atoms/Button/index";
+import SideDocumentacao from "../../Components/organisms/SideBarDocument/SideDocumentacao";
+import { useState } from "react";
+import Pesquisa from "../../Components/molecules/BarraPesquisa/index";
 
 function Mapeamento() {
+  const [openSideBar, setOpenSideBar] = useState(false);
   const value = "Buscar";
   return (
     <>
-      <Barra />
+      <Pesquisa setOpenSideBar={setOpenSideBar} />
+      <div>{openSideBar && <SideDocumentacao />}</div>
       <Map>
         <div className="card">
           <div className="busca">

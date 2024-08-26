@@ -5,7 +5,7 @@ export const Section = styled.div`
   margin: 0 auto;
   margin-top: 20px;
   justify-content: center;
-  gap: 50px;
+  gap: 100px;
 
   .secEsquerda {
     display: flex;
@@ -111,11 +111,21 @@ export const Section = styled.div`
     width: 21rem;
     padding-left: 1rem;
   }
+
+  @media (max-width: 425px) {
+    flex-wrap: wrap-reverse;
+  }
 `;
 export const Direita = styled.div`
   iframe {
     width: 37.5rem;
     height: 40rem;
     border: 1px solid black;
+  }
+
+  @media (max-width: 425px) {
+    iframe {
+      width: 423px;
+    }
   }
 `;

@@ -4,9 +4,13 @@ import background from "../../Assets/bg.png";
 export const Section = styled.section`
   background-image: url(${background});
   background-color: #f6cf00;
-  height: 775.61px;
+  height: 80vh;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 1040px) {
+    background-image: none;
+  }
 `;
 export const Container = styled.div`
   display: flex;
@@ -14,6 +18,13 @@ export const Container = styled.div`
   font-size: 1.18rem;
   justify-content: center;
   gap: 20px;
+
+  @media (max-width: 1040px) {
+    .imagemMaos img {
+      display: none;
+    }
+  }
+
   section {
     margin: 0 5rem;
     display: flex;
@@ -48,14 +59,20 @@ export const Container = styled.div`
     text-transform: uppercase;
   }
   p {
-    margin: 1%.5 0;
+    margin: 1.5rem 0;
   }
 
-  .imagemMaos {
-    margin: -5px;
-    margin-top: 6.9rem;
-    display: flex;
-    justify-content: end;
+  .imagemMaos img {
+    margin-top: 17px;
+  }
+  @media (max-width: 425px) {
+    transform: scale(0.8);
+    align-content: center;
+    max-width: 425px;
+    section {
+      gap: 20px;
+      margin: 0 0;
+    }
   }
 `;
 export const Text = styled.div`

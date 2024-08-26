@@ -9,7 +9,7 @@ function Footer() {
     <S.Section>
       <S.Container>
         <div>
-          <img src={img} alt="" />
+          <img src={img} alt="" className="logoPonte" />
         </div>
 
         <ul>

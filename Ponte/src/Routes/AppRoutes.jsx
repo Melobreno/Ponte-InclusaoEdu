@@ -18,8 +18,6 @@ import Mapeamento from "../Pages/Mapeamento/index";
 import CadastroRes from "../Pages/Cadastro/CadastroResumido";
 import PrivateRoute from "./privateRoutes";
 
-// import Posts from "../Pages/Feed/posts";
-
 function AppRoutes() {
   return (
     <BrowserRouter>
@@ -35,8 +33,8 @@ function AppRoutes() {
         <Route path="/cadastro" element={<CadastroRes />}></Route>
         <Route path="/Assinaturas" element={<Assinatura />}></Route>
         <Route path="/Pagamento" element={<ConfirmarCompra />}></Route>
-
         <Route path="/Feed" element={<Feed />}></Route>
+
         <Route
           path="/chat"
           element={

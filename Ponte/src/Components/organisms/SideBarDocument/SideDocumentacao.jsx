@@ -1,108 +1,76 @@
 import img from "../../../Assets/Group.svg";
 import * as S from "./SideDocument.style";
-import iconDoc from "../../../Assets/iconDoc.svg";
-import iconFolder from "../../../Assets/iconFolder.svg";
-import lapis from "../../../Assets/lapis.svg";
-import iconStar from "../../../Assets/iconStar.svg";
-import iconArrrow from "../../../Assets/arrow.svg";
-import iconConfig from "../../../Assets/iconConfig.svg";
-import iconSair from "../../../Assets/iconSair.svg";
+import { IoHomeOutline } from "react-icons/io5";
+import { GoPeople } from "react-icons/go";
+import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
+import { VscFile } from "react-icons/vsc";
+import { IoSettingsOutline } from "react-icons/io5";
+import { CiLogout } from "react-icons/ci";
+import { IoFolderOpenOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 function SideDocumentacao() {
   return (
     <>
-      <S.Container>
-        <S.TextAvata>
-          <img src={img} alt="" />
-          <p>Lucas Melo</p>
-        </S.TextAvata>
-        <hr />
-        <S.Texto>
-          <ul>
-            <li>
-              <span>
-                <img src={iconStar} alt="" />
-              </span>
-              Favoritos
+      <S.nav>
+        <div id="sidebar-container">
+          <div id="usuario">
+            <img src={img} alt="avatar" id="avatar" />
+
+            <p id="infor-usuario">
+              <span className="item-descricao">Lucas Melo</span>
+              <span className="item-descricao">Terapeuta</span>
+            </p>
+          </div>
+          <ul id="saide_items">
+            <li className="saide-item">
+              <Link to="/feed">
+                <IoHomeOutline />
+                <span className="item-descricao">Página principal</span>
+              </Link>
             </li>
-            <li>
-              <span className="lapis">
-                <img src={lapis} alt="" />
-              </span>
-              Atividades
+            <li className="saide-item">
+              <Link to="/mapeamento">
+                <GoPeople />
+                <span className="item-descricao">Profissionais</span>
+              </Link>
             </li>
-            <li>
-              <span>
-                <img src={iconDoc} alt="" />
-              </span>
-              Documentos
+            <li className="saide-item">
+              <Link to="/atividadeProf">
+                <VscFile />
+                <span className="item-descricao">Mural</span>
+              </Link>
+            </li>
+            <li className="saide-item">
+              <Link to="/Doc">
+                <IoFolderOpenOutline />
+                <span className="item-descricao">Pasta de documentos</span>
+              </Link>
+            </li>
+            <li className="saide-item">
+              <Link to="/Chat">
+                <IoChatbubbleEllipsesOutline />
+                <span className="item-descricao">Chat</span>
+              </Link>
             </li>
 
-            <ul>
-              <li>
-                <span className="iconArrowOpen">
-                  <img src={iconArrrow} alt="" />
-                </span>
-                Diagnosticos
-              </li>
-              <ul className="arquivos">
-                <li>
-                  <span>
-                    <img src={iconFolder} alt="" />
-                  </span>
-                  Laudo 1.pdf
-                </li>
-                <li>
-                  <span>
-                    <img src={iconFolder} alt="" />
-                  </span>
-                  Laudo 2.pdf
-                </li>
-                <li>
-                  <span>
-                    <img src={iconFolder} alt="" />
-                  </span>
-                  Laudo 3.pdf
-                </li>
-              </ul>
-
-              <li>
-                <span className="iconArrowClosed">
-                  <img src={iconArrrow} alt="" />
-                </span>
-                Nutricionista
-              </li>
-              <li>
-                <span className="iconArrowClosed">
-                  <img src={iconArrrow} alt="" />
-                </span>
-                Psicomotricista
-              </li>
-              <li>
-                <span className="iconArrowClosed">
-                  <img src={iconArrrow} alt="" />
-                </span>
-                Terapeuta Ocupacional
-              </li>
-            </ul>
-          </ul>
-
-          <ul className="listOpt">
-            <li>
-              <span>
-                <img src={iconConfig} alt="" />
-              </span>
-              Configurações
-            </li>
-            <li>
-              <span>
-                <img src={iconSair} alt="" />
-              </span>
-              Sair
+            <li className="saide-item">
+              <Link to="/CadastroProf">
+                <IoSettingsOutline />
+                <span className="item-descricao">Configuração</span>
+              </Link>
             </li>
           </ul>
-        </S.Texto>
-      </S.Container>
+        </div>
+        <Link to="/login">
+          <div id="sair">
+            <button className="sair-btn">
+              <CiLogout />
+              <span className="item-descricao">Sair</span>
+            </button>
+          </div>
+        </Link>
+      </S.nav>
     </>
   );
 }

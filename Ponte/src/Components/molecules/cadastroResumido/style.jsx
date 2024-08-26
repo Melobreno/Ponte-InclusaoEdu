@@ -8,4 +8,13 @@ export const Container = styled.section`
   justify-content: center;
   align-items: center;
   gap: 50px;
+
+  @media (max-width: 425px) {
+    div {
+      display: none;
+    }
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
 `;
