@@ -9,27 +9,25 @@ import SideDocumentacao from "../../Components/organisms/SideBarDocument/SideDoc
 
 function Feed() {
   const [openSideBar, setOpenSideBar] = useState(false);
-
   return (
     <>
       <Pesquisa setOpenSidebar={setOpenSideBar} />
       <Pagina>
+        <Pesquisa setOpenSidebar={setOpenSideBar} />
         <div>{openSideBar && <SideDocumentacao />}</div>
-        <div>
-          <Section>
-            <Texto>
-              <div className="posts">
-                <Posts />
-              </div>
-            </Texto>
-            <hr className="linhaL" />
-            <Atores>
-              <div className="atores">
-                <img className="img" src={img} alt="" />
-
-                <div className="texto">
-                  <h2>Lucas Melo</h2>
-                  <p>Responsável por (Criança)</p>
+        <Section>
+          <Texto>
+            <div className="posts">
+              <Posts />
+            </div>
+          </Texto>
+          <hr className="linhaL" />
+          <Atores>
+            <div className="atores">
+              <img className="img" src={img} alt="" />
+              <div className="texto">
+                <h2>Lucas Melo</h2>
+                <p>Responsável por Criança</p>
                 </div>
               </div>
 

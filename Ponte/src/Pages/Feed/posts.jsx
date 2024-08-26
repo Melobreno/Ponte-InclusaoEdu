@@ -1,8 +1,6 @@
 import { Escreva, Mensagem } from "./styles";
 import img from "../../Assets/Avatar 1.svg";
-// import img2 from "../../Assets/avatar2.svg";
 import lixeira from "../../Assets/lixeira.svg";
-
 import balao from "../../Assets/comentario.svg";
 import Btn from "../../Components/atoms/Button/index";
 import { useState, useEffect } from "react";
@@ -10,19 +8,15 @@ import api from "../../api/api";
 
 function Posts() {
   const [texto, setTexto] = useState("");
-  const [mensagens, setMensagem] = useState([]);
-
-  useEffect(() => {
-    fetchMensagens();
-  }, []);
+  const [mensagens, setMensagens] = useState([]);
 
   const fetchMensagens = async () => {
     try {
-      const response = await api.get("");
+      const response = await api.get("/showmsg");
       const msgOrdem = response.data.sort(
         (dataA, dataB) => new Date(dataB.data) - new Date(dataA.data)
       );
-      setMensagem(msgOrdem);
+      setMensagens(msgOrdem);
     } catch (error) {
       console.error(`Erro ao buscar dados: ${error}`);
     }
@@ -30,8 +24,8 @@ function Posts() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await api.post("/insertItem", {
-        texto,
+      await api.post("/insertmsg", {
+        texto: texto,
       });
       fetchMensagens();
       setTexto("");
@@ -42,17 +36,20 @@ function Posts() {
 
   const handleDelete = async (id) => {
     try {
-      await api.delete(`/deleteItem/${id}`);
+      await api.delete(`/deletemsg/${id}`);
       fetchMensagens();
     } catch (error) {
       console.error(`Erro ao deletar a mensagem: `, error);
     }
   };
-
+  useEffect(() => {
+    fetchMensagens();
+  }, []);
   const enviar = "Enviar";
   return (
     <>
       <div>
+        <h1>Teste</h1>
         <Escreva>
           <form onSubmit={handleSubmit}>
             <div className="novaMsg">
@@ -93,7 +90,7 @@ function Posts() {
                       className="lixeira"
                       onClick={() => handleDelete(mensagem.id)}
                     >
-                      <img src={lixeira} />
+                      <img src={lixeira} alt="Ícone de lixeira" />
                     </button>
                   </div>
                 </div>
@@ -101,27 +98,6 @@ function Posts() {
             </Mensagem>
           ))}
         </div>
-
-        {/* <Mensagem2>
-          <div className="enviado">
-            <img className="img" src={img2} alt="" />
-            <div className="texto">
-              <h1>Priscila Silva</h1>
-              <p>
-                Jornada: Muito feliz em ver como o João está se desenvolvendo e
-                aprendendo tanto! Vamos continuar apoiando e incentivando cada
-                passo dessa jornada. 🚀❤️
-              </p>
-              <div className="comentario">
-                <p className="data">07 - Agosto - 2024</p>
-                <img className="balao" src={balao} alt="" />
-                <button className="lixeira">
-                  <img src={lixeira} alt="" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </Mensagem2> */}
       </div>
     </>
   );
