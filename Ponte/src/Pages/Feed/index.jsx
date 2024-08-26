@@ -13,7 +13,6 @@ function Feed() {
     <>
       <Pesquisa setOpenSidebar={setOpenSideBar} />
       <Pagina>
-        <Pesquisa setOpenSidebar={setOpenSideBar} />
         <div>{openSideBar && <SideDocumentacao />}</div>
         <Section>
           <Texto>
@@ -28,27 +27,26 @@ function Feed() {
               <div className="texto">
                 <h2>Lucas Melo</h2>
                 <p>Responsável por Criança</p>
-                </div>
               </div>
+            </div>
 
-              <div className="atores">
-                <img className="img" src={img2} alt="" />
-                <div className="texto">
-                  <h2>Priscila Silva</h2>
-                  <p>Fonoaudiologa</p>
-                </div>
+            <div className="atores">
+              <img className="img" src={img2} alt="" />
+              <div className="texto">
+                <h2>Priscila Silva</h2>
+                <p>Fonoaudiologa</p>
               </div>
+            </div>
 
-              <div className="atores">
-                <img className="img" src={img3} alt="" />
-                <div className="texto">
-                  <h2>Erick Oliveira</h2>
-                  <p>Terapeuta</p>
-                </div>
+            <div className="atores">
+              <img className="img" src={img3} alt="" />
+              <div className="texto">
+                <h2>Erick Oliveira</h2>
+                <p>Terapeuta</p>
               </div>
-            </Atores>
-          </Section>
-        </div>
+            </div>
+          </Atores>
+        </Section>
       </Pagina>
     </>
   );

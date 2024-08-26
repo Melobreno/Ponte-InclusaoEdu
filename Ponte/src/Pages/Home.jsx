@@ -14,6 +14,12 @@ function Home() {
       <Funcionalidades />
       <Faq />
       <Footer />
+      <df-messenger
+        intent="WELCOME"
+        chat-title="Ponte: Inclusão Edu"
+        agent-id="4730aa58-8ecc-4b17-93dc-e16520caef3c"
+        language-code="en"
+      ></df-messenger>
     </>
   );
 }
