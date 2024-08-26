@@ -1,20 +1,17 @@
-
-import { GlobalStyles } from "../../MainStyles";
 import { Pagina, Section, Texto, Atores } from "./styles";
 import img from "../../Assets/Avatar 1.svg";
 import img2 from "../../Assets/avatar2.svg";
 import img3 from "../../Assets/avatar3.svg";
-
-import Pesquisa from "../../Components/molecules/BarraPesquisa";
+import SideDocumentacao from "../../Components/organisms/SideBarDocument/SideDocumentacao";
+import Pesquisa from "../../Components/molecules/BarraPesquisa/index";
 import Posts from "./posts";
 function Feed() {
-  const value = "Enviar";
+  const [openSideBar, setOpenSideBar] = useState(false);
   return (
     <>
       <Pagina>
-        <GlobalStyles />
-        <Pesquisa />
-
+        <Pesquisa setOpenSidebar={setOpenSideBar} />
+        <div>{openSideBar && <SideDocumentacao />}</div>
         <Section>
           <Texto>
             <div className="posts">
@@ -28,7 +25,7 @@ function Feed() {
 
               <div className="texto">
                 <h2>Lucas Melo</h2>
-                <p>Responsável por (Criança)</p>
+                <p>Responsável por Criança</p>
               </div>
             </div>
 

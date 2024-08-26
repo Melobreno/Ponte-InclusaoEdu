@@ -1,7 +1,7 @@
 const prisma = require("../../clientLib/prisma");
 
 module.exports = class insertMsgController {
-  static async inserMsg(req, res) {
+  static async insertMsg(req, res) {
     const { texto } = req.body;
 
     try {

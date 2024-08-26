@@ -18,7 +18,7 @@ import Mapeamento from "../Pages/Mapeamento/index";
 import CadastroRes from "../Pages/Cadastro/CadastroResumido";
 import PrivateRoute from "./privateRoutes";
 
-import Posts from "../Pages/Feed/posts";
+// import Posts from "../Pages/Feed/posts";
 
 function AppRoutes() {
   return (
@@ -36,14 +36,7 @@ function AppRoutes() {
         <Route path="/Assinaturas" element={<Assinatura />}></Route>
         <Route path="/Pagamento" element={<ConfirmarCompra />}></Route>
 
-        <Route
-          path="/feed"
-          element={
-            <PrivateRoute>
-              <Feed />
-            </PrivateRoute>
-          }
-        ></Route>
+        <Route path="/Feed" element={<Feed />}></Route>
         <Route
           path="/chat"
           element={

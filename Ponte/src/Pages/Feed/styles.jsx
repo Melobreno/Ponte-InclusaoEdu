@@ -34,7 +34,6 @@ export const Section = styled.div`
   }
 `;
 
-
 export const Texto = styled.div`
   background-color: lightblue;
   display: flex;
