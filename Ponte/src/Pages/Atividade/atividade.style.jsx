@@ -132,6 +132,7 @@ export const Bloco = styled.div`
     background-color: #fff;
     border-radius: 15px;
     width: 90px;
+    cursor: pointer;
     font-family: "Montserrat", sans-serif, Helvetica;
     @media (max-width: 425px) {
       display: flex;
@@ -185,6 +186,7 @@ export const menssagem = styled.div`
     border-radius: 15px;
     padding: 8px;
     width: 90px;
+    cursor: pointer;
     background-color: #ffff;
     @media (max-width: 425px) {
       padding: 4px;
@@ -194,5 +196,10 @@ export const menssagem = styled.div`
     /* @media (max-width: 1024px) {
       width: 70px;
     } */
+  }
+  .avatar {
+    display: flex;
+    width: 130px;
+    gap: 7px;
   }
 `;

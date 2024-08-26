@@ -3,9 +3,11 @@ const prisma = require("../../clientLib/prisma");
 module.exports = class putController {
   static async atualizaAtivi(req, res) {
     const { id_ativi } = req.params;
+    const { texto } = req.body;
     try {
       const atualizarAtivi = await prisma.atividade.update({
-        where: { id_ativi },
+        where: { id_ativi: Number(id_ativi) },
+        data: { texto },
       });
       return res
         .status(200)

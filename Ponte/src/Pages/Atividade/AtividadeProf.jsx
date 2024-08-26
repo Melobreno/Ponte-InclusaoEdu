@@ -2,6 +2,7 @@ import SideDocumentacao from "../../Components/organisms/SideBarDocument/SideDoc
 import Pesquisa from "../../Components/molecules/BarraPesquisa/index";
 import * as S from "./atividade.style";
 import Btn from "../../Components/atoms/Button";
+import avata from "../../Assets/Avatar 1.svg";
 import { useState, useEffect } from "react";
 import api from "../../api/api";
 
@@ -35,7 +36,7 @@ function AtividadeProf() {
       }
 
       if (editando) {
-        await api.put(`/atualizaAtivi/${id_ativi}${editando}`, {
+        await api.put(`/atualizaAtivi:${editando}`, {
           texto,
         });
         setEditando(null);
@@ -78,7 +79,7 @@ function AtividadeProf() {
 
   const handleEdit = (useTexto) => {
     setTexto(useTexto.texto);
-    setEditando(useTexto.id);
+    setEditando(useTexto.id_ativi);
     setIsFocused(true);
   };
 
@@ -120,6 +121,10 @@ function AtividadeProf() {
             <S.menssagem>
               {messagem.map((useTexto) => (
                 <ul key={useTexto.id_ativi}>
+                  <p className="avatar">
+                    <img src={avata} alt="" />
+                    <h4>Lucas Melo</h4>
+                  </p>
                   <li className="caixasTexto">
                     {useTexto.texto}{" "}
                     <div className="butoesCaixas">
