@@ -3,9 +3,9 @@ import { FiAlignJustify } from "react-icons/fi";
 import { RiCloseFill } from "react-icons/ri";
 import logo from "../../../Assets/logoPonte.svg";
 import avatar from "../../../Assets/Avatar 1.svg";
-
 import lupa from "../../../Assets/lupa.svg";
 import { useState } from "react";
+
 function Pesquisa({ setOpenSidebar }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -34,13 +34,13 @@ function Pesquisa({ setOpenSidebar }) {
           )}
         </div>
         <div className="esquerdaNav">
-
           <div className="inputNav">
             <a href="">
               <img src={logo} alt="logo" className="logo" />
             </a>
           </div>
         </div>
+
         <div className="direitaNav">
           <div className="pesquisa">
             <input

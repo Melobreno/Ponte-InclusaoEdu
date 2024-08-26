@@ -6,8 +6,8 @@ export const Section = styled.div`
   justify-content: space-around;
   align-items: center;
   margin: auto;
-  padding-bottom: 2.6rem;
-  padding-top: 0.7rem;
+
+  border-bottom: solid 1px black;
   @media (${breakpoint.mobile}) {
     transform: scale(0.37);
     justify-content: center;

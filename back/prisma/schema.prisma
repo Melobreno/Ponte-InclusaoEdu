@@ -25,3 +25,8 @@ model Documents {
   name_doc String
   url_doc  String @unique
 }
+
+model Atividade {
+  id_ativi Int    @id @default(autoincrement())
+  texto    String
+}

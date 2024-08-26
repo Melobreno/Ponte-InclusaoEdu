@@ -1,12 +1,10 @@
 import { Escreva, Mensagem } from "./styles";
 import img from "../../Assets/Avatar 1.svg";
-// import img2 from "../../Assets/avatar2.svg";
 import lixeira from "../../Assets/lixeira.svg";
-
 import balao from "../../Assets/comentario.svg";
 import Btn from "../../Components/atoms/Button/index";
 import { useState, useEffect } from "react";
-import api from "../../api";
+import "../../api/api";
 
 function Posts() {
   const [texto, setTexto] = useState("");
