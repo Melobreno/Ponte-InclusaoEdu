@@ -8,7 +8,7 @@ import api from "../../api/api";
 
 function Login() {
   const navigate = useNavigate();
-  const value = "Enviar";
+  const value = "Entrar";
 
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");

@@ -109,5 +109,3 @@ export const Map = styled.div`
 `;
 export const Foto1 = styled.div``;
 export const Foto2 = styled.div``;
-export const Barra = styled.div``;
-export const Button = styled.div``;

@@ -1,6 +1,6 @@
 import { Map, Foto1, Foto2 } from "./mapStyled";
-import foto1 from "../../Assets/Usermulher.svg";
-import foto2 from "../../Assets/Userhomem.svg";
+import fotom from "../../Assets/Usermulher.svg";
+import fotoh from "../../Assets/Userhomem.svg";
 import Button from "../../Components/atoms/Button/index";
 import SideDocumentacao from "../../Components/organisms/SideBarDocument/SideDocumentacao";
 import { useState } from "react";
@@ -22,7 +22,7 @@ function Mapeamento() {
           <div className="container2">
             <div className="info1">
               <Foto1>
-                <img src={foto1} alt="user" />
+                <img src={fotom} alt="user" />
               </Foto1>
               <div className="dados">
                 <div className="nome">Erick Oliveira</div>
@@ -40,7 +40,7 @@ function Mapeamento() {
           <div className="container3">
             <div className="info1">
               <Foto2>
-                <img src={foto2} alt="user" />
+                <img src={fotoh} alt="user" />
               </Foto2>
               <div className="dados">
                 <div className="nome">Pricilla Silva</div>

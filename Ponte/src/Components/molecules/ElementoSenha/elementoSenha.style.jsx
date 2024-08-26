@@ -2,15 +2,19 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-direction: column;
-  gap: 30px;
+  gap: 50px;
+  height: 50rem;
 `;
 
 export const texto = styled.div`
   text-align: start;
   width: 65%;
+  font-family: "montsserat";
+  font-size: x-large;
+  width: 23rem;
 `;
 export const inputs = styled.div`
   display: flex;

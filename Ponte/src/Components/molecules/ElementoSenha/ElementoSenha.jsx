@@ -1,5 +1,5 @@
 import { useState } from "react";
-import img from "../../../Assets/logoPonte.svg";
+import img from "../../../Assets/Logo8.svg";
 import Btn from "../../atoms/Button/index/";
 import * as S from "./elementoSenha.style";
 function ElementoSenha({ exibirInput, placeholderNova, placeholderRep }) {
