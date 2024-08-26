@@ -1,25 +1,87 @@
+import { useState } from "react";
 import MetodoPgto from "../../atoms/CardPGTO/index";
 import * as S from "./style";
 import iconMais from "../../../Assets/+.svg";
 import Btn from "../../atoms/Button";
 
 function Pagamento() {
+  //Estados para armazenar
+  const [cardNum, setCardNum] = useState("");
+  const [dateVal, setDataVal] = useState("");
+  const [cvv, setCvv] = useState("");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleCard = (e) => {
+    e.preventDefault();
+    if (!cardNum || !dateVal || !cvv || !name) {
+      setMessage("Por favor, preencha todos os campos!");
+      return;
+    }
+    console.log("Processando pagamento:");
+    console.log("Número do Cartão:", cardNum);
+    console.log("Data de Expiração:", dateVal);
+    console.log("CVV:", cvv);
+    console.log("Nome do Titular:", name);
+    setMessage("Pagamento efetuado com sucesso!");
+  };
+
   return (
     <S.ContainerSec>
       <section className="sectionForma">
         <h1 className="tituloSec">Formas de Pagamento</h1>
         <div className="containerForma">
           <div className="contentFormaPagamento">
+            <div className="precoAVista">
+              <h3>Preço à vista: R$49,90</h3>
+            </div>
             <div className="formasDePagamento">
               <p>Cartão de Crédito</p>
-              <MetodoPgto metPgto={"cartao"} />
+
+              <form onSubmit={handleCard}>
+                <div className="card">
+                  <label htmlFor="">Número do cartão</label>
+                  <input
+                    type="text"
+                    value={cardNum}
+                    onChange={(e) => setCardNum(e.target.value)}
+                    placeholder="0000 0000 0000 0000"
+                  />
+
+                  <label htmlFor="">Data de validade</label>
+                  <input
+                    type="text"
+                    value={dateVal}
+                    onChange={(e) => setDataVal(e.target.value)}
+                    placeholder="MM/AA"
+                  />
+
+                  <label htmlFor="">CVV</label>
+                  <input
+                    type="text"
+                    value={cvv}
+                    onChange={(e) => setCvv(e.target.value)}
+                    placeholder="123"
+                  />
+
+                  <label htmlFor="">Nome no cartão</label>
+                  <input
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    placeholder="Nome Impresso no Cartão"
+                  />
+                </div>
+              </form>
+
               <MetodoPgto metPgto={"cartao"} />
               <a href="#">
                 <img src={iconMais} alt="" />
                 Adicionar um novo Cartão
               </a>
+              <hr />
             </div>
-            <hr />
+
             <div className="formasDePagamento">
               <p>Pix</p>
               <MetodoPgto metPgto={"pix"} />
@@ -35,7 +97,7 @@ function Pagamento() {
             <p>Itens:</p>
             <div className="contentItens">
               <p>Acesso Premium - 1 mês</p>
-              <p>R$ 44,90</p>
+              <p>R$ 49,90</p>
             </div>
             <hr />
             <div className="contentDetalhes">
@@ -54,10 +116,11 @@ function Pagamento() {
             <hr />
             <div className="contentTotal">
               <h3>Total do pedido:</h3>
-              <h3>R$ 44,90</h3>
+              <h3>R$ 49,90</h3>
             </div>
             <div className="containerBtn">
-              <Btn txt={"Confirmar Compra"} />
+              <Btn txt={"Confirmar Compra"} onClick={handleCard} />
+              {message && <p>{message}</p>}
             </div>
           </div>
         </div>

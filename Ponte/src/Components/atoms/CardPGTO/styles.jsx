@@ -7,8 +7,9 @@ export const ContainerOpt = styled.div`
   gap: 10px;
   align-items: center;
   width: 400px;
-  height: 70px;
+  height: 60px;
   background-color: #eef7ff;
+  /* background-color: #4a6074; */
   border-radius: 10px;
   padding: 5px;
   margin-bottom: 8px;

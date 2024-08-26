@@ -9,6 +9,23 @@ export const ContainerSec = styled.section`
     font-size: 2rem;
     margin-top: 0;
   }
+  .precoAVista h3 {
+    margin-left: 0.8rem;
+    margin-bottom: auto;
+  }
+  hr {
+    margin: 1px;
+  }
+  .card {
+    display: grid;
+    grid-template-columns: 190px 170px;
+    margin: 0.5rem;
+    input {
+      margin-bottom: 0.5rem;
+      border-radius: 0.2rem;
+      border: 1px solid black;
+    }
+  }
 
   .sectionForma {
     font-family: "Montserrat";
@@ -26,6 +43,8 @@ export const ContainerSec = styled.section`
   }
 
   .contentFormaPagamento {
+    display: flex;
+    flex-direction: column;
     background-color: #ffffff;
     border: 1px solid black;
     width: 440px;
@@ -55,9 +74,18 @@ export const ContainerSec = styled.section`
     color: #000000;
     font-size: 14px;
   }
+  .contentFormaPagamento {
+    height: 600px;
+  }
 
   .formasDePagamento {
     margin-left: 10px;
+    p {
+      margin-left: 0.5rem;
+    }
+    a {
+      padding: 0.6rem;
+    }
   }
 
   .contentResumo p {
@@ -80,6 +108,7 @@ export const ContainerSec = styled.section`
     margin-top: 40px;
   }
   .containerBtn button {
+    margin-top: 0.8rem;
     width: 200px;
     height: 40px;
   }
