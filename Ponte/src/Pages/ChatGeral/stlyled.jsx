@@ -5,7 +5,7 @@ export const Section = styled.div`
   margin: 0 auto;
   margin-top: 20px;
   justify-content: center;
-  gap: 50px;
+  gap: 100px;
 
   .secEsquerda {
     display: flex;

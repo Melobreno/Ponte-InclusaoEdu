@@ -8,7 +8,7 @@ function Card({ nomeProp }) {
   const valorAssinatura = nomeProp === "Premium" ? "49,90" : "00,00";
   const titleCard = nomeProp === "Premium" ? "Premium" : "Basic";
   const infoCard = nomeProp === "Premium" ? <InfoPremium /> : <InfoBasic />;
-  const toPayment = nomeProp === "Premium" ? "/Pagamento" : "/Pagamento";
+  const toPayment = nomeProp === "Premium" ? "/Pagamento" : "/feed";
   return (
     <>
       <S.cardSection nomeProp={nomeProp}>

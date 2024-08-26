@@ -59,14 +59,11 @@ export const Container = styled.div`
     text-transform: uppercase;
   }
   p {
-    margin: 1%.5 0;
+    margin: 1.5rem 0;
   }
 
-  .imagemMaos {
-    margin: -5px;
-    margin-top: 6.9rem;
-    display: flex;
-    justify-content: end;
+  .imagemMaos img {
+    margin-top: 17px;
   }
   @media (max-width: 425px) {
     transform: scale(0.8);
