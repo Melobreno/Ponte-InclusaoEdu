@@ -1,4 +1,4 @@
-const prisma = require("../clientLib/prisma");
+const prisma = require("../../clientLib/prisma");
 
 module.exports = class insertLink {
   static async docLink(req, res) {

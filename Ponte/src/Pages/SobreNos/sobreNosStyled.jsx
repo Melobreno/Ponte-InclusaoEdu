@@ -62,8 +62,9 @@ export const Container = styled.div`
     margin: 1.5rem 0;
   }
 
-  .imagemMaos img {
-    margin-top: 17px;
+  .imagemMaos {
+    display: flex;
+    align-items: end;
   }
   @media (max-width: 425px) {
     transform: scale(0.8);

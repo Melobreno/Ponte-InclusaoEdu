@@ -33,7 +33,15 @@ function AppRoutes() {
         <Route path="/cadastro" element={<CadastroRes />}></Route>
         <Route path="/Assinaturas" element={<Assinatura />}></Route>
         <Route path="/Pagamento" element={<ConfirmarCompra />}></Route>
-        <Route path="/Feed" element={<Feed />}></Route>
+
+        <Route
+          path="/Feed"
+          element={
+            <PrivateRoute>
+              <Feed />
+            </PrivateRoute>
+          }
+        ></Route>
 
         <Route
           path="/chat"
