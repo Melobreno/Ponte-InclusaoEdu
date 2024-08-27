@@ -1,4 +1,4 @@
-const prisma = require("../clientLib/prisma");
+const prisma = require("../../clientLib/prisma");
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
 

@@ -4,7 +4,6 @@ import Captacao from "../Pages/Captacao";
 import CadastroR from "../Pages/Cadastro/CadastroResp";
 import CadastroP from "../Pages/Cadastro/CadastroProf";
 import RedefinirSenha from "../Pages/Senhas/RedefinirSenha/RedefinirSenha";
-import CodigoAtivacao from "../Pages/Senhas/CodigoAtivacao/CodigoAtivacao";
 import NovaSenha from "../Pages/Senhas/NovaSenha/NovaSenha";
 import Login from "../Pages/Login/Login";
 import Assinatura from "../Pages/Assinatura";
@@ -14,7 +13,6 @@ import Chat from "../Pages/ChatGeral";
 import Documentacao from "../Pages/Documentacao/Documentacao";
 import AtividadeProf from "../Pages/Atividade/AtividadeProf";
 import AtividadeResp from "../Pages/Atividade/AtividadeResp";
-import Mapeamento from "../Pages/Mapeamento/index";
 import CadastroRes from "../Pages/Cadastro/CadastroResumido";
 import PrivateRoute from "./privateRoutes";
 
@@ -26,22 +24,22 @@ function AppRoutes() {
         <Route path="/cadastroResp" element={<CadastroR />}></Route>
         <Route path="/cadastroProf" element={<CadastroP />}></Route>
         <Route path="/captacao" element={<Captacao />}></Route>
-        <Route path="/CodigoAtivacao" element={<CodigoAtivacao />}></Route>
         <Route path="/NovaSenha" element={<NovaSenha />}></Route>
         <Route path="/RedefinirSenha" element={<RedefinirSenha />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/cadastro" element={<CadastroRes />}></Route>
         <Route path="/Assinaturas" element={<Assinatura />}></Route>
         <Route path="/Pagamento" element={<ConfirmarCompra />}></Route>
-        <Route path="/mapeamento" element={<Mapeamento />}></Route>
+
         <Route
-          path="/feed"
+          path="/Feed"
           element={
             <PrivateRoute>
               <Feed />
             </PrivateRoute>
           }
         ></Route>
+
         <Route
           path="/chat"
           element={

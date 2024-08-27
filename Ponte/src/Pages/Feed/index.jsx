@@ -9,48 +9,44 @@ import SideDocumentacao from "../../Components/organisms/SideBarDocument/SideDoc
 
 function Feed() {
   const [openSideBar, setOpenSideBar] = useState(false);
-
   return (
     <>
       <Pesquisa setOpenSidebar={setOpenSideBar} />
       <Pagina>
         <div>{openSideBar && <SideDocumentacao />}</div>
-        <div>
-          <Section>
-            <Texto>
-              <div className="posts">
-                <Posts />
+        <Section>
+          <Texto>
+            <div className="posts">
+              <Posts />
+            </div>
+          </Texto>
+          <hr className="linhaL" />
+          <Atores>
+            <div className="atores">
+              <img className="img" src={img} alt="" />
+              <div className="texto">
+                <h2>Lucas Melo</h2>
+                <p>Responsável por Criança</p>
               </div>
-            </Texto>
-            <hr className="linhaL" />
-            <Atores>
-              <div className="atores">
-                <img className="img" src={img} alt="" />
+            </div>
 
-                <div className="texto">
-                  <h2>Lucas Melo</h2>
-                  <p>Responsável por (Criança)</p>
-                </div>
+            <div className="atores">
+              <img className="img" src={img2} alt="" />
+              <div className="texto">
+                <h2>Priscila Silva</h2>
+                <p>Fonoaudiologa</p>
               </div>
+            </div>
 
-              <div className="atores">
-                <img className="img" src={img2} alt="" />
-                <div className="texto">
-                  <h2>Priscila Silva</h2>
-                  <p>Fonoaudiologa</p>
-                </div>
+            <div className="atores">
+              <img className="img" src={img3} alt="" />
+              <div className="texto">
+                <h2>Erick Oliveira</h2>
+                <p>Terapeuta</p>
               </div>
-
-              <div className="atores">
-                <img className="img" src={img3} alt="" />
-                <div className="texto">
-                  <h2>Erick Oliveira</h2>
-                  <p>Terapeuta</p>
-                </div>
-              </div>
-            </Atores>
-          </Section>
-        </div>
+            </div>
+          </Atores>
+        </Section>
       </Pagina>
     </>
   );

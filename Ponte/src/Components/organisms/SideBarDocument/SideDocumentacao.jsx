@@ -7,8 +7,12 @@ import { VscFile } from "react-icons/vsc";
 import { IoSettingsOutline } from "react-icons/io5";
 import { CiLogout } from "react-icons/ci";
 import { IoFolderOpenOutline } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
+function handleLogout() {
+  localStorage.removeItem("token");
+  window.location.reload();
+}
 function SideDocumentacao() {
   return (
     <>
@@ -62,14 +66,12 @@ function SideDocumentacao() {
             </li>
           </ul>
         </div>
-        <Link to="/login">
-          <div id="sair">
-            <button className="sair-btn">
-              <CiLogout />
-              <span className="item-descricao">Sair</span>
-            </button>
-          </div>
-        </Link>
+        <div id="sair">
+          <button className="sair-btn" onClick={handleLogout}>
+            <CiLogout />
+            <span className="item-descricao">Sair</span>
+          </button>
+        </div>
       </S.nav>
     </>
   );

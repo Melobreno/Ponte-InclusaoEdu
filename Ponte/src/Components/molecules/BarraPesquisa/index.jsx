@@ -18,28 +18,29 @@ function Pesquisa({ setOpenSidebar }) {
   return (
     <>
       <Section>
-        <div>
-          {isOpen ? (
-            <RiCloseFill
-              onClick={abrirSidebar}
-              className="menu"
-              fontSize={25}
-            />
-          ) : (
-            <FiAlignJustify
-              onClick={abrirSidebar}
-              fontSize={25}
-              className="menu"
-            />
-          )}
-        </div>
         <div className="esquerdaNav">
+          <div>
+            {isOpen ? (
+              <RiCloseFill
+                onClick={abrirSidebar}
+                className="menu"
+                fontSize={25}
+              />
+            ) : (
+              <FiAlignJustify
+                onClick={abrirSidebar}
+                fontSize={25}
+                className="menu"
+              />
+            )}
+          </div>
           <div className="inputNav">
             <a href="">
               <img src={logo} alt="logo" className="logo" />
             </a>
           </div>
         </div>
+
         <div className="direitaNav">
           <div className="pesquisa">
             <input

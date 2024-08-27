@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  margin-right: 12rem;
   margin-left: 0;
   position: relative;
 `;
