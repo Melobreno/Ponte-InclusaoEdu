@@ -15,7 +15,7 @@ export const Section = styled.div`
   justify-content: center;
 
   .linhaL {
-    margin: 0 6rem;
+    margin: 20px;
     width: 0rem;
     height: 48rem;
     @media (max-width: 1680px) {
@@ -117,7 +117,7 @@ export const Mensagem = styled.div`
   width: 50rem;
   height: 13.5rem;
   margin-top: 2.18rem;
-  background-color: #ecf4f6;
+  background-color: aliceblue;
   border-radius: 0.375rem;
   box-shadow: 6px 6px 15px -6px rgba(0, 0, 0, 0.25);
 
@@ -206,7 +206,7 @@ export const Atores = styled.div`
   padding: 0;
   margin: 0;
   height: 46rem;
-  width: 450px;
+  width: 350px;
 
   @media (${breakpoint.mobile}) {
     display: none;

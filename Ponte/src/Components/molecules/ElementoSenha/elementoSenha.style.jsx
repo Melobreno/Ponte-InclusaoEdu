@@ -32,7 +32,7 @@ export const inputs = styled.div`
   flex-direction: column;
   gap: 20px;
   input {
-    width: 20rem;
+    width: 17rem;
     height: 2rem;
     border-radius: 0.6rem;
     border: 0.125rem solid #25a6ce;

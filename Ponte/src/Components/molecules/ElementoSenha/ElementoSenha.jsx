@@ -21,7 +21,7 @@ function ElementoSenha({ exibirInput, placeholderNova, placeholderRep }) {
           <h1>Redefinir senha</h1>
           <p>
             Para redefinir a senha digite o seu email que está cadastrado na
-            plataforma
+            plataforma.
           </p>
         </S.texto>
         <S.inputs>
