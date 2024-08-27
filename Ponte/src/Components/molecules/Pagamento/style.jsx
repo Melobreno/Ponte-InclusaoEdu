@@ -5,41 +5,81 @@ export const ContainerSec = styled.section`
   justify-content: center;
   padding: 1.3rem 20%;
 
-  h1 {
-    font-size: 2rem;
-    margin-top: 0;
+  @media (max-width: 1440px) {
+    padding: 1.3rem 15%;
   }
-  .precoAVista h3 {
-    margin-left: 0.8rem;
-    margin-bottom: auto;
+
+  @media (max-width: 1024px) {
+    padding: 1.3rem 10%;
+    flex-direction: column;
+    align-items: center;
   }
-  hr {
-    margin: 1px;
-  }
-  .card {
-    display: grid;
-    grid-template-columns: 190px 170px;
-    margin: 0.5rem;
-    input {
-      margin-bottom: 0.5rem;
-      border-radius: 0.2rem;
-      border: 1px solid black;
-    }
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+    padding: 1.3rem 5%;
   }
 
   .sectionForma {
     font-family: "Montserrat";
     background-color: #ffffff;
     width: 100%;
-    height: 650px;
-    max-width: fit-content;
+    height: auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    @media (max-width: 1024px) {
+      max-width: 90%;
+    }
+
+    @media (max-width: 425px) {
+      width: 100%;
+    }
+  }
+
+  .tituloSec {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+
+    @media (max-width: 1440px) {
+      font-size: 1.8rem;
+    }
+
+    @media (max-width: 1024px) {
+      font-size: 1.6rem;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 1.5rem;
+    }
   }
 
   .containerForma {
     display: flex;
     gap: 40px;
-    max-width: fit-content;
-    justify-items: center;
+    width: 100%;
+    justify-content: space-between;
+
+    @media (max-width: 1440px) {
+      gap: 30px;
+    }
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    @media (max-width: 425px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
   }
 
   .contentFormaPagamento {
@@ -48,68 +88,177 @@ export const ContainerSec = styled.section`
     background-color: #ffffff;
     border: 1px solid black;
     width: 440px;
-    height: 540px;
+    height: auto;
     border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    @media (max-width: 1440px) {
+      width: 400px;
+    }
+
+    @media (max-width: 1024px) {
+      width: 90%;
+    }
+
+    @media (max-width: 425px) {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+
+  .precoAVista h3 {
+    margin-bottom: 1rem;
+
+    @media (max-width: 425px) {
+      text-align: center;
+    }
+  }
+
+  .formasDePagamento {
+    margin-top: 1rem;
+
+    @media (max-width: 425px) {
+      text-align: center;
+    }
+
+    p {
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000000;
+      font-size: 14px;
+      margin-top: 1rem;
+      text-decoration: none;
+
+      @media (max-width: 425px) {
+        justify-content: center;
+      }
+
+      img {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 1rem;
+
+    @media (max-width: 1440px) {
+      grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 425px) {
+      grid-template-columns: 1fr;
+    }
+
+    label {
+      font-size: 14px;
+      margin-bottom: 0.3rem;
+    }
+
+    input {
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+      border-radius: 0.2rem;
+      border: 1px solid black;
+
+      @media (max-width: 425px) {
+        width: 100%;
+      }
+    }
   }
 
   .contentResumo {
     border: 1px solid black;
     width: 450px;
-    height: 360px;
-    padding: 10px;
+    height: auto;
+    padding: 20px;
     border-radius: 10px;
     font-size: 14px;
-  }
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-  .contentFormaPagamento img {
-    width: 15px;
-  }
-
-  .tituloRes {
-    margin-top: 5px;
-  }
-
-  .contentFormaPagamento a {
-    display: flex;
-    color: #000000;
-    font-size: 14px;
-  }
-  .contentFormaPagamento {
-    height: 600px;
-  }
-
-  .formasDePagamento {
-    margin-left: 10px;
-    p {
-      margin-left: 0.5rem;
+    @media (max-width: 1440px) {
+      width: 420px;
     }
-    a {
-      padding: 0.6rem;
+
+    @media (max-width: 1024px) {
+      width: 90%;
+    }
+
+    @media (max-width: 425px) {
+      width: 100%;
+    }
+
+    .tituloRes {
+      margin-top: 5px;
+      margin-bottom: 1rem;
+    }
+
+    .contentItens,
+    .contentTotal {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+
+      @media (max-width: 425px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    .contentDetalhes {
+      text-align: left;
+
+      @media (max-width: 425px) {
+        text-align: center;
+      }
+
+      h3 {
+        margin-bottom: 0.5rem;
+      }
+
+      ul {
+        list-style: disc;
+        margin-left: 20px;
+
+        @media (max-width: 425px) {
+          list-style: none;
+          margin-left: 0;
+          padding: 0;
+        }
+
+        li {
+          margin-bottom: 0.5rem;
+        }
+      }
     }
   }
 
-  .contentResumo p {
-    margin-top: 0;
-  }
-  .contentItens {
-    font-weight: 600;
-    margin-left: 40px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .contentTotal {
-    display: flex;
-    justify-content: space-between;
-  }
   .containerBtn {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
-  }
-  .containerBtn button {
-    margin-top: 0.8rem;
-    width: 200px;
-    height: 40px;
+    margin-top: 1.5rem;
+
+    @media (max-width: 1440px) {
+      margin-top: 1.2rem;
+    }
+
+    @media (max-width: 425px) {
+      flex-direction: column;
+      width: 100%;
+
+      button {
+        width: 100%;
+      }
+    }
   }
 `;
