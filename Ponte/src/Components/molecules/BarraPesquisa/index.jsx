@@ -40,6 +40,7 @@ function Pesquisa({ setOpenSidebar }) {
             </a>
           </div>
         </div>
+
         <div className="direitaNav">
           <div className="pesquisa">
             <input

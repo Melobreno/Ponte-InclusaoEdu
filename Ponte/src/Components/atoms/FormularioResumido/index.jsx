@@ -63,7 +63,7 @@ function FormResumido() {
 
         <label>Senha:</label>
         <input
-          type="text"
+          type="password"
           value={senha}
           onChange={(event) => {
             setSenha(event.target.value);
@@ -72,7 +72,7 @@ function FormResumido() {
 
         <label>Confirme sua Senha:</label>
         <input
-          type="text"
+          type="password"
           value={confirmSenha}
           onChange={(event) => {
             setConfirmSenha(event.target.value);
