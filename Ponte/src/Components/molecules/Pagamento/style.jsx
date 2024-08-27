@@ -3,21 +3,21 @@ import styled from "styled-components";
 export const ContainerSec = styled.section`
   display: flex;
   justify-content: center;
-  padding: 1.3rem 20%;
+  padding: 4rem 20%;
 
   @media (max-width: 1440px) {
-    padding: 1.3rem 15%;
+    padding: 4rem 15%;
   }
 
   @media (max-width: 1024px) {
-    padding: 1.3rem 10%;
+    padding: 4rem 10%;
     flex-direction: column;
     align-items: center;
   }
 
   @media (max-width: 425px) {
     flex-direction: column;
-    padding: 1.3rem 5%;
+    padding: 3rem 5%;
   }
 
   .sectionForma {
@@ -87,7 +87,7 @@ export const ContainerSec = styled.section`
     flex-direction: column;
     background-color: #ffffff;
     border: 1px solid black;
-    width: 440px;
+    width: 450px;
     height: auto;
     border-radius: 10px;
     padding: 20px;
@@ -116,11 +116,7 @@ export const ContainerSec = styled.section`
   }
 
   .formasDePagamento {
-    margin-top: 1rem;
-
-    @media (max-width: 425px) {
-      text-align: center;
-    }
+    text-align: left;
 
     p {
       margin-bottom: 0.5rem;
@@ -147,9 +143,10 @@ export const ContainerSec = styled.section`
 
   .card {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    margin-top: 1rem;
+    width: 22rem;
 
     @media (max-width: 1440px) {
       grid-template-columns: 1fr;
@@ -160,6 +157,8 @@ export const ContainerSec = styled.section`
     }
 
     label {
+      display: flex;
+
       font-size: 14px;
       margin-bottom: 0.3rem;
     }
@@ -171,7 +170,7 @@ export const ContainerSec = styled.section`
       border: 1px solid black;
 
       @media (max-width: 425px) {
-        width: 100%;
+        width: 20rem;
       }
     }
   }
@@ -179,11 +178,12 @@ export const ContainerSec = styled.section`
   .contentResumo {
     border: 1px solid black;
     width: 450px;
-    height: auto;
+    height: 27rem;
     padding: 20px;
     border-radius: 10px;
     font-size: 14px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
 
     @media (max-width: 1440px) {
       width: 420px;
@@ -194,12 +194,14 @@ export const ContainerSec = styled.section`
     }
 
     @media (max-width: 425px) {
-      width: 100%;
+      width: 95%;
     }
 
     .tituloRes {
       margin-top: 5px;
       margin-bottom: 1rem;
+      text-align: center;
+      font-size: 18.7px;
     }
 
     .contentItens,
@@ -210,8 +212,7 @@ export const ContainerSec = styled.section`
 
       @media (max-width: 425px) {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        text-align: left;
       }
     }
 
@@ -219,7 +220,7 @@ export const ContainerSec = styled.section`
       text-align: left;
 
       @media (max-width: 425px) {
-        text-align: center;
+        text-align: left;
       }
 
       h3 {

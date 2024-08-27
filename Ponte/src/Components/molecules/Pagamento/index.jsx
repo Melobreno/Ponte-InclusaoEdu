@@ -72,11 +72,6 @@ function Pagamento() {
                   />
                 </div>
               </form>
-
-              <a href="#">
-                <img src={iconMais} alt="" />
-                Adicionar um novo Cartão
-              </a>
               <hr />
             </div>
 
@@ -92,7 +87,7 @@ function Pagamento() {
           </div>
           <div className="contentResumo">
             <h3 className="tituloRes">Resumo do pedido</h3>
-            <p>Itens:</p>
+
             <div className="contentItens">
               <p>Acesso Premium - 1 mês</p>
               <p>R$ 49,90</p>
