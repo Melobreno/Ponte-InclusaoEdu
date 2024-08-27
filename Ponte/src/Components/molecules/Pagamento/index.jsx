@@ -36,8 +36,7 @@ function Pagamento() {
               <h3>Preço à vista: R$49,90</h3>
             </div>
             <div className="formasDePagamento">
-              <p>Cartão de Crédito</p>
-
+              <MetodoPgto metPgto={"cartao"} />
               <form onSubmit={handleCard}>
                 <div className="card">
                   <label htmlFor="">Número do cartão</label>
@@ -74,7 +73,6 @@ function Pagamento() {
                 </div>
               </form>
 
-              <MetodoPgto metPgto={"cartao"} />
               <a href="#">
                 <img src={iconMais} alt="" />
                 Adicionar um novo Cartão
