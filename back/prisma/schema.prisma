@@ -26,14 +26,13 @@ model Documents {
   url_doc  String @unique
 }
 
-
-model Atividade {
-  id_ativi Int    @id @default(autoincrement())
-  texto    String
-}
 model Message {
   id    Int      @id @default(autoincrement())
   texto String
   data  DateTime @default(now())
+}
 
+model Atividade {
+  id_ativi Int    @id @default(autoincrement())
+  texto    String
 }
