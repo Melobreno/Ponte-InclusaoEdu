@@ -4,6 +4,7 @@ import MainSec from "./LP-index/Sessão inicial";
 import Footer from "../Components/molecules/Footer/Footer";
 import Funcionalidades from "../Pages/LP-index/Funcionalidades/funcionalidades";
 import Faq from "../Components/organisms/FAQ";
+import Chatbot from "../Components/atoms/chatbot/index";
 
 function Home() {
   return (
@@ -14,12 +15,7 @@ function Home() {
       <Funcionalidades />
       <Faq />
       <Footer />
-      <df-messenger
-        intent="WELCOME"
-        chat-title="Ponte: Inclusão Edu"
-        agent-id="4730aa58-8ecc-4b17-93dc-e16520caef3c"
-        language-code="en"
-      ></df-messenger>
+      <Chatbot />
     </>
   );
 }
