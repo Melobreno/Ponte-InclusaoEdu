@@ -11,7 +11,7 @@ function FormR() {
   return (
     <S.FormSection>
       <form onSubmit={handleSubmit(onSubmit)} className="formContainer">
-        <h1>Cadastro Para Pais e Responsáveis</h1>
+        <h1>Atualizar cadastro do Responsáveis</h1>
         <div className="formDiv">
           <label>
             Nome Completo:
@@ -76,7 +76,7 @@ function FormR() {
           </label>
         </div>
         <div className="containerBtn">
-          <Btn txt={"Cadastrar-se"} />
+          <Btn txt={"Enviar"} />
         </div>
 
         <p className="cadastroProf">

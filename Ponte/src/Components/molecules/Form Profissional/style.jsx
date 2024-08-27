@@ -47,9 +47,8 @@ export const FormSection = styled.section`
 
   select {
     margin-top: 15px;
-    height: 30px;
+    height: 2.3rem;
     align-self: center;
-    height: 1.87rem;
     width: 20rem;
     border-radius: 10px;
     border: 1px solid #25a6ce;

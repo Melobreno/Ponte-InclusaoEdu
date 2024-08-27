@@ -5,7 +5,12 @@ export const Section = styled.div`
   margin: 0 auto;
   margin-top: 20px;
   justify-content: center;
-  gap: 50px;
+  gap: 100px;
+
+  .sidebar {
+    display: flex;
+    z-index: 1000;
+  }
 
   .secEsquerda {
     display: flex;
@@ -111,11 +116,27 @@ export const Section = styled.div`
     width: 21rem;
     padding-left: 1rem;
   }
+
+  .conversasIf {
+    display: flex;
+    gap: 20px;
+    margin-left: 140px;
+  }
+
+  @media (max-width: 425px) {
+    flex-wrap: wrap-reverse;
+  }
 `;
 export const Direita = styled.div`
   iframe {
-    width: 37.5rem;
-    height: 40rem;
+    width: 40rem;
+    height: 42rem;
     border: 1px solid black;
+  }
+
+  @media (max-width: 425px) {
+    iframe {
+      width: 423px;
+    }
   }
 `;

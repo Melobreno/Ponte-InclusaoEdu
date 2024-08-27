@@ -1,15 +1,18 @@
 import img from "../../../Assets/Group.svg";
 import * as S from "./SideDocument.style";
 import { IoHomeOutline } from "react-icons/io5";
-import { AiOutlineLineChart } from "react-icons/ai";
 import { GoPeople } from "react-icons/go";
 import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
 import { VscFile } from "react-icons/vsc";
 import { IoSettingsOutline } from "react-icons/io5";
 import { CiLogout } from "react-icons/ci";
 import { IoFolderOpenOutline } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
+function handleLogout() {
+  localStorage.removeItem("token");
+  window.location.reload();
+}
 function SideDocumentacao() {
   return (
     <>
@@ -25,25 +28,19 @@ function SideDocumentacao() {
           </div>
           <ul id="saide_items">
             <li className="saide-item">
-              <Link to="/">
+              <Link to="/feed">
                 <IoHomeOutline />
                 <span className="item-descricao">Página principal</span>
               </Link>
             </li>
-            <li className="saide-item active">
-              <Link to="/feed">
-                <AiOutlineLineChart />
-                <span className="item-descricao">Acompanhamento</span>
-              </Link>
-            </li>
             <li className="saide-item">
-              <Link to="/captacao">
+              <Link to="/mapeamento">
                 <GoPeople />
                 <span className="item-descricao">Profissionais</span>
               </Link>
             </li>
             <li className="saide-item">
-              <Link to="/feed">
+              <Link to="/atividadeProf">
                 <VscFile />
                 <span className="item-descricao">Mural</span>
               </Link>
@@ -55,28 +52,26 @@ function SideDocumentacao() {
               </Link>
             </li>
             <li className="saide-item">
-              <Link to="/Doc">
+              <Link to="/Chat">
                 <IoChatbubbleEllipsesOutline />
                 <span className="item-descricao">Chat</span>
               </Link>
             </li>
 
             <li className="saide-item">
-              <Link to="/Doc">
+              <Link to="/CadastroProf">
                 <IoSettingsOutline />
                 <span className="item-descricao">Configuração</span>
               </Link>
             </li>
           </ul>
         </div>
-        <Link to="/login">
-          <div id="sair">
-            <button className="sair-btn">
-              <CiLogout />
-              <span className="item-descricao">Sair</span>
-            </button>
-          </div>
-        </Link>
+        <div id="sair">
+          <button className="sair-btn" onClick={handleLogout}>
+            <CiLogout />
+            <span className="item-descricao">Sair</span>
+          </button>
+        </div>
       </S.nav>
     </>
   );

@@ -1,4 +1,4 @@
-const prisma = require("../clientLib/prisma");
+const prisma = require("../../clientLib/prisma");
 
 module.exports = class deleteDocController {
   static async deleteDoc(req, res) {

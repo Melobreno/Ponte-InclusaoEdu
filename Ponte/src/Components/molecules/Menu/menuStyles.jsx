@@ -51,7 +51,7 @@ export const Container = styled.div`
   .menu-toggle {
     display: none;
     position: relative;
-    top: 100%; /* Move abaixo do botão */
+    top: 100%;
     left: 0;
     background-color: white;
     width: 100%;
@@ -113,30 +113,98 @@ export const Container = styled.div`
       text-decoration: underline #25a6ce 2.6px;
     }
   }
+
   @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+
     .menu-resp {
       display: none;
       flex-direction: column;
-    }
-
-    .menu-toggle {
-      display: block;
-      align-self: flex-end;
-      cursor: pointer;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #fff;
+      width: 200px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
     .menu-resp.show {
-      display: flex;
+      display: block;
       padding: 0;
       margin-right: 20px;
+      border-radius: 15px;
+
+      .imgTog {
+        display: none;
+      }
     }
 
     .menu-resp.show {
       display: flex;
+    }
+
+    .menu-resp li {
+      margin: 10px 0;
+      text-align: right;
+    }
+
+    .menu-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .drop-menu {
+      position: static;
+      box-shadow: none;
+    }
+
+    .drop-menu li {
+      margin-left: 0;
     }
 
     .menu-toggle img {
-      width: 35px;
+      width: 30px;
+    }
+
+    .menu-container {
+      justify-content: space-between;
+    }
+  }
+  @media (max-width: 480px) {
+    .menu-container {
+      padding: 10px;
+    }
+
+    .menu-toggle img {
+      width: 30px;
+    }
+
+    .menu-resp {
+      width: 100%; /* Menu ocupa toda a largura */
+      right: 0;
+    }
+
+    .menu-resp.show {
+      width: 300px;
+    }
+
+    .menu-resp li {
+      margin: 8px 0;
+    }
+
+    .drop-menu a {
+      display: flex;
+      padding: 5px 10px;
+      text-align: left;
+    }
+
+    .menu-resp li:hover ul,
+    .menu li.over ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
 `;

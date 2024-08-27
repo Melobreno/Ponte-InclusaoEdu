@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import api from "../../api/api";
 
 function Login() {
-  const navegate = useNavigate();
+  const navigate = useNavigate();
   const value = "Enviar";
 
   const [email, setEmail] = useState("");
@@ -18,6 +18,7 @@ function Login() {
     event.preventDefault();
     if (email.length < 1 || senha.length < 1) {
       alert("Por favor insira os seus dados");
+      return;
     }
 
     try {
@@ -25,10 +26,9 @@ function Login() {
         email_user: email,
         password_user: senha,
       });
+      const token = res.data.token;
       localStorage.setItem("token", res.data.token);
-      console.log(token);
-      navegate("/feed");
-      alert(`Logado com sucesso, seu token: ${token}`);
+      navigate("/feed");
     } catch (error) {
       setError("Login falhou. Verifique suas credenciais.");
     }
@@ -52,8 +52,8 @@ function Login() {
             <p>Digite seu e-mail:</p>
             <input
               type="email"
-              name=""
-              id=""
+              name="email"
+              id="current-email"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
             />
@@ -61,8 +61,8 @@ function Login() {
             <p>Digite sua senha:</p>
             <input
               type="password"
-              name=""
-              id=""
+              name="password"
+              id="current-password"
               value={senha}
               onChange={(event) => setSenha(event.target.value)}
             />
@@ -78,7 +78,7 @@ function Login() {
 
             <div className="cadastre">
               Ainda não possui conta?
-              <Link to={"/cadastroResp"}>
+              <Link to={"/cadastro"}>
                 <a href="">Cadasatre-se</a>
               </Link>
             </div>

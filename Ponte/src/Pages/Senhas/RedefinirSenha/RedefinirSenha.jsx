@@ -6,7 +6,7 @@ function RedefinirSenha() {
     <>
       <S.Container>
         <CirculoImg />
-        <ElementoSenha />
+        <ElementoSenha placeholderRep={"Seu email"} />
       </S.Container>
     </>
   );

@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
 export const Bloco = styled.div`
-  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
   font-family: "Montserrat", sans-serif;
 
   .tituloh2 {
@@ -74,4 +77,5 @@ export const Arquivos1 = styled.div`
 export const Container = styled.div`
   display: flex;
   text-align: center;
+  justify-content: center;
 `;
