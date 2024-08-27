@@ -1,13 +1,11 @@
 const express = require("express");
 const router = express.Router();
 
-
 const getController = require("./controller/ativiController/getController");
 const postAtividade = require("./controller/ativiController/postAtidade");
 const deleteAtividade = require("./controller/ativiController/deleteController");
 const atualizaAtivi = require("./controller/ativiController/putcontriller");
 const getAtividadeRes = require("./controller/ativiResController/getAtiviResController");
-
 const insertUserController = require("./controller/users/insertUserController");
 const loginUserController = require("./controller/users/loginUserController");
 const insertDocLink = require("./controller/document/insertDocLinkController");
@@ -19,7 +17,6 @@ const showMsgController = require("./controller/feed/showMsgController");
 const updateUserController = require("./controller/users/updateUserController");
 const verificaUserController = require("./controller/users/verificaUserController");
 
-
 router.post("/adicionar", insertUserController.insertUser);
 router.post("/login", loginUserController.loginUser);
 router.post("/enviarlink", insertDocLink.docLink);
@@ -28,11 +25,12 @@ router.delete("/deletedoc/:name_doc", deleteDocController.deleteDoc);
 router.get("/atividade", getController.getAtivi);
 router.post("/enviarAtividade", postAtividade.ativiPost);
 router.delete("/deletaratividade/:id_ativi", deleteAtividade.deletarAtivi);
-router.put("/atualizaAtivi:id_ativi", atualizaAtivi.atualizaAtivi);
+router.put("/atualizaAtivi/:id_ativi", atualizaAtivi.atualizaAtivi);
 router.get("/atividadeRes", getAtividadeRes.getAtiviRes);
 router.post("/insertmsg", insertMsgController.insertMsg);
 router.delete("/deletemsg/:id", deleteMsgController.deleteMsg);
 router.get("/showmsg", showMsgController.showMsg);
 router.put("/updatepass", updateUserController.updateUser);
 router.get("/verifica-email", verificaUserController.verificaEmail);
+
 module.exports = router;

@@ -15,7 +15,7 @@ module.exports = class putController {
     } catch (error) {
       return res
         .status(500)
-        .json({ message: "atividade atualizada com sucesso", error });
+        .json({ message: "Não foi possivel atualizar a atividade", error });
     }
   }
 };
