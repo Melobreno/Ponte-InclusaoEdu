@@ -13,7 +13,6 @@ import Chat from "../Pages/ChatGeral";
 import Documentacao from "../Pages/Documentacao/Documentacao";
 import AtividadeProf from "../Pages/Atividade/AtividadeProf";
 import AtividadeResp from "../Pages/Atividade/AtividadeResp";
-import Mapeamento from "../Pages/Mapeamento/index";
 import CadastroRes from "../Pages/Cadastro/CadastroResumido";
 import PrivateRoute from "./privateRoutes";
 
@@ -70,14 +69,6 @@ function AppRoutes() {
           element={
             <PrivateRoute>
               <AtividadeResp />
-            </PrivateRoute>
-          }
-        ></Route>
-        <Route
-          path="/mapeamento"
-          element={
-            <PrivateRoute>
-              <Mapeamento />
             </PrivateRoute>
           }
         ></Route>
