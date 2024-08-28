@@ -26,7 +26,6 @@ model Documents {
   url_doc  String @unique
 }
 
-<<<<<<< HEAD
 model Profissionais {
   id_prof  Int    @id @default(autoincrement())
   name_prof String
@@ -35,15 +34,3 @@ model Profissionais {
   ocupacao String
 
 }
-=======
-model Message {
-  id    Int      @id @default(autoincrement())
-  texto String
-  data  DateTime @default(now())
-}
-
-model Atividade {
-  id_ativi Int    @id @default(autoincrement())
-  texto    String
-}
->>>>>>> 19e4c16cd153d479d499118ff38d967df84bdca7
