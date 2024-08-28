@@ -17,6 +17,7 @@ import AtividadeResp from "../Pages/Atividade/AtividadeResp";
 import Mapeamento from "../Pages/Mapeamento/index";
 import CadastroRes from "../Pages/Cadastro/CadastroResumido";
 import PrivateRoute from "./privateRoutes";
+import PgtoConfirmado from "../Pages/ConfirmarCompra/PagamentoRealziado/index";
 
 function AppRoutes() {
   return (
@@ -34,6 +35,7 @@ function AppRoutes() {
         <Route path="/Assinaturas" element={<Assinatura />}></Route>
         <Route path="/Pagamento" element={<ConfirmarCompra />}></Route>
         <Route path="/Feed" element={<Feed />}></Route>
+        <Route path="/pgtoConfirmado" element={<PgtoConfirmado />}></Route>
 
         <Route
           path="/chat"
