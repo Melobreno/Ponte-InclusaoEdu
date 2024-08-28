@@ -31,6 +31,6 @@ router.post("/insertmsg", insertMsgController.insertMsg);
 router.delete("/deletemsg/:id", deleteMsgController.deleteMsg);
 router.get("/showmsg", showMsgController.showMsg);
 router.put("/updatepass", updateUserController.updateUser);
-router.get("/verifica-email", verificaUserController.verificaEmail);
+router.get("/verificaemail/:email_user", verificaUserController.verificaEmail);
 
 module.exports = router;

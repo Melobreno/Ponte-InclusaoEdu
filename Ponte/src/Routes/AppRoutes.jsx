@@ -3,7 +3,7 @@ import Home from "../Pages/Home";
 import Captacao from "../Pages/Captacao";
 import CadastroR from "../Pages/Cadastro/CadastroResp";
 import CadastroP from "../Pages/Cadastro/CadastroProf";
-import RedefinirSenha from "../Pages/Senhas/RedefinirSenha/RedefinirSenha";
+import RedefinirSenha from "../Pages/Senhas/verificaEmail/RedefinirSenha";
 import NovaSenha from "../Pages/Senhas/NovaSenha/NovaSenha";
 import Login from "../Pages/Login/Login";
 import Assinatura from "../Pages/Assinatura";
@@ -25,7 +25,7 @@ function AppRoutes() {
         <Route path="/cadastroProf" element={<CadastroP />}></Route>
         <Route path="/captacao" element={<Captacao />}></Route>
         <Route path="/NovaSenha" element={<NovaSenha />}></Route>
-        <Route path="/RedefinirSenha" element={<RedefinirSenha />}></Route>
+        <Route path="/verificaemail" element={<RedefinirSenha />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/cadastro" element={<CadastroRes />}></Route>
         <Route path="/Assinaturas" element={<Assinatura />}></Route>
