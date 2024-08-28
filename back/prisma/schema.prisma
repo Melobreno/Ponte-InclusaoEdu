@@ -25,3 +25,12 @@ model Documents {
   name_doc String
   url_doc  String @unique
 }
+
+model Profissionais {
+  id_prof  Int    @id @default(autoincrement())
+  name_prof String
+  cep_prof  Int
+  cidade String
+  ocupacao String
+
+}
