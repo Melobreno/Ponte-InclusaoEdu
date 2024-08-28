@@ -28,9 +28,7 @@ function Login() {
       });
       const token = res.data.token;
       localStorage.setItem("token", res.data.token);
-      console.log(token);
       navigate("/feed");
-      alert(`Logado com sucesso, seu token: ${token}`);
     } catch (error) {
       setError("Login falhou. Verifique suas credenciais.");
     }
@@ -54,8 +52,8 @@ function Login() {
             <p>Digite seu e-mail:</p>
             <input
               type="email"
-              name=""
-              id=""
+              name="email"
+              id="current-email"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
             />
@@ -63,8 +61,8 @@ function Login() {
             <p>Digite sua senha:</p>
             <input
               type="password"
-              name=""
-              id=""
+              name="password"
+              id="current-password"
               value={senha}
               onChange={(event) => setSenha(event.target.value)}
             />
@@ -80,7 +78,7 @@ function Login() {
 
             <div className="cadastre">
               Ainda não possui conta?
-              <Link to={"/cadastroResp"}>
+              <Link to={"/cadastro"}>
                 <a href="">Cadasatre-se</a>
               </Link>
             </div>

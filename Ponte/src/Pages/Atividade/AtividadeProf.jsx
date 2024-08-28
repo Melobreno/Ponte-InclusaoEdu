@@ -2,6 +2,7 @@ import SideDocumentacao from "../../Components/organisms/SideBarDocument/SideDoc
 import Pesquisa from "../../Components/molecules/BarraPesquisa/index";
 import * as S from "./atividade.style";
 import Btn from "../../Components/atoms/Button";
+import avata from "../../Assets/Avatar 1.svg";
 import { useState, useEffect } from "react";
 import api from "../../api/api";
 
@@ -16,13 +17,22 @@ function AtividadeProf() {
   // get, pega a informação que tem no banco de dados e exibe na tela
   const mostrarAtividades = async () => {
     try {
-      const response = await api.get("/");
+      const response = await api.get("/atividade");
       console.log(response.data);
       setMessagem(response.data);
     } catch (error) {
       console.error(`Error ao buscar dados: ${error}`);
     }
   };
+
+  const [dataCriacao, setDataCriacao] = useState("");
+
+  useEffect(() => {
+    if (!dataCriacao) {
+      const data = new Date().toLocaleDateString();
+      setDataCriacao(data);
+    }
+  }, [dataCriacao]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -34,15 +44,13 @@ function AtividadeProf() {
         return;
       }
 
-      const dataCriacao = new Date().toLocaleDateString();
-
       if (editando) {
-        await api.put(`/updateItem/${editando}`, {
+        await api.put(`/atualizaAtivi:${editando}`, {
           texto,
         });
         setEditando(null);
       } else if (texto != "") {
-        await api.post("/insertItem", {
+        await api.post("/enviarAtividade", {
           texto,
         });
       }
@@ -68,9 +76,9 @@ function AtividadeProf() {
     mostrarAtividades();
   }, []);
 
-  const handleDelete = async (id) => {
+  const handleDelete = async (id_ativi) => {
     try {
-      const resposta = await api.delete(`/deleteItem/${id}`);
+      const resposta = await api.delete(`/deletaratividade/${id_ativi}`);
       console.log(resposta);
       mostrarAtividades();
     } catch (error) {
@@ -80,9 +88,10 @@ function AtividadeProf() {
 
   const handleEdit = (useTexto) => {
     setTexto(useTexto.texto);
-    setEditando(useTexto.id);
+    setEditando(useTexto.id_ativi);
     setIsFocused(true);
   };
+
   return (
     <>
       <Pesquisa setOpenSidebar={setOpenSidebar} />
@@ -120,11 +129,15 @@ function AtividadeProf() {
 
             <S.menssagem>
               {messagem.map((useTexto) => (
-                <ul key={useTexto.id}>
+                <ul key={useTexto.id_ativi}>
+                  <p className="avatar">
+                    <img src={avata} alt="" />
+                    <h4>Lucas Melo</h4>
+                  </p>
                   <li className="caixasTexto">
-                    {useTexto.texto}{" "}
+                    {useTexto.texto} <p>{dataCriacao}</p>
                     <div className="butoesCaixas">
-                      <button onClick={() => handleDelete(useTexto.id)}>
+                      <button onClick={() => handleDelete(useTexto.id_ativi)}>
                         Deletar
                       </button>
                       <button onClick={() => handleEdit(useTexto)}>
