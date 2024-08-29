@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  margin-left: 0;
   position: relative;
 `;
 export const CirculoAzul = styled.section`
@@ -9,7 +8,6 @@ export const CirculoAzul = styled.section`
   width: 55rem;
   height: 56.75rem;
   border-radius: 0rem 50rem 50rem 0rem;
-  margin: 2rem 0;
 `;
 
 export const img = styled.div`

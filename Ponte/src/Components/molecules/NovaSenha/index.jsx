@@ -26,7 +26,7 @@ function ElementoSenha() {
         });
         if (response.status === 200) {
           alert("Senha atualizada com sucesso!");
-          navegar("/login"); // Redirecionar para a página de login após a atualização
+          navegar("/login");
         } else {
           alert("Erro ao trocar a senha. Tente novamente.");
         }
@@ -42,49 +42,52 @@ function ElementoSenha() {
   return (
     <>
       <S.Container>
-        <div className="voltar">
-          <Link to={"/verificaemail"}>
-            <a href="">Voltar</a>
-            <img src={voltar} alt="" />
+        <section className="mainContent">
+          <div className="voltar">
+            <Link to={"/verificaemail"}>
+              <a href="">Voltar</a>
+              <img src={voltar} alt="" />
+            </Link>
+          </div>
+          <Link to={"/login"}>
+            <img src={img} alt="" />
           </Link>
-        </div>
-        <Link to={"/login"}>
-          <img src={img} alt="" />
-        </Link>
-        <S.texto>
-          <h1>Redefinir senha</h1>
-          <p>Para efetuar a troca, insira nos campos a baixo sua nova senha</p>
-        </S.texto>
-        <S.inputs>
-          <form action="" onSubmit={trocaSenha}>
-            <label className="txtsenha">Digite a Sua nova Senha.</label>
-            <input
-              type="password"
-              value={senha}
-              onChange={(e) => {
-                setSenha(e.target.value);
-              }}
-            />
-            <label className="txtsenha">Digite a Sua Senha novamente.</label>
-            <input
-              type="password"
-              value={confirma}
-              onChange={(e) => {
-                setConfirma(e.target.value);
-              }}
-            />
-            <div>
-              <button type="submit">Confirmar</button>
-              {erro && (
-                <p className="msgErro">
-                  Por favor verifique seus dados e tente novamente
-                </p>
-              )}
-            </div>
-          </form>
-        </S.inputs>
+          <S.texto>
+            <h1>Redefinir senha</h1>
+            <p>
+              Para efetuar a troca, insira nos campos a baixo sua nova senha
+            </p>
+          </S.texto>
+          <S.inputs>
+            <form action="" onSubmit={trocaSenha}>
+              <label className="txtsenha">Digite a Sua nova Senha.</label>
+              <input
+                type="password"
+                value={senha}
+                onChange={(e) => {
+                  setSenha(e.target.value);
+                }}
+              />
+              <label className="txtsenha">Digite a Sua Senha novamente.</label>
+              <input
+                type="password"
+                value={confirma}
+                onChange={(e) => {
+                  setConfirma(e.target.value);
+                }}
+              />
+              <div>
+                <button type="submit">Confirmar</button>
+                {erro && (
+                  <p className="msgErro">
+                    Por favor verifique seus dados e tente novamente
+                  </p>
+                )}
+              </div>
+            </form>
+          </S.inputs>
+        </section>
       </S.Container>
-      <p>{setValor}</p>
     </>
   );
 }

@@ -1,20 +1,32 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  transform: scale(1.2);
   display: flex;
-  justify-content: start;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 5rem;
-  gap: 30px;
+  justify-content: center;
+  width: 50%;
+  height: 50%;
+  .mainContent {
+    transform: scale(1.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    width: fit-content;
+    height: fit-content;
+    h1 {
+      margin-bottom: 10px;
+    }
+  }
+
   .voltar {
-    width: 100%;
-    height: 100%;
+    width: 330px;
+    padding-right: 5px;
     display: flex;
     text-align: end;
     justify-content: right;
-    margin-bottom: 10rem;
+    margin-bottom: 3rem;
+
     a {
       display: flex;
       text-decoration: none;
