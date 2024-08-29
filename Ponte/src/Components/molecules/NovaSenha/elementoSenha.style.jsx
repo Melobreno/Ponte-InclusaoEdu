@@ -23,30 +23,50 @@ export const texto = styled.div`
   p {
     margin: 0;
     font-size: 12.5px;
-    text-align: center;
+    text-align: start;
     width: 290px;
   }
 `;
 export const inputs = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
   input {
     width: 17rem;
     height: 2rem;
     border-radius: 0.6rem;
     border: 0.125rem solid #25a6ce;
     outline: none;
+    margin-bottom: 5px;
   }
 
   form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+  }
+
+  form .txtsenha {
+    width: 280px;
+    text-align: start;
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+
+  .msgErro {
+    color: red;
+    font-size: 10px;
+    max-width: 150px;
+    text-align: center;
+  }
+  .footerbtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   button {
+    margin-top: 5px;
     font-size: 1.04rem;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;

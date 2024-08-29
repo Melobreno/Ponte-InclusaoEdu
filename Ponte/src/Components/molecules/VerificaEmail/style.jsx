@@ -7,7 +7,6 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 30px;
-
   img {
     width: 300px;
   }
@@ -33,6 +32,18 @@ export const Container = styled.div`
       outline: none;
     }
   }
+  .msgErro {
+    color: red;
+    font-size: 10px;
+    max-width: 150px;
+    text-align: center;
+  }
+  .footerbtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const texto = styled.div`
@@ -52,7 +63,12 @@ export const texto = styled.div`
 export const inputs = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+
+  label {
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+
   input {
     width: 17rem;
     height: 2rem;
