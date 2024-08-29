@@ -44,7 +44,7 @@ function Login() {
         </Fundo>
 
         <Container>
-          <Link to={"/"}>
+          <Link className="link" to={"/"}>
             <img src={logo} alt="Imagem Logo" />
           </Link>
           <h1>Bem-vindo!</h1>
