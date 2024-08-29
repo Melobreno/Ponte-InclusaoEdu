@@ -8,14 +8,12 @@ export const Container = styled.div`
   flex-direction: column;
   margin-bottom: 5rem;
   gap: 30px;
-
   .voltar {
     width: 100%;
     height: 100%;
     display: flex;
     text-align: end;
     justify-content: right;
-
     margin-bottom: 10rem;
     a {
       display: flex;
@@ -31,9 +29,7 @@ export const Container = styled.div`
   img {
     width: 300px;
   }
-  img {
-    width: 300px;
-  }
+
   button {
     font-size: 1.04rem;
     font-family: "Montserrat", sans-serif;
@@ -56,6 +52,18 @@ export const Container = styled.div`
       outline: none;
     }
   }
+  .msgErro {
+    color: red;
+    font-size: 10px;
+    max-width: 150px;
+    text-align: center;
+  }
+  .footerbtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const texto = styled.div`
@@ -75,7 +83,12 @@ export const texto = styled.div`
 export const inputs = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+
+  label {
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+
   input {
     width: 17rem;
     height: 2rem;

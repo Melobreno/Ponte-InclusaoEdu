@@ -26,42 +26,42 @@ function SideDocumentacao() {
               <span className="item-descricao">Terapeuta</span>
             </p>
           </div>
-          <ul id="saide_items">
-            <li className="saide-item">
+          <ul id="ul_items">
+            <li className="side-item">
               <Link to="/feed">
                 <IoHomeOutline />
                 <span className="item-descricao">Página principal</span>
               </Link>
             </li>
-            <li className="saide-item">
+            <li className="side-item">
               <Link to="/mapeamento">
                 <GoPeople />
                 <span className="item-descricao">Profissionais</span>
               </Link>
             </li>
-            <li className="saide-item">
+            <li className="side-item">
               <Link to="/atividades">
                 <VscFile />
                 <span className="item-descricao">Mural</span>
               </Link>
             </li>
-            <li className="saide-item">
+            <li className="side-item">
               <Link to="/Doc">
                 <IoFolderOpenOutline />
-                <span className="item-descricao">Pasta de documentos</span>
+                <span className="item-descricao">Documentos</span>
               </Link>
             </li>
-            <li className="saide-item">
+            <li className="side-item">
               <Link to="/Chat">
                 <IoChatbubbleEllipsesOutline />
                 <span className="item-descricao">Chat</span>
               </Link>
             </li>
 
-            <li className="saide-item">
+            <li className="side-item">
               <Link to="/CadastroProf">
                 <IoSettingsOutline />
-                <span className="item-descricao">Configuração</span>
+                <span className="item-descricao">atualização de cadastro</span>
               </Link>
             </li>
           </ul>
