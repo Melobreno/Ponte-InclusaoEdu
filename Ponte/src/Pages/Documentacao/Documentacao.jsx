@@ -122,7 +122,7 @@ function Documentacao() {
                 type="file"
                 name=""
                 id=""
-                accept="image/*"
+                accept="*/*"
                 ref={fileInputRef}
                 style={{ display: "none" }}
                 onChange={handleFileUpload}

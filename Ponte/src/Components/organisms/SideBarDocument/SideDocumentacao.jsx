@@ -40,7 +40,7 @@ function SideDocumentacao() {
               </Link>
             </li>
             <li className="saide-item">
-              <Link to="/atividadeProf">
+              <Link to="/atividades">
                 <VscFile />
                 <span className="item-descricao">Mural</span>
               </Link>

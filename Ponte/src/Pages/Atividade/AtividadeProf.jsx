@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import api from "../../api/api";
 
 function AtividadeProf() {
-  const textoButao = "Postar";
+  const textoBtn = "Postar";
   const [texto, setTexto] = useState("");
   const [messagem, setMessagem] = useState([]);
   const [isFocused, setIsFocused] = useState(false);
@@ -25,14 +25,9 @@ function AtividadeProf() {
     }
   };
 
-  const [dataCriacao, setDataCriacao] = useState("");
-
   useEffect(() => {
-    if (!dataCriacao) {
-      const data = new Date().toLocaleDateString();
-      setDataCriacao(data);
-    }
-  }, [dataCriacao]);
+    mostrarAtividades();
+  }, []);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -43,13 +38,12 @@ function AtividadeProf() {
         handleEdit();
         return;
       }
-
       if (editando) {
-        await api.put(`/atualizaAtivi:${editando}`, {
+        await api.put(`/atualizaAtivi/${editando}`, {
           texto,
         });
         setEditando(null);
-      } else if (texto != "") {
+      } else {
         await api.post("/enviarAtividade", {
           texto,
         });
@@ -69,12 +63,10 @@ function AtividadeProf() {
     setTexto("");
     setIsFocused(false);
   };
+
   const handleFocused = () => {
     setIsFocused(true);
   };
-  useEffect(() => {
-    mostrarAtividades();
-  }, []);
 
   const handleDelete = async (id_ativi) => {
     try {
@@ -113,7 +105,7 @@ function AtividadeProf() {
                   <div className="botoes">
                     <Btn
                       type="submit"
-                      txt={editando ? "Atualizar" : textoButao}
+                      txt={editando ? "Atualizar" : textoBtn}
                     />
                     <button
                       type="button"
@@ -135,7 +127,7 @@ function AtividadeProf() {
                     <h4>Lucas Melo</h4>
                   </p>
                   <li className="caixasTexto">
-                    {useTexto.texto} <p>{dataCriacao}</p>
+                    {useTexto.texto}
                     <div className="butoesCaixas">
                       <button onClick={() => handleDelete(useTexto.id_ativi)}>
                         Deletar
