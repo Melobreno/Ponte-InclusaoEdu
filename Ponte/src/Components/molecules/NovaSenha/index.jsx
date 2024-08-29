@@ -1,8 +1,9 @@
 import { useState } from "react";
 import img from "../../../Assets/Logo8.svg";
+import voltar from "../../../Assets/voltar.svg";
 import * as S from "./elementoSenha.style";
 import api from "../../../api/api";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 function ElementoSenha() {
   const navegar = useNavigate();
   const [valor, setValor] = useState("");
@@ -40,6 +41,12 @@ function ElementoSenha() {
   return (
     <>
       <S.Container>
+        <div className="voltar">
+          <Link to={"/verificaemail"}>
+            <a href="">Voltar</a>
+            <img src={voltar} alt="" />
+          </Link>
+        </div>
         <img src={img} alt="" />
         <S.texto>
           <h1>Redefinir senha</h1>

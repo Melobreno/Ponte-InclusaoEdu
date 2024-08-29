@@ -103,6 +103,26 @@ export const Container = styled.div`
   height: 44.4rem;
   margin: 5rem 21rem 12rem 4rem;
 
+  .voltar {
+    width: 93%;
+    height: 1.6rem;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+    a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      margin-right: 0.7rem;
+    }
+    img {
+      width: auto;
+      height: 1.6rem;
+      margin-right: 0.7rem;
+      padding: 0;
+      margin: 0;
+    }
+  }
   @media (max-width: 1440px) {
     margin: 4rem 15rem 0 0;
     width: 27.8rem;
@@ -256,11 +276,11 @@ export const Container = styled.div`
     display: flex;
     color: #000;
     text-decoration: none;
-
-    justify-content: flex-end;
-    margin: 0.3rem 3.31rem 0 0;
+    justify-content: flex-start;
+    margin: 0.3rem 0 0 3rem;
     font-size: 0.8125rem;
     transition: transform 0.2s ease-in-out;
+
     @media (max-width: 1440px) {
       justify-content: flex-start;
       width: 40%;
@@ -276,7 +296,6 @@ export const Container = styled.div`
       margin: 0.3rem 1rem;
       font-size: 0.7rem;
     }
-
   }
 
   .esqueceuSenha:hover {

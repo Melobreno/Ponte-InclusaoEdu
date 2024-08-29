@@ -6,8 +6,27 @@ export const Container = styled.div`
   justify-content: start;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 6rem;
   gap: 30px;
+  .voltar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: end;
+    justify-content: right;
 
+    margin-bottom: 6rem;
+    a {
+      display: flex;
+      text-decoration: none;
+      align-items: center;
+      margin-right: 0.7rem;
+    }
+    img {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
   img {
     width: 300px;
   }

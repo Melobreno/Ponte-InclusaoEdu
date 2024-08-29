@@ -1,9 +1,10 @@
 import { useState } from "react";
 import img from "../../../Assets/Logo8.svg";
+import voltar from "../../../Assets/voltar.svg";
 import Btn from "../../atoms/Button/index/";
 import * as S from "./style";
 import api from "../../../api/api";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function ElementoEmail() {
   const navegar = useNavigate();
@@ -27,6 +28,12 @@ function ElementoEmail() {
   return (
     <>
       <S.Container>
+        <div className="voltar">
+          <Link to={"/login"}>
+            <a href="">Voltar</a>
+            <img src={voltar} alt="" />
+          </Link>
+        </div>
         <img src={img} alt="" />
         <S.texto>
           <h1>Redefinir senha</h1>
