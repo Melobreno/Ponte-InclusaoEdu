@@ -11,6 +11,7 @@ const postAtividade = require("./controller/ativiController/postAtidade");
 const deleteAtividade = require("./controller/ativiController/deleteController");
 const atualizaAtivi = require("./controller/ativiController/putcontriller");
 const getAtividadeRes = require("./controller/ativiResController/getAtiviResController");
+const enviarEmail = require("./controller/emailController/email");
 
 router.post("/adicionar", insertUserController.insertUser);
 router.post("/login", loginUserController.loginUser);
@@ -22,4 +23,5 @@ router.post("/enviarAtividade", postAtividade.ativiPost);
 router.delete("/deletaratividade/:id_ativi", deleteAtividade.deletarAtivi);
 router.put("/atualizaAtivi:id_ativi", atualizaAtivi.atualizaAtivi);
 router.get("/atividadeRes", getAtividadeRes.getAtiviRes);
+router.get("/enviarEmail", enviarEmail.enviarEmail);
 module.exports = router;

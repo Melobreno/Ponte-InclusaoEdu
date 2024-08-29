@@ -7,7 +7,7 @@ import lupa from "../../../Assets/lupa.svg";
 import { useState } from "react";
 
 function Pesquisa({ setOpenSidebar }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const abrirSidebar = () => {
     const newIsOpen = !isOpen;
