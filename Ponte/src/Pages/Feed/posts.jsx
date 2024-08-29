@@ -49,7 +49,6 @@ function Posts() {
   return (
     <>
       <div>
-        <h1>Teste</h1>
         <Escreva>
           <form onSubmit={handleSubmit}>
             <div className="novaMsg">

@@ -1,19 +1,28 @@
 import Pesquisa from "../../Components/molecules/BarraPesquisa";
 import SideDocumentacao from "../../Components/organisms/SideBarDocument/SideDocumentacao";
+import avata from "../../Assets/Avatar 1.svg";
 import * as S from "./atividade.style";
 import api from "../../api/api";
 import { useState, useEffect } from "react";
 function AtividadeResp() {
   const [openSidebar, setOpenSidebar] = useState(false);
   const [menssagem, setMenssagem] = useState([]);
-  const [data, setData] = useState("");
 
   useEffect(() => {
     mostrarAtividade();
   }, []);
+
+  const [dataCriacao, setDataCriacao] = useState("");
+
+  useEffect(() => {
+    if (!dataCriacao) {
+      const data = new Date().toLocaleDateString();
+      setDataCriacao(data);
+    }
+  }, [dataCriacao]);
   const mostrarAtividade = async () => {
     try {
-      const resposta = await api.get("/");
+      const resposta = await api.get("/atividadeRes");
       setMenssagem(resposta.data);
       console.log(resposta.data);
     } catch (error) {
@@ -28,12 +37,16 @@ function AtividadeResp() {
         <S.Bloco>
           <S.menssagem>
             {menssagem.map((useTexto) => (
-              <ul key={useTexto.id}>
-                <li className="caixasTexto">{useTexto.texto}</li>
-                <div className="butoesCaixas">
-                  <button>feito</button>
-                  <button>Deletar</button>
-                </div>
+              <ul key={useTexto.id_ativi}>
+                <p className="avatar">
+                  <img src={avata} alt="avata" />
+                  <h4>Lucas Melo</h4>
+                </p>
+                <li className="caixasTexto">
+                  {useTexto.texto} <p>{dataCriacao}</p>
+                </li>
+
+                <div className="butoesCaixas"></div>
               </ul>
             ))}
           </S.menssagem>

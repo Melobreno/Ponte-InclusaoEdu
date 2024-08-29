@@ -26,7 +26,7 @@ export const Section = styled.div`
 export const Fundo = styled.div`
   background-color: #25a6ce;
   width: 55rem;
-  height: 56.75rem;
+  height: 55.75rem;
   border-radius: 0rem 50rem 50rem 0rem;
   margin-top: 2rem;
 
@@ -220,9 +220,6 @@ export const Container = styled.div`
   }
 
   .botao {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 50px;
     margin-top: 3px;
 
@@ -230,7 +227,6 @@ export const Container = styled.div`
       padding: 20px;
     }
   }
-
   .botao button {
     width: 123px;
     height: 30px;
@@ -256,11 +252,11 @@ export const Container = styled.div`
       font-size: 12px;
     }
   }
-
   .esqueceuSenha {
     display: flex;
     color: #000;
     text-decoration: none;
+
     justify-content: flex-end;
     margin: 0.3rem 3.31rem 0 0;
     font-size: 0.8125rem;
@@ -280,6 +276,7 @@ export const Container = styled.div`
       margin: 0.3rem 1rem;
       font-size: 0.7rem;
     }
+
   }
 
   .esqueceuSenha:hover {

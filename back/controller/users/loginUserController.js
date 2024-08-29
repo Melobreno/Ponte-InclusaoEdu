@@ -1,4 +1,4 @@
-const prisma = require("../clientLib/prisma");
+const prisma = require("../../clientLib/prisma");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const chaveSec = "ponte_key";

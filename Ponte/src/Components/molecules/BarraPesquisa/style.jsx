@@ -14,11 +14,12 @@ export const Section = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 30px;
   }
 
   .inputNav {
     display: flex;
-    width: 50rem;
+    width: 30rem;
     justify-content: space-between;
     align-items: center;
     @media (max-width: 1024px) {
