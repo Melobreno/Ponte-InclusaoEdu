@@ -1,7 +1,7 @@
 import Footer from "../../Components/molecules/Footer/Footer";
 import NavBar from "../../Components/organisms/NavBar/index";
 import Btn from "../../Components/atoms/Button/index";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { SobreNos } from "./capStyled";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -10,6 +10,7 @@ function Captacao() {
   const [email, setValorEmail] = useState("");
   const [nome, setValorNome] = useState("");
   const form = useRef();
+  const navegar = useNavigate();
   const value = "Confirmar";
 
   const enviarEmail = (e) => {
@@ -29,6 +30,7 @@ function Captacao() {
       .then(
         () => {
           console.log("SUCCESS!");
+          navegar("/Assinaturas");
         },
         (error) => {
           console.log("Error ao enviar email", error.text);
@@ -94,9 +96,7 @@ function Captacao() {
                 </span>
               </div>
               <div className="button">
-                <Link to={"/Assinaturas"}>
-                  <Btn txt={value} type="onSubmit" />
-                </Link>
+                <Btn txt={value} type="onSubmit" />
               </div>
             </div>
           </div>
