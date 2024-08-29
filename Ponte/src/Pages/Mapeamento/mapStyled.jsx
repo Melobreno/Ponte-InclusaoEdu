@@ -2,9 +2,8 @@ import styled from "styled-components";
 
 export const Map = styled.div`
   display: flex;
-  padding: 1rem;
   justify-content: center;
-
+  gap: 5%;
   .busca {
     font-size: x-large;
     font-family: "montserrat";
@@ -106,6 +105,12 @@ export const Map = styled.div`
     cursor: pointer;
     transition: all 0.3s ease;
     min-width: 7.7rem;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    margin-right: 120px;
   }
 
   @media (max-width: 1440px) {
