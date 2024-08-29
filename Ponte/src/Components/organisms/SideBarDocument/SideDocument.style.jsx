@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
-
 export const nav = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: aliceblue;
-  height: 89vh;
+  height: 80vh;
   max-width: 250px;
   border-radius: 0 5px 5px 0;
   font-family: "Montserrat", sans-serif;
@@ -52,7 +51,6 @@ export const nav = styled.nav`
     background-color: #25a6ce;
   }
 
-
   #sair {
     margin: 10px;
   }
@@ -68,6 +66,5 @@ export const nav = styled.nav`
   }
   #sideBar.open-sidebar {
     min-width: 15%;
-
   }
 `;

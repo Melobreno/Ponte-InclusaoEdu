@@ -94,9 +94,9 @@ function Captacao() {
                 </span>
               </div>
               <div className="button">
-                {/* <Link to={"/Assinaturas"}> */}
-                <Btn txt={value} type="onSubmit" />
-                {/* </Link> */}
+                <Link to={"/Assinaturas"}>
+                  <Btn txt={value} type="onSubmit" />
+                </Link>
               </div>
             </div>
           </div>

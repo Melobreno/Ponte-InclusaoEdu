@@ -4,19 +4,23 @@ function InfoPremium() {
     <>
       <div className="contentInfo">
         <img src={V} alt="Imagem V" />
-        <span>Informção do produto</span>
+        <span>
+          Contato prático e dinâmico com até 5 profissionais envolvidos
+        </span>
       </div>
       <div className="contentInfo">
         <img src={V} alt="Imagem V" />
-        <span>Informção do produto</span>
+        <span>
+          Mapeamento com todos os especialistas que sua criança precisa
+        </span>
       </div>
       <div className="contentInfo">
         <img src={V} alt="Imagem X" />
-        <span>Informção do produto</span>
+        <span>Controle de Atividades Semanais</span>
       </div>
       <div className="contentInfo">
         <img src={V} alt="Imagem X" />
-        <span>Informção do produto</span>
+        <span>Fácil acesso aos Relatórios Clínicos</span>
       </div>
     </>
   );

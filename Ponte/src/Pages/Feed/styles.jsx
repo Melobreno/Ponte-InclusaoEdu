@@ -3,8 +3,9 @@ import styled from "styled-components";
 import breakpoint from "../../breakpoints.js";
 
 export const Pagina = styled.div`
-  @media (${breakpoint.mobile}) {
-  }
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 `;
 
 export const Section = styled.div`
@@ -14,19 +15,23 @@ export const Section = styled.div`
   justify-content: center;
 
   .linhaL {
-    margin: 0 6rem;
+    margin: 20px;
     width: 0rem;
     height: 48rem;
-    @media (${breakpoint.bg}) {
+    @media (max-width: 1680px) {
       margin: 0 2.5rem;
     }
-    @media (${breakpoint.sm}) {
+    @media (max-width: 1150px) {
       display: none;
     }
   }
 
+  @media (max-width: 1024px) {
+    gap: 20px;
+  }
+
   .pesquisa {
-    @media (${breakpoint.md}) {
+    @media (max-width: 1440px) {
       display: flex;
       flex-direction: column;
       align-items: end;
@@ -34,43 +39,34 @@ export const Section = styled.div`
   }
 `;
 
-
 export const Texto = styled.div`
-  background-color: lightblue;
+  background-color: aliceblue;
   display: flex;
   height: 0;
 `;
 export const Escreva = styled.div`
   width: 50rem;
   height: 13.5rem;
-  background-color: #ecf4f6;
-  border-radius: 0.375rem;
+  background-color: aliceblue;
+  border-radius: 0.37rem;
   box-shadow: 6px 6px 15px -6px rgba(0, 0, 0, 0.25);
-
-  @media (${breakpoint.mobile}) {
-    margin-top: -70px;
-    display: flex;
-    justify-content: center;
-    height: 13rem;
-    transform: scale(0.37);
-  }
 
   .novaMsg {
     display: flex;
     padding: 0.88rem;
   }
   .img {
-    width: 2.70213rem;
-    height: 2.62469rem;
+    width: 2.7rem;
+    height: 2.6rem;
   }
   textarea {
-    width: 44rem;
+    width: 40rem;
     height: 7rem;
     margin-top: 0.4rem;
     margin-left: 0.71rem;
     border: none;
     resize: none;
-    background-color: #ecf4f6;
+    background-color: aliceblue;
     font-weight: 500;
     outline: none;
     font-size: 1.25rem;
@@ -93,6 +89,26 @@ export const Escreva = styled.div`
     justify-content: right;
     margin: 0.63rem 1.5rem;
   }
+  @media (max-width: 1024px) {
+    width: 26rem;
+    height: 11rem;
+
+    textarea {
+      height: 70px;
+    }
+
+    hr {
+      width: 40vw;
+    }
+  }
+
+  @media (${breakpoint.mobile}) {
+    margin-top: -70px;
+    display: flex;
+    justify-content: center;
+    height: 13rem;
+    transform: scale(0.37);
+  }
 `;
 
 export const Mensagem = styled.div`
@@ -101,7 +117,7 @@ export const Mensagem = styled.div`
   width: 50rem;
   height: 13.5rem;
   margin-top: 2.18rem;
-  background-color: #ecf4f6;
+  background-color: aliceblue;
   border-radius: 0.375rem;
   box-shadow: 6px 6px 15px -6px rgba(0, 0, 0, 0.25);
 
@@ -128,7 +144,7 @@ export const Mensagem = styled.div`
     }
   }
   .conteudo p {
-    width: 45.0625rem;
+    width: 45.06rem;
     height: 6.5rem;
     margin: 0;
   }
@@ -148,8 +164,8 @@ export const Mensagem = styled.div`
     padding: 0.88rem;
   }
   .img {
-    width: 2.70213rem;
-    height: 2.62469rem;
+    width: 2.7rem;
+    height: 2.62rem;
   }
   .comentario {
     display: flex;
@@ -160,8 +176,8 @@ export const Mensagem = styled.div`
   }
   .balao {
     padding-left: 0.5rem;
-    width: 1.8125rem;
-    height: 2.1875rem;
+    width: 1.81rem;
+    height: 2.18rem;
   }
   button.lixeira {
     padding: 0;
@@ -190,7 +206,7 @@ export const Atores = styled.div`
   padding: 0;
   margin: 0;
   height: 46rem;
-  width: 450px;
+  width: 350px;
 
   @media (${breakpoint.mobile}) {
     display: none;
@@ -202,8 +218,8 @@ export const Atores = styled.div`
   img {
     padding: 0.68rem;
     display: flex;
-    width: 2.625rem;
-    height: 2.62469rem;
+    width: 2.62rem;
+    height: 2.62rem;
   }
 
   .atores {

@@ -10,7 +10,7 @@ function NovaSenha() {
     <>
       <S.Container>
         <CirculoImg />
-        <ElementoSenha exibirInput={mostraDoisInputs} placeholder={value} />
+        <ElementoSenha exibirInput={mostraDoisInputs} />
       </S.Container>
     </>
   );

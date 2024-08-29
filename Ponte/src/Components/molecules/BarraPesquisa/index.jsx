@@ -18,22 +18,22 @@ function Pesquisa({ setOpenSidebar }) {
   return (
     <>
       <Section>
-        <div>
-          {isOpen ? (
-            <RiCloseFill
-              onClick={abrirSidebar}
-              className="menu"
-              fontSize={25}
-            />
-          ) : (
-            <FiAlignJustify
-              onClick={abrirSidebar}
-              fontSize={25}
-              className="menu"
-            />
-          )}
-        </div>
         <div className="esquerdaNav">
+          <div>
+            {isOpen ? (
+              <RiCloseFill
+                onClick={abrirSidebar}
+                className="menu"
+                fontSize={25}
+              />
+            ) : (
+              <FiAlignJustify
+                onClick={abrirSidebar}
+                fontSize={25}
+                className="menu"
+              />
+            )}
+          </div>
           <div className="inputNav">
             <a href="">
               <img src={logo} alt="logo" className="logo" />
@@ -52,7 +52,7 @@ function Pesquisa({ setOpenSidebar }) {
               <img src={lupa} alt="lupa" />
             </button>
           </div>
-          <p>Lucas Melo</p>
+          <p className="userName">Lucas Melo</p>
           <img src={avatar} alt="avata" className="avatar" />
         </div>
       </Section>

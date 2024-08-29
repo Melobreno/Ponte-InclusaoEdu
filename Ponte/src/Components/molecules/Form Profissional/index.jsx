@@ -11,7 +11,7 @@ function FormP() {
   return (
     <S.FormSection>
       <form onSubmit={handleSubmit(onSubmit)} className="formContainer">
-        <h1>Cadastro Para Profissionais</h1>
+        <h1>Atualizar cadastro do profissional</h1>
         <div className="formDiv">
           <label>
             Nome Completo:
@@ -85,7 +85,7 @@ function FormP() {
           </label>
         </div>
         <div className="containerBtn">
-          <Btn txt={"Cadastrar-se"} />
+          <Btn txt={"Enviar"} />
         </div>
         <p className="cadastroResp">
           Precisa criar um cadastro para Responsável ?{" "}
