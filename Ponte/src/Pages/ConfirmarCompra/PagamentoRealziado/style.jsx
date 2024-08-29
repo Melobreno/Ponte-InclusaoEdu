@@ -1,22 +1,3 @@
-// import styled from "styled-components";
-
-// export const Section = styled.div`
-//   .pgto {
-//     padding: 3rem;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//   }
-
-//   img {
-//     width: 36rem;
-//     height: 36rem;
-//   }
-//   .botao {
-//     padding: 5rem;
-//   }
-// `;
-
 import styled from "styled-components";
 
 export const Section = styled.div`
@@ -50,8 +31,6 @@ export const Section = styled.div`
       padding: 4rem;
     }
   }
-
-  /* Estilos para telas entre 1024px e 1440px */
   @media (max-width: 1440px) and (min-width: 1024px) {
     .pgto {
       padding: 2.5rem;
@@ -67,8 +46,6 @@ export const Section = styled.div`
       padding: 3rem;
     }
   }
-
-  /* Estilos para telas menores que 1024px */
   @media (max-width: 1024px) {
     .pgto {
       padding: 2rem;
@@ -83,8 +60,6 @@ export const Section = styled.div`
       padding: 2.5rem;
     }
   }
-
-  /* Estilos para telas menores que 425px */
   @media (max-width: 425px) {
     .pgto {
       padding: 1rem;

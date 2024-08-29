@@ -3,6 +3,7 @@ import MetodoPgto from "../../atoms/CardPGTO/index";
 import * as S from "./style";
 import iconMais from "../../../Assets/+.svg";
 import Btn from "../../atoms/Button";
+import { Link, useNavigate } from "react-router-dom";
 
 function Pagamento() {
   //Estados para armazenar
@@ -11,6 +12,7 @@ function Pagamento() {
   const [cvv, setCvv] = useState("");
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
+  const navigate = useNavigate();
 
   const handleCard = (e) => {
     e.preventDefault();
@@ -24,6 +26,7 @@ function Pagamento() {
     console.log("CVV:", cvv);
     console.log("Nome do Titular:", name);
     setMessage("Pagamento efetuado com sucesso!");
+    navigate("/pgtoConfirmado");
   };
 
   return (
@@ -112,8 +115,8 @@ function Pagamento() {
               <h3>R$ 49,90</h3>
             </div>
             <div className="containerBtn">
-              <Btn txt={"Confirmar Compra"} onClick={handleCard} />
               {message && <p>{message}</p>}
+              <Btn txt={"Confirmar Compra"} onClick={handleCard} />
             </div>
           </div>
         </div>

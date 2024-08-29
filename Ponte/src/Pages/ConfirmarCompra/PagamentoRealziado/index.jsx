@@ -11,14 +11,13 @@ function PgtoConfirmado() {
   return (
     <>
       <NavBar />
-
       <Section>
         <div className="pgto">
           <img src={img} alt="" />
           <div className="botao">
-            <Link to={"/login"} />
-            <Btn type="submit" txt={enviar} />
-            <Link />
+            <Link to={"/login"}>
+              <Btn txt={enviar} />
+            </Link>
           </div>
         </div>
       </Section>
