@@ -91,12 +91,13 @@ function AtividadeProf() {
         {openSidebar && <SideDocumentacao />}
         <S.Bloco>
           <section>
+            <h1>Quadro de atividades</h1>
             <form onSubmit={handleSubmit}>
               <div className="inputEstilizando">
                 <input
                   className={`digite ${isFocused ? "ampliado" : ""}`}
                   type="text"
-                  placeholder="Digite aqui sua proposta de atividade semanal..."
+                  placeholder="Digite sua proposta de atividade..."
                   value={texto}
                   onFocus={handleFocused}
                   onChange={(event) => setTexto(event.target.value)}
