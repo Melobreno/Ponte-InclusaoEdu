@@ -1,7 +1,6 @@
 import { useState } from "react";
 import img from "../../../Assets/Logo8.svg";
 import voltar from "../../../Assets/voltar.svg";
-import Btn from "../../atoms/Button/index/";
 import * as S from "./style";
 import api from "../../../api/api";
 import { Link } from "react-router-dom";
@@ -31,39 +30,40 @@ function ElementoEmail() {
   return (
     <>
       <S.Container>
-        <div className="voltar">
+        <section className="mainContent">
+          <div className="voltar">
+            <Link to={"/login"}>
+              <a href="">Voltar</a>
+              <img src={voltar} alt="" />
+            </Link>
+          </div>
           <Link to={"/login"}>
-            <a href="">Voltar</a>
-            <img src={voltar} alt="" />
+            <img src={img} alt="" />
           </Link>
-        </div>
-        <Link to={"/login"}>
-          <img src={img} alt="" />
-        </Link>
-        <S.texto>
-          <h1>Redefinir senha</h1>
-          <p>Digite o seu e-mail para redefinir a senha.</p>
-        </S.texto>
-        <S.inputs>
-          <label className="txtsenha">Digite seu email</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-          />
-        </S.inputs>
-        <div className="footerbtn">
-          <button onClick={verificaEmail}>Continuar</button>
-          {erro && (
-            <p className="msgErro">
-              Por favor verifique seus dados e tente novamente
-            </p>
-          )}
-        </div>
+          <S.texto>
+            <h1>Redefinir senha</h1>
+            <p>Digite o seu e-mail para redefinir a senha.</p>
+          </S.texto>
+          <S.inputs>
+            <label className="txtsenha">Digite seu email</label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+            />
+          </S.inputs>
+          <div className="footerbtn">
+            <button onClick={verificaEmail}>Continuar</button>
+            {erro && (
+              <p className="msgErro">
+                Por favor verifique seus dados e tente novamente
+              </p>
+            )}
+          </div>
+        </section>
       </S.Container>
-      <p>{setValor}</p>
     </>
   );
 }
