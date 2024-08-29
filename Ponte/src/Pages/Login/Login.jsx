@@ -66,7 +66,7 @@ function Login() {
               value={senha}
               onChange={(event) => setSenha(event.target.value)}
             />
-            <Link to={"/redefinirSenha"}>
+            <Link to={"/verificaemail"}>
               <a className="esqueceuSenha" href="">
                 Esqueci minha senha
               </a>

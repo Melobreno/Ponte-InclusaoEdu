@@ -8,7 +8,7 @@ function Chatbot() {
   return (
     <Container>
       <div id="chatbot-button" onClick={toggleChat}>
-        💬 Chat
+        Chat 💬
       </div>
 
       <div id="chatbox" className="hidden">
