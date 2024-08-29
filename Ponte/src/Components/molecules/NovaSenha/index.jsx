@@ -1,6 +1,5 @@
 import { useState } from "react";
 import img from "../../../Assets/Logo8.svg";
-import Btn from "../../atoms/Button/index/";
 import * as S from "./elementoSenha.style";
 import api from "../../../api/api";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -65,7 +64,7 @@ function ElementoSenha() {
               }}
             />
             <div>
-              <button type="submit">Continuar</button>
+              <button type="submit">Confirmar</button>
             </div>
           </form>
         </S.inputs>
