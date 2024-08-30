@@ -2,12 +2,11 @@ import styled from "styled-components";
 import breakpoint from "../../../breakpoints";
 export const Section = styled.div`
   display: flex;
-  height: 5.1875rem;
+  height: 5.18rem;
   justify-content: space-around;
   align-items: center;
   margin: auto;
 
-  border-bottom: solid 1px black;
   @media (${breakpoint.mobile}) {
     transform: scale(0.37);
     justify-content: center;
@@ -25,6 +24,7 @@ export const Section = styled.div`
 
   .inputNav {
     display: flex;
+    margin-left: 20px;
     width: 50rem;
     justify-content: space-between;
     align-items: center;
