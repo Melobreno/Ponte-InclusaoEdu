@@ -8,12 +8,14 @@ export const Container = styled.section`
   width: 500px;
   height: 450px;
   gap: 50px;
+  margin: 0 auto;
 
   form {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    width: 380px;
+    width: 100%;
+    max-width: 380px;
   }
 
   h1 {
@@ -43,5 +45,59 @@ export const Container = styled.section`
     font-size: 1.2rem;
     width: 180px;
     height: 45px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 500px;
+    height: 450px;
+    gap: 50px;
+  }
+
+  @media (max-width: 1439px) and (min-width: 1024px) {
+    width: 80%;
+    height: auto;
+    gap: 40px;
+  }
+
+  @media (max-width: 1023px) {
+    width: 90%;
+    height: auto;
+    gap: 30px;
+
+    form {
+      width: 100%;
+      max-width: none;
+    }
+
+    .btnContainer button {
+      font-size: 1rem;
+      width: 150px;
+      height: 40px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    padding: 0 10px;
+
+    form {
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    form input {
+      height: 35px;
+    }
+
+    .btnContainer button {
+      font-size: 0.9rem;
+      width: 140px;
+      height: 35px;
+    }
   }
 `;

@@ -6,16 +6,15 @@ export const Container = styled.div`
   justify-content: center;
   gap: 10%;
   background-color: #ffffff;
-  position: sticky;
   margin: 0 auto;
   align-items: center;
   margin-top: 10px;
+  position: sticky;
   img {
     width: 12rem;
   }
 
   @media (max-width: 1024px) {
-    position: relative;
     display: flex;
     justify-content: center;
   }

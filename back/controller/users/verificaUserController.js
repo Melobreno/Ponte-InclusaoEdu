@@ -2,17 +2,17 @@ const prisma = require("../../clientLib/prisma");
 
 module.exports = class verificaEmailController {
   static async verificaEmail(req, res) {
-    const { email } = req.query;
+    const { email_user } = req.params;
 
     try {
       const user = await prisma.users.findFirst({
-        where: { email_user: email },
+        where: { email_user: email_user },
       });
 
       if (user) {
-        return res.status(200).json({ existe: true });
+        return res.status(200).json({ exists: true });
       } else {
-        return res.status(404).json({ existe: false });
+        return res.status(404).json({ exists: false });
       }
     } catch (error) {
       console.error("Erro ao verificar email:", error);

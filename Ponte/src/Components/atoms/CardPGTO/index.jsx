@@ -30,14 +30,7 @@ function MetodoPgto({ metPgto }) {
         />
         <span>{txtMet}</span>
       </div>
-      <div className="contentParc">
-        {!mostrarSelect && (
-          <select name="" id="">
-            <option value="*">Preço à vista</option>
-            <option value="*">Preço à vista</option>
-          </select>
-        )}
-      </div>
+      <div className="contentParc"></div>
     </S.ContainerOpt>
   );
 }

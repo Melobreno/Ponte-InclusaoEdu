@@ -25,6 +25,13 @@ export const Bloco = styled.div`
     margin-left: 0;
     margin-top: 0;
   }
+  h1 {
+    font-family: "Montserrat", sans-serif, Helvetica;
+    width: 36.4rem;
+    height: 4.4rem;
+    font-size: 2rem;
+    font-weight: 600;
+  }
   .digite {
     width: 53vw;
     padding: 1rem;
@@ -62,6 +69,9 @@ export const Bloco = styled.div`
       padding: 1rem;
     }
   }
+  input {
+    background-color: aliceblue;
+  }
   .digite.ampliado {
     width: 53vw;
     height: 20px;
@@ -94,8 +104,8 @@ export const Bloco = styled.div`
     display: flex;
     flex-direction: column;
     gap: 30px;
-    background-color: white;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    background-color: aliceblue;
+    box-shadow: 1px 1px 1px 1px rgba(111, 111, 111, 0.2);
     padding: 10px;
     border-radius: 3px;
     @media (max-width: 425px) {

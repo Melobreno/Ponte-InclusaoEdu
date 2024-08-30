@@ -1,92 +1,151 @@
-import { Map, Foto1, Foto2 } from "./mapStyled";
-import foto1 from "../../Assets/Usermulher.svg";
-import foto2 from "../../Assets/Userhomem.svg";
-import Button from "../../Components/atoms/Button/index";
+import React, { useState } from "react";
+import { Map, Foto1 } from "./mapStyled";
+import fotom from "../../Assets/Usermulher.svg";
+import fotoh from "../../Assets/Userhomem.svg";
 import SideDocumentacao from "../../Components/organisms/SideBarDocument/SideDocumentacao";
-import { useState } from "react";
 import Pesquisa from "../../Components/molecules/BarraPesquisa/index";
+import api from "../../api/api";
 
 function Mapeamento() {
   const [openSideBar, setOpenSideBar] = useState(false);
-  const value = "Buscar";
+  const [resultados, setResultados] = useState([]);
+
+  const [selectedCities, setSelectedCities] = useState([]);
+
+  const handleSearch = async () => {
+    console.log("handsearch");
+    if (selectedCities.length === 0) {
+      alert("Por favor, selecione ao menos uma cidade.");
+      return;
+    }
+    if (selectedCities.length > 1) {
+      alert("Você pode selecionar apenas uma cidade.");
+      return;
+    }
+
+    try {
+      const citiesQuery = selectedCities.join(",");
+
+      console.log("Realizando busca com:", {
+        cidade: citiesQuery,
+      });
+
+      const response = await api.get(`/showcep/${citiesQuery}`);
+
+      console.log("Resposta da API:", response.data);
+
+      setResultados(response.data);
+    } catch (error) {
+      console.error("Erro ao buscar dados:", error);
+      setResultados([]);
+    }
+  };
+
   return (
     <>
-      <Pesquisa setOpenSideBar={setOpenSideBar} />
-      <div>{openSideBar && <SideDocumentacao />}</div>
+      <Pesquisa setOpenSidebar={setOpenSideBar} />
       <Map>
-        <div className="card">
-          <div className="busca">
-            Encontramos estes resultados para sua busca:
+        <div className="side">{openSideBar && <SideDocumentacao />}</div>
+        <div className="content">
+          <div className="card">
+            <div className="busca">
+              Faça aqui o mapeamento de profissionais disponiveis para a sua
+              cidade.
+            </div>
+            {resultados.length > 0 ? (
+              resultados.map((dado) => (
+                <div className="container2" key={dado["id-prof"]}>
+                  <div className="info1">
+                    <Foto1>
+                      <img
+                        src={
+                          ["G", "F", "A"].includes(dado.name_prof.charAt(0))
+                            ? fotoh
+                            : fotom
+                        }
+                        alt="user"
+                      />
+                    </Foto1>
+                    <div className="dados">
+                      <div className="nome">{dado["name_prof"]}</div>
+                      <div className="ocupacao">{dado.ocupacao}</div>
+                    </div>
+                  </div>
+                  <div className="info2">
+                    <div className="endereco">{dado.cidade}</div>
+                    <div className="status">Disponível para teleconsulta</div>
+                    <div className="atendimento">Atendimento particular</div>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <div className="container3">
+                <p>
+                  Selecione uma cidade e clique em buscar para obter
+                  informações:
+                </p>
+              </div>
+            )}
           </div>
 
-          <div className="container2">
-            <div className="info1">
-              <Foto1>
-                <img src={foto1} alt="user" />
-              </Foto1>
-              <div className="dados">
-                <div className="nome">Erick Oliveira</div>
-                <div className="ocupacao">Fonoaudiologa</div>
-              </div>
+          <div className="container1">
+            <h3 className="texto">Selecione uma cidade:</h3>
+            <div className="input">
+              <input
+                type="checkbox"
+                value="Recife"
+                checked={selectedCities.includes("Recife")}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  setSelectedCities((prev) =>
+                    e.target.checked
+                      ? [...prev, value]
+                      : prev.filter((cidade) => cidade !== value)
+                  );
+                }}
+                id="RECIFE"
+              />
+              <span>Recife</span>
             </div>
-            <div className="info2">
-              <div className="endereco">
-                Rua Ipojuca, 537 Areias, Recife, PE 50780650
-              </div>
-              <div className="status">Disponivel para teleconsulta</div>
-              <div className="atendimento">Atendimento Particular</div>
+            <div className="input">
+              <input
+                type="checkbox"
+                value="Paudalho"
+                checked={selectedCities.includes("Paudalho")}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  setSelectedCities((prev) =>
+                    e.target.checked
+                      ? [...prev, value]
+                      : prev.filter((cidade) => cidade !== value)
+                  );
+                }}
+                id="PAUDALHO"
+              />
+              <span>Paudalho</span>
             </div>
-          </div>
-          <div className="container3">
-            <div className="info1">
-              <Foto2>
-                <img src={foto2} alt="user" />
-              </Foto2>
-              <div className="dados">
-                <div className="nome">Pricilla Silva</div>
-                <div className="ocupacao">Terapeuta</div>
-              </div>
+            <div className="input">
+              <input
+                type="checkbox"
+                value="Jaboatão"
+                checked={selectedCities.includes("Jaboatão")}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  setSelectedCities((prev) =>
+                    e.target.checked
+                      ? [...prev, value]
+                      : prev.filter((cidade) => cidade !== value)
+                  );
+                }}
+                id="JABOATAO"
+              />
+              <span>Jaboatão Dos Guararapes</span>
             </div>
-            <div className="info2">
-              <div className="endereco">
-                Av. Liberdade, 425, Tejipio, Recife, PE, 50984210
-              </div>
-              <div className="status">Disponivel para teleconsulta</div>
-              <div className="atendimento">Atendimento Particular</div>
+            <div className="button">
+              <button className="botao" onClick={handleSearch}>
+                Buscar
+              </button>
             </div>
-          </div>
-        </div>
-
-        <div className="container1">
-          <h3 className="texto">Especialização:</h3>
-          <div className="input">
-            <input type="checkbox" name="" id="" />
-            <span>Fonoaudiologia</span>
-          </div>
-          <div className="input">
-            <input type="checkbox" name="" id="" />
-            <span>Terapeuta</span>
-          </div>
-          <div className="input">
-            <input type="checkbox" name="" id="" />
-            <span>Psicomotricista</span>
-          </div>
-
-          <h3 className="texto">Distância:</h3>
-          <div className="input">
-            <input type="checkbox" name="" id="" />
-            <span>5 km</span>
-          </div>
-          <div className="input">
-            <input type="checkbox" name="" id="" />
-            <span>10 km</span>
-          </div>
-          <div className="input">
-            <input type="checkbox" name="" id="" />
-            <span>15 km</span>
-          </div>
-          <div className="button">
-            <Button txt={value} />
           </div>
         </div>
       </Map>

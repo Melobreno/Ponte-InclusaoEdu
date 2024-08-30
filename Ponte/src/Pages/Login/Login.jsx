@@ -2,13 +2,14 @@ import { useState } from "react";
 import { Imagem, Container, Section, Fundo } from "./LoginStyled";
 import imgLogin from "../../Assets/tabletLogin.svg";
 import logo from "../../Assets/logoPonte.svg";
+import voltar from "../../Assets/voltar.svg";
 import Btn from "../../Components/atoms/Button/index";
 import { Link, useNavigate } from "react-router-dom";
 import api from "../../api/api";
 
 function Login() {
   const navigate = useNavigate();
-  const value = "Enviar";
+  const value = "Entrar";
 
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
@@ -44,7 +45,13 @@ function Login() {
         </Fundo>
 
         <Container>
-          <Link to={"/"}>
+          <div className="voltar">
+            <Link className="link" to={"/"}>
+              <a href="">Voltar</a>
+              <img src={voltar} alt="" />
+            </Link>
+          </div>
+          <Link className="link" to={"/"}>
             <img src={logo} alt="Imagem Logo" />
           </Link>
           <h1>Bem-vindo!</h1>
@@ -66,7 +73,7 @@ function Login() {
               value={senha}
               onChange={(event) => setSenha(event.target.value)}
             />
-            <Link to={"/redefinirSenha"}>
+            <Link to={"/verificaemail"}>
               <a className="esqueceuSenha" href="">
                 Esqueci minha senha
               </a>

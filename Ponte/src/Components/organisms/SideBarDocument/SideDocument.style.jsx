@@ -6,6 +6,7 @@ export const nav = styled.nav`
   justify-content: space-between;
   background-color: aliceblue;
   height: 80vh;
+  width: 250px;
   max-width: 250px;
   border-radius: 0 5px 5px 0;
   font-family: "Montserrat", sans-serif;
@@ -26,7 +27,7 @@ export const nav = styled.nav`
   #infor-usuario span:last-child {
     font-size: 12px;
   }
-  #saide_items {
+  #ul_items {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -34,20 +35,27 @@ export const nav = styled.nav`
     list-style: none;
     padding: 0px;
   }
-  .saide-item {
+  .side-item {
     border-radius: 10px;
-    padding: 14px;
+    padding: 14px 6px;
     cursor: pointer;
   }
-  .saide-item a {
+
+  .side-item a {
     text-decoration: none;
     display: flex;
     align-items: center;
     color: black;
-    gap: 20px;
+    gap: 18px;
   }
 
-  .saide-item.active {
+  .side-item span:hover {
+    transition: all 10ms ease-in-out;
+    transform: scale(1.03);
+    font-weight: 500;
+  }
+
+  .side-item.active {
     background-color: #25a6ce;
   }
 
