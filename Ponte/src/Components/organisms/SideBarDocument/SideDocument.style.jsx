@@ -37,7 +37,7 @@ export const nav = styled.nav`
   }
   .side-item {
     border-radius: 10px;
-    padding: 14px 6px;
+    padding: 14px 2px;
     cursor: pointer;
   }
 

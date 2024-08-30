@@ -263,8 +263,15 @@ export const Container = styled.div`
     }
   }
 
+  .botao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .botao span {
-    font-size: 14px;
+    font-size: 12px;
     color: #ff0000;
     font-weight: 500;
 
