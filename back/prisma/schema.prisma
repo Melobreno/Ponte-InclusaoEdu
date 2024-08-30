@@ -27,10 +27,20 @@ model Documents {
 }
 
 model Profissionais {
-  id_prof  Int    @id @default(autoincrement())
+  id_prof   Int    @id @default(autoincrement())
   name_prof String
   cep_prof  Int
-  cidade String
-  ocupacao String
+  cidade    String
+  ocupacao  String
+}
 
+model Message {
+  id    Int      @id @default(autoincrement())
+  texto String
+  data  DateTime @default(now())
+}
+
+model Atividade {
+  id_ativi Int    @id @default(autoincrement())
+  texto    String
 }
