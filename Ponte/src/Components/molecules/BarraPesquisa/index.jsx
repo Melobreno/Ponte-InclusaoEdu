@@ -5,6 +5,7 @@ import logo from "../../../Assets/logoPonte.svg";
 import avatar from "../../../Assets/Avatar 1.svg";
 import lupa from "../../../Assets/lupa.svg";
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 function Pesquisa({ setOpenSidebar }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,7 +37,9 @@ function Pesquisa({ setOpenSidebar }) {
           </div>
           <div className="inputNav">
             <a href="">
-              <img src={logo} alt="logo" className="logo" />
+              <Link to={"/"}>
+                <img src={logo} alt="logo" className="logo" />
+              </Link>
             </a>
           </div>
         </div>
