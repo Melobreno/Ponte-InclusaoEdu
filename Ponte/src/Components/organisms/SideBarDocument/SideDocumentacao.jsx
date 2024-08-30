@@ -61,7 +61,7 @@ function SideDocumentacao() {
             <li className="side-item">
               <Link to="/CadastroProf">
                 <IoSettingsOutline />
-                <span className="item-descricao">atualização de cadastro</span>
+                <span className="item-descricao">Atualização de cadastro</span>
               </Link>
             </li>
           </ul>

@@ -10,6 +10,10 @@ export const Container = styled.div`
 
   ul {
     list-style-type: none;
+    a {
+      color: black;
+      text-decoration: none;
+    }
   }
   ul li {
     font-size: 1rem;
