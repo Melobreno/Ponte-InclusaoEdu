@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  max-width: 62%;
+  justify-content: center;
   font-family: "Montserrat", sans-serif;
+  gap: 2%;
   @media (max-width: 425px) {
     max-width: 100%;
   }
@@ -17,8 +18,6 @@ export const Bloco = styled.div`
   display: flex;
   width: 70vw;
   flex-direction: column;
-  margin-left: 11.25rem;
-  margin-top: 1.87rem;
   margin-right: 0;
   @media (max-width: 425px) {
     width: 100%;
@@ -31,6 +30,7 @@ export const Bloco = styled.div`
     height: 4.4rem;
     font-size: 2rem;
     font-weight: 600;
+    margin-bottom: 0;
   }
   .digite {
     width: 53vw;
@@ -51,6 +51,11 @@ export const Bloco = styled.div`
       width: 100%;
     }
   }
+
+  form {
+    width: 1100px;
+  }
+
   .quadro {
     display: flex;
     align-items: center;
@@ -104,6 +109,7 @@ export const Bloco = styled.div`
     display: flex;
     flex-direction: column;
     gap: 30px;
+    width: 1100px;
     background-color: aliceblue;
     box-shadow: 1px 1px 1px 1px rgba(111, 111, 111, 0.2);
     padding: 10px;
