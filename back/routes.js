@@ -6,6 +6,7 @@ const postAtividade = require("./controller/ativiController/postAtidade");
 const deleteAtividade = require("./controller/ativiController/deleteController");
 const atualizaAtivi = require("./controller/ativiController/putcontriller");
 const getAtividadeRes = require("./controller/ativiResController/getAtiviResController");
+const enviarEmail = require("./controller/emailController/email");
 const insertUserController = require("./controller/users/insertUserController");
 const loginUserController = require("./controller/users/loginUserController");
 const insertDocLink = require("./controller/document/insertDocLinkController");
@@ -17,7 +18,6 @@ const deleteMsgController = require("./controller/feed/deleteMsgController");
 const showMsgController = require("./controller/feed/showMsgController");
 const updateUserController = require("./controller/users/updateUserController");
 const verificaUserController = require("./controller/users/verificaUserController");
-
 
 router.post("/adicionar", insertUserController.insertUser);
 router.post("/login", loginUserController.loginUser);

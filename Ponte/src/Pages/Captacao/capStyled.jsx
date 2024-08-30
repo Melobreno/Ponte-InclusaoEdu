@@ -3,10 +3,11 @@ import styled from "styled-components";
 export const SobreNos = styled.div`
   display: flex;
   font-family: "Montserrat-Bold", Helvetica;
-  padding: 1.5rem 20%;
+  padding: 7rem;
+
   justify-content: center;
   text-align: start;
-  height: 35.5rem;
+  height: 26rem;
   gap: 20px;
 
   textarea::placeholder {
@@ -44,7 +45,8 @@ export const SobreNos = styled.div`
     height: 3rem;
     border-radius: 0.5rem;
     margin-top: 1.25rem;
-    border: 1px solid #000;
+    border: 1px solid #25a6ce;
+    outline: none;
   }
 
   .bigInput textarea {
@@ -53,7 +55,8 @@ export const SobreNos = styled.div`
     width: 28rem;
     border-radius: 0.63rem;
     margin-top: 1.25rem;
-    border: 1px solid #000;
+    border: 1px solid #25a6ce;
+    outline: none;
   }
 
   .checkbox {
