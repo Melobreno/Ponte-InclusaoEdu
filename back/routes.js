@@ -6,7 +6,6 @@ const postAtividade = require("./controller/ativiController/postAtidade");
 const deleteAtividade = require("./controller/ativiController/deleteController");
 const atualizaAtivi = require("./controller/ativiController/putcontriller");
 const getAtividadeRes = require("./controller/ativiResController/getAtiviResController");
-const enviarEmail = require("./controller/emailController/email");
 const insertUserController = require("./controller/users/insertUserController");
 const loginUserController = require("./controller/users/loginUserController");
 const insertDocLink = require("./controller/document/insertDocLinkController");
@@ -35,6 +34,5 @@ router.delete("/deletemsg/:id", deleteMsgController.deleteMsg);
 router.get("/showmsg", showMsgController.showMsg);
 router.put("/updatepass", updateUserController.updateUser);
 router.get("/verificaemail/:email_user", verificaUserController.verificaEmail);
-
 
 module.exports = router;
