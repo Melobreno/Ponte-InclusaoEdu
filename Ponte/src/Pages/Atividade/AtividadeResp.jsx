@@ -7,12 +7,11 @@ import { useState, useEffect } from "react";
 function AtividadeResp() {
   const [openSidebar, setOpenSidebar] = useState(false);
   const [menssagem, setMenssagem] = useState([]);
+  const [dataCriacao, setDataCriacao] = useState("");
 
   useEffect(() => {
     mostrarAtividade();
   }, []);
-
-  const [dataCriacao, setDataCriacao] = useState("");
 
   useEffect(() => {
     if (!dataCriacao) {
