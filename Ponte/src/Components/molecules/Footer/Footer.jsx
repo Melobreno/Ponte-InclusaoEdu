@@ -16,11 +16,11 @@ function Footer() {
           <h2>Sobre </h2>
           <li>Sobre nós</li>
           <li>Saiba mais</li>
-          <li>Funcionalidade</li>
+          <li>Funcionalidades</li>
         </ul>
         <ul>
           <h2>Suporte</h2>
-          <li>ponte@instituto.com</li>
+          <a href="mailto: ponteinclusaoedu@gmail.com">ponte@instituto.com</a>
           <li>FAQ</li>
           <li>Contato</li>
         </ul>
@@ -29,7 +29,7 @@ function Footer() {
           <h2>Siga a Ponte</h2>
           <li>
             <img src={insta} alt="" />
-            <p>@ponteintegraedu</p>
+            <a href="mailto: ponteinclusaoedu@gmail.com">@ponteintegraedu</a>
           </li>
           <li>
             <img src={x} alt="" />
