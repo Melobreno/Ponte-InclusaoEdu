@@ -2,10 +2,11 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   font-family: "Montserrat", sans-serif;
-  padding: 1rem 20%;
+  margin: 0 auto;
+  gap: 40px;
 
   ul {
     list-style-type: none;
@@ -45,6 +46,21 @@ export const Container = styled.div`
     padding: 0;
     margin-bottom: 0.3rem;
   }
+
+  @media (max-width: 1024px) {
+    transform: scale(0.8);
+    max-width: 425px;
+  }
+  @media (max-width: 425px) {
+    margin-left: -20px;
+    .logoPonte {
+      display: none;
+    }
+
+    ul {
+      padding: 0;
+    }
+  }
 `;
 
 export const TextComple = styled.div`
@@ -54,14 +70,16 @@ export const TextComple = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 0.2rem;
     font-family: "Montserrat", sans-serif;
+    padding: 0;
   }
 `;
 
-export const Section = styled.section`
-  width: 100%;
-  justify-content: center;
+export const Section = styled.footer`
   margin: 0 auto;
   bottom: 0;
+
+  @media (max-width: 425px) {
+    transform: scale(0.7);
+  }
 `;

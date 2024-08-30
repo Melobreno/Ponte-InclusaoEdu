@@ -1,9 +1,9 @@
-import AppRoutes from "./Pages/Routes/AppRoutes.jsx";
-import { GlobalStyles } from "../src/MainStyles.jsx";
+import AppRoutes from "./Routes/AppRoutes.jsx";
+import { GlobalStyles } from "./MainStyles.jsx";
 function App() {
   return (
     <>
-      <GlobalStyles/>
+      <GlobalStyles />
       <AppRoutes />
     </>
   );

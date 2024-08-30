@@ -1,8 +1,10 @@
 import * as S from "./buttonStyle";
-function btn({ txt }) {
+function btn({ txt, onClick }) {
   return (
     <>
-      <S.Container>{txt}</S.Container>
+      <S.Container onClick={onClick} type="submit">
+        {txt}
+      </S.Container>
     </>
   );
 }

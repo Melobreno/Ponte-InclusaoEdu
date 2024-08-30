@@ -3,11 +3,17 @@ import styled from "styled-components";
 export const SobreNos = styled.div`
   display: flex;
   font-family: "Montserrat-Bold", Helvetica;
-  padding: 1.3rem 20%;
-  justify-content: start;
+  padding: 7rem;
+
+  justify-content: center;
   text-align: start;
-  height: 400px;
+  height: 26rem;
   gap: 20px;
+
+  textarea::placeholder {
+    padding: 5px 0;
+    font-family: "Montserrat-Bold", Helvetica;
+  }
 
   .textos {
     padding-top: 1rem;
@@ -25,6 +31,7 @@ export const SobreNos = styled.div`
     font-size: 1.4rem;
   }
   .inputs {
+    padding-top: 1rem;
     width: 16rem;
   }
 
@@ -38,7 +45,8 @@ export const SobreNos = styled.div`
     height: 3rem;
     border-radius: 0.5rem;
     margin-top: 1.25rem;
-    border: 1px solid #000;
+    border: 1px solid #25a6ce;
+    outline: none;
   }
 
   .bigInput textarea {
@@ -47,7 +55,8 @@ export const SobreNos = styled.div`
     width: 28rem;
     border-radius: 0.63rem;
     margin-top: 1.25rem;
-    border: 1px solid #000;
+    border: 1px solid #25a6ce;
+    outline: none;
   }
 
   .checkbox {
@@ -56,6 +65,11 @@ export const SobreNos = styled.div`
     flex-direction: column;
     font-size: 0.8rem;
     gap: 0.5rem;
+  }
+
+  div .politicSpan {
+    color: #25a6ce;
+    text-decoration: underline;
   }
 
   .button {

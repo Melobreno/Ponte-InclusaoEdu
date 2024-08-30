@@ -1,5 +1,7 @@
 import { FaqSection } from "./faqStyle";
 import imgQuestion from "../../../Assets/VectorQuest.svg";
+import Btn from "../../atoms/Button";
+import { Link } from "react-router-dom";
 
 function divDireita() {
   return (
@@ -27,6 +29,10 @@ function divDireita() {
           Como posso começar a usar a Ponte ?
         </li>
       </ul>
+
+      <Link to={"/captacao"} className="btnSaibaMais">
+        <Btn txt={"Saiba Mais"} />
+      </Link>
     </FaqSection>
   );
 }

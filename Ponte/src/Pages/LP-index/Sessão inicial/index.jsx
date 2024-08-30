@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import * as S from "./sobreStyle";
 import imgTyping from "../../../Assets/Typing-cuate.svg";
 import Btn from "../../../Components/atoms/Button";
@@ -10,7 +11,9 @@ function SessaoInit() {
         <S.ContainerEsq>
           <h1>Um espaço para aprender e crescer juntos.</h1>
           <div className="button">
-            <Btn txt={value} /> {/*Colocar o value de Saiba Mais com props*/}
+            <Link to={"/captacao"}>
+              <Btn txt={value} />
+            </Link>
           </div>
         </S.ContainerEsq>
 

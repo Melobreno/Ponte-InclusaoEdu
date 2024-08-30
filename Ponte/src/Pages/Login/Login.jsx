@@ -1,53 +1,95 @@
-import { GlobalStyles } from "../../MainStyles";
+import { useState } from "react";
 import { Imagem, Container, Section, Fundo } from "./LoginStyled";
 import imgLogin from "../../Assets/tabletLogin.svg";
 import logo from "../../Assets/logoPonte.svg";
+import voltar from "../../Assets/voltar.svg";
 import Btn from "../../Components/atoms/Button/index";
-import fb from "../../Assets/fb.svg";
-import x from "../../Assets/x.svg";
-import insta from "../../Assets/instagram.svg";
+import { Link, useNavigate } from "react-router-dom";
+import api from "../../api/api";
+
 function Login() {
+  const navigate = useNavigate();
   const value = "Entrar";
+
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    if (email.length < 1 || senha.length < 1) {
+      alert("Por favor insira os seus dados");
+      return;
+    }
+
+    try {
+      const res = await api.post("/login", {
+        email_user: email,
+        password_user: senha,
+      });
+      const token = res.data.token;
+      localStorage.setItem("token", res.data.token);
+      navigate("/feed");
+    } catch (error) {
+      setError("Login falhou. Verifique suas credenciais.");
+    }
+  };
+
   return (
     <>
-      <GlobalStyles />
       <Section>
         <Fundo>
           <Imagem>
-            <img src={imgLogin} alt="" />
+            <img src={imgLogin} alt="Vetor login" />
           </Imagem>
         </Fundo>
 
         <Container>
-          <img src={logo} alt="" />
+          <div className="voltar">
+            <Link className="link" to={"/"}>
+              <a href="">Voltar</a>
+              <img src={voltar} alt="" />
+            </Link>
+          </div>
+          <Link className="link" to={"/"}>
+            <img src={logo} alt="Imagem Logo" />
+          </Link>
           <h1>Bem-vindo!</h1>
-          <div className="loginContainer">
+          <form className="loginContainer" onSubmit={handleSubmit}>
             <p>Digite seu e-mail:</p>
-            <input type="email" name="" id="" />
+            <input
+              type="email"
+              name="email"
+              id="current-email"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+            />
+
             <p>Digite sua senha:</p>
-            <input type="password" name="" id="" />
-            <a className="esqueceuSenha" href="">
-              Esqueci minha senha
-            </a>
+            <input
+              type="password"
+              name="password"
+              id="current-password"
+              value={senha}
+              onChange={(event) => setSenha(event.target.value)}
+            />
+            <Link to={"/verificaemail"}>
+              <a className="esqueceuSenha" href="">
+                Esqueci minha senha
+              </a>
+            </Link>
             <div className="botao">
               <Btn txt={value} />
+              {error && <span>{error}</span>}
             </div>
 
             <div className="cadastre">
-              Ainda não possui conta? <a href="">Cadasatre-se</a>
+              Ainda não possui conta?
+              <Link to={"/cadastro"}>
+                <a href="">Cadasatre-se</a>
+              </Link>
             </div>
-            <ul className="social">
-              <li>
-                <img src={insta} alt="" />
-              </li>
-              <li>
-                <img src={fb} alt="" />
-              </li>
-              <li>
-                <img src={x} alt="" />
-              </li>
-            </ul>
-          </div>
+          </form>
         </Container>
       </Section>
     </>

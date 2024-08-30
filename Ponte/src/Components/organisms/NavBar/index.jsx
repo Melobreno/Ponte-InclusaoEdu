@@ -1,15 +1,16 @@
 import imgLogo from "../../../Assets/logoPonte.svg";
 import * as S from "./NavBarStyle.jsx";
+import { Link } from "react-router-dom";
 import Menu from "../../molecules/Menu";
 
 function NavBar() {
   return (
-    <>
-      <S.Container>
+    <S.Container>
+      <Link to={"/"}>
         <img src={imgLogo} alt="" />
-        <Menu />
-      </S.Container>
-    </>
+      </Link>
+      <Menu />
+    </S.Container>
   );
 }
 

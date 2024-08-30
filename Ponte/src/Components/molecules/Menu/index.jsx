@@ -1,27 +1,73 @@
 import * as S from "./menuStyles";
 import Btn from "../../atoms/Button";
+import { Link } from "react-router-dom";
+import HamMenu from "../../../Assets/hamburger.svg";
+import { useState } from "react";
 
 function menu() {
   const value = "Login";
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <S.Container>
-      <ul>
+      <ul className="menu-desk">
         <li>
-          <a href="">Sobre nós</a>
+          <a href="#sobre">Sobre nós</a>
         </li>
         <li>
-          <a href="">Funcionalidades</a>
+          <a href="#funcionalidade">Funcionalidades</a>
         </li>
         <li>
-          <a href="">Contatos</a>
+          <a href="#contato">Contatos</a>
         </li>
-        <Btn txt={value} />
+        <Link to={"/login"}>
+          <Btn txt={value} />
+        </Link>
         <li>
-          <a className="cadastro" href="">
-            Cadastro
-          </a>
+          <Link to={"/cadastro"}>
+            <a className="cadastro" href="">
+              Cadastro
+            </a>
+          </Link>
         </li>
       </ul>
+
+      <div className="menu-container">
+        <div className="menu-toggle" onClick={toggleMenu}>
+          <img src={HamMenu} alt="hamburger-menu" className="imgTog" />
+        </div>
+
+        <ul className={`menu-resp ${isMenuOpen ? "show" : ""}`}>
+          <li>
+            <a className="menu-title">Seções</a>
+            <ul className="drop-menu">
+              <li>
+                <a href="#sobre">Sobre nós</a>
+              </li>
+              <li>
+                <a href="#funcionalidade">Funcionalidades</a>
+              </li>
+              <li>
+                <a href="#contato">Contatos</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <Link to={"/login"}>
+              <Btn txt={value} />
+            </Link>
+          </li>
+          <li>
+            <Link to={"/cadastro"}>
+              <a className="cadastro">Cadastro</a>
+            </Link>
+          </li>
+        </ul>
+      </div>
     </S.Container>
   );
 }
