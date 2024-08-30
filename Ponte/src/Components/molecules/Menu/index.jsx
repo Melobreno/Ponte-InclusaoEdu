@@ -56,12 +56,12 @@ function menu() {
               </li>
             </ul>
           </li>
-          <li>
+          <li className="btn">
             <Link to={"/login"}>
               <Btn txt={value} />
             </Link>
           </li>
-          <li>
+          <li className="btn">
             <Link to={"/cadastro"}>
               <a className="cadastro">Cadastro</a>
             </Link>

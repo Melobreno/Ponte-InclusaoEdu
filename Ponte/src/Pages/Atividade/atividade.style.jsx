@@ -78,9 +78,9 @@ export const Bloco = styled.div`
     background-color: aliceblue;
   }
   .digite.ampliado {
-    width: 53vw;
+    width: 50vw;
     height: 20px;
-    padding: 60px;
+    padding: 60px 30px;
     border-radius: 0;
     font-size: 0, 81rem;
     background-color: aliceblue;

@@ -34,6 +34,11 @@ export const Container = styled.div`
     text-align: center;
   }
 
+  .social a {
+    text-decoration: none;
+    color: black;
+  }
+
   .social img {
     width: 1.25rem;
     height: 1.25rem;

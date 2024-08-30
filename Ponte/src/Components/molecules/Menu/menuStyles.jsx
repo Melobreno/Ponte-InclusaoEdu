@@ -182,12 +182,13 @@ export const Container = styled.div`
     }
 
     .menu-resp {
-      width: 100%; /* Menu ocupa toda a largura */
+      width: 100%;
       right: 0;
     }
 
     .menu-resp.show {
-      width: 300px;
+      width: 310px;
+      height: 170px;
     }
 
     .menu-resp li {
@@ -200,11 +201,12 @@ export const Container = styled.div`
       text-align: left;
     }
 
-    .menu-resp li:hover ul,
-    .menu li.over ul {
-      display: flex;
-      flex-wrap: wrap;
+    .menu-resp li:hover ul {
+      display: inline-block;
       justify-content: center;
+      transform: scale(0.88);
+      left: -40px;
+      z-index: 1000;
     }
   }
 `;

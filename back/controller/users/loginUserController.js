@@ -27,7 +27,6 @@ module.exports = class loginUserController {
         chaveSec,
         { expiresIn: "20s" }
       );
-      console.log(`Aqui esta o seu token: ${token}`);
       return res.status(200).json({ token });
     } catch (error) {
       return response.status(401).json({ error });

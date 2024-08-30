@@ -55,7 +55,8 @@ function ElementoSenha() {
           <S.texto>
             <h1>Redefinir senha</h1>
             <p>
-              Para efetuar a troca, insira nos campos a baixo sua nova senha
+              Para efetuar a troca de senha, insira sua nova senha nos campos a
+              baixo.
             </p>
           </S.texto>
           <S.inputs>
