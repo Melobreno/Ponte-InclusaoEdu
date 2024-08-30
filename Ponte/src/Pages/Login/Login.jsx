@@ -60,6 +60,7 @@ function Login() {
             <input
               type="email"
               name="email"
+              autoComplete="username"
               id="current-email"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
@@ -69,6 +70,7 @@ function Login() {
             <input
               type="password"
               name="password"
+              autoComplete="new-password"
               id="current-password"
               value={senha}
               onChange={(event) => setSenha(event.target.value)}
