@@ -21,43 +21,57 @@ function Perfilprof() {
               <p>Terapeuta</p>
             </div>
           </div>
-          <button className="adicionar">conectar</button>
-          <div className="box2">
-            <p>Nome: Dr. Carlos Silva </p>
-            <p>Especialidade: Terapia Ocupacional para TEA</p>
-            <p> Instituição: Clínica Criança Feliz</p>
-            <p>Telefone: (81) 99876-5432</p>
-            <p> E-mail: carlos.silva@gmail.com</p>
-            Endereço: Av. Dantas Barreto, 101, Sala 12, Recife - PE, 50020-000
-          </div>
-          <div className="box3">
-            <Foto2>
-              <a
-                href="https://www.facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img className="face" src="./src/assets/fb.svg" alt="fb" />
-              </a>
-              <a
-                href="https://www.x.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img className="x" src="./src/assets/x.svg" alt="x" />
-              </a>
-              <a
-                href="https://www.instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="insta"
-                  src="./src/assets/instagram.svg"
-                  alt="insta"
-                />
-              </a>
-            </Foto2>
+          <div className="conteiner2">
+            <div className="botao">
+              <button className="adicionar">conectar</button>
+              <button className="chat">Mensagem</button>
+            </div>
+            <div className="box2">
+              <div className="sobre">
+                <h3 className="dadosprof">Dados Profissionais</h3>
+                <p>Nome: Dr. Carlos Silva </p>
+                <p>Especialidade: Terapia Ocupacional para TEA</p>
+                <p> Instituição: Clínica Criança Feliz</p>
+                <p>Telefone: (81) 99876-5432</p>
+                <p> E-mail: carlos.silva@gmail.com</p>
+                <p>
+                  Endereço: Av. Dantas Barreto, 101, Sala 12, Recife - PE,
+                  50020-000
+                </p>
+              </div>
+              <div className="box3">
+                <h3>Sobre: Carlos Silva</h3>
+                <p>
+                  Carlos atua na clínica Criança Feliz, onde sua dedicação e
+                  expertise são amplamente reconhecidas. Sua abordagem empática
+                  e suas habilidades excepcionais em comunicação o destacam como
+                  um profissional apaixonado por ajudar seus pacientes a
+                  alcançar seus objetivos e maximizar seu potencial.
+                </p>
+                <p>Acompanhe carlos nas redes sociais e saiba mais</p>
+                <Foto2>
+                  <a
+                    href="https://www.facebook.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img className="face" src="./src/assets/fb.svg" alt="fb" />
+                  </a>
+
+                  <a
+                    href="https://www.instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      className="insta"
+                      src="./src/assets/instagram.svg"
+                      alt="insta"
+                    />
+                  </a>
+                </Foto2>
+              </div>
+            </div>
           </div>
         </div>
       </Perf>
