@@ -1,24 +1,23 @@
 import styled from "styled-components";
 
 export const Map = styled.div`
+  font-family: "montserrat";
+
   display: flex;
   justify-content: center;
   gap: 5%;
   .busca {
     font-size: x-large;
-    font-family: "montserrat";
   }
 
   .nome {
     font-size: large;
     margin: 0.2rem;
-    font-family: "montserrat";
   }
 
   .ocupacao {
     font-size: small;
     margin: 0.2rem;
-    font-family: "montserrat";
   }
 
   .info1 {
@@ -46,7 +45,6 @@ export const Map = styled.div`
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
-    font-family: "montserrat";
   }
 
   .container1 {
@@ -57,7 +55,6 @@ export const Map = styled.div`
     flex-direction: column;
     border-radius: 20px;
     margin-left: 1rem;
-    font-family: "montserrat";
     padding: 0.4rem;
   }
 
@@ -95,7 +92,6 @@ export const Map = styled.div`
 
   .button .botao {
     font-size: 1.04rem;
-    font-family: "Montserrat", sans-serif;
     font-weight: 700;
     background-color: #25a6ce;
     border: none;

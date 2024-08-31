@@ -27,8 +27,10 @@ function Login() {
         email_user: email,
         password_user: senha,
       });
-      const token = res.data.token;
-      localStorage.setItem("token", res.data.token);
+      const { token, conta } = res.data;
+      localStorage.setItem("token", token);
+      localStorage.setItem("conta", conta);
+      alert(conta);
       navigate("/feed");
     } catch (error) {
       setError("Login falhou. Verifique suas credenciais.");

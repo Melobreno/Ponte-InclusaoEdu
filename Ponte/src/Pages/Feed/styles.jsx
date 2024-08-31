@@ -6,6 +6,7 @@ export const Pagina = styled.div`
   display: flex;
   justify-content: center;
   gap: 15px;
+  margin-top: 25px;
 `;
 
 export const Section = styled.div`
