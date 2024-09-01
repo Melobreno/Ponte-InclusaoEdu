@@ -23,11 +23,16 @@ module.exports = class loginUserController {
     }
     try {
       const token = jwt.sign(
-        { id_user: users.id_user, name_user: users.name_user },
+        {
+          id_user: users.id_user,
+          name_user: users.name_user,
+          conta: users.conta,
+        },
         chaveSec,
         { expiresIn: "20s" }
       );
-      return res.status(200).json({ token });
+
+      return res.status(200).json({ token, conta: users.conta });
     } catch (error) {
       return response.status(401).json({ error });
     }

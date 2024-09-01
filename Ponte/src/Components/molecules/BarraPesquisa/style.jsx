@@ -6,8 +6,11 @@ export const Section = styled.div`
   justify-content: space-around;
   align-items: center;
   margin: auto;
+  .imgLupa img {
+    width: 18px;
+  }
 
-  @media (${breakpoint.mobile}) {
+  @media (max-width: 425px) {
     transform: scale(0.37);
     justify-content: center;
     margin: 0;

@@ -46,7 +46,7 @@ export const nav = styled.nav`
     display: flex;
     align-items: center;
     color: black;
-    gap: 18px;
+    gap: 15px;
   }
 
   .side-item span:hover {
