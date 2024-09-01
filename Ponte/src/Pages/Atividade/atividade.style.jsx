@@ -75,7 +75,7 @@ export const Bloco = styled.div`
     }
   }
   input {
-    background-color: aliceblue;
+    background-color: white;
   }
   .digite.ampliado {
     width: 50vw;
@@ -110,7 +110,7 @@ export const Bloco = styled.div`
     flex-direction: column;
     gap: 30px;
     width: 1100px;
-    background-color: aliceblue;
+    background-color: white;
     box-shadow: 1px 1px 1px 1px rgba(111, 111, 111, 0.2);
     padding: 10px;
     border-radius: 3px;

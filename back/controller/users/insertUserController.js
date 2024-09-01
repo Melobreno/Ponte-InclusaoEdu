@@ -4,7 +4,7 @@ const saltRounds = 10;
 
 module.exports = class insertUserController {
   static async insertUser(req, res) {
-    const { name_user, email_user, password_user } = req.body;
+    const { name_user, email_user, password_user, conta } = req.body;
 
     if (!name_user || !email_user || !password_user) {
       return res.status(500).json({ message: "Os Campos são obrigatórios!" });
@@ -19,6 +19,7 @@ module.exports = class insertUserController {
           name_user,
           email_user,
           password_user: hash,
+          conta,
         },
       });
       return res

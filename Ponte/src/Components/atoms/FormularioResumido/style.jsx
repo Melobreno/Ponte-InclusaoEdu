@@ -38,13 +38,32 @@ export const Container = styled.section`
   .btnContainer {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 30px;
   }
 
   .btnContainer button {
     font-size: 1.2rem;
     width: 180px;
     height: 45px;
+  }
+
+  .inputTipo {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 0;
+  }
+
+  .inputTipo span {
+    width: 160px;
+  }
+
+  .labeltitulo {
+    margin-bottom: 10px;
+  }
+
+  .inputTipo #tipo_conta {
+    margin: 0;
   }
 
   @media (min-width: 1440px) {

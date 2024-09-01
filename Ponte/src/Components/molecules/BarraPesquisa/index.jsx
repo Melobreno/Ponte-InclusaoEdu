@@ -5,7 +5,9 @@ import logo from "../../../Assets/logoPonte.svg";
 import avatar from "../../../Assets/Avatar 1.svg";
 import lupa from "../../../Assets/lupa.svg";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+
+import { Link } from "react-router-dom";
+
 
 function Pesquisa({ setOpenSidebar }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,25 +38,25 @@ function Pesquisa({ setOpenSidebar }) {
             )}
           </div>
           <div className="inputNav">
-            <a href="">
-              <Link to={"/"}>
+            <Link to={"/"}>
+              <a>
                 <img src={logo} alt="logo" className="logo" />
-              </Link>
-            </a>
+              </a>
+            </Link>
           </div>
         </div>
 
         <div className="direitaNav">
-          <div className="pesquisa">
+          {/* <div className="pesquisa">
             <input
               type="text"
               placeholder="O que  você está procurando?"
               className="lupa"
             />
-            <button className="">
+            <button className="imgLupa">
               <img src={lupa} alt="lupa" />
             </button>
-          </div>
+          </div> */}
           <p className="userName">Lucas Melo</p>
           <img src={avatar} alt="avata" className="avatar" />
         </div>
