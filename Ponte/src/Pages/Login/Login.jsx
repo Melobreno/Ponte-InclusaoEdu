@@ -31,6 +31,7 @@ function Login() {
       localStorage.setItem("token", token);
       localStorage.setItem("conta", conta);
       localStorage.setItem("usuario", name_user);
+      localStorage.setItem("email", email);
       navigate("/feed");
     } catch (error) {
       setError("Login falhou. Verifique suas credenciais.");

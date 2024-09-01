@@ -4,6 +4,8 @@ import * as S from "./style";
 import { Link } from "react-router-dom";
 
 function FormP() {
+  const userName = localStorage.getItem("usuario");
+  const userEmail = localStorage.getItem("email");
   const { register, handleSubmit, setValue } = useForm();
   function onSubmit(userData) {
     console.log(userData);
@@ -27,7 +29,7 @@ function FormP() {
         <div className="formDiv">
           <label>
             Nome Completo:
-            <input type="text" {...register("Nome")} />
+            <input type="text" {...register("Nome")} value={userName} />
           </label>
 
           <label>
@@ -41,7 +43,12 @@ function FormP() {
 
           <label>
             Email:
-            <input type="text" id="inputEmail" {...register("email")} />
+            <input
+              type="text"
+              id="inputEmail"
+              {...register("email")}
+              value={userEmail}
+            />
           </label>
           <label>
             Data de Nascimento:
@@ -76,7 +83,7 @@ function FormP() {
             id="selectSex"
             {...register("sexo", { required: true })}
           >
-            <option value="0">Select...</option>
+            <option value="0">Sexo:</option>
             <option value="Masc">Masculino</option>
             <option value="Fem">Feminino</option>
             <option value="Outro">Outro</option>

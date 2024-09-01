@@ -18,6 +18,8 @@ export const FormSection = styled.section`
   .formDiv {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
 
     @media (min-width: 1024px) {

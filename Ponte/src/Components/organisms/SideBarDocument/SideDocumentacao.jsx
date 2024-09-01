@@ -13,6 +13,7 @@ function handleLogout() {
   localStorage.removeItem("token");
   localStorage.removeItem("conta");
   localStorage.removeItem("usuario");
+  localStorage.removeItem("email");
   window.location.reload();
 }
 const tipo_conta = localStorage.getItem("conta");
