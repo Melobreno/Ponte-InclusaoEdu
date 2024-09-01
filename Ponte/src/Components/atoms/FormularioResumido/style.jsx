@@ -119,4 +119,27 @@ export const Container = styled.section`
       height: 35px;
     }
   }
+
+  .checkbox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    gap: 0.5rem;
+
+    div {
+      display: flex;
+      gap: 0.5rem;
+    }
+    input {
+      margin: 0;
+    }
+  }
+
+  div .politicSpan {
+    color: #25a6ce;
+    text-decoration: none;
+    font-weight: 600;
+  }
 `;
