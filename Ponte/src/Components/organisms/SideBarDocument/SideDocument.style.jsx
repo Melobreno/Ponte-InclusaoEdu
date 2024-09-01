@@ -5,11 +5,11 @@ export const nav = styled.nav`
   flex-direction: column;
   justify-content: space-between;
   background-color: aliceblue;
-  height: 80vh;
-  width: 250px;
+  height: 90vh;
   max-width: 250px;
   border-radius: 0 5px 5px 0;
   font-family: "Montserrat", sans-serif;
+  font-weight: 500;
 
   #sidebar-container {
     margin: 10px;
@@ -60,7 +60,7 @@ export const nav = styled.nav`
   }
 
   #sair {
-    margin: 10px;
+    margin-bottom: 4rem;
   }
   .sair-btn {
     display: flex;
