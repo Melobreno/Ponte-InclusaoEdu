@@ -11,8 +11,11 @@ import { Link, Navigate } from "react-router-dom";
 
 function handleLogout() {
   localStorage.removeItem("token");
+  localStorage.removeItem("conta");
   window.location.reload();
 }
+const tipo_conta = localStorage.getItem("conta");
+
 function SideDocumentacao() {
   return (
     <>
@@ -40,7 +43,13 @@ function SideDocumentacao() {
               </Link>
             </li>
             <li className="side-item">
-              <Link to="/atividades">
+              <Link
+                to={
+                  tipo_conta === "responsavel"
+                    ? "/atividaderesp"
+                    : "/atividades"
+                }
+              >
                 <VscFile />
                 <span className="item-descricao">Mural</span>
               </Link>

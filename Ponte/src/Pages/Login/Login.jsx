@@ -30,7 +30,6 @@ function Login() {
       const { token, conta } = res.data;
       localStorage.setItem("token", token);
       localStorage.setItem("conta", conta);
-      alert(conta);
       navigate("/feed");
     } catch (error) {
       setError("Login falhou. Verifique suas credenciais.");
