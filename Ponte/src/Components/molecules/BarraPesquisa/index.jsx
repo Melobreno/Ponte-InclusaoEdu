@@ -3,12 +3,12 @@ import { FiAlignJustify } from "react-icons/fi";
 import { RiCloseFill } from "react-icons/ri";
 import logo from "../../../Assets/logoPonte.svg";
 import avatar from "../../../Assets/Avatar 1.svg";
-import lupa from "../../../Assets/lupa.svg";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Pesquisa({ setOpenSidebar }) {
   const [isOpen, setIsOpen] = useState(false);
+  const usuarioLog = localStorage.getItem("usuario");
 
   const abrirSidebar = () => {
     const newIsOpen = !isOpen;
@@ -45,17 +45,7 @@ function Pesquisa({ setOpenSidebar }) {
         </div>
 
         <div className="direitaNav">
-          {/* <div className="pesquisa">
-            <input
-              type="text"
-              placeholder="O que  você está procurando?"
-              className="lupa"
-            />
-            <button className="imgLupa">
-              <img src={lupa} alt="lupa" />
-            </button>
-          </div> */}
-          <p className="userName">Lucas Melo</p>
+          <p className="userName">{usuarioLog}</p>
           <img src={avatar} alt="avata" className="avatar" />
         </div>
       </Section>

@@ -12,9 +12,11 @@ import { Link, Navigate } from "react-router-dom";
 function handleLogout() {
   localStorage.removeItem("token");
   localStorage.removeItem("conta");
+  localStorage.removeItem("usuario");
   window.location.reload();
 }
 const tipo_conta = localStorage.getItem("conta");
+const nomeUsuario = localStorage.getItem("usuario");
 
 function SideDocumentacao() {
   return (
@@ -25,8 +27,8 @@ function SideDocumentacao() {
             <img src={img} alt="avatar" id="avatar" />
 
             <p id="infor-usuario">
-              <span className="item-descricao">Lucas Melo</span>
-              <span className="item-descricao">Terapeuta</span>
+              <span className="item-descricao">{nomeUsuario}</span>
+              <span className="item-descricao">{tipo_conta}</span>
             </p>
           </div>
           <ul id="ul_items">

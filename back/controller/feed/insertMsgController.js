@@ -2,11 +2,11 @@ const prisma = require("../../clientLib/prisma");
 
 module.exports = class insertMsgController {
   static async insertMsg(req, res) {
-    const { texto } = req.body;
+    const { usuario, texto } = req.body;
 
     try {
       const insertTexto = await prisma.message.create({
-        data: { texto },
+        data: { usuario, texto },
       });
       return res
         .status(200)
