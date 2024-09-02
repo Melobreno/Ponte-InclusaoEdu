@@ -90,9 +90,8 @@ export const Arquivos1 = styled.div`
   }
 
   .containerArquivos {
-    width: 54vw;
+    width: 812px;
     height: 80px;
-    margin-left: 50px;
     border-radius: 10px;
     border: solid 1px #000000;
     display: flex;

@@ -16,7 +16,7 @@ function Feed() {
   useEffect(() => {
     setTimeout(() => {
       setCarregando(false);
-    }, 2000);
+    }, 1000);
   }, []);
   if (carregando) {
     return <TelaCarregamento />;

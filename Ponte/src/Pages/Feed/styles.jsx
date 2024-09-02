@@ -269,6 +269,10 @@ export const Atores = styled.div`
     flex-direction: column;
     text-decoration: none;
     color: black;
+    a {
+      text-decoration: none;
+      color: black;
+    }
   }
 
   h2 {
