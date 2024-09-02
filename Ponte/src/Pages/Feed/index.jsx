@@ -6,6 +6,7 @@ import Pesquisa from "../../Components/molecules/BarraPesquisa";
 import Posts from "./posts";
 import { useState } from "react";
 import SideDocumentacao from "../../Components/organisms/SideBarDocument/SideDocumentacao";
+import { Link } from "react-router-dom";
 
 function Feed() {
   const [openSideBar, setOpenSideBar] = useState(false);
@@ -35,7 +36,9 @@ function Feed() {
             <div className="atores">
               <img className="img" src={img2} alt="" />
               <div className="texto">
-                <h2>Priscila Silva</h2>
+                <Link to={"/perfilprof"}>
+                  <h2>Priscila Silva</h2>
+                </Link>
                 <p>Fonoaudiologa</p>
               </div>
             </div>

@@ -14,8 +14,9 @@ export const Bloco = styled.div`
 `;
 export const Arquivos = styled.div`
   display: flex;
-  flex-direction: row;
-  max-width: 70vw;
+  flex-direction: column;
+  max-width: 60vw;
+  margin-left: 55px;
   gap: 30px;
   justify-content: space-evenly;
 
@@ -23,13 +24,18 @@ export const Arquivos = styled.div`
     width: 250px;
     height: 220px;
     border-radius: 10px;
-    border: solid 2px #000000;
+    border: solid 1px #000000;
   }
 
   .containerFunc {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10px;
+    gap: 2%;
+    width: 800px;
+    height: 80px;
   }
 
   .containerFunc img {
@@ -37,6 +43,32 @@ export const Arquivos = styled.div`
     background-color: #f4c500;
     padding: 5px;
     border-radius: 10px;
+  }
+
+  @media (max-width: 1024px) {
+    transform: scale(0.8);
+    margin: 0;
+
+    .containerFunc {
+      width: 480px;
+    }
+  }
+  @media (max-width: 425px) {
+    margin-left: 30px;
+    gap: 15px;
+
+    .containerFunc {
+      display: flex;
+      width: 400px;
+      height: 80px;
+      height: auto;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .containerFunc img {
+      width: 24px;
+    }
   }
 `;
 
@@ -62,7 +94,7 @@ export const Arquivos1 = styled.div`
     height: 80px;
     margin-left: 50px;
     border-radius: 10px;
-    border: solid 2px #000000;
+    border: solid 1px #000000;
     display: flex;
     align-items: center;
   }
@@ -73,8 +105,45 @@ export const Arquivos1 = styled.div`
     display: flex;
     justify-content: space-between;
   }
+
+  @media (max-width: 1024px) {
+    transform: scale(0.8);
+    justify-content: start;
+    margin: 0;
+    .containerArquivos {
+      margin-left: 0;
+    }
+  }
+  @media (max-width: 425px) {
+    margin-left: 20px;
+    gap: 15px;
+
+    .containerArquivos {
+      width: 90vw;
+      height: auto;
+      margin-left: 0;
+      flex-direction: column;
+      padding: 10px;
+    }
+
+    .containerArquivos p {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .msgSemArquivo {
+      width: 90vw;
+    }
+  }
 `;
 export const Container = styled.div`
   display: flex;
   text-align: center;
+  justify-content: center;
+
+  @media (max-width: 425px) {
+    padding: 10px;
+  }
 `;

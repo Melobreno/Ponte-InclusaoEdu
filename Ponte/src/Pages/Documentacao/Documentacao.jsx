@@ -84,8 +84,6 @@ function Documentacao() {
     }
   };
   //encodeURIComponent -> Garante que o valor passado continue com espaços e/ou caracteres especiais
-
-  // Função para deletar um documento
   const deleteDoc = async (name_doc) => {
     try {
       await api.delete(`/deletedoc/${encodeURIComponent(name_doc)}`);
