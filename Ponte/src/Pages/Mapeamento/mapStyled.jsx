@@ -14,6 +14,11 @@ export const Map = styled.div`
     margin: 0.2rem;
   }
 
+  .nome a {
+    text-decoration: none;
+    color: black;
+  }
+
   .ocupacao {
     font-size: small;
     margin: 0.2rem;
@@ -51,6 +56,7 @@ export const Map = styled.div`
     width: 18rem;
     height: 17rem;
     border: 1.5px solid gray;
+    margin-top: 75px;
     flex-direction: column;
     border-radius: 20px;
     margin-left: 1rem;

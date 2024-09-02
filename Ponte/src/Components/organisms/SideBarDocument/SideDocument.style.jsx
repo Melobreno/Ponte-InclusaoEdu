@@ -22,6 +22,10 @@ export const nav = styled.nav`
     display: flex;
     flex-direction: column;
   }
+
+  .item-descricao {
+    text-align: start;
+  }
   #usuario {
     display: flex;
     gap: 20px;

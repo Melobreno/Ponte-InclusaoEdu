@@ -13,7 +13,7 @@ function Documentacao() {
   const [showAllDocuments, setShowAllDocuments] = useState(false);
   const [recentDocuments, setRecentDocuments] = useState([]);
   const fileInputRef = useRef(null);
-  const [carregando, setCarregando] = useState(true);
+  const [carregando, setCarregando] = useState(false);
 
   const url =
     "https://script.google.com/macros/s/AKfycbzV7eJn2hUrzk0UGiDFLJk3RoOvf8ji0EWrxXThyOZySw0iKbmNNWh4weVietU8f199Ow/exec"; // Url do Script criado com App Script
@@ -29,7 +29,7 @@ function Documentacao() {
           type: file.type,
           name: file.name,
         };
-
+        setCarregando(true);
         try {
           const response = await fetch(url, {
             method: "POST",
@@ -48,6 +48,9 @@ function Documentacao() {
           }
         } catch (error) {
           console.error("Erro ao enviar o arquivo:", error);
+        } finally {
+          setCarregando(false);
+          handleShowAllDocuments();
         }
       };
       fr.readAsDataURL(file);
@@ -99,11 +102,6 @@ function Documentacao() {
     handleShowAllDocuments();
   }, []);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setCarregando(false);
-    }, 2000);
-  }, []);
   if (carregando) {
     return <TelaCarregamento />;
   }

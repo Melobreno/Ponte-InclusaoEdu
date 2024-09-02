@@ -31,8 +31,8 @@ function AtividadeResp() {
     <>
       <Pesquisa />
       <S.Container>
+        <SideDocumentacao />
         <S.Bloco>
-          <SideDocumentacao />
           <S.menssagem>
             <h2>Atividades</h2>
             {menssagem.map((useTexto) => (

@@ -1,9 +1,20 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+  display: flex;
+  text-align: center;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 10%;
+
+  @media (max-width: 425px) {
+    padding: 10px;
+  }
+`;
+
 export const Bloco = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
 
   font-family: "Montserrat", sans-serif;
 
@@ -16,9 +27,9 @@ export const Arquivos = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 60vw;
+  width: 100vw;
   margin-left: 55px;
   gap: 30px;
-  justify-content: space-evenly;
 
   div {
     width: 250px;
@@ -135,14 +146,5 @@ export const Arquivos1 = styled.div`
     .msgSemArquivo {
       width: 90vw;
     }
-  }
-`;
-export const Container = styled.div`
-  display: flex;
-  text-align: center;
-  justify-content: center;
-
-  @media (max-width: 425px) {
-    padding: 10px;
   }
 `;

@@ -14,7 +14,6 @@ function AtividadeProf() {
   const [isFocused, setIsFocused] = useState(false);
   const [editando, setEditando] = useState(null);
 
-  // get, pega a informação que tem no banco de dados e exibe na tela
   const mostrarAtividades = async () => {
     try {
       const response = await api.get("/atividade");
@@ -88,8 +87,8 @@ function AtividadeProf() {
     <>
       <Pesquisa />
       <S.Container>
+        <SideDocumentacao />
         <S.Bloco>
-          <SideDocumentacao />
           <section>
             <h1>Quadro de atividades</h1>
             <form onSubmit={handleSubmit}>

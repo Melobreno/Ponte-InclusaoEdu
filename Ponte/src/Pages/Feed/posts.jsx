@@ -11,6 +11,7 @@ function Posts() {
   const [mensagens, setMensagens] = useState([]);
   const nomeUsuario = localStorage.getItem("usuario");
   const [error, setErro] = useState("");
+  const primNome = nomeUsuario.split(" ")[0];
 
   const fetchMensagens = async () => {
     try {
@@ -32,10 +33,11 @@ function Posts() {
       if (texto != "") {
         await api.post("/insertmsg", {
           texto: texto,
-          usuario: nomeUsuario,
+          usuario: primNome,
         });
         setErro("");
       }
+
       fetchMensagens();
       setTexto("");
     } catch (error) {

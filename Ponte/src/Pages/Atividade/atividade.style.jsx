@@ -2,11 +2,10 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   font-family: "Montserrat", sans-serif;
-  section {
-    margin-left: 3rem;
-  }
+  gap: 2%;
+
 
   @media (max-width: 425px) {
     display: flex;
@@ -22,7 +21,9 @@ export const Container = styled.div`
 `;
 export const Bloco = styled.div`
   display: flex;
-  width: 100%;
+  justify-content: start;
+  width: 90%;
+  margin-left: 5%;
 
   @media (max-width: 425px) {
     width: 100%;
@@ -44,7 +45,7 @@ export const Bloco = styled.div`
     margin-bottom: 0;
   }
   .digite {
-    width: 53vw;
+    width: 44vw;
     padding: 1rem;
     height: 3rem;
     border: none;
@@ -88,9 +89,9 @@ export const Bloco = styled.div`
     background-color: white;
   }
   .digite.ampliado {
-    width: 50vw;
-    height: 1.25rem;
-    padding: 3.75rem 1.87rem;
+    width: 46vw;
+    height: 20px;
+    padding: 60px 30px;
     border-radius: 0;
     font-size: 0, 81rem;
     background-color: aliceblue;
@@ -117,7 +118,7 @@ export const Bloco = styled.div`
     display: flex;
     flex-direction: column;
     gap: 30px;
-    width: 53.5rem;
+    width: 87.4%;
     background-color: white;
     box-shadow: 1px 1px 1px 1px rgba(111, 111, 111, 0.2);
     padding: 10px;

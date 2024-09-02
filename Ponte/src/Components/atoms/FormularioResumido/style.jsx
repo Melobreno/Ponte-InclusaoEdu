@@ -59,7 +59,9 @@ export const Container = styled.section`
   }
 
   .labeltitulo {
-    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 500;
   }
 
   .inputTipo #tipo_conta {
