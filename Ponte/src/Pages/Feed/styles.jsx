@@ -100,7 +100,14 @@ export const Escreva = styled.div`
     display: flex;
     justify-content: right;
     margin: 0.63rem 1.5rem;
+    span {
+      display: flex;
+      align-items: center;
+      color: red;
+      margin-right: 1rem;
+    }
   }
+
   @media (max-width: 1024px) {
     width: 26rem;
     height: 11rem;

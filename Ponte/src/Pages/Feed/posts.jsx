@@ -72,9 +72,9 @@ function Posts() {
           </div>
           <hr />
           <div className="botao">
+            {error && <span>{error}</span>}
             <Btn type="submit" txt={enviar} />
           </div>
-          {error && <div>{error}</div>}
         </form>
       </Escreva>
       <div>
