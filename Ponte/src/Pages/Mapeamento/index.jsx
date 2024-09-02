@@ -7,7 +7,6 @@ import Pesquisa from "../../Components/molecules/BarraPesquisa/index";
 import api from "../../api/api";
 
 function Mapeamento() {
-  const [openSideBar, setOpenSideBar] = useState(false);
   const [resultados, setResultados] = useState([]);
 
   const [selectedCities, setSelectedCities] = useState([]);
@@ -43,9 +42,9 @@ function Mapeamento() {
 
   return (
     <>
-      <Pesquisa setOpenSidebar={setOpenSideBar} />
+      <Pesquisa />
       <Map>
-        <div className="side">{openSideBar && <SideDocumentacao />}</div>
+        <SideDocumentacao />
         <div className="content">
           <div className="card">
             <div className="busca">

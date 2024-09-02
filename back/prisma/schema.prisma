@@ -7,21 +7,18 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model atividade {
-  id_ativi Int    @id @default(autoincrement())
-  texto    String
+model Users {
+  id_user       String @id @default(uuid())
+  name_user     String
+  email_user    String @unique
+  password_user String
+  conta         String
 }
 
 model documents {
   id_doc   Int    @id @default(autoincrement())
   name_doc String
-  url_doc  String @unique(map: "Documents_url_doc_key")
-}
-
-model message {
-  id    Int      @id @default(autoincrement())
-  texto String
-  data  DateTime @default(now())
+  url_doc  String @unique
 }
 
 model profissionais {
@@ -33,9 +30,13 @@ model profissionais {
   sexo      String
 }
 
-model users {
-  id_user       String @id
-  name_user     String
-  email_user    String @unique(map: "Users_email_user_key")
-  password_user String
+model message {
+  id    Int      @id @default(autoincrement())
+  texto String
+  data  DateTime @default(now())
+}
+
+model atividade {
+  id_ativi Int    @id @default(autoincrement())
+  texto    String
 }

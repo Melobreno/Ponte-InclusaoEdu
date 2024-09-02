@@ -7,7 +7,6 @@ import nDoc from "../../Assets/newDoc.svg";
 import { useRef, useState, useEffect, useDeferredValue } from "react";
 import api from "../../api/api";
 function Documentacao() {
-  const [openSideBar, setOpenSideBar] = useState(false);
   const [documents, setDocuments] = useState([]);
   const [uploadedFiles, setUploadedFiles] = useState([]);
   const [showAllDocuments, setShowAllDocuments] = useState(false);
@@ -85,8 +84,6 @@ function Documentacao() {
     }
   };
   //encodeURIComponent -> Garante que o valor passado continue com espaços e/ou caracteres especiais
-
-  // Função para deletar um documento
   const deleteDoc = async (name_doc) => {
     try {
       await api.delete(`/deletedoc/${encodeURIComponent(name_doc)}`);
@@ -102,10 +99,9 @@ function Documentacao() {
 
   return (
     <>
-      <Pesquisa setOpenSidebar={setOpenSideBar} />
-
+      <Pesquisa />
       <S.Container>
-        <div>{openSideBar && <SideDocumentacao />}</div>
+        <SideDocumentacao />
         <S.Bloco>
           <div className="tituloh2">
             <h2>Documentos da Criança</h2>

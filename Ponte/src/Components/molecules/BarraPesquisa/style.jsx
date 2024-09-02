@@ -1,13 +1,14 @@
 import styled from "styled-components";
-import breakpoint from "../../../breakpoints";
 export const Section = styled.div`
   display: flex;
   height: 5.18rem;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin: auto;
-
-  @media (${breakpoint.mobile}) {
+  font-size: 1.25rem;
+  font-weight: 550;
+  font-family: "Montserrat", sans-serif;
+  @media (max-width: 425px) {
     transform: scale(0.37);
     justify-content: center;
     margin: 0;
@@ -24,11 +25,10 @@ export const Section = styled.div`
 
   .inputNav {
     display: flex;
-    margin-left: 20px;
-    width: 50rem;
+    margin-left: 3rem;
     justify-content: space-between;
     align-items: center;
-    @media (${breakpoint.sm}) {
+    @media (max-width: 1150px) {
       margin: auto;
       width: auto;
     }
@@ -38,7 +38,20 @@ export const Section = styled.div`
     justify-content: space-between;
     display: flex;
     align-items: center;
+    margin-right: 8rem;
     gap: 10px;
+  }
+  .linkHome {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 2rem;
+    text-decoration: none;
+    color: black;
+  }
+  .inicio {
+    text-align: center;
   }
 
   .pesquisa {
@@ -48,7 +61,7 @@ export const Section = styled.div`
     border-radius: 1.25rem;
     border: 0.13rem solid #25a6ce;
 
-    @media (${breakpoint.sm}) {
+    @media (max-width: 1150px) {
       display: none;
     }
   }
@@ -64,13 +77,10 @@ export const Section = styled.div`
     all: unset;
     cursor: pointer;
   }
-  p {
+
+  .userName {
     width: 9rem;
     text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.25rem;
-    font-style: normal;
-    font-weight: 600;
   }
 
   .avatar {

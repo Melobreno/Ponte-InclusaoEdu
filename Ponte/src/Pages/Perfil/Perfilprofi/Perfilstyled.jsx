@@ -3,95 +3,111 @@ import styled from "styled-components";
 export const Perf = styled.div`
   display: flex;
   justify-content: center;
+  margin: 0 auto;
 
   .conteiner1 {
     display: flex;
     flex-direction: column;
-    width: 80rem;
     height: 52rem;
-    background-color: aliceblue;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
+    text-align: start;
     border-radius: 20px;
+    margin-top: 30px;
+
+    p {
+      margin-top: 0;
+    }
   }
 
   .box1 {
-    height: 8rem;
-    width: 78rem;
-    justify-content: flex-start;
+    height: 10rem;
+    width: 77%;
+    justify-content: start;
+    align-items: center;
     background-color: white;
-    border-color: aliceblue;
+    border: 1px solid #25a6ce;
     border-radius: 20px;
     display: flex;
-    padding: 0.5rem;
+    gap: 1rem;
+    padding: 10px;
 
-    .textoprof {
-      padding: 1rem;
+    .nomeProf {
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .ocupacao {
+      margin: 0;
+      text-align: start;
     }
   }
+
   .botao {
     display: flex;
     text-align: center;
-    padding: 1rem;
-    height: 3rem;
-    background-color: aliceblue;
-    border-radius: 20px;
-    justify-content: start;
-    gap: 1rem;
-  }
-  .chat {
-    width: 6rem;
+    align-items: center;
+    padding: 1rem 0.4rem;
     height: 2rem;
-    text-align: center;
-    border-radius: 10px;
-    border-color: #25a6ce;
-    background-color: yellow;
+    border-radius: 20px;
+    justify-content: end;
     gap: 1rem;
+    width: 77%;
   }
 
-  .adicionar {
+  .btn {
+    font-family: "Montserrat";
     width: 6rem;
     height: 2rem;
     text-align: center;
     border-radius: 10px;
-    border-color: #25a6ce;
-    background-color: yellow;
+    border: none;
+    background-color: #25a6ce;
     gap: 1rem;
+    color: #fff;
+    font-weight: 500;
+  }
+
+  button:hover {
+    transform: scale(1.1);
+    transition: all 200ms ease-in-out;
   }
 
   .box2 {
-    height: 22rem;
-    width: 77rem;
+    height: 25rem;
+    width: 77%;
     justify-content: space-around;
-
+    border: 1px solid #25a6ce;
+    padding: 10px;
     display: flex;
     padding: 1rem;
     background-color: white;
     border-radius: 20px;
   }
+
   .sobre {
     width: 36rem;
-    background-color: aliceblue;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    height: 100%;
-    padding: 0.2rem;
+    padding: 1rem;
   }
 
   .box3 {
     width: 36rem;
-    background-color: aliceblue;
     border-radius: 20px;
+    border: 1px solid #25a6ce;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    padding: 0.2rem;
+    padding: 1rem;
+
+    .sobre {
+      text-align: center;
+    }
   }
 
   .face,
@@ -100,9 +116,102 @@ export const Perf = styled.div`
     margin: 0.5rem;
     padding: 1rem;
   }
+
   .conteiner2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+  }
+
+  @media (max-width: 1024px) {
+    .conteiner1 {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .box1 {
+      width: 90%;
+    }
+
+    .box2 {
+      width: 90%;
+    }
+
+    .botao {
+      justify-content: center;
+      width: 90%;
+    }
+
+    .sobre {
+      width: 100%;
+    }
+
+    .box3 {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .conteiner1 {
+      display: flex;
+      padding: 10px;
+      height: auto;
+    }
+
+    .box1 {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      padding: 20px;
+      gap: 10px;
+    }
+
+    .botao {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .btn {
+      width: 100%;
+    }
+    .conteiner2 {
+      display: flex;
+      justify-content: start;
+    }
+
+    .box2 {
+      transform: scale(0.9);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-content: center;
+      flex-direction: column;
+      height: auto;
+      width: 100%;
+    }
+
+    .sobre {
+      width: 100%;
+      font-size: 14px;
+    }
+
+    .box3 {
+      width: 100%;
+      padding: 20px;
+      transform: scale(0.9);
+    }
+
+    .face,
+    .insta {
+      width: 40px;
+      height: 40px;
+      padding: 0.5rem;
+    }
   }
 `;
-
-export const Foto1 = styled.div``;
-export const Foto2 = styled.div``;

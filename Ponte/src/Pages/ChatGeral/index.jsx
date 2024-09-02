@@ -7,12 +7,13 @@ import lupa from "../../Assets/lupa.svg";
 import SideDocumentacao from "../../Components/organisms/SideBarDocument/SideDocumentacao";
 import { useState } from "react";
 function Chat() {
-  const [openSideBar, setOpenSideBar] = useState(false);
   return (
     <>
-      <Pesquisa setOpenSidebar={setOpenSideBar} />
+      <Pesquisa />
       <Section>
-        <div className="sidebar">{openSideBar && <SideDocumentacao />}</div>
+        <div className="sidebar">
+          <SideDocumentacao />
+        </div>
         <section className="conversasIf">
           <div className="secEsquerda">
             <div className="pesquisar">
