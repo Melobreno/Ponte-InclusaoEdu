@@ -19,6 +19,7 @@ function handleLogout() {
 }
 const tipo_conta = localStorage.getItem("conta");
 const nomeUsuario = localStorage.getItem("usuario");
+const primNome = nomeUsuario.split(" ")[0];
 
 function SideDocumentacao() {
   return (
@@ -29,7 +30,7 @@ function SideDocumentacao() {
             <img src={img} alt="avatar" id="avatar" />
 
             <p id="infor-usuario">
-              <span className="item-descricao">{nomeUsuario}</span>
+              <span className="item-descricao">{primNome}</span>
               <span className="item-descricao">conta: {tipo_conta}</span>
             </p>
           </div>
