@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const FormSection = styled.section`
   font-family: "Montserrat", sans-serif;
-  margin: 0 auto;
+  margin: 0;
   display: flex;
+  padding: 1.3rem;
   justify-content: center;
-  padding: 1rem;
-
+  width: 60%;
   .formContainer {
     display: flex;
     flex-direction: column;

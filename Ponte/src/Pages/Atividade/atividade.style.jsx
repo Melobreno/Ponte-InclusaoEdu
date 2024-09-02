@@ -5,6 +5,11 @@ export const Container = styled.div`
   justify-content: center;
   font-family: "Montserrat", sans-serif;
   gap: 2%;
+
+  section {
+    margin-left: 10rem;
+  }
+
   @media (max-width: 425px) {
     max-width: 100%;
   }
@@ -16,9 +21,8 @@ export const Container = styled.div`
 `;
 export const Bloco = styled.div`
   display: flex;
-  width: 70vw;
-  flex-direction: column;
-  margin-right: 0;
+  width: 100%;
+
   @media (max-width: 425px) {
     width: 100%;
     margin-left: 0;

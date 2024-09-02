@@ -4,8 +4,8 @@ import breakpoint from "../../breakpoints.js";
 
 export const Pagina = styled.div`
   display: flex;
-  justify-content: center;
-  gap: 15px;
+  justify-content: space-between;
+  gap: 10px;
   margin-top: 25px;
 `;
 
@@ -16,7 +16,7 @@ export const Section = styled.div`
   justify-content: center;
 
   .linhaL {
-    margin: 20px;
+    margin: 40px;
     width: 0rem;
     height: 48rem;
     @media (max-width: 1680px) {
@@ -44,6 +44,7 @@ export const Texto = styled.div`
   background-color: aliceblue;
   display: flex;
   height: 0;
+  margin-right: 2rem;
 `;
 export const Escreva = styled.div`
   width: 50rem;
@@ -205,7 +206,7 @@ export const Atores = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0;
-  margin: 0;
+  margin-right: 5rem;
   height: 46rem;
   width: 350px;
 

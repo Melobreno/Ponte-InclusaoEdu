@@ -8,12 +8,11 @@ import { useState } from "react";
 import SideDocumentacao from "../../Components/organisms/SideBarDocument/SideDocumentacao";
 
 function Feed() {
-  const [openSideBar, setOpenSideBar] = useState(false);
   return (
     <>
-      <Pesquisa setOpenSidebar={setOpenSideBar} />
+      <Pesquisa />
       <Pagina>
-        <div>{openSideBar && <SideDocumentacao />}</div>
+        <SideDocumentacao />
         <Section>
           <Texto>
             <div className="posts">
