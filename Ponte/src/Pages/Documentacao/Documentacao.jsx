@@ -6,12 +6,14 @@ import lixeira from "../../Assets/lixeira.svg";
 import nDoc from "../../Assets/newDoc.svg";
 import { useRef, useState, useEffect, useDeferredValue } from "react";
 import api from "../../api/api";
+import TelaCarregamento from "../../Components/atoms/telaCarregamento/TelaCarregamneto";
 function Documentacao() {
   const [documents, setDocuments] = useState([]);
   const [uploadedFiles, setUploadedFiles] = useState([]);
   const [showAllDocuments, setShowAllDocuments] = useState(false);
   const [recentDocuments, setRecentDocuments] = useState([]);
   const fileInputRef = useRef(null);
+  const [carregando, setCarregando] = useState(true);
 
   const url =
     "https://script.google.com/macros/s/AKfycbzV7eJn2hUrzk0UGiDFLJk3RoOvf8ji0EWrxXThyOZySw0iKbmNNWh4weVietU8f199Ow/exec"; // Url do Script criado com App Script
@@ -97,6 +99,14 @@ function Documentacao() {
     handleShowAllDocuments();
   }, []);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setCarregando(false);
+    }, 2000);
+  }, []);
+  if (carregando) {
+    return <TelaCarregamento />;
+  }
   return (
     <>
       <Pesquisa />

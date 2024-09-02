@@ -17,7 +17,9 @@ import CadastroRes from "../Pages/Cadastro/CadastroResumido";
 import PrivateRoute from "./privateRoutes";
 import PgtoConfirmado from "../Pages/ConfirmarCompra/PagamentoRealziado/index";
 import Mapeamento from "../Pages/Mapeamento";
+import TelaCarregamento from "../Components/atoms/telaCarregamento/TelaCarregamneto";
 import Perfilprof from "../Pages/Perfil/Perfilprofi";
+
 
 function AppRoutes() {
   return (
@@ -33,7 +35,9 @@ function AppRoutes() {
         <Route path="/Assinaturas" element={<Assinatura />}></Route>
         <Route path="/Pagamento" element={<ConfirmarCompra />}></Route>
         <Route path="/pgtoConfirmado" element={<PgtoConfirmado />}></Route>
+        <Route path="/carregamento" element={<TelaCarregamento />} />
         <Route path="/perfilprof" element={<Perfilprof />}></Route>
+
         <Route
           path="/Feed"
           element={
