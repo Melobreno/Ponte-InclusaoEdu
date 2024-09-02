@@ -8,6 +8,10 @@ import img from "../../../Assets/avatar2.svg";
 
 function Perfilprof() {
   const [openSideBar, setOpenSideBar] = useState(false);
+  const [isConnected, setIsConnected] = useState(false);
+  const handleClick = () => {
+    setIsConnected(!isConnected);
+  };
   return (
     <>
       <Pesquisa setOpenSidebar={setOpenSideBar} />
@@ -25,9 +29,13 @@ function Perfilprof() {
           </div>
           <div className="conteiner2">
             <div className="botao">
-              <Link to={"/chat"}>
-                <button className="btn">conectar</button>
-              </Link>
+              <button
+                className={`btn ${isConnected ? "connected" : "not-connected"}`}
+                onClick={handleClick}
+              >
+                {isConnected ? "Conectado" : "Conectar"}
+              </button>
+
               <Link to={"/chat"}>
                 <button className="btn">Mensagem</button>
               </Link>
