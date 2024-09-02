@@ -11,7 +11,6 @@ function AtividadeProf() {
   const [texto, setTexto] = useState("");
   const [messagem, setMessagem] = useState([]);
   const [isFocused, setIsFocused] = useState(false);
-  const [openSidebar, setOpenSidebar] = useState(false);
   const [editando, setEditando] = useState(null);
 
   // get, pega a informação que tem no banco de dados e exibe na tela
@@ -86,10 +85,10 @@ function AtividadeProf() {
 
   return (
     <>
-      <Pesquisa setOpenSidebar={setOpenSidebar} />
+      <Pesquisa />
       <S.Container>
-        {openSidebar && <SideDocumentacao />}
         <S.Bloco>
+          <SideDocumentacao />
           <section>
             <h1>Quadro de atividades</h1>
             <form onSubmit={handleSubmit}>

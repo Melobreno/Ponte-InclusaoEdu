@@ -2,10 +2,9 @@ import styled from "styled-components";
 
 export const Map = styled.div`
   font-family: "montserrat";
-
   display: flex;
-  justify-content: center;
-  gap: 5%;
+  gap: 10%;
+
   .busca {
     font-size: x-large;
   }
