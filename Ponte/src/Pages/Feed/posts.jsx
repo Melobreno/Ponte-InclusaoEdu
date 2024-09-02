@@ -27,7 +27,7 @@ function Posts() {
     event.preventDefault();
     try {
       if (texto === "") {
-        setErro("texto invalido ");
+        setErro("Texto inválido ");
       }
       if (texto != "") {
         await api.post("/insertmsg", {
