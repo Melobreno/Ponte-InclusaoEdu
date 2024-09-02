@@ -46,7 +46,7 @@ function FormResumido() {
     <Container>
       <h1>Faça seu Cadastro</h1>
       <form onSubmit={handleSubmit}>
-        <label>Nome Completo:</label>
+        <label className="labeltitulo">Nome Completo:</label>
         <input
           type="text"
           value={nome}
@@ -55,7 +55,7 @@ function FormResumido() {
           }}
         />
 
-        <label>Email:</label>
+        <label className="labeltitulo">Email:</label>
         <input
           type="email"
           value={email}
@@ -64,7 +64,7 @@ function FormResumido() {
           }}
         />
 
-        <label>Senha:</label>
+        <label className="labeltitulo">Senha:</label>
         <input
           type="password"
           value={senha}
@@ -73,7 +73,7 @@ function FormResumido() {
           }}
         />
 
-        <label>Confirme sua Senha:</label>
+        <label className="labeltitulo">Confirme sua Senha:</label>
         <input
           type="password"
           value={confirmSenha}

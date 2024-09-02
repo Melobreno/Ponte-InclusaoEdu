@@ -31,9 +31,10 @@ model profissionais {
 }
 
 model message {
-  id    Int      @id @default(autoincrement())
-  texto String
-  data  DateTime @default(now())
+  id      Int      @id @default(autoincrement())
+  texto   String
+  usuario String
+  data    DateTime @default(now())
 }
 
 model atividade {
