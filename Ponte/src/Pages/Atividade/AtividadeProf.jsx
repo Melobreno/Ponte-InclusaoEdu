@@ -4,6 +4,7 @@ import * as S from "./atividade.style";
 import Btn from "../../Components/atoms/Button";
 import avata from "../../Assets/Avatar 1.svg";
 import { useState, useEffect } from "react";
+const usuarioLog = localStorage.getItem("usuario");
 import api from "../../api/api";
 
 function AtividadeProf() {
@@ -124,7 +125,7 @@ function AtividadeProf() {
                 <ul key={useTexto.id_ativi}>
                   <p className="avatar">
                     <img src={avata} alt="" />
-                    <h4>Lucas Melo</h4>
+                    <h4>{usuarioLog}</h4>
                   </p>
                   <li className="caixasTexto">
                     {useTexto.texto}

@@ -10,6 +10,7 @@ function Posts() {
   const [texto, setTexto] = useState("");
   const [mensagens, setMensagens] = useState([]);
   const nomeUsuario = localStorage.getItem("usuario");
+  const [error, setErro] = useState("");
 
   const fetchMensagens = async () => {
     try {
@@ -25,10 +26,16 @@ function Posts() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await api.post("/insertmsg", {
-        texto: texto,
-        usuario: nomeUsuario,
-      });
+      if (texto === "") {
+        setErro("texto invalido ");
+      }
+      if (texto != "") {
+        await api.post("/insertmsg", {
+          texto: texto,
+          usuario: nomeUsuario,
+        });
+        setErro("");
+      }
       fetchMensagens();
       setTexto("");
     } catch (error) {
@@ -67,6 +74,7 @@ function Posts() {
           <div className="botao">
             <Btn type="submit" txt={enviar} />
           </div>
+          {error && <div>{error}</div>}
         </form>
       </Escreva>
       <div>
@@ -75,11 +83,11 @@ function Posts() {
             <div className="enviado">
               <img className="img" src={img} alt="" />
 
-                <div className="texto">
-                  <h1>{mensagem.usuario}</h1>
-                  <div className="conteudo">
-                    <p>{mensagem.texto}</p>
-                  </div>
+              <div className="texto">
+                <h1>{mensagem.usuario}</h1>
+                <div className="conteudo">
+                  <p>{mensagem.texto}</p>
+                </div>
 
                 <div className="comentario">
                   <p className="data">

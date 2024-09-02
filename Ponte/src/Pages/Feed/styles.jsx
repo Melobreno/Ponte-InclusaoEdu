@@ -4,17 +4,14 @@ export const Pagina = styled.div`
   display: flex;
   justify-content: center;
   gap: 15px;
-
   @media (max-width: 425px) {
     flex-direction: column;
-    align-items: center;
     gap: 10px;
   }
 `;
 
 export const Section = styled.div`
   display: flex;
-
   justify-content: space-around;
   justify-content: center;
 
