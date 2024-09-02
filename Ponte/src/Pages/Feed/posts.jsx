@@ -48,55 +48,53 @@ function Posts() {
   const enviar = "Enviar";
   return (
     <>
+      <Escreva>
+        <form onSubmit={handleSubmit} className="formInput">
+          <div className="novaMsg">
+            <img className="img" src={img} alt="" />
+            <textarea
+              type="text"
+              value={texto}
+              onChange={(event) => {
+                setTexto(event.target.value);
+              }}
+              placeholder="Digite uma nova mensagem..."
+            ></textarea>
+          </div>
+          <hr />
+          <div className="botao">
+            <Btn type="submit" txt={enviar} />
+          </div>
+        </form>
+      </Escreva>
       <div>
-        <Escreva>
-          <form onSubmit={handleSubmit}>
-            <div className="novaMsg">
+        {mensagens.map((mensagem) => (
+          <Mensagem key={mensagem.id}>
+            <div className="enviado">
               <img className="img" src={img} alt="" />
-              <textarea
-                type="text"
-                value={texto}
-                onChange={(event) => {
-                  setTexto(event.target.value);
-                }}
-                placeholder="Digite uma nova mensagem..."
-              ></textarea>
-            </div>
-            <hr />
-            <div className="botao">
-              <Btn type="submit" txt={enviar} />
-            </div>
-          </form>
-        </Escreva>
-        <div>
-          {mensagens.map((mensagem) => (
-            <Mensagem key={mensagem.id}>
-              <div className="enviado">
-                <img className="img" src={img} alt="" />
 
-                <div className="texto">
-                  <h1>Lucas Melo</h1>
-                  <div className="conteudo">
-                    <p>{mensagem.texto}</p>
-                  </div>
+              <div className="texto">
+                <h1>Lucas Melo</h1>
+                <div className="conteudo">
+                  <p>{mensagem.texto}</p>
+                </div>
 
-                  <div className="comentario">
-                    <p className="data">
-                      {new Date(mensagem.data).toLocaleDateString()}
-                    </p>
-                    <img className="balao" src={balao} alt="" />
-                    <button
-                      className="lixeira"
-                      onClick={() => handleDelete(mensagem.id)}
-                    >
-                      <img src={lixeira} alt="Ícone de lixeira" />
-                    </button>
-                  </div>
+                <div className="comentario">
+                  <p className="data">
+                    {new Date(mensagem.data).toLocaleDateString()}
+                  </p>
+                  <img className="balao" src={balao} alt="" />
+                  <button
+                    className="lixeira"
+                    onClick={() => handleDelete(mensagem.id)}
+                  >
+                    <img src={lixeira} alt="Ícone de lixeira" />
+                  </button>
                 </div>
               </div>
-            </Mensagem>
-          ))}
-        </div>
+            </div>
+          </Mensagem>
+        ))}
       </div>
     </>
   );

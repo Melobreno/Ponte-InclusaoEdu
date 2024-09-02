@@ -4,6 +4,12 @@ export const Pagina = styled.div`
   display: flex;
   justify-content: center;
   gap: 15px;
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 `;
 
 export const Section = styled.div`
@@ -35,15 +41,26 @@ export const Section = styled.div`
       align-items: end;
     }
   }
+
+  @media (max-width: 425px) {
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const Texto = styled.div`
   background-color: aliceblue;
-  display: flex;
   height: 0;
+
+  @media (max-width: 425px) {
+    display: flex;
+    justify-content: center;
+  }
 `;
 export const Escreva = styled.div`
-  width: 50rem;
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
   height: 13.5rem;
   background-color: aliceblue;
   border-radius: 0.37rem;
@@ -92,29 +109,36 @@ export const Escreva = styled.div`
     height: 11rem;
 
     textarea {
-      height: 70px;
+      height: 40px;
     }
 
     hr {
-      width: 40vw;
+      width: 10vw;
     }
   }
 
   @media (max-width: 425px) {
-    margin-top: -70px;
-    display: flex;
-    justify-content: center;
-    height: 13rem;
-    transform: scale(0.37);
+    transform: scale(0.7);
+    margin-bottom: 40px;
+    textarea {
+      width: 80vw;
+      font-size: 1rem;
+    }
+    hr {
+      display: none;
+    }
+    .botao {
+      justify-content: end;
+      margin-top: 10%;
+    }
   }
 `;
 
 export const Mensagem = styled.div`
   display: flex;
-
   width: 50rem;
   height: 13.5rem;
-  margin-top: 2.18rem;
+  margin-top: 3.18rem;
   background-color: aliceblue;
   border-radius: 0.375rem;
   box-shadow: 6px 6px 15px -6px rgba(0, 0, 0, 0.25);
@@ -125,7 +149,7 @@ export const Mensagem = styled.div`
 
     justify-content: center;
     height: 13rem;
-    transform: scale(0.37);
+    transform: scale(0.38);
   }
 
   .texto {
@@ -195,6 +219,18 @@ export const Mensagem = styled.div`
   .lixeira:hover {
     box-shadow: 0 0.33rem 0.7rem rgba(0, 0, 0, 0.37);
     transform: translateY(-1px);
+  }
+
+  @media (max-width: 425px) {
+    .texto {
+      font-size: 0.9rem;
+    }
+
+    .balao,
+    .lixeira {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
   }
 `;
 
