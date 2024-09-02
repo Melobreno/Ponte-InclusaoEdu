@@ -19,7 +19,7 @@ export const Section = styled.div`
   justify-content: center;
 
   .linhaL {
-    margin: 20px;
+    margin: 40px;
     width: 0rem;
     height: 48rem;
     @media (max-width: 1680px) {
@@ -238,7 +238,7 @@ export const Atores = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0;
-  margin: 0;
+  margin-right: 5rem;
   height: 46rem;
   width: 350px;
 

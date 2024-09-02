@@ -24,8 +24,7 @@ function AppRoutes() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/cadastroResp" element={<CadastroR />}></Route>
-        <Route path="/cadastroProf" element={<CadastroP />}></Route>
+
         <Route path="/captacao" element={<Captacao />}></Route>
         <Route path="/NovaSenha" element={<NovaSenha />}></Route>
         <Route path="/verificaemail" element={<RedefinirSenha />}></Route>
@@ -81,6 +80,22 @@ function AppRoutes() {
           element={
             <PrivateRoute>
               <Mapeamento />
+            </PrivateRoute>
+          }
+        ></Route>
+        <Route
+          path="/cadastroResp"
+          element={
+            <PrivateRoute>
+              <CadastroR />
+            </PrivateRoute>
+          }
+        ></Route>
+        <Route
+          path="/cadastroProf"
+          element={
+            <PrivateRoute>
+              <CadastroP />
             </PrivateRoute>
           }
         ></Route>

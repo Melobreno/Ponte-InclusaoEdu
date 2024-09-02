@@ -9,6 +9,7 @@ import api from "../../api/api";
 function Posts() {
   const [texto, setTexto] = useState("");
   const [mensagens, setMensagens] = useState([]);
+  const nomeUsuario = localStorage.getItem("usuario");
 
   const fetchMensagens = async () => {
     try {
@@ -26,6 +27,7 @@ function Posts() {
     try {
       await api.post("/insertmsg", {
         texto: texto,
+        usuario: nomeUsuario,
       });
       fetchMensagens();
       setTexto("");
@@ -73,11 +75,11 @@ function Posts() {
             <div className="enviado">
               <img className="img" src={img} alt="" />
 
-              <div className="texto">
-                <h1>Lucas Melo</h1>
-                <div className="conteudo">
-                  <p>{mensagem.texto}</p>
-                </div>
+                <div className="texto">
+                  <h1>{mensagem.usuario}</h1>
+                  <div className="conteudo">
+                    <p>{mensagem.texto}</p>
+                  </div>
 
                 <div className="comentario">
                   <p className="data">

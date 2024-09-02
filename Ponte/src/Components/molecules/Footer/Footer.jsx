@@ -29,7 +29,12 @@ function Footer() {
           <h2>Siga a Ponte</h2>
           <li>
             <img src={insta} alt="" />
-            <a href="mailto: ponteinclusaoedu@gmail.com">@ponteintegraedu</a>
+            <a
+              href="https://www.instagram.com/ponte_inclusao_educacional/"
+              target="_blank"
+            >
+              @ponteintegraedu
+            </a>
           </li>
           <li>
             <img src={x} alt="" />

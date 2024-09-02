@@ -5,7 +5,6 @@ import * as S from "./atividade.style";
 import api from "../../api/api";
 import { useState, useEffect } from "react";
 function AtividadeResp() {
-  const [openSidebar, setOpenSidebar] = useState(false);
   const [menssagem, setMenssagem] = useState([]);
   const [dataCriacao, setDataCriacao] = useState("");
 
@@ -30,10 +29,10 @@ function AtividadeResp() {
   };
   return (
     <>
-      <Pesquisa setOpenSidebar={setOpenSidebar} />
+      <Pesquisa />
       <S.Container>
-        {openSidebar && <SideDocumentacao />}
         <S.Bloco>
+          <SideDocumentacao />
           <S.menssagem>
             {menssagem.map((useTexto) => (
               <ul key={useTexto.id_ativi}>

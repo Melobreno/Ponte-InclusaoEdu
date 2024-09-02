@@ -38,13 +38,32 @@ export const Container = styled.section`
   .btnContainer {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 30px;
   }
 
   .btnContainer button {
     font-size: 1.2rem;
     width: 180px;
     height: 45px;
+  }
+
+  .inputTipo {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 0;
+  }
+
+  .inputTipo span {
+    width: 160px;
+  }
+
+  .labeltitulo {
+    margin-bottom: 10px;
+  }
+
+  .inputTipo #tipo_conta {
+    margin: 0;
   }
 
   @media (min-width: 1440px) {
@@ -99,5 +118,28 @@ export const Container = styled.section`
       width: 140px;
       height: 35px;
     }
+  }
+
+  .checkbox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    gap: 0.5rem;
+
+    div {
+      display: flex;
+      gap: 0.5rem;
+    }
+    input {
+      margin: 0;
+    }
+  }
+
+  div .politicSpan {
+    color: #25a6ce;
+    text-decoration: none;
+    font-weight: 600;
   }
 `;

@@ -5,6 +5,11 @@ export const Container = styled.div`
   justify-content: center;
   font-family: "Montserrat", sans-serif;
   gap: 2%;
+
+  section {
+    margin-left: 10rem;
+  }
+
   @media (max-width: 425px) {
     max-width: 100%;
   }
@@ -16,9 +21,8 @@ export const Container = styled.div`
 `;
 export const Bloco = styled.div`
   display: flex;
-  width: 70vw;
-  flex-direction: column;
-  margin-right: 0;
+  width: 100%;
+
   @media (max-width: 425px) {
     width: 100%;
     margin-left: 0;
@@ -75,7 +79,7 @@ export const Bloco = styled.div`
     }
   }
   input {
-    background-color: aliceblue;
+    background-color: white;
   }
   .digite.ampliado {
     width: 50vw;
@@ -110,7 +114,7 @@ export const Bloco = styled.div`
     flex-direction: column;
     gap: 30px;
     width: 1100px;
-    background-color: aliceblue;
+    background-color: white;
     box-shadow: 1px 1px 1px 1px rgba(111, 111, 111, 0.2);
     padding: 10px;
     border-radius: 3px;

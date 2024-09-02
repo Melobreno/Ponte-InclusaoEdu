@@ -10,11 +10,13 @@ import { Link } from "react-router-dom";
 
 function Feed() {
   const [openSideBar, setOpenSideBar] = useState(false);
+  const nomeUsuario = localStorage.getItem("usuario");
+  const tipoConta = localStorage.getItem("conta");
   return (
     <>
-      <Pesquisa setOpenSidebar={setOpenSideBar} />
+      <Pesquisa />
       <Pagina>
-        <div>{openSideBar && <SideDocumentacao />}</div>
+        <SideDocumentacao />
         <Section>
           <Texto>
             <div className="posts">
@@ -26,8 +28,8 @@ function Feed() {
             <div className="atores">
               <img className="img" src={img} alt="" />
               <div className="texto">
-                <h2>Lucas Melo</h2>
-                <p>Responsável por Criança</p>
+                <h2>{nomeUsuario}</h2>
+                <p>{tipoConta}</p>
               </div>
             </div>
 
