@@ -8,7 +8,6 @@ import { useState } from "react";
 
 import { Link } from "react-router-dom";
 
-
 function Pesquisa({ setOpenSidebar }) {
   const [isOpen, setIsOpen] = useState(false);
 
