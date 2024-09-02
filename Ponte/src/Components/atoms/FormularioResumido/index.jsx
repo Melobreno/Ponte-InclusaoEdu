@@ -81,6 +81,23 @@ function FormResumido() {
             setConfirmSenha(event.target.value);
           }}
         />
+        <div className="checkbox">
+          <div>
+            <input type="checkbox" name="" id="" />
+            <span>
+              Ao selecionar, você autoriza a Ponte enviar Emails com
+              atualizações e novidades da ferramenta.
+            </span>
+          </div>
+
+          <div>
+            <input type="checkbox" name="" id="" />
+            <span>
+              Ao selecionar, você está concordando com as
+              <span className="politicSpan"> políticas de privacidades.</span>
+            </span>
+          </div>
+        </div>
 
         <label htmlFor="" className="labeltitulo">
           Qual o tipo da conta ?

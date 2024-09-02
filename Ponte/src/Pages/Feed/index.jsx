@@ -13,9 +13,9 @@ function Feed() {
   const tipoConta = localStorage.getItem("conta");
   return (
     <>
-      <Pesquisa setOpenSidebar={setOpenSideBar} />
+      <Pesquisa />
       <Pagina>
-        <div>{openSideBar && <SideDocumentacao />}</div>
+        <SideDocumentacao />
         <Section>
           <Texto>
             <div className="posts">

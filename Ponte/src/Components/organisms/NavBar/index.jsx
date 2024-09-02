@@ -9,9 +9,11 @@ function NavBar() {
   return (
     <S.Container>
       {!possuiToken && (
-        <Link to={"/"}>
-          <img src={imgLogo} alt="" />
-        </Link>
+        <div>
+          {/* <Link to={"/"}>
+            <img src={imgLogo} alt="" />
+          </Link> */}
+        </div>
       )}
       {!possuiToken ? <Menu /> : <Barra />}
     </S.Container>

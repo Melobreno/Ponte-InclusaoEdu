@@ -39,12 +39,7 @@ function SideDocumentacao() {
                 <span className="item-descricao">Página principal</span>
               </Link>
             </li>
-            <li className="side-item">
-              <Link to="/mapeamento">
-                <GoPeople />
-                <span className="item-descricao">Profissionais</span>
-              </Link>
-            </li>
+
             <li className="side-item">
               <Link
                 to={
@@ -54,7 +49,13 @@ function SideDocumentacao() {
                 }
               >
                 <VscFile />
-                <span className="item-descricao">Mural</span>
+                <span className="item-descricao">Atividades</span>
+              </Link>
+            </li>
+            <li className="side-item">
+              <Link to="/Chat">
+                <IoChatbubbleEllipsesOutline />
+                <span className="item-descricao">Chat</span>
               </Link>
             </li>
             <li className="side-item">
@@ -63,10 +64,11 @@ function SideDocumentacao() {
                 <span className="item-descricao">Documentos</span>
               </Link>
             </li>
+
             <li className="side-item">
-              <Link to="/Chat">
-                <IoChatbubbleEllipsesOutline />
-                <span className="item-descricao">Chat</span>
+              <Link to="/mapeamento">
+                <GoPeople />
+                <span className="item-descricao">Mapeamento</span>
               </Link>
             </li>
 

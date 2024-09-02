@@ -77,5 +77,4 @@ export const Arquivos1 = styled.div`
 export const Container = styled.div`
   display: flex;
   text-align: center;
-  justify-content: center;
 `;

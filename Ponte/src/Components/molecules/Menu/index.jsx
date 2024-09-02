@@ -3,6 +3,7 @@ import Btn from "../../atoms/Button";
 import { Link } from "react-router-dom";
 import HamMenu from "../../../Assets/hamburger.svg";
 import { useState } from "react";
+import imgLo from "../../../Assets/logoPonte.svg";
 
 function menu() {
   const value = "Login";
@@ -14,6 +15,11 @@ function menu() {
 
   return (
     <S.Container>
+      <div className="nav">
+        <Link to={"/"}>
+          <img src={imgLo} alt="" />
+        </Link>
+      </div>
       <ul className="menu-desk">
         <li>
           <a href="#sobre">Sobre nós</a>

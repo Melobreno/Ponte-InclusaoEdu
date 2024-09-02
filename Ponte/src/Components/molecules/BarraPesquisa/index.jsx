@@ -1,6 +1,4 @@
 import { Section } from "./style";
-import { FiAlignJustify } from "react-icons/fi";
-import { RiCloseFill } from "react-icons/ri";
 import logo from "../../../Assets/logoPonte.svg";
 import avatar from "../../../Assets/Avatar 1.svg";
 import { useState } from "react";
@@ -15,33 +13,15 @@ function Pesquisa({ setOpenSidebar }) {
     setIsOpen(newIsOpen);
     setOpenSidebar(newIsOpen);
   };
-
   return (
     <>
       <Section>
-        <div className="esquerdaNav">
-          <div>
-            {isOpen ? (
-              <RiCloseFill
-                onClick={abrirSidebar}
-                className="menu"
-                fontSize={25}
-              />
-            ) : (
-              <FiAlignJustify
-                onClick={abrirSidebar}
-                fontSize={25}
-                className="menu"
-              />
-            )}
-          </div>
-          <div className="inputNav">
-            <Link to={"/"}>
-              <a>
-                <img src={logo} alt="logo" className="logo" />
-              </a>
-            </Link>
-          </div>
+        <div className="inputNav">
+          <Link to={"/"}>
+            <a>
+              <img src={logo} alt="logo" className="logo" />
+            </a>
+          </Link>
         </div>
 
         <div className="direitaNav">

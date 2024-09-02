@@ -4,7 +4,6 @@ export const Section = styled.div`
   display: flex;
   margin: 0 auto;
   margin-top: 20px;
-  justify-content: center;
   gap: 100px;
 
   .sidebar {
