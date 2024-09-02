@@ -12,9 +12,12 @@ import { Link, Navigate } from "react-router-dom";
 function handleLogout() {
   localStorage.removeItem("token");
   localStorage.removeItem("conta");
+  localStorage.removeItem("usuario");
+  localStorage.removeItem("email");
   window.location.reload();
 }
 const tipo_conta = localStorage.getItem("conta");
+const nomeUsuario = localStorage.getItem("usuario");
 
 function SideDocumentacao() {
   return (
@@ -25,8 +28,8 @@ function SideDocumentacao() {
             <img src={img} alt="avatar" id="avatar" />
 
             <p id="infor-usuario">
-              <span className="item-descricao">Lucas Melo</span>
-              <span className="item-descricao">Terapeuta</span>
+              <span className="item-descricao">{nomeUsuario}</span>
+              <span className="item-descricao">{tipo_conta}</span>
             </p>
           </div>
           <ul id="ul_items">
@@ -36,12 +39,7 @@ function SideDocumentacao() {
                 <span className="item-descricao">Página principal</span>
               </Link>
             </li>
-            <li className="side-item">
-              <Link to="/mapeamento">
-                <GoPeople />
-                <span className="item-descricao">Profissionais</span>
-              </Link>
-            </li>
+
             <li className="side-item">
               <Link
                 to={
@@ -51,7 +49,13 @@ function SideDocumentacao() {
                 }
               >
                 <VscFile />
-                <span className="item-descricao">Mural</span>
+                <span className="item-descricao">Atividades</span>
+              </Link>
+            </li>
+            <li className="side-item">
+              <Link to="/Chat">
+                <IoChatbubbleEllipsesOutline />
+                <span className="item-descricao">Chat</span>
               </Link>
             </li>
             <li className="side-item">
@@ -60,10 +64,11 @@ function SideDocumentacao() {
                 <span className="item-descricao">Documentos</span>
               </Link>
             </li>
+
             <li className="side-item">
-              <Link to="/Chat">
-                <IoChatbubbleEllipsesOutline />
-                <span className="item-descricao">Chat</span>
+              <Link to="/mapeamento">
+                <GoPeople />
+                <span className="item-descricao">Mapeamento</span>
               </Link>
             </li>
 

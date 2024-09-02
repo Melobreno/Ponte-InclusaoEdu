@@ -32,7 +32,9 @@ module.exports = class loginUserController {
         { expiresIn: "20s" }
       );
 
-      return res.status(200).json({ token, conta: users.conta });
+      return res
+        .status(200)
+        .json({ token, conta: users.conta, name_user: users.name_user });
     } catch (error) {
       return response.status(401).json({ error });
     }

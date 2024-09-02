@@ -4,9 +4,14 @@ export const Container = styled.div`
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 1.04rem;
-
+  display: flex;
+  justify-content: center;
+  width: 100%;
   .menu-resp {
     display: none;
+  }
+  .menu-desk {
+    margin-left: 30rem;
   }
 
   a {
@@ -21,6 +26,11 @@ export const Container = styled.div`
     display: flex;
     gap: 1.25rem;
     align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
   }
   a::after {
     content: "";

@@ -6,11 +6,13 @@ import Pesquisa from "../../Components/molecules/BarraPesquisa";
 import Posts from "./posts";
 import { useEffect, useState } from "react";
 import SideDocumentacao from "../../Components/organisms/SideBarDocument/SideDocumentacao";
+import { Link } from "react-router-dom";
 import TelaCarregamento from "../../Components/atoms/telaCarregamento/TelaCarregamneto";
 
 function Feed() {
-  const [openSideBar, setOpenSideBar] = useState(false);
   const [carregando, setCarregando] = useState(true);
+  const nomeUsuario = localStorage.getItem("usuario");
+  const tipoConta = localStorage.getItem("conta");
   useEffect(() => {
     setTimeout(() => {
       setCarregando(false);
@@ -21,9 +23,9 @@ function Feed() {
   }
   return (
     <>
-      <Pesquisa setOpenSidebar={setOpenSideBar} />
+      <Pesquisa />
       <Pagina>
-        <div>{openSideBar && <SideDocumentacao />}</div>
+        <SideDocumentacao />
         <Section>
           <Texto>
             <div className="posts">
@@ -35,19 +37,19 @@ function Feed() {
             <div className="atores">
               <img className="img" src={img} alt="" />
               <div className="texto">
-                <h2>Lucas Melo</h2>
-                <p>Responsável por Criança</p>
+                <h2>{nomeUsuario}</h2>
+                <p>{tipoConta}</p>
               </div>
             </div>
-
             <div className="atores">
               <img className="img" src={img2} alt="" />
               <div className="texto">
-                <h2>Priscila Silva</h2>
+                <Link to={"/perfilprof"}>
+                  <h2>Priscila Silva</h2>
+                </Link>
                 <p>Fonoaudiologa</p>
               </div>
             </div>
-
             <div className="atores">
               <img className="img" src={img3} alt="" />
               <div className="texto">

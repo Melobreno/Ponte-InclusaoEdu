@@ -18,14 +18,15 @@ import PrivateRoute from "./privateRoutes";
 import PgtoConfirmado from "../Pages/ConfirmarCompra/PagamentoRealziado/index";
 import Mapeamento from "../Pages/Mapeamento";
 import TelaCarregamento from "../Components/atoms/telaCarregamento/TelaCarregamneto";
+import Perfilprof from "../Pages/Perfil/Perfilprofi";
+
 
 function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/cadastroResp" element={<CadastroR />}></Route>
-        <Route path="/cadastroProf" element={<CadastroP />}></Route>
+
         <Route path="/captacao" element={<Captacao />}></Route>
         <Route path="/NovaSenha" element={<NovaSenha />}></Route>
         <Route path="/verificaemail" element={<RedefinirSenha />}></Route>
@@ -34,7 +35,9 @@ function AppRoutes() {
         <Route path="/Assinaturas" element={<Assinatura />}></Route>
         <Route path="/Pagamento" element={<ConfirmarCompra />}></Route>
         <Route path="/pgtoConfirmado" element={<PgtoConfirmado />}></Route>
-        <Route path="carregamento" element={<TelaCarregamento />} />
+        <Route path="/carregamento" element={<TelaCarregamento />} />
+        <Route path="/perfilprof" element={<Perfilprof />}></Route>
+
         <Route
           path="/Feed"
           element={
@@ -81,6 +84,22 @@ function AppRoutes() {
           element={
             <PrivateRoute>
               <Mapeamento />
+            </PrivateRoute>
+          }
+        ></Route>
+        <Route
+          path="/cadastroResp"
+          element={
+            <PrivateRoute>
+              <CadastroR />
+            </PrivateRoute>
+          }
+        ></Route>
+        <Route
+          path="/cadastroProf"
+          element={
+            <PrivateRoute>
+              <CadastroP />
             </PrivateRoute>
           }
         ></Route>

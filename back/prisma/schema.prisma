@@ -30,9 +30,10 @@ model Profissionais {
 }
 
 model Message {
-  id    Int      @id @default(autoincrement())
-  texto String
-  data  DateTime @default(now())
+  id      Int      @id @default(autoincrement())
+  usuario String
+  texto   String
+  data    DateTime @default(now())
 }
 
 model Atividade {
