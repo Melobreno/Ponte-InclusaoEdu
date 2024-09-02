@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-import breakpoint from "../../breakpoints.js";
-
 export const Pagina = styled.div`
   display: flex;
   justify-content: center;
@@ -102,7 +100,7 @@ export const Escreva = styled.div`
     }
   }
 
-  @media (${breakpoint.mobile}) {
+  @media (max-width: 425px) {
     margin-top: -70px;
     display: flex;
     justify-content: center;
@@ -121,7 +119,7 @@ export const Mensagem = styled.div`
   border-radius: 0.375rem;
   box-shadow: 6px 6px 15px -6px rgba(0, 0, 0, 0.25);
 
-  @media (${breakpoint.mobile}) {
+  @media (max-width: 425px) {
     margin-top: -100px;
     display: flex;
 
@@ -139,7 +137,7 @@ export const Mensagem = styled.div`
     margin-top: 0.4rem;
     margin-left: 0.71rem;
     justify-content: space-around;
-    @media (${breakpoint.mobile}) {
+    @media (max-width: 425px) {
       display: flex;
     }
   }
@@ -208,11 +206,11 @@ export const Atores = styled.div`
   height: 46rem;
   width: 350px;
 
-  @media (${breakpoint.mobile}) {
+  @media (max-width: 425px) {
     display: none;
   }
 
-  @media (${breakpoint.md}) {
+  @media (max-width: 1440px) {
     width: 250px;
   }
   img {
@@ -233,7 +231,10 @@ export const Atores = styled.div`
     width: 15rem;
     display: flex;
     flex-direction: column;
+    text-decoration: none;
+    color: black;
   }
+
   h2 {
     margin: 0;
     font-family: "Montserrat", sans-serif, Helvetica;

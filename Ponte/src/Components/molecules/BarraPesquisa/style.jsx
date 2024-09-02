@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import breakpoint from "../../../breakpoints";
 export const Section = styled.div`
   display: flex;
   height: 5.18rem;
@@ -7,7 +6,7 @@ export const Section = styled.div`
   align-items: center;
   margin: auto;
 
-  @media (${breakpoint.mobile}) {
+  @media (max-width: 425px) {
     transform: scale(0.37);
     justify-content: center;
     margin: 0;
@@ -28,7 +27,7 @@ export const Section = styled.div`
     width: 50rem;
     justify-content: space-between;
     align-items: center;
-    @media (${breakpoint.sm}) {
+    @media (max-width: 1150px) {
       margin: auto;
       width: auto;
     }
@@ -48,7 +47,7 @@ export const Section = styled.div`
     border-radius: 1.25rem;
     border: 0.13rem solid #25a6ce;
 
-    @media (${breakpoint.sm}) {
+    @media (max-width: 1150px) {
       display: none;
     }
   }
