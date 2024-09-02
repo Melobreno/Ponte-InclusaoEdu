@@ -4,11 +4,21 @@ import img2 from "../../Assets/avatar2.svg";
 import img3 from "../../Assets/avatar3.svg";
 import Pesquisa from "../../Components/molecules/BarraPesquisa";
 import Posts from "./posts";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SideDocumentacao from "../../Components/organisms/SideBarDocument/SideDocumentacao";
+import TelaCarregamento from "../../Components/atoms/telaCarregamento/TelaCarregamneto";
 
 function Feed() {
   const [openSideBar, setOpenSideBar] = useState(false);
+  const [carregando, setCarregando] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setCarregando(false);
+    }, 2000);
+  }, []);
+  if (carregando) {
+    return <TelaCarregamento />;
+  }
   return (
     <>
       <Pesquisa setOpenSidebar={setOpenSideBar} />
