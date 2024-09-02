@@ -10,6 +10,7 @@ function Posts() {
   const [texto, setTexto] = useState("");
   const [mensagens, setMensagens] = useState([]);
   const nomeUsuario = localStorage.getItem("usuario");
+  const [error, setErro] = useState("");
   const primNome = nomeUsuario.split(" ")[0];
 
   const fetchMensagens = async () => {
@@ -26,10 +27,17 @@ function Posts() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await api.post("/insertmsg", {
-        texto: texto,
-        usuario: primNome,
-      });
+      if (texto === "") {
+        setErro("Texto inválido ");
+      }
+      if (texto != "") {
+        await api.post("/insertmsg", {
+          texto: texto,
+          usuario: primNome,
+        });
+        setErro("");
+      }
+
       fetchMensagens();
       setTexto("");
     } catch (error) {
@@ -66,6 +74,7 @@ function Posts() {
           </div>
           <hr />
           <div className="botao">
+            {error && <span>{error}</span>}
             <Btn type="submit" txt={enviar} />
           </div>
         </form>

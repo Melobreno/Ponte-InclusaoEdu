@@ -4,10 +4,8 @@ export const Pagina = styled.div`
   display: flex;
   justify-content: flex-start;
   gap: 15px;
-
   @media (max-width: 425px) {
     flex-direction: column;
-    align-items: center;
     gap: 10px;
   }
 `;
@@ -102,7 +100,14 @@ export const Escreva = styled.div`
     display: flex;
     justify-content: right;
     margin: 0.63rem 1.5rem;
+    span {
+      display: flex;
+      align-items: center;
+      color: red;
+      margin-right: 1rem;
+    }
   }
+
   @media (max-width: 1024px) {
     width: 26rem;
     height: 11rem;

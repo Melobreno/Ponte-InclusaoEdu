@@ -34,6 +34,7 @@ function AtividadeResp() {
         <SideDocumentacao />
         <S.Bloco>
           <S.menssagem>
+            <h2>Atividades</h2>
             {menssagem.map((useTexto) => (
               <ul key={useTexto.id_ativi}>
                 <p className="avatar">
