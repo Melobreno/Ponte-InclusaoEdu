@@ -18,6 +18,8 @@ export const FormSection = styled.section`
   .formDiv {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
 
     @media (max-width: 1440px) {
@@ -69,6 +71,11 @@ export const FormSection = styled.section`
     display: flex;
     justify-content: center;
     padding: 1rem;
+  }
+  .formContainer button {
+    width: 150px;
+    padding: 0.5rem;
+    font-size: 1rem;
   }
 
   .cadastroResp {

@@ -5,6 +5,7 @@ import fotoh from "../../Assets/Userhomem.svg";
 import SideDocumentacao from "../../Components/organisms/SideBarDocument/SideDocumentacao";
 import Pesquisa from "../../Components/molecules/BarraPesquisa/index";
 import api from "../../api/api";
+import { Link } from "react-router-dom";
 
 function Mapeamento() {
   const [resultados, setResultados] = useState([]);
@@ -55,18 +56,24 @@ function Mapeamento() {
               resultados.map((dado) => (
                 <div className="container2" key={dado["id-prof"]}>
                   <div className="info1">
+                    {console.log(dado.sexo)}
                     <Foto1>
                       <img
                         src={
-                          ["G", "F", "A"].includes(dado.name_prof.charAt(0))
+                          dado.sexo === "masculino"
+                            ? fotom
+                            : dado.sexo === "feminino"
                             ? fotoh
-                            : fotom
+                            : ""
                         }
                         alt="user"
                       />
                     </Foto1>
+
                     <div className="dados">
-                      <div className="nome">{dado["name_prof"]}</div>
+                      <div className="nome">
+                        <Link to={"/perfilprof"}>{dado["name_prof"]}</Link>
+                      </div>
                       <div className="ocupacao">{dado.ocupacao}</div>
                     </div>
                   </div>

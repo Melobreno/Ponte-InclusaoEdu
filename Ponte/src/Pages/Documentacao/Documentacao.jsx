@@ -6,12 +6,14 @@ import lixeira from "../../Assets/lixeira.svg";
 import nDoc from "../../Assets/newDoc.svg";
 import { useRef, useState, useEffect, useDeferredValue } from "react";
 import api from "../../api/api";
+import TelaCarregamento from "../../Components/atoms/telaCarregamento/TelaCarregamneto";
 function Documentacao() {
   const [documents, setDocuments] = useState([]);
   const [uploadedFiles, setUploadedFiles] = useState([]);
   const [showAllDocuments, setShowAllDocuments] = useState(false);
   const [recentDocuments, setRecentDocuments] = useState([]);
   const fileInputRef = useRef(null);
+  const [carregando, setCarregando] = useState(false);
 
   const url =
     "https://script.google.com/macros/s/AKfycbzV7eJn2hUrzk0UGiDFLJk3RoOvf8ji0EWrxXThyOZySw0iKbmNNWh4weVietU8f199Ow/exec"; // Url do Script criado com App Script
@@ -27,7 +29,7 @@ function Documentacao() {
           type: file.type,
           name: file.name,
         };
-
+        setCarregando(true);
         try {
           const response = await fetch(url, {
             method: "POST",
@@ -46,6 +48,9 @@ function Documentacao() {
           }
         } catch (error) {
           console.error("Erro ao enviar o arquivo:", error);
+        } finally {
+          setCarregando(false);
+          handleShowAllDocuments();
         }
       };
       fr.readAsDataURL(file);
@@ -84,8 +89,6 @@ function Documentacao() {
     }
   };
   //encodeURIComponent -> Garante que o valor passado continue com espaços e/ou caracteres especiais
-
-  // Função para deletar um documento
   const deleteDoc = async (name_doc) => {
     try {
       await api.delete(`/deletedoc/${encodeURIComponent(name_doc)}`);
@@ -99,6 +102,9 @@ function Documentacao() {
     handleShowAllDocuments();
   }, []);
 
+  if (carregando) {
+    return <TelaCarregamento />;
+  }
   return (
     <>
       <Pesquisa />

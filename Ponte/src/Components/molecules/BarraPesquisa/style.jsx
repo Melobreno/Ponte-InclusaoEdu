@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import breakpoint from "../../../breakpoints";
 export const Section = styled.div`
   display: flex;
   height: 5.18rem;
@@ -9,11 +8,6 @@ export const Section = styled.div`
   font-size: 1.25rem;
   font-weight: 550;
   font-family: "Montserrat", sans-serif;
-
-  .imgLupa img {
-    width: 18px;
-  }
-
   @media (max-width: 425px) {
     transform: scale(0.37);
     justify-content: center;
@@ -34,7 +28,7 @@ export const Section = styled.div`
     margin-left: 3rem;
     justify-content: space-between;
     align-items: center;
-    @media (${breakpoint.sm}) {
+    @media (max-width: 1150px) {
       margin: auto;
       width: auto;
     }
@@ -67,7 +61,7 @@ export const Section = styled.div`
     border-radius: 1.25rem;
     border: 0.13rem solid #25a6ce;
 
-    @media (${breakpoint.sm}) {
+    @media (max-width: 1150px) {
       display: none;
     }
   }

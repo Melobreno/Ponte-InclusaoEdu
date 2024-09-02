@@ -31,8 +31,8 @@ function AtividadeResp() {
     <>
       <Pesquisa />
       <S.Container>
+        <SideDocumentacao />
         <S.Bloco>
-          <SideDocumentacao />
           <S.menssagem>
             {menssagem.map((useTexto) => (
               <ul key={useTexto.id_ativi}>

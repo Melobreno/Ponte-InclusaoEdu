@@ -5,6 +5,7 @@ import { IoHomeOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 function Pesquisa() {
+  const nameUser = localStorage.getItem("usuario");
   return (
     <>
       <Section>
@@ -22,7 +23,7 @@ function Pesquisa() {
             <p>Início</p>
           </Link>
 
-          <p className="userName">Lucas Melo</p>
+          <p className="userName">{nameUser}</p>
           <img src={avatar} alt="avata" className="avatar" />
         </div>
       </Section>

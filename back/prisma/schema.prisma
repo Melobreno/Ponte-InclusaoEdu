@@ -15,27 +15,28 @@ model Users {
   conta         String
 }
 
-model Documents {
+model documents {
   id_doc   Int    @id @default(autoincrement())
   name_doc String
   url_doc  String @unique
 }
 
-model Profissionais {
+model profissionais {
   id_prof   Int    @id @default(autoincrement())
   name_prof String
   cep_prof  Int
   cidade    String
   ocupacao  String
+  sexo      String
 }
 
-model Message {
+model message {
   id    Int      @id @default(autoincrement())
   texto String
   data  DateTime @default(now())
 }
 
-model Atividade {
+model atividade {
   id_ativi Int    @id @default(autoincrement())
   texto    String
 }
