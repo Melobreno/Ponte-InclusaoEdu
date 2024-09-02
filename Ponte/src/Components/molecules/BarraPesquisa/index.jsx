@@ -1,10 +1,18 @@
 import { Section } from "./style";
 import logo from "../../../Assets/logoPonte.svg";
 import avatar from "../../../Assets/Avatar 1.svg";
-import { IoHomeOutline } from "react-icons/io5";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
-function Pesquisa() {
+function Pesquisa({ setOpenSidebar }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const usuarioLog = localStorage.getItem("usuario");
+
+  const abrirSidebar = () => {
+    const newIsOpen = !isOpen;
+    setIsOpen(newIsOpen);
+    setOpenSidebar(newIsOpen);
+  };
   return (
     <>
       <Section>
@@ -17,12 +25,7 @@ function Pesquisa() {
         </div>
 
         <div className="direitaNav">
-          <Link to={"/feed"} className="linkHome">
-            <IoHomeOutline />
-            <p>Início</p>
-          </Link>
-
-          <p className="userName">Lucas Melo</p>
+          <p className="userName">{usuarioLog}</p>
           <img src={avatar} alt="avata" className="avatar" />
         </div>
       </Section>
