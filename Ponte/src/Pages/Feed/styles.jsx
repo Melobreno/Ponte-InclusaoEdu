@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Pagina = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 15px;
 
   @media (max-width: 425px) {
@@ -14,9 +14,8 @@ export const Pagina = styled.div`
 
 export const Section = styled.div`
   display: flex;
-
-  justify-content: space-around;
   justify-content: center;
+  margin-left: 5%;
 
   .linhaL {
     margin: 40px;

@@ -7,6 +7,7 @@ import { VscFile } from "react-icons/vsc";
 import { IoSettingsOutline } from "react-icons/io5";
 import { CiLogout } from "react-icons/ci";
 import { IoFolderOpenOutline } from "react-icons/io5";
+import { MdPersonAddAlt } from "react-icons/md";
 import { Link, Navigate } from "react-router-dom";
 
 function handleLogout() {
@@ -29,7 +30,7 @@ function SideDocumentacao() {
 
             <p id="infor-usuario">
               <span className="item-descricao">{nomeUsuario}</span>
-              <span className="item-descricao">{tipo_conta}</span>
+              <span className="item-descricao">conta: {tipo_conta}</span>
             </p>
           </div>
           <ul id="ul_items">
@@ -62,6 +63,13 @@ function SideDocumentacao() {
               <Link to="/Doc">
                 <IoFolderOpenOutline />
                 <span className="item-descricao">Documentos</span>
+              </Link>
+            </li>
+
+            <li className="side-item">
+              <Link to="/Profissionais">
+                <MdPersonAddAlt />
+                <span className="item-descricao">Profissionais</span>
               </Link>
             </li>
 

@@ -19,7 +19,7 @@ import PgtoConfirmado from "../Pages/ConfirmarCompra/PagamentoRealziado/index";
 import Mapeamento from "../Pages/Mapeamento";
 import TelaCarregamento from "../Components/atoms/telaCarregamento/TelaCarregamneto";
 import Perfilprof from "../Pages/Perfil/Perfilprofi";
-
+import Profissionais from "../Pages/Profissionais";
 
 function AppRoutes() {
   return (
@@ -36,7 +36,22 @@ function AppRoutes() {
         <Route path="/Pagamento" element={<ConfirmarCompra />}></Route>
         <Route path="/pgtoConfirmado" element={<PgtoConfirmado />}></Route>
         <Route path="/carregamento" element={<TelaCarregamento />} />
-        <Route path="/perfilprof" element={<Perfilprof />}></Route>
+        <Route
+          path="/perfilprof"
+          element={
+            <PrivateRoute>
+              <Perfilprof />
+            </PrivateRoute>
+          }
+        ></Route>
+        <Route
+          path="/profissionais"
+          element={
+            <PrivateRoute>
+              <Profissionais />
+            </PrivateRoute>
+          }
+        ></Route>
 
         <Route
           path="/Feed"
