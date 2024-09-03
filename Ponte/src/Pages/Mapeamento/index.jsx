@@ -69,6 +69,7 @@ function Mapeamento() {
                               ? fotoh
                               : ""
                           }
+                          className="foto"
                           alt="user"
                         />
                       </Foto1>

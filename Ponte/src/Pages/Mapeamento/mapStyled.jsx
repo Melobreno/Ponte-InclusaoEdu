@@ -239,5 +239,12 @@ export const Map = styled.div`
   }
 `;
 
-export const Foto1 = styled.div``;
+export const Foto1 = styled.div`
+  .foto {
+    @media (max-width: 425px) {
+      margin-left: 2px;
+      width: 80px;
+    }
+  }
+`;
 export const Foto2 = styled.div``;
