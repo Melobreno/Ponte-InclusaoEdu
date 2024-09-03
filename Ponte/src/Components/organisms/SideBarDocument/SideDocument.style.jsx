@@ -94,4 +94,7 @@ export const nav = styled.nav`
       font-size: 14px;
     }
   }
+  @media (max-width: 425px) {
+    margin-right: 0;
+  }
 `;

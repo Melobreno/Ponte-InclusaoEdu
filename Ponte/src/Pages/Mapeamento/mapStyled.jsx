@@ -181,14 +181,18 @@ export const Map = styled.div`
   }
 
   @media (max-width: 425px) {
-    flex-direction: column;
-    align-items: center;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    flex-direction: row;
+    gap: 4%;
 
     .info1,
     .info2 {
-      flex-direction: column;
-      margin-left: 0;
-      width: 100%;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      width: 80%;
+      font-size: 10px;
     }
 
     .container3,
@@ -196,9 +200,19 @@ export const Map = styled.div`
     .container1,
     .card {
       width: 100%;
-      height: auto;
+      height: 15%;
+      padding: 0;
+    }
+    .status {
+      display: none;
     }
 
+    .endereco {
+      display: none;
+    }
+    .atendimento {
+      display: none;
+    }
     .container1 {
       margin-left: 0;
       margin-top: 2rem;
@@ -212,6 +226,15 @@ export const Map = styled.div`
     .nome,
     .ocupacao {
       font-size: smaller;
+    }
+    .content {
+      gap: 10px;
+    }
+    .texto {
+      font-size: 12px;
+    }
+    .nomeCidade {
+      font-size: 13px;
     }
   }
 `;

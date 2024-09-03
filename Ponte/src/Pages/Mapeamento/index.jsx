@@ -54,6 +54,7 @@ function Mapeamento() {
                 Faça aqui o mapeamento de profissionais disponiveis para a sua
                 cidade.
               </div>
+
               {resultados.length > 0 ? (
                 resultados.map((dado) => (
                   <div className="container2" key={dado["id-prof"]}>
@@ -113,7 +114,7 @@ function Mapeamento() {
                   }}
                   id="RECIFE"
                 />
-                <span>Recife</span>
+                <span className="nomeCidade">Recife</span>
               </div>
               <div className="input">
                 <input
@@ -130,7 +131,7 @@ function Mapeamento() {
                   }}
                   id="PAUDALHO"
                 />
-                <span>Paudalho</span>
+                <span className="nomeCidade">Paudalho</span>
               </div>
               <div className="input">
                 <input
@@ -147,7 +148,7 @@ function Mapeamento() {
                   }}
                   id="JABOATAO"
                 />
-                <span>Jaboatão Dos Guararapes</span>
+                <span className="nomeCidade">Jaboatão Dos Guararapes</span>
               </div>
               <div className="button">
                 <button className="botao" onClick={handleSearch}>
