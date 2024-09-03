@@ -73,9 +73,16 @@ export const SobreNos = styled.div`
   }
 
   .button {
-    width: 2rem;
-    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
     margin-top: 2rem;
-    margin-left: 10.5rem;
+    align-items: center;
+  }
+
+  .button .erro {
+    color: red;
+    margin-top: 5px;
   }
 `;

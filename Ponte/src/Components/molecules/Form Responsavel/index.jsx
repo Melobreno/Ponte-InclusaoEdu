@@ -1,13 +1,15 @@
 import { useForm } from "react-hook-form";
 import Btn from "../../atoms/Button";
 import * as S from "./style";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function FormR() {
+  const nav = useNavigate();
   const { register, handleSubmit, setValue } = useForm();
 
   function onSubmit(userData) {
     console.log(userData);
+    nav("/Assinaturas");
   }
   const checkCep = (e) => {
     const cep = e.target.value.replace(/\D/g, "");

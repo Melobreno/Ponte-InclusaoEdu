@@ -8,6 +8,7 @@ import emailjs from "@emailjs/browser";
 
 function Captacao() {
   const [email, setValorEmail] = useState("");
+  const [error, setError] = useState(false);
   const [nome, setValorNome] = useState("");
   const form = useRef();
   const navegar = useNavigate();
@@ -15,6 +16,10 @@ function Captacao() {
 
   const enviarEmail = (e) => {
     e.preventDefault();
+
+    if (nome.length < 1 || email.length < 1) {
+      setError(true);
+    }
 
     const templateFrom = {
       from_name: nome,
@@ -30,7 +35,7 @@ function Captacao() {
       .then(
         () => {
           console.log("SUCCESS!");
-          navegar("/Assinaturas");
+          navegar("/cadastro");
         },
         (error) => {
           console.log("Error ao enviar email", error.text);
@@ -96,7 +101,12 @@ function Captacao() {
                 </span>
               </div>
               <div className="button">
-                <Btn txt={value} type="onSubmit" />
+                <div>
+                  <Btn txt={value} type="onSubmit" />
+                </div>
+                {error && (
+                  <span className="erro">Por Favor insira seus dados!</span>
+                )}
               </div>
             </div>
           </div>
