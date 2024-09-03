@@ -75,7 +75,7 @@ function FormR() {
             id="selectSex"
             {...register("sexo", { required: true })}
           >
-            <option value="0">Select...</option>
+            <option value="0">Sexo:</option>
             <option value="Masc">Masculino</option>
             <option value="Fem">Feminino</option>
             <option value="Outro">Outro</option>

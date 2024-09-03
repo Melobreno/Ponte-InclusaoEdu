@@ -6,13 +6,15 @@ import lixeira from "../../Assets/lixeira.svg";
 import nDoc from "../../Assets/newDoc.svg";
 import { useRef, useState, useEffect, useDeferredValue } from "react";
 import api from "../../api/api";
+import TelaCarregamento from "../../Components/atoms/telaCarregamento/TelaCarregamneto";
+import { Surgir } from "../../Components/motion";
 function Documentacao() {
-  const [openSideBar, setOpenSideBar] = useState(false);
   const [documents, setDocuments] = useState([]);
   const [uploadedFiles, setUploadedFiles] = useState([]);
   const [showAllDocuments, setShowAllDocuments] = useState(false);
   const [recentDocuments, setRecentDocuments] = useState([]);
   const fileInputRef = useRef(null);
+  const [carregando, setCarregando] = useState(false);
 
   const url =
     "https://script.google.com/macros/s/AKfycbzV7eJn2hUrzk0UGiDFLJk3RoOvf8ji0EWrxXThyOZySw0iKbmNNWh4weVietU8f199Ow/exec"; // Url do Script criado com App Script
@@ -28,7 +30,7 @@ function Documentacao() {
           type: file.type,
           name: file.name,
         };
-
+        setCarregando(true);
         try {
           const response = await fetch(url, {
             method: "POST",
@@ -47,6 +49,9 @@ function Documentacao() {
           }
         } catch (error) {
           console.error("Erro ao enviar o arquivo:", error);
+        } finally {
+          setCarregando(false);
+          handleShowAllDocuments();
         }
       };
       fr.readAsDataURL(file);
@@ -85,8 +90,6 @@ function Documentacao() {
     }
   };
   //encodeURIComponent -> Garante que o valor passado continue com espaços e/ou caracteres especiais
-
-  // Função para deletar um documento
   const deleteDoc = async (name_doc) => {
     try {
       await api.delete(`/deletedoc/${encodeURIComponent(name_doc)}`);
@@ -100,81 +103,88 @@ function Documentacao() {
     handleShowAllDocuments();
   }, []);
 
+  if (carregando) {
+    return <TelaCarregamento />;
+  }
   return (
     <>
-      <Pesquisa setOpenSidebar={setOpenSideBar} />
-
+      <Pesquisa />
       <S.Container>
-        <div>{openSideBar && <SideDocumentacao />}</div>
+        <SideDocumentacao />
         <S.Bloco>
-          <div className="tituloh2">
-            <h2>Documentos da Criança</h2>
-          </div>
-          <S.Arquivos>
-            <div className="containerFunc">
-              <span>
-                <img src={nDoc} alt="" />
-              </span>
-              <p onClick={activeFileInput} style={{ cursor: "pointer" }}>
-                Adicionar um novo Documento
-              </p>
-              <input
-                type="file"
-                name=""
-                id=""
-                accept="*/*"
-                ref={fileInputRef}
-                style={{ display: "none" }}
-                onChange={handleFileUpload}
-              />
-            </div>
-            <div className="containerFunc">
-              <span>
-                <img src={pDF} alt="" />
-              </span>
-              <p onClick={handleShowAllDocuments} style={{ cursor: "pointer" }}>
-                Visualizar Todos os Documentos
-              </p>
-            </div>
-          </S.Arquivos>
-          <div>
+          <Surgir>
             <div className="tituloh2">
-              {showAllDocuments ? (
-                <h2>Todos os Documentos</h2>
-              ) : (
-                <h2>Documentos recentes</h2>
-              )}
+              <h2>Documentos da Criança</h2>
             </div>
-            <S.Arquivos1>
-              {recentDocuments.length > 0 ? (
-                recentDocuments.map((file, index) => (
-                  <div key={index} className="containerArquivos">
-                    <p>
-                      <a
-                        href={file.url_doc}
-                        target="_blank"
-                        rel="noopener noreferrer" // Essa linha garante a segurança ao abrir o link externo
-                      >
-                        {file.name_doc}
-                      </a>
-                      <span className="timeDelete">
-                        {`${new Date().toLocaleDateString()}`}{" "}
-                        <span>
-                          <img
-                            src={lixeira}
-                            alt=""
-                            onClick={() => deleteDoc(file.name_doc)}
-                          />
+            <S.Arquivos>
+              <div className="containerFunc">
+                <span>
+                  <img src={nDoc} alt="" />
+                </span>
+                <p onClick={activeFileInput} style={{ cursor: "pointer" }}>
+                  Adicionar um novo Documento
+                </p>
+                <input
+                  type="file"
+                  name=""
+                  id=""
+                  accept="*/*"
+                  ref={fileInputRef}
+                  style={{ display: "none" }}
+                  onChange={handleFileUpload}
+                />
+              </div>
+              <div className="containerFunc">
+                <span>
+                  <img src={pDF} alt="" />
+                </span>
+                <p
+                  onClick={handleShowAllDocuments}
+                  style={{ cursor: "pointer" }}
+                >
+                  Visualizar Todos os Documentos
+                </p>
+              </div>
+            </S.Arquivos>
+            <div>
+              <div className="tituloh2">
+                {showAllDocuments ? (
+                  <h2>Todos os Documentos</h2>
+                ) : (
+                  <h2>Documentos recentes</h2>
+                )}
+              </div>
+              <S.Arquivos1>
+                {recentDocuments.length > 0 ? (
+                  recentDocuments.map((file, index) => (
+                    <div key={index} className="containerArquivos">
+                      <p>
+                        <a
+                          href={file.url_doc}
+                          target="_blank"
+                          rel="noopener noreferrer" // Essa linha garante a segurança ao abrir o link externo
+                        >
+                          {file.name_doc}
+                        </a>
+                        <span className="timeDelete">
+                          {`${new Date().toLocaleDateString()}`}{" "}
+                          <span>
+                            <img
+                              src={lixeira}
+                              alt=""
+                              onClick={() => deleteDoc(file.name_doc)}
+                            />
+                          </span>
                         </span>
-                      </span>
-                    </p>
-                  </div>
-                ))
-              ) : (
-                <p className="msgSemArquivo">Nenhum arquivo enviado ainda</p>
-              )}
-            </S.Arquivos1>
-          </div>
+                      </p>
+                    </div>
+                  ))
+                ) : (
+                  <p className="msgSemArquivo">Nenhum arquivo enviado ainda</p>
+                )}
+              </S.Arquivos1>
+            </div>
+          </Surgir>
         </S.Bloco>
       </S.Container>
     </>

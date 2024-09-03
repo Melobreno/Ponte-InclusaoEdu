@@ -1,58 +1,30 @@
 import { Section } from "./style";
-import { FiAlignJustify } from "react-icons/fi";
-import { RiCloseFill } from "react-icons/ri";
 import logo from "../../../Assets/logoPonte.svg";
 import avatar from "../../../Assets/Avatar 1.svg";
-import lupa from "../../../Assets/lupa.svg";
-import { useState } from "react";
+import { IoHomeOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
-function Pesquisa({ setOpenSidebar }) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const abrirSidebar = () => {
-    const newIsOpen = !isOpen;
-    setIsOpen(newIsOpen);
-    setOpenSidebar(newIsOpen);
-  };
-
+function Pesquisa() {
+  const nameUser = localStorage.getItem("usuario");
+  const primNome = nameUser.split(" ")[0];
   return (
     <>
       <Section>
-        <div className="esquerdaNav">
-          <div>
-            {isOpen ? (
-              <RiCloseFill
-                onClick={abrirSidebar}
-                className="menu"
-                fontSize={25}
-              />
-            ) : (
-              <FiAlignJustify
-                onClick={abrirSidebar}
-                fontSize={25}
-                className="menu"
-              />
-            )}
-          </div>
-          <div className="inputNav">
-            <a href="">
+        <div className="inputNav">
+          <Link to={"/"}>
+            <a>
               <img src={logo} alt="logo" className="logo" />
             </a>
-          </div>
+          </Link>
         </div>
 
         <div className="direitaNav">
-          <div className="pesquisa">
-            <input
-              type="text"
-              placeholder="O que  você está procurando?"
-              className="lupa"
-            />
-            <button className="">
-              <img src={lupa} alt="lupa" />
-            </button>
-          </div>
-          <p className="userName">Lucas Melo</p>
+          <Link to={"/feed"} className="linkHome">
+            <IoHomeOutline />
+            <p>Início</p>
+          </Link>
+
+          <p className="userName">{primNome}</p>
           <img src={avatar} alt="avata" className="avatar" />
         </div>
       </Section>

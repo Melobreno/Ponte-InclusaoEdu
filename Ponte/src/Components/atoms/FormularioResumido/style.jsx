@@ -20,7 +20,7 @@ export const Container = styled.section`
 
   h1 {
     text-align: center;
-    margin: 0;
+    margin: 2rem;
     font-size: 2rem;
   }
 
@@ -38,13 +38,40 @@ export const Container = styled.section`
   .btnContainer {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 30px;
   }
 
   .btnContainer button {
     font-size: 1.2rem;
     width: 180px;
     height: 45px;
+  }
+
+  .tipoConta {
+    display: flex;
+    gap: 2rem;
+  }
+  .inputTipo {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 0;
+  }
+
+  .inputTipo span {
+    width: fit-content;
+
+    margin-right: 1rem;
+  }
+
+  .labeltitulo {
+    margin-bottom: 10px;
+    margin-top: 1rem;
+    font-weight: 500;
+  }
+
+  .inputTipo #tipo_conta {
+    margin: 0;
   }
 
   @media (min-width: 1440px) {
@@ -77,10 +104,8 @@ export const Container = styled.section`
   }
 
   @media (max-width: 425px) {
-    width: 100%;
     height: auto;
-    gap: 20px;
-    padding: 0 10px;
+    margin-right: 10%;
 
     form {
       width: 100%;
@@ -99,5 +124,27 @@ export const Container = styled.section`
       width: 140px;
       height: 35px;
     }
+  }
+
+  .checkbox {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    gap: 0.5rem;
+
+    div {
+      display: flex;
+      gap: 0.5rem;
+    }
+    input {
+      margin: 0;
+    }
+  }
+
+  div .politicSpan {
+    color: #25a6ce;
+    text-decoration: none;
+    font-weight: 600;
   }
 `;

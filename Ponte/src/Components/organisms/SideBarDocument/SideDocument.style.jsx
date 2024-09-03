@@ -5,11 +5,15 @@ export const nav = styled.nav`
   flex-direction: column;
   justify-content: space-between;
   background-color: aliceblue;
-  height: 80vh;
-  width: 250px;
+  height: 90vh;
   max-width: 250px;
   border-radius: 0 5px 5px 0;
   font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  @media (max-width: 425px) {
+    align-items: center;
+    width: 80px;
+  }
 
   #sidebar-container {
     margin: 10px;
@@ -17,6 +21,10 @@ export const nav = styled.nav`
   #infor-usuario {
     display: flex;
     flex-direction: column;
+  }
+
+  .item-descricao {
+    text-align: start;
   }
   #usuario {
     display: flex;
@@ -33,7 +41,7 @@ export const nav = styled.nav`
     justify-content: flex-start;
     gap: 10px;
     list-style: none;
-    padding: 0px;
+    padding: 0;
   }
   .side-item {
     border-radius: 10px;
@@ -47,6 +55,9 @@ export const nav = styled.nav`
     align-items: center;
     color: black;
     gap: 15px;
+    @media (max-width: 425px) {
+      justify-content: center;
+    }
   }
 
   .side-item span:hover {
@@ -55,12 +66,8 @@ export const nav = styled.nav`
     font-weight: 500;
   }
 
-  .side-item.active {
-    background-color: #25a6ce;
-  }
-
   #sair {
-    margin: 10px;
+    margin-bottom: 4rem;
   }
   .sair-btn {
     display: flex;
@@ -74,5 +81,24 @@ export const nav = styled.nav`
   }
   #sideBar.open-sidebar {
     min-width: 15%;
+  }
+  @media (max-width: 425px) {
+    .item-descricao {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-size: 14px;
+    }
+
+    #usuario {
+      gap: 0;
+    }
+  }
+  @media (max-width: 425px) {
+    margin-right: 0;
   }
 `;

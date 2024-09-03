@@ -14,11 +14,14 @@ export const Container = styled.section`
     text-align: center;
   }
   .logo {
-    width: 80px;
-    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 180px;
   }
   .animation-bar {
-    width: 150px;
+    width: 250px;
     height: 2px;
     background: #cfcfcf;
     overflow: hidden;
@@ -26,16 +29,19 @@ export const Container = styled.section`
   }
   .animation-bar::before {
     content: "";
-    width: 75px;
+    width: 80px;
     height: 2px;
     background: #25a6ce;
     position: absolute;
-    left: 180px;
+    left: 280px;
     animation: animation 1.5s infinite ease;
   }
   @keyframes animation {
-    50% {
-      left: -96px;
+    0% {
+      left: -80px;
+    }
+    100% {
+      left: 250px;
     }
   }
 `;

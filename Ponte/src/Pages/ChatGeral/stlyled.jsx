@@ -4,7 +4,6 @@ export const Section = styled.div`
   display: flex;
   margin: 0 auto;
   margin-top: 20px;
-  justify-content: center;
   gap: 100px;
 
   .sidebar {
@@ -123,8 +122,73 @@ export const Section = styled.div`
     margin-left: 140px;
   }
 
+  @media (max-width: 1440px) {
+    display: flex;
+    gap: 0;
+    .conversasIf {
+      margin-left: 5rem;
+    }
+  }
+  @media (max-width: 1024px) {
+    display: flex;
+    justify-content: flex-start;
+    width: 100vw;
+    gap: 0;
+    margin: 0;
+
+    .secEsquerda {
+      display: none;
+      justify-content: flex-start;
+
+      width: 15rem;
+    }
+    .conversasIf {
+      margin-left: 2rem;
+      width: 90%;
+    }
+    .bot1 {
+      display: flex;
+      width: fit-content;
+    }
+    .bot {
+      display: flex;
+      width: fit-content;
+    }
+    .search {
+      display: none;
+    }
+    .pesquisar {
+      display: flex;
+
+      width: 80%;
+    }
+    .conversa {
+      display: flex;
+      justify-content: flex-start;
+      width: 15rem;
+    }
+    span {
+      display: none;
+    }
+    .texto {
+      display: flex;
+      width: fit-content;
+    }
+  }
+
   @media (max-width: 425px) {
-    flex-wrap: wrap-reverse;
+    .secEsquerda {
+      display: none;
+    }
+    .conversasIf {
+      display: flex;
+      justify-content: flex-start;
+      margin: 0;
+    }
+
+    .pesquisar {
+      background-color: black;
+    }
   }
 `;
 export const Direita = styled.div`
@@ -134,9 +198,19 @@ export const Direita = styled.div`
     border: 1px solid black;
   }
 
+  @media (max-width: 1024px) {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+
   @media (max-width: 425px) {
+    display: flex;
+    justify-content: start;
+    width: fit-content;
+
     iframe {
-      width: 423px;
+      width: 80vw;
     }
   }
 `;

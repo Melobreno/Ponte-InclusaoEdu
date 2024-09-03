@@ -4,7 +4,7 @@ import { Navigate } from "react-router-dom";
 const PrivateRoute = ({ children }) => {
   const possuiToken = !!localStorage.getItem("token");
 
-  return possuiToken ? children : <Navigate to="/login" />;
+  return possuiToken ? children : <Navigate to={"/login"} />;
 };
 
 export default PrivateRoute;

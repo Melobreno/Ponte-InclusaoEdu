@@ -1,13 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  font-family: "Montserrat", sans-serif;
-  display: flex;
-  justify-content: center;
-  gap: 10%;
-  background-color: #ffffff;
-  margin: 0 auto;
-  align-items: center;
   margin-top: 10px;
   position: sticky;
   img {
@@ -23,5 +16,11 @@ export const Container = styled.div`
     justify-content: center;
     gap: 40%;
     align-items: center;
+  }
+
+  @media (max-width: 425px) {
+    display: flex;
+
+    padding: 0;
   }
 `;

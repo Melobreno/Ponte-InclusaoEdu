@@ -1,13 +1,17 @@
 import FormResumido from "../../atoms/FormularioResumido";
 import VetorCadastro from "../../../Assets/vetor-cadastro.svg";
 import { Container } from "./style";
+import { Surgir } from "../../motion/index";
 
 function mainCadastro() {
   return (
     <Container>
-      <div>
-        <img src={VetorCadastro} alt="" />
-      </div>
+      <Surgir>
+        <div className="fotoAvatar">
+          <img src={VetorCadastro} alt="" />
+        </div>
+      </Surgir>
+
       <FormResumido />
     </Container>
   );

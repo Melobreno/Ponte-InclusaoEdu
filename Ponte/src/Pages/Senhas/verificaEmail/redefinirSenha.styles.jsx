@@ -7,4 +7,11 @@ export const Container = styled.section`
   justify-content: space-between;
   height: 100%;
   width: 100%;
+  @media (max-width: 425px) {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
 `;

@@ -1,27 +1,24 @@
 import styled from "styled-components";
 
-import breakpoint from "../../breakpoints.js";
-
 export const Pagina = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-direction: row;
   gap: 15px;
 `;
 
 export const Section = styled.div`
   display: flex;
-
-  justify-content: space-around;
   justify-content: center;
+  margin-left: 5%;
 
   .linhaL {
-    margin: 20px;
+    margin: 40px;
     width: 0rem;
     height: 48rem;
-    @media (max-width: 1680px) {
-      margin: 0 2.5rem;
-    }
-    @media (max-width: 1150px) {
+  }
+  @media (max-width: 1024px) {
+    .linhaL {
       display: none;
     }
   }
@@ -37,15 +34,27 @@ export const Section = styled.div`
       align-items: end;
     }
   }
+
+  @media (max-width: 425px) {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+  }
 `;
 
 export const Texto = styled.div`
   background-color: aliceblue;
-  display: flex;
   height: 0;
+
+  @media (max-width: 425px) {
+    width: 350px;
+    margin-left: -50px;
+  }
 `;
 export const Escreva = styled.div`
-  width: 50rem;
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
   height: 13.5rem;
   background-color: aliceblue;
   border-radius: 0.37rem;
@@ -88,47 +97,50 @@ export const Escreva = styled.div`
     display: flex;
     justify-content: right;
     margin: 0.63rem 1.5rem;
+    span {
+      display: flex;
+      align-items: center;
+      color: red;
+      margin-right: 1rem;
+    }
   }
-  @media (max-width: 1024px) {
+
+  @media (max-width: 425px) {
     width: 26rem;
     height: 11rem;
-
+    transform: scale(0.7);
     textarea {
-      height: 70px;
+      width: 80vw;
+      font-size: 1rem;
+    }
+    hr {
+      display: none;
+    }
+    .botao {
+      justify-content: end;
+      margin-top: 10%;
+    }
+  }
+  @media (max-width: 1024px) {
+    textarea {
+      height: 40px;
+      border-bottom: 1px solid #4e4b4b;
     }
 
     hr {
-      width: 40vw;
+      display: none;
     }
-  }
-
-  @media (${breakpoint.mobile}) {
-    margin-top: -70px;
-    display: flex;
-    justify-content: center;
-    height: 13rem;
-    transform: scale(0.37);
   }
 `;
 
 export const Mensagem = styled.div`
   display: flex;
-
   width: 50rem;
   height: 13.5rem;
-  margin-top: 2.18rem;
+  margin-top: 3.18rem;
   background-color: aliceblue;
   border-radius: 0.375rem;
   box-shadow: 6px 6px 15px -6px rgba(0, 0, 0, 0.25);
-
-  @media (${breakpoint.mobile}) {
-    margin-top: -100px;
-    display: flex;
-
-    justify-content: center;
-    height: 13rem;
-    transform: scale(0.37);
-  }
 
   .texto {
     display: flex;
@@ -139,9 +151,6 @@ export const Mensagem = styled.div`
     margin-top: 0.4rem;
     margin-left: 0.71rem;
     justify-content: space-around;
-    @media (${breakpoint.mobile}) {
-      display: flex;
-    }
   }
   .conteudo p {
     width: 45.06rem;
@@ -198,22 +207,54 @@ export const Mensagem = styled.div`
     box-shadow: 0 0.33rem 0.7rem rgba(0, 0, 0, 0.37);
     transform: translateY(-1px);
   }
+
+  @media (max-width: 425px) {
+    margin-top: 0;
+    margin-bottom: 10px;
+    width: 300px;
+    padding: 0;
+    transform: scale(0.9);
+    margin-left: 50px;
+
+    .texto {
+      width: fit-content;
+    }
+
+    h1 {
+      width: fit-content;
+    }
+
+    .conteudo p {
+      width: fit-content;
+    }
+
+    .conteudo {
+      width: fit-content;
+    }
+
+    .enviado {
+      height: 100px;
+    }
+  }
 `;
 
 export const Atores = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0;
-  margin: 0;
+  margin-right: 5rem;
   height: 46rem;
   width: 350px;
 
-  @media (${breakpoint.mobile}) {
+  @media (max-width: 425px) {
     display: none;
   }
 
-  @media (${breakpoint.md}) {
+  @media (max-width: 1440px) {
     width: 250px;
+  }
+  @media (max-width: 1024px) {
+    display: none;
   }
   img {
     padding: 0.68rem;
@@ -233,7 +274,14 @@ export const Atores = styled.div`
     width: 15rem;
     display: flex;
     flex-direction: column;
+    text-decoration: none;
+    color: black;
+    a {
+      text-decoration: none;
+      color: black;
+    }
   }
+
   h2 {
     margin: 0;
     font-family: "Montserrat", sans-serif, Helvetica;

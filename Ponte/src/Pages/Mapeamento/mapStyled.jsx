@@ -1,24 +1,27 @@
 import styled from "styled-components";
 
 export const Map = styled.div`
+  font-family: "montserrat";
   display: flex;
-  justify-content: center;
-  gap: 5%;
+  gap: 10%;
+
   .busca {
     font-size: x-large;
-    font-family: "montserrat";
   }
 
   .nome {
     font-size: large;
     margin: 0.2rem;
-    font-family: "montserrat";
+  }
+
+  .nome a {
+    text-decoration: none;
+    color: black;
   }
 
   .ocupacao {
     font-size: small;
     margin: 0.2rem;
-    font-family: "montserrat";
   }
 
   .info1 {
@@ -46,7 +49,6 @@ export const Map = styled.div`
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
-    font-family: "montserrat";
   }
 
   .container1 {
@@ -54,10 +56,10 @@ export const Map = styled.div`
     width: 18rem;
     height: 17rem;
     border: 1.5px solid gray;
+    margin-top: 75px;
     flex-direction: column;
     border-radius: 20px;
     margin-left: 1rem;
-    font-family: "montserrat";
     padding: 0.4rem;
   }
 
@@ -95,7 +97,6 @@ export const Map = styled.div`
 
   .button .botao {
     font-size: 1.04rem;
-    font-family: "Montserrat", sans-serif;
     font-weight: 700;
     background-color: #25a6ce;
     border: none;
@@ -180,14 +181,18 @@ export const Map = styled.div`
   }
 
   @media (max-width: 425px) {
-    flex-direction: column;
-    align-items: center;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    flex-direction: row;
+    gap: 4%;
 
     .info1,
     .info2 {
-      flex-direction: column;
-      margin-left: 0;
-      width: 100%;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      width: 80%;
+      font-size: 10px;
     }
 
     .container3,
@@ -195,9 +200,19 @@ export const Map = styled.div`
     .container1,
     .card {
       width: 100%;
-      height: auto;
+      height: 15%;
+      padding: 0;
+    }
+    .status {
+      display: none;
     }
 
+    .endereco {
+      display: none;
+    }
+    .atendimento {
+      display: none;
+    }
     .container1 {
       margin-left: 0;
       margin-top: 2rem;
@@ -212,8 +227,24 @@ export const Map = styled.div`
     .ocupacao {
       font-size: smaller;
     }
+    .content {
+      gap: 10px;
+    }
+    .texto {
+      font-size: 12px;
+    }
+    .nomeCidade {
+      font-size: 13px;
+    }
   }
 `;
 
-export const Foto1 = styled.div``;
+export const Foto1 = styled.div`
+  .foto {
+    @media (max-width: 425px) {
+      margin-left: 2px;
+      width: 80px;
+    }
+  }
+`;
 export const Foto2 = styled.div``;
