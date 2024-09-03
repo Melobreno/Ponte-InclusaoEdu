@@ -7,7 +7,7 @@ function mainCadastro() {
   return (
     <Container>
       <Surgir>
-        <div>
+        <div className="fotoAvatar">
           <img src={VetorCadastro} alt="" />
         </div>
       </Surgir>

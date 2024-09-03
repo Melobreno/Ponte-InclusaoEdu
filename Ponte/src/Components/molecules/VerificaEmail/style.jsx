@@ -6,7 +6,6 @@ export const Container = styled.div`
   width: 50%;
   height: 50%;
   .mainContent {
-    transform: scale(1.2);
     display: flex;
     justify-content: center;
     align-items: center;
