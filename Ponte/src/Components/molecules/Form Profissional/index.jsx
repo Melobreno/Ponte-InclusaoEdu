@@ -104,12 +104,6 @@ function FormP() {
           <div className="containerBtn">
             <Btn txt={"Enviar"} />
           </div>
-          <p className="cadastroResp">
-            Precisa criar um cadastro para Responsável ?{" "}
-            <Link to={"/cadastroResp"}>
-              <span>Clique aqui</span>
-            </Link>
-          </p>
         </Surgir>
       </form>
     </S.FormSection>
