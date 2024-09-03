@@ -2,11 +2,14 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   font-family: "Montserrat", sans-serif;
   gap: 2%;
 
-
+  @media (max-width: 1024px) {
+    margin-left: 0;
+    max-width: 730px;
+  }
   @media (max-width: 425px) {
     display: flex;
     justify-content: space-between;
@@ -15,14 +18,9 @@ export const Container = styled.div`
     padding: 0 0;
     right: 0;
   }
-  @media (max-width: 1024px) {
-    margin-left: 0;
-  }
 `;
 export const Bloco = styled.div`
   display: flex;
-  justify-content: start;
-  width: 90%;
   margin-left: 5%;
 
   @media (max-width: 425px) {
@@ -31,6 +29,9 @@ export const Bloco = styled.div`
     margin-top: 0;
   }
   @media (max-width: 1024px) {
+    form {
+      max-width: 730px;
+    }
   }
 
   h1 {
@@ -58,9 +59,6 @@ export const Bloco = styled.div`
     display: flex;
     @media (max-width: 425px) {
       width: 100%;
-    }
-    @media (max-width: 1024px) {
-      width: 68%;
     }
   }
 
@@ -97,14 +95,20 @@ export const Bloco = styled.div`
     background-color: aliceblue;
     border-bottom: solid 2px #25a6ce;
     @media (max-width: 1024px) {
-      width: 92%;
-      height: 0;
+      width: 90%;
     }
   }
   .avatar {
     width: 2.6rem;
     height: 2.6rem;
+
+    @media (max-width: 1024px) {
+      h4 {
+        width: auto;
+      }
+    }
   }
+
   .bnt {
     margin: 20px;
     @media (max-width: 425px) {
@@ -128,11 +132,11 @@ export const Bloco = styled.div`
       padding: 5px;
     }
     @media (max-width: 1024px) {
-      width: 160%;
       padding: 0;
       height: auto;
       margin-left: 10px;
-      margin-right: 20px;
+      padding: 2%;
+      width: 94.5%;
     }
   }
   .botoes {
@@ -148,11 +152,10 @@ export const Bloco = styled.div`
       justify-content: end;
       margin-right: 15px;
       gap: 10px;
-      /* padding: 4px; */
     }
   }
 
-  .butaoSecudario {
+  .botaoSecudario {
     padding: 6px;
     border: none;
     border: solid 2px #25a6ce;
@@ -183,7 +186,6 @@ export const menssagem = styled.div`
     border: none;
     background-color: aliceblue;
     border-radius: 3px;
-    /* width: 54rem; */
     margin-left: 20px;
     gap: 20px;
     @media (max-width: 425px) {
@@ -195,8 +197,7 @@ export const menssagem = styled.div`
       font-size: 8px;
     }
     @media (max-width: 1024px) {
-      width: 70%;
-      padding: 0;
+      padding: 1%;
       margin-left: 10px;
     }
   }
@@ -212,12 +213,15 @@ export const menssagem = styled.div`
   p {
     font-size: 13px;
   }
-  .butoesCaixas {
+  .botoesCaixas {
     display: flex;
     justify-content: flex-end;
     gap: 20px;
+    @media (max-width: 1024px) {
+      padding: 0 1%;
+    }
   }
-  .butoesCaixas button {
+  .botoesCaixas button {
     border: none;
     border: solid 1px #25a6ce;
     border-radius: 15px;
@@ -236,7 +240,15 @@ export const menssagem = styled.div`
   }
   .avatar {
     display: flex;
-    width: 130px;
     gap: 7px;
+    width: auto;
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 730px;
+    width: 100%;
+  }
+
+  .secResp {
   }
 `;

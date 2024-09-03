@@ -37,7 +37,7 @@ function AtividadeResp() {
         <S.Bloco>
           <S.menssagem>
             <Surgir>
-               <h2>Atividades</h2>
+              <h2>Atividades</h2>
               {menssagem.map((useTexto) => (
                 <ul key={useTexto.id_ativi}>
                   <p className="avatar">

@@ -8,13 +8,6 @@ export const Section = styled.div`
   font-size: 1.25rem;
   font-weight: 550;
   font-family: "Montserrat", sans-serif;
-  @media (max-width: 425px) {
-    transform: scale(0.37);
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    gap: 18rem;
-  }
 
   .esquerdaNav {
     display: flex;
@@ -89,5 +82,25 @@ export const Section = styled.div`
   }
   .logo {
     width: 150px;
+  }
+  @media (max-width: 425px) {
+    justify-content: space-between;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    gap: 10%;
+    font-size: 0.8rem;
+
+    .logo {
+      width: 150px;
+    }
+
+    .direitaNav {
+      margin: 0;
+    }
+
+    .userName {
+      width: auto;
+    }
   }
 `;

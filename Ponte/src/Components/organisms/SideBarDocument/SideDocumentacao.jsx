@@ -8,7 +8,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { CiLogout } from "react-icons/ci";
 import { IoFolderOpenOutline } from "react-icons/io5";
 import { MdPersonAddAlt } from "react-icons/md";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function handleLogout() {
   localStorage.removeItem("token");
@@ -19,7 +19,6 @@ function handleLogout() {
 }
 const tipo_conta = localStorage.getItem("conta");
 const nomeUsuario = localStorage.getItem("usuario");
-const primNome = nomeUsuario;
 
 function SideDocumentacao() {
   return (
@@ -30,7 +29,7 @@ function SideDocumentacao() {
             <img src={img} alt="avatar" id="avatar" />
 
             <p id="infor-usuario">
-              <span className="item-descricao">{primNome.split(" ")[0]}</span>
+              <span className="item-descricao">{nomeUsuario}</span>
               <span className="item-descricao">conta: {tipo_conta}</span>
             </p>
           </div>

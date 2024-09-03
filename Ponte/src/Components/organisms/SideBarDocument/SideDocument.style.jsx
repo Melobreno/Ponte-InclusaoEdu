@@ -41,7 +41,7 @@ export const nav = styled.nav`
     justify-content: flex-start;
     gap: 10px;
     list-style: none;
-    padding: 0px;
+    padding: 0;
   }
   .side-item {
     border-radius: 10px;
