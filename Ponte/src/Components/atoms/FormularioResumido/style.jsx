@@ -67,6 +67,7 @@ export const Container = styled.section`
   .labeltitulo {
     margin-bottom: 10px;
     margin-top: 1rem;
+    font-weight: 500;
   }
 
   .inputTipo #tipo_conta {

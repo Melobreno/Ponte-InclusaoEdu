@@ -6,13 +6,17 @@ export const Container = styled.div`
   font-family: "Montserrat", sans-serif;
   gap: 2%;
 
+
   @media (max-width: 425px) {
-    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 0;
+    right: 0;
   }
   @media (max-width: 1024px) {
-    max-width: 100%;
     margin-left: 0;
-    margin-top: 0;
   }
 `;
 export const Bloco = styled.div`
@@ -26,8 +30,14 @@ export const Bloco = styled.div`
     margin-left: 0;
     margin-top: 0;
   }
+  @media (max-width: 1024px) {
+  }
+
   h1 {
     font-family: "Montserrat", sans-serif, Helvetica;
+    display: flex;
+    align-items: center;
+    justify-content: start;
     width: 36.4rem;
     height: 4.4rem;
     font-size: 2rem;
@@ -50,7 +60,7 @@ export const Bloco = styled.div`
       width: 100%;
     }
     @media (max-width: 1024px) {
-      width: 100%;
+      width: 68%;
     }
   }
 
@@ -61,11 +71,10 @@ export const Bloco = styled.div`
   .quadro {
     display: flex;
     align-items: center;
-    width: 53vw;
+    width: 55vw;
     height: 7.8rem;
     border-radius: 10px;
     border: solid 1px #848484;
-    padding: 2rem;
     gap: 2rem;
     @media (max-width: 425px) {
       width: 100%;
@@ -87,11 +96,9 @@ export const Bloco = styled.div`
     font-size: 0, 81rem;
     background-color: aliceblue;
     border-bottom: solid 2px #25a6ce;
-    @media (max-width: 425px) {
-    }
     @media (max-width: 1024px) {
-      width: 83%;
-      height: 0px;
+      width: 92%;
+      height: 0;
     }
   }
   .avatar {
@@ -121,8 +128,11 @@ export const Bloco = styled.div`
       padding: 5px;
     }
     @media (max-width: 1024px) {
-      width: 100%;
-      padding: 5px;
+      width: 160%;
+      padding: 0;
+      height: auto;
+      margin-left: 10px;
+      margin-right: 20px;
     }
   }
   .botoes {
@@ -173,21 +183,31 @@ export const menssagem = styled.div`
     border: none;
     background-color: aliceblue;
     border-radius: 3px;
-    width: 59rem;
+    /* width: 54rem; */
+    margin-left: 20px;
+    gap: 20px;
     @media (max-width: 425px) {
-      width: 100%;
+      width: 100px;
       padding: 0;
+      height: 30%;
       margin-left: 10px;
+      margin-right: 20px;
+      font-size: 8px;
     }
     @media (max-width: 1024px) {
-      width: 100%;
+      width: 70%;
       padding: 0;
       margin-left: 10px;
     }
   }
+  h2 {
+    margin: 20px;
+  }
   li {
-    padding: 30px;
+    margin-left: 5px;
+    margin-right: 10px;
     border: none;
+    width: 100%;
   }
   p {
     font-size: 13px;

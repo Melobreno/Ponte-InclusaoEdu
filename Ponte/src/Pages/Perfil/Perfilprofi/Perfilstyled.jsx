@@ -67,7 +67,13 @@ export const Perf = styled.div`
     color: #fff;
     font-weight: 500;
   }
+  .not-connected {
+    background-color: #25a6ce;
+  }
 
+  .connected {
+    background-color: #58da33;
+  }
   button:hover {
     transform: scale(1.1);
     transition: all 200ms ease-in-out;

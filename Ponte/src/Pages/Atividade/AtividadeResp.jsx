@@ -37,6 +37,7 @@ function AtividadeResp() {
         <S.Bloco>
           <S.menssagem>
             <Surgir>
+               <h2>Atividades</h2>
               {menssagem.map((useTexto) => (
                 <ul key={useTexto.id_ativi}>
                   <p className="avatar">
@@ -46,7 +47,6 @@ function AtividadeResp() {
                   <li className="caixasTexto">
                     {useTexto.texto} <p>{dataCriacao}</p>
                   </li>
-
                   <div className="butoesCaixas"></div>
                 </ul>
               ))}

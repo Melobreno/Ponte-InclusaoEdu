@@ -10,6 +10,10 @@ export const nav = styled.nav`
   border-radius: 0 5px 5px 0;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  @media (max-width: 425px) {
+    align-items: start;
+    width: 80px;
+  }
 
   #sidebar-container {
     margin: 10px;
@@ -51,16 +55,15 @@ export const nav = styled.nav`
     align-items: center;
     color: black;
     gap: 15px;
+    @media (max-width: 425px) {
+      justify-content: center;
+    }
   }
 
   .side-item span:hover {
     transition: all 10ms ease-in-out;
     transform: scale(1.03);
     font-weight: 500;
-  }
-
-  .side-item.active {
-    background-color: #25a6ce;
   }
 
   #sair {
@@ -78,5 +81,17 @@ export const nav = styled.nav`
   }
   #sideBar.open-sidebar {
     min-width: 15%;
+  }
+  @media (max-width: 425px) {
+    .item-descricao {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-size: 14px;
+    }
   }
 `;

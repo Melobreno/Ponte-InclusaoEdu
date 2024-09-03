@@ -9,31 +9,38 @@ import { Surgir } from "../../../Components/motion";
 
 function Perfilprof() {
   const [openSideBar, setOpenSideBar] = useState(false);
+  const [isConnected, setIsConnected] = useState(false);
+  const handleClick = () => {
+    setIsConnected(!isConnected);
+  };
   return (
     <>
       <Pesquisa setOpenSidebar={setOpenSideBar} />
       <Perf>
         <div className="side">{openSideBar && <SideDocumentacao />}</div>
         <Surgir>
-          <div className="conteiner1">
-            <div className="box1">
-              <div>
-                <img src={img} width={"100px"} alt="user" />
-              </div>
-              <div className="textoprof">
-                <p className="nomeProf">Priscila Silva</p>
-                <p className="ocupacao">Fonoaudióloga</p>
-              </div>
+        <div className="conteiner1">
+          <div className="box1">
+            <div>
+              <img src={img} width={"100px"} alt="user" />
             </div>
-            <div className="conteiner2">
-              <div className="botao">
-                <Link to={"/chat"}>
-                  <button className="btn">Conectar</button>
-                </Link>
-                <Link to={"/chat"}>
-                  <button className="btn">Mensagem</button>
-                </Link>
-              </div>
+            <div className="textoprof">
+              <p className="nomeProf">Priscila Silva</p>
+              <p className="ocupacao">Fonoaudióloga</p>
+            </div>
+          </div>
+          <div className="conteiner2">
+            <div className="botao">
+              <button
+                className={`btn ${isConnected ? "connected" : "not-connected"}`}
+                onClick={handleClick}
+              >
+                {isConnected ? "Conectado" : "Conectar"}
+              </button>
+              <Link to={"/chat"}>
+                <button className="btn">Mensagem</button>
+              </Link>
+            </div>
               <div className="box2">
                 <div className="sobre">
                   <h3 className="dadosprof">Dados Profissionais</h3>

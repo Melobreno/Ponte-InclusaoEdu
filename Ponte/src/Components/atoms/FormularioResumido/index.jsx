@@ -57,6 +57,7 @@ function FormResumido() {
             }}
           />
 
+
           <label>Email:</label>
           <input
             type="email"
