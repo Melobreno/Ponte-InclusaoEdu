@@ -103,9 +103,9 @@ export const Arquivos = styled.div`
 `;
 
 export const Arquivos1 = styled.div`
-  max-width: fit-content;
   display: flex;
   flex-direction: column;
+  width: 820px;
   gap: 20px;
 
   .timeDelete {
@@ -120,7 +120,7 @@ export const Arquivos1 = styled.div`
 
   .containerArquivos {
     width: 812px;
-    height: 80px;
+    margin-left: 6%;
     border-radius: 10px;
     border: solid 1px #000000;
     display: flex;
@@ -145,11 +145,12 @@ export const Arquivos1 = styled.div`
   @media (max-width: 425px) {
     gap: 15px;
     justify-content: start;
+    width: fit-content;
 
     .containerArquivos {
       width: 270px;
-      margin-left: -10px;
       height: auto;
+      margin-left: 10px;
       flex-direction: column;
       padding: 0 10px;
     }
