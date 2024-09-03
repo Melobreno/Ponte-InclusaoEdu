@@ -3,11 +3,8 @@ import styled from "styled-components";
 export const Pagina = styled.div`
   display: flex;
   justify-content: flex-start;
+  flex-direction: row;
   gap: 15px;
-  @media (max-width: 425px) {
-    flex-direction: column;
-    gap: 10px;
-  }
 `;
 
 export const Section = styled.div`
@@ -40,8 +37,9 @@ export const Section = styled.div`
   }
 
   @media (max-width: 425px) {
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
   }
 `;
 
@@ -50,8 +48,8 @@ export const Texto = styled.div`
   height: 0;
 
   @media (max-width: 425px) {
-    display: flex;
-    justify-content: center;
+    width: 350px;
+    margin-left: -50px;
   }
 `;
 export const Escreva = styled.div`
@@ -123,7 +121,6 @@ export const Escreva = styled.div`
 
   @media (max-width: 425px) {
     transform: scale(0.7);
-    margin-bottom: 40px;
     textarea {
       width: 80vw;
       font-size: 1rem;
@@ -147,15 +144,6 @@ export const Mensagem = styled.div`
   border-radius: 0.375rem;
   box-shadow: 6px 6px 15px -6px rgba(0, 0, 0, 0.25);
 
-  @media (max-width: 425px) {
-    margin-top: -100px;
-    display: flex;
-
-    justify-content: center;
-    height: 13rem;
-    transform: scale(0.38);
-  }
-
   .texto {
     display: flex;
     flex-direction: column;
@@ -165,9 +153,6 @@ export const Mensagem = styled.div`
     margin-top: 0.4rem;
     margin-left: 0.71rem;
     justify-content: space-around;
-    @media (max-width: 425px) {
-      display: flex;
-    }
   }
   .conteudo p {
     width: 45.06rem;
@@ -226,14 +211,31 @@ export const Mensagem = styled.div`
   }
 
   @media (max-width: 425px) {
+    margin-top: 0;
+    margin-bottom: 10px;
+    width: 300px;
+    padding: 0;
+    transform: scale(0.9);
+    margin-left: 50px;
+
     .texto {
-      font-size: 0.9rem;
+      width: fit-content;
     }
 
-    .balao,
-    .lixeira {
-      width: 1.5rem;
-      height: 1.5rem;
+    h1 {
+      width: fit-content;
+    }
+
+    .conteudo p {
+      width: fit-content;
+    }
+
+    .conteudo {
+      width: fit-content;
+    }
+
+    .enviado {
+      height: 100px;
     }
   }
 `;

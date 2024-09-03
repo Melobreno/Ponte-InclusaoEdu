@@ -44,8 +44,6 @@ function AtividadeResp() {
                 <li className="caixasTexto">
                   {useTexto.texto} <p>{dataCriacao}</p>
                 </li>
-
-                <div className="butoesCaixas"></div>
               </ul>
             ))}
           </S.menssagem>

@@ -110,7 +110,7 @@ function AtividadeProf() {
                     <button
                       type="button"
                       onClick={handleCancela}
-                      className="butaoSecudario"
+                      className="botaoSecudario"
                     >
                       Cancelar
                     </button>
@@ -128,7 +128,7 @@ function AtividadeProf() {
                   </p>
                   <li className="caixasTexto">
                     {useTexto.texto}
-                    <div className="butoesCaixas">
+                    <div className="botoesCaixas">
                       <button onClick={() => handleDelete(useTexto.id_ativi)}>
                         Deletar
                       </button>

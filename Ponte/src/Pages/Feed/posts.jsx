@@ -79,35 +79,33 @@ function Posts() {
           </div>
         </form>
       </Escreva>
-      <div>
-        {mensagens.map((mensagem) => (
-          <Mensagem key={mensagem.id}>
-            <div className="enviado">
-              <img className="img" src={img} alt="" />
+      {mensagens.map((mensagem) => (
+        <Mensagem key={mensagem.id}>
+          <div className="enviado">
+            <img className="img" src={img} alt="" />
 
-              <div className="texto">
-                <h1>{mensagem.usuario}</h1>
-                <div className="conteudo">
-                  <p>{mensagem.texto}</p>
-                </div>
+            <div className="texto">
+              <h1>{mensagem.usuario}</h1>
+              <div className="conteudo">
+                <p>{mensagem.texto}</p>
+              </div>
 
-                <div className="comentario">
-                  <p className="data">
-                    {new Date(mensagem.data).toLocaleDateString()}
-                  </p>
-                  <img className="balao" src={balao} alt="" />
-                  <button
-                    className="lixeira"
-                    onClick={() => handleDelete(mensagem.id)}
-                  >
-                    <img src={lixeira} alt="Ícone de lixeira" />
-                  </button>
-                </div>
+              <div className="comentario">
+                <p className="data">
+                  {new Date(mensagem.data).toLocaleDateString()}
+                </p>
+                <img className="balao" src={balao} alt="" />
+                <button
+                  className="lixeira"
+                  onClick={() => handleDelete(mensagem.id)}
+                >
+                  <img src={lixeira} alt="Ícone de lixeira" />
+                </button>
               </div>
             </div>
-          </Mensagem>
-        ))}
-      </div>
+          </div>
+        </Mensagem>
+      ))}
     </>
   );
 }

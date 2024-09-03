@@ -28,9 +28,7 @@ function Feed() {
         <SideDocumentacao />
         <Section>
           <Texto>
-            <div className="posts">
-              <Posts />
-            </div>
+            <Posts />
           </Texto>
           <hr className="linhaL" />
           <Atores>
