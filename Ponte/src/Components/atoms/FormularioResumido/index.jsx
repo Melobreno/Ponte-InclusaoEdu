@@ -2,6 +2,7 @@ import { Container } from "./style";
 import Btn from "../Button";
 import { useState } from "react";
 import api from "../../../api/api";
+import { Surgir, DirCentro } from "../../motion";
 function FormResumido() {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
@@ -44,96 +45,100 @@ function FormResumido() {
 
   return (
     <Container>
-      <h1>Faça seu Cadastro</h1>
-      <form onSubmit={handleSubmit}>
-        <label>Nome Completo:</label>
-        <input
-          type="text"
-          value={nome}
-          onChange={(event) => {
-            setNome(event.target.value);
-          }}
-        />
-
-        <label>Email:</label>
-        <input
-          type="email"
-          value={email}
-          onChange={(event) => {
-            setEmail(event.target.value);
-          }}
-        />
-
-        <label>Senha:</label>
-        <input
-          type="password"
-          value={senha}
-          onChange={(event) => {
-            setSenha(event.target.value);
-          }}
-        />
-
-        <label>Confirme sua Senha:</label>
-        <input
-          type="password"
-          value={confirmSenha}
-          onChange={(event) => {
-            setConfirmSenha(event.target.value);
-          }}
-        />
-        <div className="checkbox">
-          <div>
-            <input type="checkbox" name="" id="" />
-            <span>
-              Ao selecionar, você autoriza a Ponte enviar Emails com
-              atualizações e novidades da ferramenta.
-            </span>
-          </div>
-
-          <div>
-            <input type="checkbox" name="" id="" />
-            <span>
-              Ao selecionar, você está concordando com as
-              <span className="politicSpan"> políticas de privacidades.</span>
-            </span>
-          </div>
-        </div>
-
-        <label htmlFor="" className="labeltitulo">
-          Qual o tipo da conta ?
-        </label>
-        <label htmlFor="" className="inputTipo">
-          <span>Profissional</span>
+      <DirCentro>
+        <h1>Faça seu Cadastro</h1>
+        <form onSubmit={handleSubmit}>
+          <label>Nome Completo:</label>
           <input
-            type="radio"
-            name="tipo_conta"
-            id="tipo_conta"
-            value="profissional"
-            checked={conta === "profissional"}
+            type="text"
+            value={nome}
             onChange={(event) => {
-              setConta(event.target.value);
+              setNome(event.target.value);
             }}
           />
-        </label>
 
-        <label htmlFor="" className="inputTipo">
-          <span>Responsável</span>
+          <label>Email:</label>
           <input
-            type="radio"
-            name="tipo_conta"
-            id="tipo_conta"
-            value="responsavel"
-            checked={conta === "responsavel"}
+            type="email"
+            value={email}
             onChange={(event) => {
-              setConta(event.target.value);
+              setEmail(event.target.value);
             }}
           />
-        </label>
 
-        <div className="btnContainer">
-          <Btn txt={"Continuar"} />
-        </div>
-      </form>
+          <label>Senha:</label>
+          <input
+            type="password"
+            value={senha}
+            onChange={(event) => {
+              setSenha(event.target.value);
+            }}
+          />
+
+          <label>Confirme sua Senha:</label>
+          <input
+            type="password"
+            value={confirmSenha}
+            onChange={(event) => {
+              setConfirmSenha(event.target.value);
+            }}
+          />
+          <label htmlFor="" className="labeltitulo">
+            Qual o tipo da conta ?
+          </label>
+          <div className="tipoConta">
+            <label htmlFor="" className="inputTipo">
+              <span>Profissional</span>
+              <input
+                type="radio"
+                name="tipo_conta"
+                id="tipo_conta"
+                value="profissional"
+                checked={conta === "profissional"}
+                onChange={(event) => {
+                  setConta(event.target.value);
+                }}
+              />
+            </label>
+
+            <label htmlFor="" className="inputTipo">
+              <span>Responsável</span>
+              <input
+                type="radio"
+                name="tipo_conta"
+                id="tipo_conta"
+                value="responsavel"
+                checked={conta === "responsavel"}
+                onChange={(event) => {
+                  setConta(event.target.value);
+                }}
+              />
+            </label>
+          </div>
+
+          <div className="checkbox">
+            <div>
+              <input type="checkbox" name="" id="" />
+              <span>
+                Ao selecionar, você autoriza a Ponte enviar Emails com
+                atualizações e novidades da ferramenta.
+              </span>
+            </div>
+
+            <div>
+              <input type="checkbox" name="" id="" />
+              <span>
+                Ao selecionar, você está concordando com as
+                <span className="politicSpan"> políticas de privacidades.</span>
+              </span>
+            </div>
+          </div>
+
+          <div className="btnContainer">
+            <Btn txt={"Continuar"} />
+          </div>
+        </form>
+      </DirCentro>
     </Container>
   );
 }

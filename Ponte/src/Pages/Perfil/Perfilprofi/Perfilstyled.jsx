@@ -50,7 +50,7 @@ export const Perf = styled.div`
     padding: 1rem 0.4rem;
     height: 2rem;
     border-radius: 20px;
-    justify-content: end;
+    justify-content: flex-start;
     gap: 1rem;
     width: 77%;
   }

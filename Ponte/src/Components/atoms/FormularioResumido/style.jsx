@@ -20,7 +20,7 @@ export const Container = styled.section`
 
   h1 {
     text-align: center;
-    margin: 0;
+    margin: 2rem;
     font-size: 2rem;
   }
 
@@ -47,6 +47,10 @@ export const Container = styled.section`
     height: 45px;
   }
 
+  .tipoConta {
+    display: flex;
+    gap: 2rem;
+  }
   .inputTipo {
     display: flex;
     justify-content: start;
@@ -55,11 +59,14 @@ export const Container = styled.section`
   }
 
   .inputTipo span {
-    width: 160px;
+    width: fit-content;
+
+    margin-right: 1rem;
   }
 
   .labeltitulo {
     margin-bottom: 10px;
+    margin-top: 1rem;
   }
 
   .inputTipo #tipo_conta {
