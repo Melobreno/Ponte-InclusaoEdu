@@ -4,7 +4,6 @@ import * as S from "./atividade.style";
 import Btn from "../../Components/atoms/Button";
 import avata from "../../Assets/Avatar 1.svg";
 import { useState, useEffect } from "react";
-const usuarioLog = localStorage.getItem("usuario");
 import api from "../../api/api";
 import { Surgir } from "../../Components/motion";
 

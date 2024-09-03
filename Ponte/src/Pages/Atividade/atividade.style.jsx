@@ -13,7 +13,7 @@ export const Container = styled.div`
   @media (max-width: 425px) {
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     padding: 0 0;
     right: 0;
@@ -60,10 +60,19 @@ export const Bloco = styled.div`
     @media (max-width: 425px) {
       width: 100%;
     }
+    @media (max-width: 1024px) {
+      width: min-content;
+    }
   }
 
   form {
     width: 1100px;
+    @media (max-width: 425px) {
+      width: 20rem;
+    }
+    @media (max-width: 1024px) {
+      width: fit-content;
+    }
   }
 
   .quadro {
@@ -87,7 +96,7 @@ export const Bloco = styled.div`
     background-color: white;
   }
   .digite.ampliado {
-    width: 46vw;
+    width: 64rem;
     height: 20px;
     padding: 60px 30px;
     border-radius: 0;
@@ -95,7 +104,12 @@ export const Bloco = styled.div`
     background-color: aliceblue;
     border-bottom: solid 2px #25a6ce;
     @media (max-width: 1024px) {
-      width: 90%;
+      width: 70%;
+      font-size: 0.5rem;
+    }
+    @media (max-width: 425px) {
+      width: 14rem;
+      word-wrap: break-word;
     }
   }
   .avatar {
@@ -122,13 +136,13 @@ export const Bloco = styled.div`
     display: flex;
     flex-direction: column;
     gap: 30px;
-    width: 87.4%;
+    width: 67.4rem;
     background-color: white;
     box-shadow: 1px 1px 1px 1px rgba(111, 111, 111, 0.2);
     padding: 10px;
     border-radius: 3px;
     @media (max-width: 425px) {
-      width: 100%;
+      width: 19rem;
       padding: 5px;
     }
     @media (max-width: 1024px) {
@@ -136,7 +150,7 @@ export const Bloco = styled.div`
       height: auto;
       margin-left: 10px;
       padding: 2%;
-      width: 94.5%;
+      width: max-content;
     }
   }
   .botoes {
@@ -144,6 +158,8 @@ export const Bloco = styled.div`
     gap: 20px;
     justify-content: flex-end;
     @media (max-width: 425px) {
+      height: 2rem;
+
       justify-content: center;
       gap: 10px;
       padding: 4px;
@@ -173,7 +189,6 @@ export const Bloco = styled.div`
       width: 70px;
     }
     @media (max-width: 1024px) {
-      width: 70px;
     }
   }
 `;
@@ -186,10 +201,10 @@ export const menssagem = styled.div`
     border: none;
     background-color: aliceblue;
     border-radius: 3px;
-    margin-left: 20px;
+    margin-left: 1px;
     gap: 20px;
     @media (max-width: 425px) {
-      width: 100px;
+      width: 18rem;
       padding: 0;
       height: 30%;
       margin-left: 10px;
@@ -199,6 +214,7 @@ export const menssagem = styled.div`
     @media (max-width: 1024px) {
       padding: 1%;
       margin-left: 10px;
+      width: max-content;
     }
   }
   h2 {
@@ -216,7 +232,8 @@ export const menssagem = styled.div`
   .botoesCaixas {
     display: flex;
     justify-content: flex-end;
-    gap: 20px;
+    gap: 1.6rem;
+    margin-right: 1rem;
     @media (max-width: 1024px) {
       padding: 0 1%;
     }
