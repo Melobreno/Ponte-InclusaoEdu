@@ -100,19 +100,6 @@ function FormP() {
                 {...register("Cadastro Prof")}
               />
             </label>
-
-            <label>
-              Crie uma Senha:
-              <input type="text" id="inputSenha" {...register("CrieSenha")} />
-            </label>
-            <label htmlFor="">
-              Digite a senha novamente:
-              <input
-                type="text"
-                id="inputSenhaNov"
-                {...register("confirmSenha")}
-              />
-            </label>
           </div>
           <div className="containerBtn">
             <Btn txt={"Enviar"} />
