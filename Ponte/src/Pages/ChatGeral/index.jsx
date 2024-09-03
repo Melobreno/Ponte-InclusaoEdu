@@ -62,14 +62,12 @@ function Chat() {
               </div>
             </div>
 
-            <div>
-              <Direita>
-                <iframe
-                  src="https://chat-frontend-rjpu.onrender.com"
-                  frameborder="0"
-                ></iframe>
-              </Direita>
-            </div>
+            <Direita>
+              <iframe
+                src="https://chat-frontend-rjpu.onrender.com"
+                frameborder="0"
+              ></iframe>
+            </Direita>
           </section>
         </Surgir>
       </Section>

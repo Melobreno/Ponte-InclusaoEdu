@@ -67,16 +67,15 @@ export const Arquivos = styled.div`
     }
   }
   @media (max-width: 425px) {
-    margin-left: 30px;
     gap: 15px;
 
     .containerFunc {
       display: flex;
-      width: 400px;
+      width: 320px;
       height: 80px;
       height: auto;
       flex-direction: row;
-      align-items: center;
+      text-align: start;
     }
   }
 `;

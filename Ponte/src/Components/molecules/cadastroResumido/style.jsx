@@ -10,11 +10,15 @@ export const Container = styled.section`
   gap: 60px;
 
   @media (max-width: 425px) {
-    div {
-      display: none;
-    }
     display: flex;
     justify-content: center;
-    margin: 0 auto;
+    margin: 0;
+    width: auto;
+    height: auto;
+  }
+  .fotoAvatar {
+    @media (max-width: 425px) {
+      display: none;
+    }
   }
 `;

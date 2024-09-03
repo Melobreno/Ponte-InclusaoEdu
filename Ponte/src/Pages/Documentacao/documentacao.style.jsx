@@ -8,19 +8,35 @@ export const Container = styled.div`
   gap: 10%;
 
   @media (max-width: 425px) {
-    padding: 10px;
+    gap: 0;
   }
 `;
 
 export const Bloco = styled.div`
   display: flex;
   flex-direction: column;
-
   font-family: "Montserrat", sans-serif;
 
   .tituloh2 {
     text-align: start;
     margin-left: 50px;
+  }
+  @media (max-width: 1024px) {
+    .tituloh2 {
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: 425px) {
+    width: 85vw;
+
+    .tituloh2 {
+      margin-left: 10px;
+      width: fit-content;
+      h2 {
+        font-size: 18px;
+      }
+    }
   }
 `;
 export const Arquivos = styled.div`
@@ -57,21 +73,20 @@ export const Arquivos = styled.div`
   }
 
   @media (max-width: 1024px) {
-    transform: scale(0.8);
     margin: 0;
 
     .containerFunc {
-      width: 480px;
+      width: 590px;
     }
   }
   @media (max-width: 425px) {
-    margin-left: 30px;
+    margin-left: 10px;
     gap: 15px;
 
     .containerFunc {
+      width: 280px;
+      margin-left: 0;
       display: flex;
-      width: 400px;
-      height: 80px;
       height: auto;
       flex-direction: row;
       align-items: center;
@@ -79,6 +94,10 @@ export const Arquivos = styled.div`
 
     .containerFunc img {
       width: 24px;
+    }
+
+    .containerFunc p {
+      font-size: 16px;
     }
   }
 `;
@@ -88,7 +107,6 @@ export const Arquivos1 = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-left: 50px;
 
   .timeDelete {
     display: flex;
@@ -117,23 +135,23 @@ export const Arquivos1 = styled.div`
   }
 
   @media (max-width: 1024px) {
-    transform: scale(0.8);
     justify-content: start;
     margin: 0;
     .containerArquivos {
       margin-left: 0;
+      width: 600px;
     }
   }
   @media (max-width: 425px) {
-    margin-left: 20px;
     gap: 15px;
+    justify-content: start;
 
     .containerArquivos {
-      width: 90vw;
+      width: 270px;
+      margin-left: -10px;
       height: auto;
-      margin-left: 0;
       flex-direction: column;
-      padding: 10px;
+      padding: 0 10px;
     }
 
     .containerArquivos p {
@@ -143,8 +161,8 @@ export const Arquivos1 = styled.div`
       gap: 10px;
     }
 
-    .msgSemArquivo {
-      width: 90vw;
+    .containerArquivos p {
+      overflow: hidden;
     }
   }
 `;

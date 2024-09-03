@@ -11,7 +11,7 @@ export const nav = styled.nav`
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   @media (max-width: 425px) {
-    align-items: start;
+    align-items: center;
     width: 80px;
   }
 
@@ -93,5 +93,12 @@ export const nav = styled.nav`
       text-overflow: ellipsis;
       font-size: 14px;
     }
+
+    #usuario {
+      gap: 0;
+    }
+  }
+  @media (max-width: 425px) {
+    margin-right: 0;
   }
 `;

@@ -30,8 +30,6 @@ export const Container = styled.div`
     padding: 0;
   }
 
-  li {
-  }
   a::after {
     content: "";
     position: absolute;
@@ -73,6 +71,9 @@ export const Container = styled.div`
   }
 
   @media (max-width: 1024px) {
+    align-items: center;
+    width: auto;
+    gap: 20%;
     .menu-desk {
       display: none;
     }
@@ -183,6 +184,8 @@ export const Container = styled.div`
     }
   }
   @media (max-width: 480px) {
+    display: flex;
+    justify-content: space-around;
     .menu-container {
       padding: 10px;
     }
