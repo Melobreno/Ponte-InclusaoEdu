@@ -142,9 +142,8 @@ export const Container = styled.div`
   @media (max-width: 425px) {
     display: flex;
     align-items: center;
-    width: 100%;
-    height: auto;
-    margin: 1rem auto;
+    height: 100vh;
+    margin: 0;
   }
 
   h1 {

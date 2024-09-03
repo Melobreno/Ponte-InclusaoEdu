@@ -104,10 +104,8 @@ export const Container = styled.section`
   }
 
   @media (max-width: 425px) {
-    width: 100%;
     height: auto;
-    gap: 20px;
-    padding: 0 10px;
+    margin-right: 10%;
 
     form {
       width: 100%;
@@ -129,7 +127,6 @@ export const Container = styled.section`
   }
 
   .checkbox {
-    width: 100%;
     display: flex;
     flex-direction: column;
     margin-top: 0.5rem;

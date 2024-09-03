@@ -8,6 +8,10 @@ export const Container = styled.section`
   height: 100%;
   width: 100%;
   @media (max-width: 425px) {
-    width: 60%;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
   }
 `;

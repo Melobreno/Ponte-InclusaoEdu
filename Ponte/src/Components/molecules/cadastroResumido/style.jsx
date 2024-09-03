@@ -12,7 +12,9 @@ export const Container = styled.section`
   @media (max-width: 425px) {
     display: flex;
     justify-content: center;
-    margin: 0 auto;
+    margin: 0;
+    width: auto;
+    height: auto;
   }
   .fotoAvatar {
     @media (max-width: 425px) {

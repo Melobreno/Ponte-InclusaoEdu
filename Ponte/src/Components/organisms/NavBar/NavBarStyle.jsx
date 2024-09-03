@@ -17,4 +17,10 @@ export const Container = styled.div`
     gap: 40%;
     align-items: center;
   }
+
+  @media (max-width: 425px) {
+    display: flex;
+
+    padding: 0;
+  }
 `;

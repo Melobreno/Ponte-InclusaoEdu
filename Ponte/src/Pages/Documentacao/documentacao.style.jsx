@@ -107,7 +107,6 @@ export const Arquivos1 = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-left: 50px;
 
   .timeDelete {
     display: flex;
@@ -144,7 +143,6 @@ export const Arquivos1 = styled.div`
     }
   }
   @media (max-width: 425px) {
-    margin-left: 20px;
     gap: 15px;
     justify-content: start;
 
@@ -165,10 +163,6 @@ export const Arquivos1 = styled.div`
 
     .containerArquivos p {
       overflow: hidden;
-    }
-
-    .msgSemArquivo {
-      width: 90vw;
     }
   }
 `;
