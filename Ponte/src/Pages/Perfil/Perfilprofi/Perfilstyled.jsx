@@ -72,7 +72,7 @@ export const Perf = styled.div`
   }
 
   .connected {
-    background-color: #58da33;
+    background-color: #f4c500;
   }
   button:hover {
     transform: scale(1.1);
