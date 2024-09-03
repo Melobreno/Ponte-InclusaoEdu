@@ -122,8 +122,78 @@ export const Section = styled.div`
     margin-left: 140px;
   }
 
+  @media (max-width: 1440px) {
+    display: flex;
+    gap: 0;
+    .conversasIf {
+      margin-left: 5rem;
+    }
+  }
+  @media (max-width: 1024px) {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    gap: 0;
+    margin: 0;
+
+    .secEsquerda {
+      display: flex;
+      justify-content: flex-start;
+
+      width: 15rem;
+    }
+    .conversasIf {
+      margin-left: 2rem;
+      width: 90%;
+    }
+    .bot1 {
+      display: flex;
+      width: fit-content;
+    }
+    .bot {
+      display: flex;
+      width: fit-content;
+    }
+    .search {
+      display: none;
+    }
+    .pesquisar {
+      display: flex;
+
+      width: 80%;
+    }
+    .conversa {
+      display: flex;
+      justify-content: flex-start;
+      width: 15rem;
+    }
+    span {
+      display: none;
+    }
+    .texto {
+      display: flex;
+      width: fit-content;
+    }
+  }
+
   @media (max-width: 425px) {
-    flex-wrap: wrap-reverse;
+    background-color: #25a6ce;
+    display: flex;
+
+    .secEsquerda {
+      background-color: #25a6ce;
+      display: none;
+      width: 100%;
+    }
+    .conversasIf {
+      display: flex;
+      justify-content: flex-start;
+      margin: 0;
+    }
+
+    .pesquisar {
+      background-color: black;
+    }
   }
 `;
 export const Direita = styled.div`
@@ -132,10 +202,21 @@ export const Direita = styled.div`
     height: 42rem;
     border: 1px solid black;
   }
+  @media (max-width: 1440px) {
+  }
+
+  @media (max-width: 1024px) {
+    width: 425px;
+  }
 
   @media (max-width: 425px) {
+    margin: 0;
+    transform: scale(0.7);
+    display: flex;
+    justify-content: center;
+
     iframe {
-      width: 423px;
+      width: 400px;
     }
   }
 `;
