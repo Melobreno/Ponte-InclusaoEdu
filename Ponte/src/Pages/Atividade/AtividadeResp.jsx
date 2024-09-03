@@ -4,6 +4,8 @@ import avata from "../../Assets/Avatar 1.svg";
 import * as S from "./atividade.style";
 import api from "../../api/api";
 import { useState, useEffect } from "react";
+import { Surgir } from "../../Components/motion";
+
 function AtividadeResp() {
   const [menssagem, setMenssagem] = useState([]);
   const [dataCriacao, setDataCriacao] = useState("");
@@ -34,20 +36,21 @@ function AtividadeResp() {
         <SideDocumentacao />
         <S.Bloco>
           <S.menssagem>
-            <h2>Atividades</h2>
-            {menssagem.map((useTexto) => (
-              <ul key={useTexto.id_ativi}>
-                <p className="avatar">
-                  <img src={avata} alt="avata" />
-                  <h4>Lucas Melo</h4>
-                </p>
-                <li className="caixasTexto">
-                  {useTexto.texto} <p>{dataCriacao}</p>
-                </li>
-
-                <div className="butoesCaixas"></div>
-              </ul>
-            ))}
+            <Surgir>
+               <h2>Atividades</h2>
+              {menssagem.map((useTexto) => (
+                <ul key={useTexto.id_ativi}>
+                  <p className="avatar">
+                    <img src={avata} alt="avata" />
+                    <h4>Lucas Melo</h4>
+                  </p>
+                  <li className="caixasTexto">
+                    {useTexto.texto} <p>{dataCriacao}</p>
+                  </li>
+                  <div className="butoesCaixas"></div>
+                </ul>
+              ))}
+            </Surgir>
           </S.menssagem>
         </S.Bloco>
       </S.Container>

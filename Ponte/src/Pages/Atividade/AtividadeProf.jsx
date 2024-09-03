@@ -6,6 +6,7 @@ import avata from "../../Assets/Avatar 1.svg";
 import { useState, useEffect } from "react";
 const usuarioLog = localStorage.getItem("usuario");
 import api from "../../api/api";
+import { Surgir } from "../../Components/motion";
 
 function AtividadeProf() {
   const textoBtn = "Postar";
@@ -86,61 +87,64 @@ function AtividadeProf() {
   return (
     <>
       <Pesquisa />
+
       <S.Container>
         <SideDocumentacao />
         <S.Bloco>
-          <section>
-            <h1>Quadro de atividades</h1>
-            <form onSubmit={handleSubmit}>
-              <div className="inputEstilizando">
-                <input
-                  className={`digite ${isFocused ? "ampliado" : ""}`}
-                  type="text"
-                  placeholder="Digite sua proposta de atividade..."
-                  value={texto}
-                  onFocus={handleFocused}
-                  onChange={(event) => setTexto(event.target.value)}
-                />
-                {isFocused && (
-                  <div className="botoes">
-                    <Btn
-                      type="submit"
-                      txt={editando ? "Atualizar" : textoBtn}
-                    />
-                    <button
-                      type="button"
-                      onClick={handleCancela}
-                      className="butaoSecudario"
-                    >
-                      Cancelar
-                    </button>
-                  </div>
-                )}
-              </div>
-            </form>
-
-            <S.menssagem>
-              {messagem.map((useTexto) => (
-                <ul key={useTexto.id_ativi}>
-                  <p className="avatar">
-                    <img src={avata} alt="" />
-                    <h4>{usuarioLog}</h4>
-                  </p>
-                  <li className="caixasTexto">
-                    {useTexto.texto}
-                    <div className="butoesCaixas">
-                      <button onClick={() => handleDelete(useTexto.id_ativi)}>
-                        Deletar
-                      </button>
-                      <button onClick={() => handleEdit(useTexto)}>
-                        Editar
+          <Surgir>
+            <section>
+              <h1>Quadro de atividades</h1>
+              <form onSubmit={handleSubmit}>
+                <div className="inputEstilizando">
+                  <input
+                    className={`digite ${isFocused ? "ampliado" : ""}`}
+                    type="text"
+                    placeholder="Digite sua proposta de atividade..."
+                    value={texto}
+                    onFocus={handleFocused}
+                    onChange={(event) => setTexto(event.target.value)}
+                  />
+                  {isFocused && (
+                    <div className="botoes">
+                      <Btn
+                        type="submit"
+                        txt={editando ? "Atualizar" : textoBtn}
+                      />
+                      <button
+                        type="button"
+                        onClick={handleCancela}
+                        className="butaoSecudario"
+                      >
+                        Cancelar
                       </button>
                     </div>
-                  </li>
-                </ul>
-              ))}
-            </S.menssagem>
-          </section>
+                  )}
+                </div>
+              </form>
+
+              <S.menssagem>
+                {messagem.map((useTexto) => (
+                  <ul key={useTexto.id_ativi}>
+                    <p className="avatar">
+                      <img src={avata} alt="" />
+                      <h4>Lucas Melo</h4>
+                    </p>
+                    <li className="caixasTexto">
+                      {useTexto.texto}
+                      <div className="butoesCaixas">
+                        <button onClick={() => handleDelete(useTexto.id_ativi)}>
+                          Deletar
+                        </button>
+                        <button onClick={() => handleEdit(useTexto)}>
+                          Editar
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                ))}
+              </S.menssagem>
+            </section>
+          </Surgir>
         </S.Bloco>
       </S.Container>
     </>
