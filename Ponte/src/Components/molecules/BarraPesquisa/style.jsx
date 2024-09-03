@@ -90,7 +90,6 @@ export const Section = styled.div`
     padding: 0;
     gap: 10%;
     font-size: 0.8rem;
-    padding: 0 10px;
 
     .logo {
       width: 150px;

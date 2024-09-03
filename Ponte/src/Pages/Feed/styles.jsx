@@ -16,10 +16,9 @@ export const Section = styled.div`
     margin: 40px;
     width: 0rem;
     height: 48rem;
-    @media (max-width: 1680px) {
-      margin: 0 2.5rem;
-    }
-    @media (max-width: 1150px) {
+  }
+  @media (max-width: 1024px) {
+    .linhaL {
       display: none;
     }
   }
@@ -106,20 +105,9 @@ export const Escreva = styled.div`
     }
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 425px) {
     width: 26rem;
     height: 11rem;
-
-    textarea {
-      height: 40px;
-    }
-
-    hr {
-      width: 10vw;
-    }
-  }
-
-  @media (max-width: 425px) {
     transform: scale(0.7);
     textarea {
       width: 80vw;
@@ -131,6 +119,16 @@ export const Escreva = styled.div`
     .botao {
       justify-content: end;
       margin-top: 10%;
+    }
+  }
+  @media (max-width: 1024px) {
+    textarea {
+      height: 40px;
+      border-bottom: 1px solid #4e4b4b;
+    }
+
+    hr {
+      display: none;
     }
   }
 `;
@@ -254,6 +252,9 @@ export const Atores = styled.div`
 
   @media (max-width: 1440px) {
     width: 250px;
+  }
+  @media (max-width: 1024px) {
+    display: none;
   }
   img {
     padding: 0.68rem;
