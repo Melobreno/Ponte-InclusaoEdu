@@ -131,13 +131,13 @@ export const Section = styled.div`
   }
   @media (max-width: 1024px) {
     display: flex;
-    justify-content: space-between;
-    width: 50%;
+    justify-content: flex-start;
+    width: 100vw;
     gap: 0;
     margin: 0;
 
     .secEsquerda {
-      display: flex;
+      display: none;
       justify-content: flex-start;
 
       width: 15rem;
@@ -177,13 +177,8 @@ export const Section = styled.div`
   }
 
   @media (max-width: 425px) {
-    background-color: #25a6ce;
-    display: flex;
-
     .secEsquerda {
-      background-color: #25a6ce;
       display: none;
-      width: 100%;
     }
     .conversasIf {
       display: flex;
@@ -202,21 +197,20 @@ export const Direita = styled.div`
     height: 42rem;
     border: 1px solid black;
   }
-  @media (max-width: 1440px) {
-  }
 
   @media (max-width: 1024px) {
-    width: 425px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
   }
 
   @media (max-width: 425px) {
-    margin: 0;
-    transform: scale(0.7);
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    width: fit-content;
 
     iframe {
-      width: 400px;
+      width: 80vw;
     }
   }
 `;
