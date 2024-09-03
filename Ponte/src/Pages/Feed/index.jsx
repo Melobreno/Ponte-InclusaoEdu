@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import SideDocumentacao from "../../Components/organisms/SideBarDocument/SideDocumentacao";
 import { Link } from "react-router-dom";
 import TelaCarregamento from "../../Components/atoms/telaCarregamento/TelaCarregamneto";
+import { Surgir } from "../../Components/motion";
 
 function Feed() {
   const [carregando, setCarregando] = useState(true);
@@ -28,33 +29,39 @@ function Feed() {
         <SideDocumentacao />
         <Section>
           <Texto>
-            <Posts />
+            <Surgir>
+              <div className="posts">
+                <Posts />
+              </div>
+            </Surgir>
           </Texto>
           <hr className="linhaL" />
           <Atores>
-            <div className="atores">
-              <img className="img" src={img} alt="" />
-              <div className="texto">
-                <h2>{nomeUsuario}</h2>
-                <p>{tipoConta}</p>
+            <Surgir>
+              <div className="atores">
+                <img className="img" src={img} alt="" />
+                <div className="texto">
+                  <h2>{nomeUsuario}</h2>
+                  <p>{tipoConta}</p>
+                </div>
               </div>
-            </div>
-            <div className="atores">
-              <img className="img" src={img2} alt="" />
-              <div className="texto">
-                <Link to={"/perfilprof"}>
-                  <h2>Priscila Silva</h2>
-                </Link>
-                <p>Fonoaudiologa</p>
+              <div className="atores">
+                <img className="img" src={img2} alt="" />
+                <div className="texto">
+                  <Link to={"/perfilprof"}>
+                    <h2>Priscila Silva</h2>
+                  </Link>
+                  <p>Fonoaudiologa</p>
+                </div>
               </div>
-            </div>
-            <div className="atores">
-              <img className="img" src={img3} alt="" />
-              <div className="texto">
-                <h2>Erick Oliveira</h2>
-                <p>Terapeuta</p>
+              <div className="atores">
+                <img className="img" src={img3} alt="" />
+                <div className="texto">
+                  <h2>Erick Oliveira</h2>
+                  <p>Terapeuta</p>
+                </div>
               </div>
-            </div>
+            </Surgir>
           </Atores>
         </Section>
       </Pagina>
