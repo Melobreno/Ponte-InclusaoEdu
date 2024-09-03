@@ -8,6 +8,9 @@ export const CirculoAzul = styled.section`
   width: 55rem;
   height: 56.75rem;
   border-radius: 0rem 50rem 50rem 0rem;
+  @media (max-width: 425px) {
+    display: none;
+  }
 `;
 
 export const img = styled.div`
@@ -15,4 +18,7 @@ export const img = styled.div`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  @media (max-width: 425px) {
+    display: none;
+  }
 `;

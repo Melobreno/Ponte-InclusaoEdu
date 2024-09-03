@@ -98,4 +98,7 @@ export const nav = styled.nav`
       gap: 0;
     }
   }
+  @media (max-width: 425px) {
+    margin-right: 0;
+  }
 `;
