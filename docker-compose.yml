@@ -1,0 +1,54 @@
+services:
+  # Serviço do MySQL
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ponte_db
+      MYSQL_USER: prisma
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - app-networks
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "--silent"]
+      interval: 10s
+      retries: 5
+      start_period: 30s
+      timeout: 5s
+
+  # Serviço do backend
+  backend:
+    build:
+      context: ./Back
+    ports:
+      - "3003:3003"
+    environment:
+      DATABASE_URL: mysql://root:root@db:3306/ponte_db
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - app-networks
+    # entrypoint: ["/wait-for-it.sh", "db:3306", "--", "npm", "start"]
+
+  # Serviço do frontend
+  frontend:
+    build:
+      context: ./Ponte
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - app-networks
+
+volumes:
+  db_data:
+
+networks:
+  app-networks:

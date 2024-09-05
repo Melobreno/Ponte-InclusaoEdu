@@ -1,0 +1,20 @@
+FROM node:20
+
+WORKDIR /Back
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+RUN apt-get update -y && apt-get install -y openssl
+
+RUN npm install bcrypt
+
+RUN npx prisma generate
+
+EXPOSE 3003
+
+# Optionally, you might want to make migrations and seeding part of a startup script
+CMD ["sh", "-c", "npx prisma migrate deploy && npm run start"]
