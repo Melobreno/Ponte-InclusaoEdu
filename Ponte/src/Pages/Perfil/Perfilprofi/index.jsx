@@ -6,6 +6,8 @@ import Footer from "../../../Components/molecules/Footer/Footer";
 import { Link } from "react-router-dom";
 import img from "../../../Assets/avatar2.svg";
 import { Surgir } from "../../../Components/motion";
+import fb from "../../../Assets/fb.svg";
+import insta from "../../../Assets/instagram.svg";
 
 function Perfilprof() {
   const [openSideBar, setOpenSideBar] = useState(false);
@@ -19,28 +21,30 @@ function Perfilprof() {
       <Perf>
         <div className="side">{openSideBar && <SideDocumentacao />}</div>
         <Surgir>
-        <div className="conteiner1">
-          <div className="box1">
-            <div>
-              <img src={img} width={"100px"} alt="user" />
+          <div className="conteiner1">
+            <div className="box1">
+              <div>
+                <img src={img} width={"100px"} alt="user" />
+              </div>
+              <div className="textoprof">
+                <p className="nomeProf">Priscila Silva</p>
+                <p className="ocupacao">Fonoaudióloga</p>
+              </div>
             </div>
-            <div className="textoprof">
-              <p className="nomeProf">Priscila Silva</p>
-              <p className="ocupacao">Fonoaudióloga</p>
-            </div>
-          </div>
-          <div className="conteiner2">
-            <div className="botao">
-              <button
-                className={`btn ${isConnected ? "connected" : "not-connected"}`}
-                onClick={handleClick}
-              >
-                {isConnected ? "Conectado" : "Conectar"}
-              </button>
-              <Link to={"/chat"}>
-                <button className="btn">Mensagem</button>
-              </Link>
-            </div>
+            <div className="conteiner2">
+              <div className="botao">
+                <button
+                  className={`btn ${
+                    isConnected ? "connected" : "not-connected"
+                  }`}
+                  onClick={handleClick}
+                >
+                  {isConnected ? "Conectado" : "Conectar"}
+                </button>
+                <Link to={"/chat"}>
+                  <button className="btn">Mensagem</button>
+                </Link>
+              </div>
               <div className="box2">
                 <div className="sobre">
                   <h3 className="dadosprof">Dados Profissionais</h3>
@@ -71,11 +75,7 @@ function Perfilprof() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <img
-                        className="face"
-                        src="./src/assets/fb.svg"
-                        alt="fb"
-                      />
+                      <img className="face" src={fb} alt="fb" />
                     </a>
 
                     <a
@@ -83,11 +83,7 @@ function Perfilprof() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <img
-                        className="insta"
-                        src="./src/assets/instagram.svg"
-                        alt="insta"
-                      />
+                      <img className="insta" src={insta} alt="insta" />
                     </a>
                   </div>
                 </div>
