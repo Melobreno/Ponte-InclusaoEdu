@@ -1,4 +1,4 @@
-import img from "../../../Assets/Vetoredsenha.svg";
+import img from "../../../assets/Vetoredsenha.svg";
 import * as S from "./imgCir.style";
 
 function CirculoImg() {

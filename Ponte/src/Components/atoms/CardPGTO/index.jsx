@@ -1,6 +1,6 @@
-import iconCard from "../../../Assets/icon _credit.svg";
-import iconBarras from "../../../Assets/icon _barcode.svg";
-import iconPix from "../../../Assets/logo-pix-solid.svg";
+import iconCard from "../../../assets/icon _credit.svg";
+import iconBarras from "../../../assets/icon _barcode.svg";
+import iconPix from "../../../assets/logo-pix-solid.svg";
 import * as S from "./styles";
 
 function MetodoPgto({ metPgto }) {

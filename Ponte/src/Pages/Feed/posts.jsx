@@ -1,7 +1,7 @@
 import { Escreva, Mensagem } from "./styles";
-import img from "../../Assets/Avatar 1.svg";
-import lixeira from "../../Assets/lixeira.svg";
-import balao from "../../Assets/comentario.svg";
+import img from "../../assets/Avatar 1.svg";
+import lixeira from "../../assets/lixeira.svg";
+import balao from "../../assets/comentario.svg";
 import Btn from "../../Components/atoms/Button/index";
 import { useState, useEffect } from "react";
 import api from "../../api/api";

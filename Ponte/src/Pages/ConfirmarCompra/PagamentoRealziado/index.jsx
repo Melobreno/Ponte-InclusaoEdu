@@ -1,6 +1,6 @@
 import Btn from "../../../Components/atoms/Button";
 import { Section } from "./style";
-import img from "../../../Assets/pgtoFeito.svg";
+import img from "../../../assets/pgtoFeito.svg";
 import NavBar from "../../../Components/organisms/NavBar";
 import Footer from "../../../Components/molecules/Footer/Footer";
 

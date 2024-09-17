@@ -1,9 +1,9 @@
 import * as S from "./menuStyles";
 import Btn from "../../atoms/Button";
 import { Link } from "react-router-dom";
-import HamMenu from "../../../Assets/hamburger.svg";
+import HamMenu from "../../../assets/hamburger.svg";
 import { useState } from "react";
-import imgLo from "../../../Assets/logoPonte.svg";
+import imgLo from "../../../assets/logoPonte.svg";
 
 function menu() {
   const value = "Login";

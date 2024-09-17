@@ -1,8 +1,8 @@
 import * as S from "./style";
 import SideDocumentacao from "../../Components/organisms/SideBarDocument/SideDocumentacao";
 import Pesquisa from "../../Components/molecules/BarraPesquisa";
-import imgVetor2 from "../../Assets/avatar2.svg";
-import imgVetor3 from "../../Assets/avatar3.svg";
+import imgVetor2 from "../../assets/avatar2.svg";
+import imgVetor3 from "../../assets/avatar3.svg";
 import { Link } from "react-router-dom";
 import { Surgir } from "../../Components/motion";
 

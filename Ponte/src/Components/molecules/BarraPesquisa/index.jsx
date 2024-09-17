@@ -1,6 +1,6 @@
 import { Section } from "./style";
-import logo from "../../../Assets/logoPonte.svg";
-import avatar from "../../../Assets/Avatar 1.svg";
+import logo from "../../../assets/logoPonte.svg";
+import avatar from "../../../assets/Avatar 1.svg";
 import { IoHomeOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 

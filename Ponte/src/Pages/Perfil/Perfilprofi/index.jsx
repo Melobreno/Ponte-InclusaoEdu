@@ -4,7 +4,7 @@ import Pesquisa from "../../../Components/molecules/BarraPesquisa";
 import SideDocumentacao from "../../../Components/organisms/SideBarDocument/SideDocumentacao";
 import Footer from "../../../Components/molecules/Footer/Footer";
 import { Link } from "react-router-dom";
-import img from "../../../Assets/avatar2.svg";
+import img from "../../../assets/avatar2.svg";
 import { Surgir } from "../../../Components/motion";
 import fb from "../../../Assets/fb.svg";
 import insta from "../../../Assets/instagram.svg";

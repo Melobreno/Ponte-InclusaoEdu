@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Map, Foto1 } from "./mapStyled";
-import fotom from "../../Assets/Usermulher.svg";
-import fotoh from "../../Assets/Userhomem.svg";
+import fotom from "../../assets/Usermulher.svg";
+import fotoh from "../../assets/Userhomem.svg";
 import SideDocumentacao from "../../Components/organisms/SideBarDocument/SideDocumentacao";
 import Pesquisa from "../../Components/molecules/BarraPesquisa/index";
 import api from "../../api/api";

@@ -1,5 +1,5 @@
-import X from "../../../../Assets/X vetor.svg";
-import V from "../../../../Assets/V vetor.svg";
+import X from "../../../../assets/X vetor.svg";
+import V from "../../../../assets/V vetor.svg";
 function InfoBasic() {
   return (
     <>
