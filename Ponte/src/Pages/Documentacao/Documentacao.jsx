@@ -1,9 +1,9 @@
 import * as S from "./documentacao.style";
 import SideDocumentacao from "../../Components/organisms/SideBarDocument/SideDocumentacao";
 import Pesquisa from "../../Components/molecules/BarraPesquisa/index";
-import pDF from "../../Assets/PicPDF.svg";
-import lixeira from "../../Assets/lixeira.svg";
-import nDoc from "../../Assets/newDoc.svg";
+import pDF from "../../assets/PicPDF.svg";
+import lixeira from "../../assets/lixeira.svg";
+import nDoc from "../../assets/newDoc.svg";
 import { useRef, useState, useEffect, useDeferredValue } from "react";
 import api from "../../api/api";
 import TelaCarregamento from "../../Components/atoms/telaCarregamento/TelaCarregamneto";

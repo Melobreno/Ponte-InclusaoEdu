@@ -4,7 +4,7 @@ import Pesquisa from "../../../Components/molecules/BarraPesquisa";
 import SideDocumentacao from "../../../Components/organisms/SideBarDocument/SideDocumentacao";
 import Footer from "../../../Components/molecules/Footer/Footer";
 import { Link } from "react-router-dom";
-import img from "../../../Assets/avatar2.svg";
+import img from "../../../assets/avatar2.svg";
 import { Surgir } from "../../../Components/motion";
 
 function Perfilprof() {
@@ -19,28 +19,30 @@ function Perfilprof() {
       <Perf>
         <div className="side">{openSideBar && <SideDocumentacao />}</div>
         <Surgir>
-        <div className="conteiner1">
-          <div className="box1">
-            <div>
-              <img src={img} width={"100px"} alt="user" />
+          <div className="conteiner1">
+            <div className="box1">
+              <div>
+                <img src={img} width={"100px"} alt="user" />
+              </div>
+              <div className="textoprof">
+                <p className="nomeProf">Priscila Silva</p>
+                <p className="ocupacao">Fonoaudióloga</p>
+              </div>
             </div>
-            <div className="textoprof">
-              <p className="nomeProf">Priscila Silva</p>
-              <p className="ocupacao">Fonoaudióloga</p>
-            </div>
-          </div>
-          <div className="conteiner2">
-            <div className="botao">
-              <button
-                className={`btn ${isConnected ? "connected" : "not-connected"}`}
-                onClick={handleClick}
-              >
-                {isConnected ? "Conectado" : "Conectar"}
-              </button>
-              <Link to={"/chat"}>
-                <button className="btn">Mensagem</button>
-              </Link>
-            </div>
+            <div className="conteiner2">
+              <div className="botao">
+                <button
+                  className={`btn ${
+                    isConnected ? "connected" : "not-connected"
+                  }`}
+                  onClick={handleClick}
+                >
+                  {isConnected ? "Conectado" : "Conectar"}
+                </button>
+                <Link to={"/chat"}>
+                  <button className="btn">Mensagem</button>
+                </Link>
+              </div>
               <div className="box2">
                 <div className="sobre">
                   <h3 className="dadosprof">Dados Profissionais</h3>

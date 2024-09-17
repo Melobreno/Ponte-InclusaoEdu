@@ -1,7 +1,7 @@
 import { useState } from "react";
 import MetodoPgto from "../../atoms/CardPGTO/index";
 import * as S from "./style";
-import iconMais from "../../../Assets/+.svg";
+import iconMais from "../../../assets/+.svg";
 import Btn from "../../atoms/Button";
 import { Link, useNavigate } from "react-router-dom";
 

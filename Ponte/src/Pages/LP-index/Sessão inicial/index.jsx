@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import * as S from "./sobreStyle";
-import imgTyping from "../../../Assets/Typing-cuate.svg";
+import imgTyping from "../../../assets/Typing-cuate.svg";
 import Btn from "../../../Components/atoms/Button";
 import { EsqCentro, DirCentro, Surgir } from "../../../Components/motion/index";
 

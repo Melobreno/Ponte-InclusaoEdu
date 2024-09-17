@@ -2,7 +2,7 @@ import SideDocumentacao from "../../Components/organisms/SideBarDocument/SideDoc
 import Pesquisa from "../../Components/molecules/BarraPesquisa/index";
 import * as S from "./atividade.style";
 import Btn from "../../Components/atoms/Button";
-import avata from "../../Assets/Avatar 1.svg";
+import avata from "../../assets/Avatar 1.svg";
 import { useState, useEffect } from "react";
 import api from "../../api/api";
 import { Surgir } from "../../Components/motion";

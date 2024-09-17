@@ -1,8 +1,8 @@
 import { Section, Container } from "./funcionalidadesStyle";
-import conexao from "../../../Assets/conexao 1.svg";
-import doc from "../../../Assets/doc.svg";
-import pessoas from "../../../Assets/pessoas.svg";
-import acompanamento from "../../../Assets/acompanhamento.svg";
+import conexao from "../../../assets/conexao 1.svg";
+import doc from "../../../assets/doc.svg";
+import pessoas from "../../../assets/pessoas.svg";
+import acompanamento from "../../../assets/acompanhamento.svg";
 import { Hover } from "../../../Components/motion";
 
 function Funcionalidades() {

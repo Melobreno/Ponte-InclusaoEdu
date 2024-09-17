@@ -1,6 +1,6 @@
 import { useState } from "react";
-import img from "../../../Assets/Logo8.svg";
-import voltar from "../../../Assets/voltar.svg";
+import img from "../../../assets/Logo8.svg";
+import voltar from "../../../assets/voltar.svg";
 import * as S from "./style";
 import api from "../../../api/api";
 import { Link } from "react-router-dom";

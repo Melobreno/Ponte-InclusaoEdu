@@ -1,5 +1,5 @@
 import FormResumido from "../../atoms/FormularioResumido";
-import VetorCadastro from "../../../Assets/vetor-cadastro.svg";
+import VetorCadastro from "../../../assets/vetor-cadastro.svg";
 import { Container } from "./style";
 import { Surgir } from "../../motion/index";
 

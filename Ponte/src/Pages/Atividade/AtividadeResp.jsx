@@ -1,6 +1,6 @@
 import Pesquisa from "../../Components/molecules/BarraPesquisa";
 import SideDocumentacao from "../../Components/organisms/SideBarDocument/SideDocumentacao";
-import avata from "../../Assets/Avatar 1.svg";
+import avata from "../../assets/Avatar 1.svg";
 import * as S from "./atividade.style";
 import api from "../../api/api";
 import { useState, useEffect } from "react";

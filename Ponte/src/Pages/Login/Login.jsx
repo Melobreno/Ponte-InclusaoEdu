@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Imagem, Container, Section, Fundo } from "./LoginStyled";
-import imgLogin from "../../Assets/tabletLogin.svg";
-import logo from "../../Assets/logoPonte.svg";
-import voltar from "../../Assets/voltar.svg";
+import imgLogin from "../../assets/tabletLogin.svg";
+import logo from "../../assets/logoPonte.svg";
+import voltar from "../../assets/voltar.svg";
 import Btn from "../../Components/atoms/Button/index";
 import { Link, useNavigate } from "react-router-dom";
 import api from "../../api/api";

@@ -1,8 +1,8 @@
 import * as S from "./footerStyle";
-import img from "../../../Assets/logoPonte.svg";
-import fb from "../../../Assets/fb.svg";
-import x from "../../../Assets/x.svg";
-import insta from "../../../Assets/instagram.svg";
+import img from "../../../assets/logoPonte.svg";
+import fb from "../../../assets/fb.svg";
+import x from "../../../assets/x.svg";
+import insta from "../../../assets/instagram.svg";
 
 function Footer() {
   return (

@@ -1,9 +1,9 @@
 import Pesquisa from "../../Components/molecules/BarraPesquisa/index";
 import { Section, Direita } from "./stlyled";
-import img from "../../Assets/Avatar 1.svg";
-import img2 from "../../Assets/avatar2.svg";
-import img3 from "../../Assets/avatar3.svg";
-import lupa from "../../Assets/lupa.svg";
+import img from "../../assets/Avatar 1.svg";
+import img2 from "../../assets/avatar2.svg";
+import img3 from "../../assets/avatar3.svg";
+import lupa from "../../assets/lupa.svg";
 import SideDocumentacao from "../../Components/organisms/SideBarDocument/SideDocumentacao";
 import { Surgir } from "../../Components/motion";
 function Chat() {

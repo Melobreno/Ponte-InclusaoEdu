@@ -1,4 +1,4 @@
-import img from "../../../Assets/Group.svg";
+import img from "../../../assets/Group.svg";
 import * as S from "./SideDocument.style";
 import { IoHomeOutline } from "react-icons/io5";
 import { GoPeople } from "react-icons/go";

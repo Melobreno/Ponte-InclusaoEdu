@@ -1,4 +1,4 @@
-import lupa from "../../../Assets/lupa.svg";
+import lupa from "../../../assets/lupa.svg";
 import { Container } from "./style";
 
 function InputNav() {

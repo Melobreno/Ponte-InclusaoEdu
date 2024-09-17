@@ -1,4 +1,4 @@
-import imgLogo from "../../../Assets/logoPonte.svg";
+import imgLogo from "../../../assets/logoPonte.svg";
 import * as S from "./style";
 function TelaCarregamento() {
   return (
