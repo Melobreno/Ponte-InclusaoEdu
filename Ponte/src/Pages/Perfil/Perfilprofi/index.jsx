@@ -6,8 +6,8 @@ import Footer from "../../../Components/molecules/Footer/Footer";
 import { Link } from "react-router-dom";
 import img from "../../../assets/avatar2.svg";
 import { Surgir } from "../../../Components/motion";
-import fb from "../../../Assets/fb.svg";
-import insta from "../../../Assets/instagram.svg";
+import fb from "../../../assets/fb.svg";
+import insta from "../../../assets/instagram.svg";
 
 function Perfilprof() {
   const [openSideBar, setOpenSideBar] = useState(false);

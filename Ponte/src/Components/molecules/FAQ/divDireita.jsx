@@ -1,5 +1,5 @@
 import { FaqSection } from "./faqStyle";
-import imgQuestion from "../../../assets/VectorQuest.svg";
+import imgQuestion from "../../../assets/vectorquest.svg";
 import Btn from "../../atoms/Button";
 import { Link } from "react-router-dom";
 

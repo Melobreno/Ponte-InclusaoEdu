@@ -1,4 +1,4 @@
-import V from "../../../../assets/V vetor.svg";
+import V from "../../../../assets/v-vetor.svg";
 function InfoPremium() {
   return (
     <>
