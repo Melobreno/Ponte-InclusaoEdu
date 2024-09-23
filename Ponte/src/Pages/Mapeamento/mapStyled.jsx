@@ -228,7 +228,7 @@ export const Map = styled.div`
       font-size: smaller;
     }
     .content {
-      gap: 10px;
+      margin: 0;
     }
     .texto {
       font-size: 12px;

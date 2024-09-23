@@ -85,4 +85,65 @@ export const SobreNos = styled.div`
     color: red;
     margin-top: 5px;
   }
+
+  @media (max-width: 375px) {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-bottom: 60%;
+    margin-top: 10%;
+
+    .textos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 100%;
+      font-size: 1rem;
+      margin: 0 auto;
+    }
+
+    .textos h1 {
+      max-width: fit-content;
+      font-size: 1.25rem;
+      padding: 0 10px;
+    }
+
+    .textos p {
+      max-width: 95%;
+      padding: 0.5rem 0;
+    }
+
+    .inputs {
+      width: 90%;
+      margin: 0 auto;
+      padding-top: 0;
+    }
+
+    .inputs input,
+    .bigInput textarea {
+      width: 100%;
+      height: 2.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .checkbox {
+      margin: 5% 0;
+      font-size: 0.9rem;
+      width: 100%;
+      gap: 0.75rem;
+    }
+
+    form {
+      padding: 0.5rem;
+    }
+
+    .button {
+      margin-top: 1.5rem;
+    }
+
+    .button .erro {
+      font-size: 0.85rem;
+      color: red;
+    }
+  }
 `;

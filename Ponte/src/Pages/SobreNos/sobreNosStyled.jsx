@@ -79,4 +79,15 @@ export const Container = styled.div`
 export const Text = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 375px) {
+    max-width: 370px;
+    .sobre_title {
+      margin-bottom: 10%;
+    }
+
+    .texto {
+      max-width: fit-content;
+    }
+  }
 `;

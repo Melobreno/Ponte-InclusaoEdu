@@ -6,8 +6,8 @@ function SobreNos() {
     <>
       <S.Section>
         <S.Container>
-          <section id="sobre">
-            <h1>Sobre nós</h1>
+          <S.Text id="sobre">
+            <h1 className="sobre_title">Sobre nós</h1>
             <div className="texto">
               <div>
                 <p>
@@ -29,7 +29,7 @@ function SobreNos() {
                 </p>
               </div>
             </div>
-          </section>
+          </S.Text>
           <div className="imagemMaos">
             <img src={maosImg} alt="Crinça com as mãos levantadas" />
           </div>
