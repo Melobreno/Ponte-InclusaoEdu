@@ -1,7 +1,9 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://ponteback.onrender.com/",
+  baseURL: "https://ponteback.onrender.com",
+  timeout: 3000,
+  headers: { "Content-Type": "application/json" },
   //Em Prod  http://localhost:3003/
 });
 
